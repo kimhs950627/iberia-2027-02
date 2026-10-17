@@ -1,0 +1,38 @@
+/* 토큰 — 색·타입·간격·모션의 단일 정의 */
+:root {
+  /* color */
+  --ink: #1E2A22;
+  --ink-soft: #3A463D;
+  --paper: #F6F2EA;
+  --paper-2: #EDE7DB;
+  --paper-clean: #FBFAF8;
+  --accent: #B4451F;
+  --muted: #7A756B;
+  --rule: #D8D0C0;
+  --rule-strong: #1E2A22;
+
+  /* type */
+  --font-display: "Fraunces", "Gowun Batang", Georgia, serif;
+  --font-body: "IBM Plex Sans KR", "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --fs-caption: 0.75rem;
+  --fs-small: 0.875rem;
+  --fs-body: 1rem;
+  --fs-lead: 1.25rem;
+  --fs-h3: 1.75rem;
+  --fs-day: 4.5rem;
+  --fs-hero: clamp(2.75rem, 7vw, 5.5rem);
+
+  /* space */
+  --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px;
+  --s-5: 24px; --s-6: 32px; --s-7: 48px; --s-8: 72px; --s-9: 112px;
+
+  /* shape */
+  --rail: 88px;
+  --maxw: 1120px;
+
+  /* motion */
+  --ease: cubic-bezier(.22,.61,.36,1);
+  --dur: 520ms;
+}
