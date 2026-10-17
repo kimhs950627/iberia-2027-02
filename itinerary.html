@@ -72,7 +72,9 @@ body::after{
 /* ── 일차 블록 */
 .day{
   display:grid; grid-template-columns:var(--rail) minmax(0,1fr); gap:var(--s-6);
-  padding:var(--s-8) 0; border-bottom:1px solid var(--rule);
+  max-width:var(--maxw); margin:0 auto;
+  padding:var(--s-8) max(var(--s-5), env(safe-area-inset-left)) var(--s-8) max(var(--s-5), env(safe-area-inset-left));
+  border-bottom:1px solid var(--rule);
   opacity:0; transform:translateY(12px);
   animation:reveal var(--dur) var(--ease) forwards;
 }
@@ -139,8 +141,14 @@ body::after{
 .tail a{color:var(--accent); border-bottom:1px solid currentColor; text-decoration:none}
 
 @media (max-width:720px){
-  :root{--rail:52px; --fs-day:2.5rem}
-  .day{gap:var(--s-4); padding:var(--s-7) 0}
+  :root{--rail:0px; --fs-day:2.75rem; --s-5:22px; --s-7:36px}
+  .wrap{padding:0 max(22px, env(safe-area-inset-left))}
+  .day{
+    grid-template-columns:1fr; gap:var(--s-3);
+    padding:var(--s-7) max(22px, env(safe-area-inset-left));
+  }
+  .day-rail{flex-direction:row; align-items:baseline; gap:var(--s-3)}
+  .day-num{line-height:.9}
   .ledger td.src{display:none}
   .ledger thead th:nth-child(3){display:none}
   .ledger td.what{font-size:var(--fs-caption)}
