@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>예약 캘린더 — 언제 무엇을 여는가 · 이베리아 2027-02</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Gowun+Batang:wght@400;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/tokens.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);
+  font-size:var(--fs-body);line-height:1.75;-webkit-font-smoothing:antialiased}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:99;opacity:.035;
+  background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+a{color:var(--accent)}
+.topbar{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--rule)}
+.topbar .wrap{display:flex;align-items:baseline;gap:14px;padding-top:12px;padding-bottom:12px}
+.topbar .brand{font-family:var(--font-display);font-weight:700;font-size:var(--fs-small)}
+.topbar .links{margin-left:auto;display:flex;gap:14px;font-family:var(--font-mono);font-size:var(--fs-caption);flex-wrap:wrap}
+.topbar a{text-decoration:none;border-bottom:1px solid currentColor}
+.hero{padding:72px 0 34px;border-bottom:3px solid var(--rule-strong)}
+.kicker{font-family:var(--font-mono);font-size:var(--fs-caption);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);margin:0 0 20px}
+.hero h1{font-family:var(--font-display);font-weight:700;font-size:clamp(2rem,5vw,3.3rem);
+  line-height:1.08;letter-spacing:-.02em;margin:0 0 20px;text-wrap:balance}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero .lede{max-width:58ch;font-size:var(--fs-lead);color:var(--ink-soft);margin:0 0 24px}
+.flow{font-family:var(--font-mono);font-size:13px;line-height:1.95;background:var(--paper-2);
+  border:1px solid var(--rule);border-left:3px solid var(--accent);padding:18px 22px;overflow-x:auto;white-space:pre}
+.flow b{color:var(--accent)}
+
+.cal{max-width:var(--maxw);margin:0 auto;padding:40px 24px 0}
+table.cal{width:100%;border-collapse:collapse;font-size:var(--fs-small)}
+table.cal caption{text-align:left;font-family:var(--font-mono);font-size:12px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);padding-bottom:12px}
+table.cal th,table.cal td{padding:12px 8px;border-bottom:1px solid var(--rule);vertical-align:top;text-align:left}
+table.cal thead th{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--muted);font-weight:500;border-bottom:2px solid var(--rule-strong)}
+td.n{font-family:var(--font-display);font-weight:700;color:var(--accent);width:28px}
+td.open{white-space:nowrap;width:110px}
+td.open b{font-family:var(--font-mono);font-size:var(--fs-small)}
+td.open small,td.what small{display:block;font-family:var(--font-mono);font-size:11px;color:var(--muted)}
+td.what b{font-weight:700}
+td.rule{color:var(--ink-soft);font-size:13px;width:26%}
+td.price{font-family:var(--font-mono);white-space:nowrap;width:150px;font-variant-numeric:tabular-nums}
+td.site{font-family:var(--font-mono);font-size:11px;color:var(--muted);width:170px;word-break:break-all}
+tr.detail td{border-bottom:2px solid var(--rule-strong);padding-top:0}
+.need{margin:10px 0 6px;font-size:13px}
+.warn{margin:0 0 6px;font-size:13px;color:var(--ink-soft);background:var(--paper-2);
+  border-left:3px solid var(--accent);padding:10px 14px}
+
+.tail{max-width:var(--maxw);margin:0 auto;padding:56px 24px 96px}
+.tail h2{font-family:var(--font-display);font-size:var(--fs-h3);margin:0 0 16px}
+.tail li,.tail p{font-size:var(--fs-small);color:var(--ink-soft)}
+
+@media (max-width:820px){
+  .hero{padding:44px 0 28px}
+  .wrap,.cal,.tail{padding-left:22px;padding-right:22px}
+  table.cal,table.cal tbody,table.cal tr{display:block}
+  table.cal thead{display:none}
+  table.cal tr:not(.detail){border-top:2px solid var(--rule-strong);padding-top:8px}
+  table.cal td{display:block;border:none;padding:2px 0;width:auto}
+  td.n{display:inline-block;margin-right:8px}
+  td.open{display:inline-block}
+  td.rule{font-size:12px}
+  tr.detail td{padding-bottom:2px}
+  .flow{font-size:11px}
+}
+@media print{
+  .topbar,.tail,.flow{display:none}
+  table.cal tr{break-inside:avoid}
+  body::after{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="brand">이베리아 2027-02 · 예약 캘린더</span>
+    <span class="links">
+      <a href="index.html">요약</a>
+      <a href="itinerary.html">일정</a>
+      <a href="taxrefund.html">택스리펀</a>
+      <a href="jewelry.html">주얼리</a>
+    </span>
+  </div>
+</div>
+
+<main>
+<section class="hero wrap">
+  <p class="kicker">Booking calendar · Nov 2026 → Jan 2027</p>
+  <h1>언제 <em>무엇을</em> 열어야 하는가</h1>
+  <p class="lede">방문일이 아니라 <b>예약이 열리는 순서</b>로 정렬했습니다.
+    11월에 항공과 알함브라가 몰려 있고, 12월에 사그라다·기차·성당이 열립니다.</p>
+  <div class="flow"><b>2026-11-01</b>  항공 결제 (루프트한자)
+<b>2026-11-15</b>  알함브라 주시 ← 최대 병목
+<b>2026-11월</b>    세비야 알카사르 확인
+<b>2026-12-20</b>  CP 기차(60일 전) · 사그라다(2개월 전)
+<b>2026-12월</b>    세비야·그라나다 대성당 · 렐루 서점 · 라이언에어
+<b>2027-01월</b>    Alsa 버스 · 부엘링</div>
+</section>
+
+<section class="cal">
+  <table class="cal">
+    <caption>예약 캘린더 — 오픈(확인) 시점 순</caption>
+    <thead>
+      <tr><th scope="col">#</th><th scope="col">확인 시작</th><th scope="col">대상</th>
+          <th scope="col">오픈 규칙</th><th scope="col">비용</th><th scope="col">공식 사이트</th></tr>
+    </thead>
+    <tbody>
+
+<tr>
+  <td class="n">1</td>
+  <td class="open"><b>2026-11-01</b><small>확인 시작</small></td>
+  <td class="what"><b>항공 ICN ↔ 이베리아 (루프트한자 독일 경유)</b><small>방문 2027-02-16 / 02-26</small></td>
+  <td class="rule">발권 목표일 — 11월 1일에 바로 결제한다</td>
+  <td class="price">2,385,380 (2인)</td>
+  <td class="site">lufthansa.com · skyscanner</td>
+</tr>
+<tr class="detail">
+  <td></td>
+  <td colspan="5">
+    <p class="need"><b>준비물</b> — 여권 영문명 · 카드 · 마일리지(있으면)</p>
+    <p class="warn">2인 240만 이하면 즉시 결제. 270만까지는 수용. **복귀편 환승 2시간 이상**과 **수하물 ICN 직통 체크인**을 확인한다.</p>
+  </td>
+</tr>
+
+<tr>
+  <td class="n">2</td>
+  <td class="open"><b>2026-11-15</b><small>확인 시작</small></td>
+  <td class="what"><b>알함브라 궁전 + 나스리 궁전</b><small>방문 2027-02-23 (화) 08:45</small></td>
+  <td class="rule">방문일 **3개월 전 = 11/23**. 실제로는 트랜치로 풀려 11월 중순부터 확인</td>
+  <td class="price">€22.27 × 2</td>
+  <td class="site">tickets.alhambra-patronato.es</td>
+</tr>
+<tr class="detail">
+  <td></td>
+  <td colspan="5">
+    <p class="need"><b>준비물</b> — **여권 영문명·번호(2인 각각)** · 방문일 · **나스리 궁전 시간대** · 카드</p>
+    <p class="warn">이 여행의 **최대 병목**이다. 나스리 궁전이 먼저 매진되고 오전 시간대가 가장 빨리 나간다. 매진이면 전날·당일 재판매분을 노린다. **입장 시 예약에 쓴 여권 실물**을 지참한다.</p>
+  </td>
+</tr>
+
+<tr>
+  <td class="n">3</td>
+  <td class="open"><b>2026-11월</b><small>확인 시작</small></td>
+  <td class="what"><b>세비야 알카사르 (Real Alcázar)</b><small>방문 2027-02-21 (일) 14:00</small></td>
+  <td class="rule">공식 오픈 시점 **미기재** → 11월부터 매주 확인</td>
+  <td class="price">€15.50 × 2 (+쿠아르토 레알 알토 €5.50)</td>
+  <td class="site">alcazarsevilla.org → alcazardesevilla.infoticketing.com</td>
+</tr>
+<tr class="detail">
+  <td></td>
+  <td colspan="5">
+    <p class="need"><b>준비물</b> — 여권 이름 · 방문일/시간대 · 카드</p>
+    <p class="warn">**겨울 운영 09:30–17:00**(10/1~3/31), 17:45부터 퇴장. **환불 불가**. 일반권에 Antiquarium·트리아나 세라믹 박물관 등이 포함된다. ⚠️ 이전 문서에 적었던 **'월요일 16~17시 €1' 특별가는 공식 페이지에서 확인되지 않았다** — 예약 페이지에서 직접 확인한다.</p>
+  </td>
+</tr>
+
+<tr>
+  <td class="n">4</td>
+  <td class="open"><b>2026-12-20</b><small>확인 시작</small></td>
+  <td class="what"><b>CP 기차 리스본 → 포르투 (AP)</b><small>방문 2027-02-18 (목) 09:30</small></td>
+  <td class="rule">**60일 전** 오픈 = 12/20</td>
+  <td class="price">95,000 (2인, Promo 기준)</td>
+  <td class="site">cp.pt</td>
+</tr>
+<tr class="detail">
+  <td></td>
+  <td colspan="5">
+    <p class="need"><b>준비물</b> — 여권 이름 · 좌석 지정 · 카드</p>
+    <p class="warn">**Promo 티켓**이 정가의 절반 이하. 오픈 직후가 가장 싸다. 좌석을 반드시 지정한다.</p>
+  </td>
+</tr>
+
+<tr>
+  <td class="n">5</td>
+  <td class="open"><b>2026-12-20</b><small>확인 시작</small></td>
+  <td class="what"><b>사그라다 파밀리아</b><small>방문 2027-02-25 (목) 09:00</small></td>
+  <td class="rule">방문일 **약 2개월 전 = 12/25** (공식 FAQ)</td>
+  <td class="price">€26 × 2</td>
+  <td class="site">sagradafamilia.org</td>
+</tr>
+<tr class="detail">
+  <td></td>
+  <td colspan="5">
+    <p class="need"><b>준비물</b> — 여권 이름 · 입장 시간대 · 카드</p>
+    <p class="warn">**공식 사이트에서 사면 수수료가 없다.** 타워 추가는 별도. 성수기엔 매진되므로 **취소표**를 함께 노린다.</p>
+  </td>
+</tr>
+
+<tr>
+  <td class="n">6</td>
+  <td class="open"><b>2026-12월</b><small>확인 시작</small></td>
+  <td class="what"><b>세비야 대성당 + 히랄다탑</b><small>방문 2027-02-21 (일) 09:00</small></td>
+  <td class="rule">공식 오픈 시점 미기재 → 12월 확인</td>
+  <td class="price">€13 × 2</td>
+  <td class="site">catedraldesevilla.es</td>
+</tr>
+<tr class="detail">
+  <td></td>
+  <td colspan="5">
+    <p class="need"><b>준비물</b> — 여권 이름 · 방문일 · 카드</p>
+    <p class="warn">히랄다탑은 **경사로**라 엘리베이터가 없다. **일요일 오전은 미사 시간**이라 개방이 늦거나 일부 제한될 수 있다 — 예약 페이지에서 일요일 시간표를 확인한다.</p>
+  </td>
+</tr>
+
+<tr>
+  <td class="n">7</td>
+  <td class="open"><b>2026-12월</b><small>확인 시작</small></td>
+  <td class="what"><b>그라나다 대성당</b><small>방문 2027-02-22 (월) 14:30</small></td>
+  <td class="rule">미기재 → 12월 확인</td>
+  <td class="price">22,000 (2인, 추정)</td>
+  <td class="site">catedraldegranada.com</td>
+</tr>
+<tr class="detail">
+  <td></td>
+  <td colspan="5">
+    <p class="need"><b>준비물</b> — 여권 이름(불필요할 수 있음) · 카드</p>
+    <p class="warn">개인 관람은 현장 구매가 되는 경우가 많지만 **시간 지정 예약**이 열리면 미리 잡는다.</p>
+  </td>
+</tr>
+
+<tr>
+  <td class="n">8</td>
+  <td class="open"><b>2026-12월</b><small>확인 시작</small></td>
+  <td class="what"><b>렐루 서점 (Livraria Lello, 포르투)</b><small>방문 2027-02-18 (목) 15:00</small></td>
+  <td class="rule">날짜·시간 지정 티켓 상시 판매</td>
+  <td class="price">25,000 (2인)</td>
+  <td class="site">livrarialello.pt</td>
+</tr>
+<tr class="detail">
+  <td></td>
+  <td colspan="5">
+    <p class="need"><b>준비물</b> — 이름 · 날짜/시간 · 카드</p>
+    <p class="warn">**시간 지정 티켓이 필수**다(현장 대기 없이 들어가려면). 티켓 금액이 책 구매 시 차감되는 구조다.</p>
+  </td>
+</tr>
+
+<tr>
+  <td class="n">9</td>
+  <td class="open"><b>2026-12월</b><small>확인 시작</small></td>
+  <td class="what"><b>Ryanair 포르투 → 세비야 (OPO→SVQ)</b><small>방문 2027-02-20 (토) 10:00</small></td>
+  <td class="rule">저가항공은 **빠를수록 싸다**</td>
+  <td class="price">75,000 (2인 · 수하물 포함)</td>
+  <td class="site">ryanair.com</td>
+</tr>
+<tr class="detail">
+  <td></td>
+  <td colspan="5">
+    <p class="need"><b>준비물</b> — 여권 이름 · 카드</p>
+    <p class="warn">**수하물이 별도**다. 위탁 1개를 미리 붙여야 공항에서 폭탄 맞지 않는다. 탑승 2시간 전 도착.</p>
+  </td>
+</tr>
+
+<tr>
+  <td class="n">10</td>
+  <td class="open"><b>2027-01월</b><small>확인 시작</small></td>
+  <td class="what"><b>Alsa 버스 세비야 → 그라나다</b><small>방문 2027-02-22 (월) 09:00</small></td>
+  <td class="rule">통상 1~2개월 전 오픈</td>
+  <td class="price">45,000 (2인)</td>
+  <td class="site">alsa.es</td>
+</tr>
+<tr class="detail">
+  <td></td>
+  <td colspan="5">
+    <p class="need"><b>준비물</b> — 이름 · 좌석 · 카드</p>
+    <p class="warn">3시간. 좌석 지정을 한다. 2월 안달루시아는 안개·비로 지연이 있을 수 있어 **알함브라가 있는 다음 날**로 잡혀 있다(여유 1일).</p>
+  </td>
+</tr>
+
+<tr>
+  <td class="n">11</td>
+  <td class="open"><b>2027-01월</b><small>확인 시작</small></td>
+  <td class="what"><b>Vueling 그라나다 → 바르셀로나 (GRX→BCN)</b><small>방문 2027-02-24 (수) 09:30</small></td>
+  <td class="rule">통상 1~2개월 전 오픈</td>
+  <td class="price">113,000 (2인 · 수하물 포함)</td>
+  <td class="site">vueling.com</td>
+</tr>
+<tr class="detail">
+  <td></td>
+  <td colspan="5">
+    <p class="need"><b>준비물</b> — 여권 이름 · 카드</p>
+    <p class="warn">**수하물 별도**. 1시간 28분 직항. 바르셀로나 이동일이라 늦어도 저녁 전 도착한다.</p>
+  </td>
+</tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="tail">
+  <h2>알함브라가 이 여행의 병목인 이유</h2>
+  <ul>
+    <li><b>나스리 궁전은 시간 지정제</b>다. 알함브라 전체는 08:30~20:00 자유 입장이지만 나스리 궁전은 정해진 시간에만 들어간다.</li>
+    <li><b>오전 시간대가 가장 먼저 매진</b>된다. 우리 일정은 08:45 입장이라 오전 시간대가 필요하다.</li>
+    <li><b>여권 실물</b>이 필요하다. 예약에 쓴 이름과 입장 시 여권이 일치해야 한다.</li>
+    <li>매진되면 <b>전날·당일 재판매분</b>이 풀린다. 안전장치로 남겨 둔다.</li>
+  </ul>
+
+  <h2>정정 — 알카사르 특별가</h2>
+  <p>이전 문서에 <b>"세비야 알카사르 월요일 16~17시 €1"</b>이라고 적었는데,
+     공식 페이지(<i>alcazarsevilla.org/prepara-la-visita</i>)에서는 <b>확인되지 않았다.</b>
+     공식 페이지가 말하는 것은 <b>"집행위원회가 정한 날과 시간에 무료 공개 관람이 있다"</b>는 것뿐이다.
+     예약 페이지에서 직접 확인하기 전까지는 <b>일반권 €15.50</b>으로 예산을 잡는다.</p>
+
+  <h2>공통 준비물</h2>
+  <ul>
+    <li><b>여권 영문명</b> — 두 사람 것 모두. 알함브라·항공·기차가 이름을 요구한다.</li>
+    <li><b>해외결제 카드</b> — 유럽 사이트는 3D Secure 인증이 자주 걸린다. 미리 한도를 확인한다.</li>
+    <li><b>예약 확인서 PDF</b> — 오프라인에서도 열리도록 휴대폰에 저장한다.</li>
+    <li><b>시간대 선택</b> — 오전을 우선한다. 오후는 지연에 취약하다.</li>
+  </ul>
+
+  <p style="margin-top:18px">비용·시간 출처: 각 공식 사이트(2026-10-18 조회).
+     알카사르 €15.50 / 사그라다 €26 / 알함브라 €22.27 / 세비야 대성당 €13.</p>
+  <p>전체 계획: <a href="index.html">요약</a> · <a href="itinerary.html">일차별 일정</a> · <a href="taxrefund.html">택스리펀</a> · <a href="jewelry.html">주얼리</a> · <a href="earrings.html">귀고리</a></p>
+</section>
+</main>
+</body>
+</html>
