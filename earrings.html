@@ -69,6 +69,25 @@ table.p2 tr.hi th,table.p2 tr.hi td{background:var(--paper-2);font-weight:700}
 .lnk{font-family:var(--font-mono);font-size:12px;margin:0}
 .lnk a{text-decoration:none;border-bottom:1px solid currentColor}
 
+.brands{max-width:var(--maxw);margin:0 auto;padding:56px 24px 0;border-top:3px solid var(--rule-strong)}
+.brands-h{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h3);margin:0 0 10px;letter-spacing:-.01em}
+.brands-sub{font-size:var(--fs-small);color:var(--ink-soft);max-width:70ch;margin:0 0 28px}
+.brand{border-bottom:1px solid var(--rule);padding:34px 0}
+.brand header{display:flex;flex-wrap:wrap;align-items:baseline;gap:14px;margin-bottom:12px}
+.brand h2{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h3);margin:0;letter-spacing:-.01em}
+.bpick{margin:0;font-family:var(--font-mono);font-size:12px;color:var(--accent)}
+.bwhy{margin:0 0 16px;font-size:var(--fs-small);max-width:74ch}
+table.bt{width:100%;border-collapse:collapse;font-size:var(--fs-small);margin:0 0 14px}
+table.bt th,table.bt td{padding:9px 8px;border-bottom:1px solid var(--rule);vertical-align:top}
+table.bt thead th{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--muted);font-weight:500;border-bottom:2px solid var(--rule-strong);text-align:right}
+table.bt thead th:first-child{text-align:left}
+table.bt th[scope=row]{font-weight:400;color:var(--ink)}
+table.bt td{text-align:right;font-family:var(--font-mono);font-variant-numeric:tabular-nums;white-space:nowrap;width:140px}
+.bnote{font-size:13px;color:var(--ink-soft);background:var(--paper-2);border-left:3px solid var(--accent);
+  padding:10px 14px;margin:0 0 8px;max-width:78ch}
+.bsrc{margin:0;font-family:var(--font-mono);font-size:11px;color:var(--muted)}
+
 .tail{max-width:var(--maxw);margin:0 auto;padding:56px 24px 96px}
 .tail h2{font-family:var(--font-display);font-size:var(--fs-h3);margin:0 0 16px}
 .tail p,.tail li{font-size:var(--fs-small);color:var(--ink-soft)}
@@ -85,6 +104,10 @@ table.p2 tr.hi th,table.p2 tr.hi td{background:var(--paper-2);font-weight:700}
   table.top td.nm small{display:none}
   table.top th:nth-child(5),table.top td:nth-child(5),
   table.top th:nth-child(6),table.top td:nth-child(6){display:none}
+  .brands{padding:44px 22px 0}
+  table.bt{font-size:12px}
+  table.bt td{width:auto}
+  .brand header{gap:8px}
 }
 @media print{
   .topbar,.tail,.crit{display:none}
@@ -336,13 +359,76 @@ table.p2 tr.hi th,table.p2 tr.hi td{background:var(--paper-2);font-weight:700}
   </div>
 </article>
 
+<section class="brands">
+  <h2 class="brands-h">다른 브랜드 — 스페인 공식 사이트 실측</h2>
+  <p class="brands-sub">같은 기준(€3,800 이하 · 얼굴을 화사하게)으로 <b>티파니·쇼메·메시카·불가리</b>를 조회했다.
+    공식 사이트가 값을 숨겨 브라우저로 직접 읽었다.</p>
+
+<article class="brand">
+  <header>
+    <h2>티파니</h2>
+    <p class="bpick">추천 — Tiffany Knot 스몰 이어링 — €2,300</p>
+  </header>
+  <p class="bwhy"><b>T 시리즈는 곡선이 빛을 나눈다.</b> 하트 태그 스터드는 실버라 화사도가 낮고, <b>Nott·T 후프가 얼굴 옆에서 반사</b>를 만든다.</p>
+  <table class="bt">
+    <thead><tr><th scope="col">제품</th><th scope="col">스페인</th><th scope="col">환급 후(원)</th></tr></thead>
+    <tbody><tr><th scope="row">Return to Tiffany 하트 태그 스터드, 미니 (실버·다이아)</th><td>680 €</td><td>940,396</td></tr><tr><th scope="row">Return to Tiffany 하트 태그 스터드, 미니 (옐로우 골드)</th><td>1,350 €</td><td>1,866,962</td></tr><tr><th scope="row">Tiffany Knot 스몰 이어링 (로즈 골드)</th><td>2,300 €</td><td>3,180,750</td></tr><tr><th scope="row">Tiffany T 후프 이어링 (옐로우 골드)</th><td>2,350 €</td><td>3,249,896</td></tr><tr><th scope="row">Tiffany HardWear 미디엄 링크 (옐로우 골드·터키석)</th><td>3,600 €</td><td>4,978,565</td></tr><tr><th scope="row">Tiffany T1 후프 이어링 (옐로우 골드)</th><td>4,100 €</td><td>5,670,032</td></tr><tr><th scope="row">Tiffany Knot 이어링 (로즈 골드·다이아몬드)</th><td>4,900 €</td><td>6,776,380</td></tr></tbody>
+  </table>
+  <p class="bnote">T 스마일 미니는 영국 사이트에서 <b>£1,050</b>로 확인됐다(스페인 € 미확인). 스페인 사이트는 <b>€ 표시</b>이며, 311개 이어링이 있다.</p>
+  <p class="bsrc">tiffany.es/jewelry/earrings/</p>
+</article>
+
+<article class="brand">
+  <header>
+    <h2>쇼메</h2>
+    <p class="bpick">추천 — Bee de Chaumet 이어커프 (로즈 골드·다이아몬드) — €2,510</p>
+  </header>
+  <p class="bwhy"><b>벌집 육각 면이 빛을 잘게 쪼갠다.</b> 다이아 없이 금만으로도 반짝임이 생기는 몇 안 되는 디자인이다. 가장 저렴한 화사 아이템이 <b>€1,210</b>부터.</p>
+  <table class="bt">
+    <thead><tr><th scope="col">제품</th><th scope="col">스페인</th><th scope="col">환급 후(원)</th></tr></thead>
+    <tbody><tr><th scope="row">Bee de Chaumet 후프 이어링 11mm (로즈 골드)</th><td>1,210 €</td><td>1,673,351</td></tr><tr><th scope="row">Bee de Chaumet 이어링 (옐로우 골드·다이아몬드 1)</th><td>1,600 €</td><td>2,212,695</td></tr><tr><th scope="row">Bee de Chaumet 이어커프 (로즈 골드·다이아몬드)</th><td>2,510 €</td><td>3,471,166</td></tr><tr><th scope="row">Bee de Chaumet 이어링 (로즈 골드·다이아몬드)</th><td>3,260 €</td><td>4,508,367</td></tr><tr><th scope="row">Bee de Chaumet 이어커프 (로즈 골드·다이아몬드)</th><td>3,390 €</td><td>4,688,148</td></tr><tr><th scope="row">Jeux de Liens 이어링 (화이트 골드·사파이어·다이아몬드)</th><td>10,700 €</td><td>14,797,400</td></tr></tbody>
+  </table>
+  <p class="bnote">스페인 사이트는 <b>`chaumet.com/en-es/`</b> 다(`/es-es/`는 404). 가격 표기가 `9 680,00 €`처럼 <b>공백+쉼표</b> 형식이라 일반 파서가 놓친다.</p>
+  <p class="bsrc">chaumet.com/en-es/collections/jewellery-earrings</p>
+</article>
+
+<article class="brand">
+  <header>
+    <h2>메시카</h2>
+    <p class="bpick">추천 — Move Uno 이어링 (로즈 골드·다이아몬드) — €1,590</p>
+  </header>
+  <p class="bwhy"><b>다이아몬드 3개가 실제로 움직인다.</b> 움직이는 다이아가 각도마다 빛을 되쏘아 <b>이 네 브랜드 중 화사 효과가 가장 직접적</b>이다. 단품 €800부터.</p>
+  <table class="bt">
+    <thead><tr><th scope="col">제품</th><th scope="col">스페인</th><th scope="col">환급 후(원)</th></tr></thead>
+    <tbody><tr><th scope="row">Move Uno 단품 이어링 (옐로우 골드)</th><td>800 €</td><td>1,106,348</td></tr><tr><th scope="row">Gatsby 클립 이어링 (옐로우 골드·다이아몬드)</th><td>1,250 €</td><td>1,728,668</td></tr><tr><th scope="row">Move Uno 이어링 (로즈 골드·다이아몬드)</th><td>1,590 €</td><td>2,198,866</td></tr><tr><th scope="row">Joy 브릴리언트 컷, 미니 (로즈 골드)</th><td>1,620 €</td><td>2,240,354</td></tr><tr><th scope="row">미니 Move Uno 후프 이어링 (옐로우 골드·다이아몬드)</th><td>1,980 €</td><td>2,738,211</td></tr></tbody>
+  </table>
+  <p class="bnote">고급 라인(So Move·Move Link)은 <b>€13,000~49,800</b>으로 이 페이지 기준을 크게 넘는다. 위 표는 <b>€2,000 이하 구간만</b> 추린 것이다.</p>
+  <p class="bsrc">messika.com/es/joyeria/categories/pendientes-diamantes</p>
+</article>
+
+<article class="brand">
+  <header>
+    <h2>불가리</h2>
+    <p class="bpick">추천 — Serpenti Viper 이어링 — €3,700</p>
+  </header>
+  <p class="bwhy"><b>뱀 비늘을 다이아로 세팅</b>해 작은 반짝임이 여러 개 흩어진다. 링 귀걸이라 턱선까지 빛이 내려온다.</p>
+  <table class="bt">
+    <thead><tr><th scope="col">제품</th><th scope="col">스페인</th><th scope="col">환급 후(원)</th></tr></thead>
+    <tbody><tr><th scope="row">Divas' Dream 단품 이어링</th><td>1,200 €</td><td>1,659,522</td></tr><tr><th scope="row">B.zero1 단품 이어링</th><td>1,850 €</td><td>2,558,429</td></tr><tr><th scope="row">Serpenti Viper 이어링</th><td>3,700 €</td><td>5,116,858</td></tr><tr><th scope="row">B.zero1 이어링</th><td>4,050 €</td><td>5,600,885</td></tr></tbody>
+  </table>
+  <p class="bnote"><b>조회 시점에 스페인·한국 사이트가 모두 로봇 차단(`Access Denied`)을 걸었다.</b> 위 값은 차단 전 CDP 로 읽은 것이고, 한국 가격은 끝내 확보하지 못했다.</p>
+  <p class="bsrc">bulgari.com/es-es/joyas/pendientes</p>
+</article>
+</section>
+
 <section class="tail">
   <h2>읽는 법과 주의</h2>
   <ul>
     <li><b>스페인 €는 공식 사이트 표시가</b>(IVA 21% 포함)입니다. 브랜드 공식 사이트에 직접 접속해 읽었습니다.</li>
     <li><b>환급 후 실구매 = 정가 × 0.87.</b> IVA 21% 중 대행사 수수료를 떼고 실제로 받는 비율이 13% 내외입니다.</li>
     <li><b>한국가는 카르티에·반클리프 공식 사이트 실측</b>입니다. 불가리 한국 사이트는 접근이 차단되어(로봇 차단) 비워 뒀습니다.</li>
-    <li>티파니·쇼메·메시카는 스페인 사이트가 가격을 렌더링하지 않아 이번 조사에서 뺐습니다.</li>
+    <li><b>티파니·쇼메·메시카·불가리는 CDP·헤드리스가 모두 막혀 Aside 브라우저로 읽었습니다.</b> 티파니는 스페인 사이트(`tiffany.es`)가, 쇼메는 `/en-es/` 경로가 정답이었고, 메시카는 JS 렌더링 뒤에 값이 있었습니다.</li>
+    <li><b>불가리 한국 가격은 끝내 확보하지 못했습니다</b> — 스페인·한국 사이트 모두 조회 시점에 로봇 차단(Access Denied)이었습니다. 위 불가리 값은 차단 전 조회분입니다.</li>
     <li>이미지는 네이버 이미지 검색 결과를 개인 확인용으로 내려받은 것입니다(재배포용 아님). 일부 제품은 사진을 확보하지 못했습니다.</li>
   </ul>
   <div class="warn">

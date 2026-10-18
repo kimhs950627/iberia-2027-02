@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>갤럭시 탭 — 스페인에서 사면 이득인가 · 이베리아 2027-02</title>
+<meta name="description" content="갤럭시 탭 S 라인을 스페인에서 살 때 한국보다 이득인지, 매장별 실측 가격과 일정에 끼우는 위치까지 정리.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Gowun+Batang:wght@400;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
@@ -17,109 +18,173 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:99;opa
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 a{color:var(--accent)}
-code{font-family:var(--font-mono);font-size:.82em;background:var(--paper-2);padding:1px 5px;border:1px solid var(--rule)}
+a:focus-visible,li:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+code{font-family:var(--font-mono);font-size:.84em;background:var(--paper-2);padding:1px 5px;border:1px solid var(--rule)}
 
+/* 캡션·라벨 11~12px 은 의도된 원장 스타일이다. 본문은 16px(--fs-body) 유지. */
 .topbar{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--rule)}
 .topbar .wrap{display:flex;align-items:baseline;gap:14px;padding-top:12px;padding-bottom:12px}
 .topbar .brand{font-family:var(--font-display);font-weight:700;font-size:var(--fs-small)}
 .topbar .links{margin-left:auto;display:flex;gap:14px;font-family:var(--font-mono);font-size:var(--fs-caption);flex-wrap:wrap}
 .topbar a{text-decoration:none;border-bottom:1px solid currentColor}
 
-.hero{padding:72px 0 40px;border-bottom:3px solid var(--rule-strong)}
+/* ---------- HERO : 비대칭 5 / 7 ---------- */
+.hero{border-bottom:3px solid var(--rule-strong)}
+.hero .wrap{display:grid;grid-template-columns:5fr 7fr;gap:56px;padding-top:64px;padding-bottom:48px;align-items:start}
 .kicker{font-family:var(--font-mono);font-size:var(--fs-caption);letter-spacing:.14em;
-  text-transform:uppercase;color:var(--accent);margin:0 0 20px}
-.hero h1{font-family:var(--font-display);font-weight:700;font-size:clamp(2rem,5vw,3.3rem);
-  line-height:1.08;letter-spacing:-.02em;margin:0 0 20px;text-wrap:balance}
-.hero h1 em{font-style:italic;color:var(--accent)}
-.hero .lede{max-width:60ch;font-size:var(--fs-lead);color:var(--ink-soft);margin:0 0 26px}
-.note{margin:24px 0 0;border:1px solid var(--rule);border-left:3px solid var(--accent);
-  background:var(--paper-2);padding:16px 20px;font-size:var(--fs-small);max-width:78ch}
-.note b{color:var(--accent)}
-.fig{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));max-width:880px;margin:24px 0 0}
-.fig div{border:1px solid var(--rule);background:var(--paper-2);padding:12px 14px}
-.fig dt{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
-.fig dd{margin:0;font-family:var(--font-display);font-weight:700;font-size:1.25rem}
-.fig dd small{display:block;font-family:var(--font-body);font-weight:400;font-size:12px;color:var(--muted)}
+  text-transform:uppercase;color:var(--accent);margin:0 0 18px}
+.hero h1{font-family:var(--font-display);font-weight:700;font-size:clamp(2rem,4.6vw,3.2rem);
+  line-height:1.06;letter-spacing:-.022em;margin:0 0 18px;text-wrap:balance}
+.hero h1 em{font-style:italic;color:var(--accent);display:block}
+.hero .lede{margin:0;font-size:var(--fs-lead);color:var(--ink-soft);max-width:34ch}
+.vstamp{margin:22px 0 0;display:inline-block;border:2px solid var(--accent);color:var(--accent);
+  font-family:var(--font-mono);font-size:var(--fs-small);font-weight:500;padding:8px 14px;letter-spacing:.02em}
+.ev{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:0;border-top:1px solid var(--rule)}
+.ev>div{padding:18px 16px 6px;border-bottom:3px solid var(--ink-soft)}
+.ev>div:first-child{padding-left:0}
+.ev .es{border-bottom-color:var(--accent)}
+.ev .tie{border-bottom-color:var(--rule)}
+.ev dt{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:6px}
+.ev .es dt{color:var(--accent)}
+.ev dd{margin:0;font-family:var(--font-display);font-weight:700;font-size:1.15rem;line-height:1.3}
+.ev dd small{display:block;font-family:var(--font-body);font-weight:400;font-size:12px;color:var(--muted);margin-top:2px}
+.hero .note{margin:22px 0 0;border-left:3px solid var(--rule-strong);background:var(--paper-2);
+  padding:14px 18px;font-size:var(--fs-small);max-width:62ch}
 
-section.block{max-width:var(--maxw);margin:0 auto;padding:56px 24px;border-bottom:1px solid var(--rule)}
-section.block>h2{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h3);
-  margin:0 0 8px;letter-spacing:-.01em}
-section.block>p.lead{margin:0 0 22px;font-size:var(--fs-small);color:var(--ink-soft);max-width:76ch}
+/* ---------- 섹션 ---------- */
+section.block{max-width:var(--maxw);margin:0 auto;padding:60px 24px}
+section.block.tight{padding-top:40px}
+section.block+section.block{border-top:1px solid var(--rule)}
+.block>h2{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h3);
+  margin:0 0 6px;letter-spacing:-.012em}
+.block>p.lead{margin:0 0 28px;font-size:var(--fs-small);color:var(--ink-soft);max-width:74ch}
 
-.tscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
-table.sum{width:100%;border-collapse:collapse;font-size:var(--fs-small)}
-table.sum caption{text-align:left;font-family:var(--font-mono);font-size:12px;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--muted);padding-bottom:10px}
-table.sum th,table.sum td{padding:12px 8px;border-bottom:1px solid var(--rule);text-align:right;
-  font-family:var(--font-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
-table.sum thead th{font-size:12px;letter-spacing:.06em;color:var(--muted);font-weight:500;
-  border-bottom:2px solid var(--rule-strong);text-transform:uppercase}
-table.sum th[scope=row]{text-align:left;font-family:var(--font-body);white-space:normal;width:24%}
-table.sum th[scope=row] small{display:block;font-family:var(--font-mono);font-size:11px;color:var(--muted)}
-table.sum td small{display:block;font-size:11px;color:var(--muted);font-weight:400}
-table.sum td.sp{background:var(--paper-2);font-weight:700}
-table.sum tr.es td.verdict{color:var(--accent);font-weight:700}
-table.sum tr.kr td.verdict{color:var(--ink-soft);font-weight:700}
-table.sum tr.tie td.verdict{color:var(--muted);font-weight:700}
-table.sum td.verdict{text-align:left;font-family:var(--font-body);white-space:normal;font-size:13px}
+/* ---------- DIVERGING BAR LADDER ---------- */
+.ladder{border-top:2px solid var(--rule-strong)}
+.row{display:grid;grid-template-columns:minmax(180px,26%) 1fr minmax(120px,15%);
+  gap:20px;align-items:center;padding:16px 0 10px;border-bottom:1px solid var(--rule)}
+.who{min-width:0}
+.who b{display:block;font-size:var(--fs-small);font-weight:700;line-height:1.35}
+.who .spec{display:block;font-family:var(--font-mono);font-size:11px;color:var(--muted)}
+.who .gen{float:right;font-family:var(--font-mono);font-size:11px;color:var(--muted)}
+.bar{position:relative;height:22px;background:var(--paper-2);border-left:1px solid var(--rule)}
+.axis{position:absolute;left:50%;top:-4px;bottom:-4px;width:1px;background:var(--rule-strong);opacity:.45}
+.fill{position:absolute;top:3px;bottom:3px;background:var(--ink-soft);min-width:4px;
+  animation:grow 520ms var(--ease) both;animation-delay:calc(var(--i) * 70ms)}
+.row.es .fill{left:50%;background:var(--accent);transform-origin:left center}
+.row.kr .fill{right:50%;background:var(--ink-soft);transform-origin:right center}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.num{text-align:right}
+.num b{display:block;font-family:var(--font-mono);font-weight:500;font-size:var(--fs-small);
+  font-variant-numeric:tabular-nums}
+.row.es .num b{color:var(--accent)}
+.num small{display:block;font-family:var(--font-mono);font-size:11px;color:var(--muted)}
+.ref{grid-column:1 / -1;margin:-2px 0 0;font-size:12px;color:var(--muted);line-height:1.65}
+.ref b{color:var(--ink-soft);font-family:var(--font-mono);font-weight:500}
+.ref span{margin-left:14px}
+.ladder-note{margin:26px 0 0;border-left:3px solid var(--accent);background:var(--paper-2);
+  padding:14px 18px;font-size:var(--fs-small);max-width:74ch}
 
-.store{border:1px solid var(--rule);border-top:3px solid var(--rule-strong);background:var(--paper-clean);
-  padding:26px 28px;margin:0 0 22px}
-.store.win{border-top-color:var(--accent)}
-.store.es{border-top-color:var(--accent)}
-.store-head .tag{display:inline-block;font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--paper);background:var(--accent);padding:2px 8px}
-.store.fit .tag{background:var(--rule-strong)}
-.store-head h2{font-family:var(--font-display);font-weight:700;font-size:1.5rem;margin:10px 0 2px}
-.store-head .price{margin:0;font-family:var(--font-mono);font-size:var(--fs-small);color:var(--ink-soft)}
-.store-head .price span{color:var(--muted)}
-ul.why{margin:18px 0;padding-left:20px;font-size:var(--fs-small)}
-ul.why li{margin-bottom:9px}
-.store .fig{margin:0 0 18px;max-width:none;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
-.fit{font-size:var(--fs-small);background:var(--paper-2);border-left:3px solid var(--rule-strong);
-  padding:12px 16px;margin:0 0 12px}
+/* ---------- 매장 : dominant 1 + 2 ---------- */
+.store{border-top:3px solid var(--ink-soft);background:var(--paper-clean);padding:26px 28px}
+.store.dominant{border-top-color:var(--accent);padding:34px 36px}
+.stamp{display:inline-block;font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;background:var(--accent);color:var(--paper);padding:3px 9px}
+.stamp.off{background:transparent;color:var(--ink-soft);border:1px solid var(--rule)}
+.store h3{font-family:var(--font-display);font-weight:700;font-size:1.45rem;margin:12px 0 4px;letter-spacing:-.01em}
+.store .lede{margin:0 0 20px;font-size:var(--fs-lead);color:var(--ink-soft)}
+.store-grid{display:grid;grid-template-columns:1fr 260px;gap:40px;align-items:start}
+ul.pts{margin:0 0 16px;padding-left:20px;font-size:var(--fs-small)}
+ul.pts li{margin-bottom:9px}
+.second{font-size:var(--fs-small);background:var(--paper-2);border-left:3px solid var(--rule-strong);
+  padding:12px 16px;margin:0 0 10px}
+.caveat{font-size:var(--fs-small);color:var(--muted);margin:0 0 10px}
 .src{margin:0;font-family:var(--font-mono);font-size:12px}
 .src a{text-decoration:none;border-bottom:1px solid currentColor}
+dl.math{margin:0;border-top:1px solid var(--rule)}
+dl.math>div{padding:11px 0;border-bottom:1px solid var(--rule)}
+dl.math dt{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+dl.math dd{margin:2px 0 0;font-family:var(--font-mono);font-size:1.05rem;font-variant-numeric:tabular-nums}
+dl.math dd small{display:block;font-size:11px;color:var(--muted)}
+dl.math>div.hi dd{color:var(--accent);font-weight:500}
+.store-pair{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;align-items:start}
+.store-pair .store{padding:22px 24px}
+.store-pair .store h3{font-size:1.2rem}
 
-table.ref,table.sched{width:100%;border-collapse:collapse;font-size:var(--fs-small);max-width:940px}
-table.ref th,table.ref td{padding:10px 8px;border-bottom:1px solid var(--rule);font-family:var(--font-mono);
-  font-variant-numeric:tabular-nums}
-table.ref th[scope=row]{text-align:left;font-family:var(--font-body);width:40%}
-table.ref td{text-align:right}
-table.ref tr.hi th,table.ref tr.hi td{background:var(--paper-2);font-weight:700}
-table.sched th,table.sched td{padding:12px 8px;border-bottom:1px solid var(--rule);text-align:left;
-  vertical-align:top;font-size:var(--fs-small)}
-table.sched thead th{font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
-  color:var(--muted);font-weight:500;border-bottom:2px solid var(--rule-strong)}
-table.sched th[scope=row]{font-family:var(--font-mono);white-space:nowrap}
-table.sched tr.hi td{background:var(--paper-2)}
-table.sched tr.hi td.move{font-weight:700;color:var(--accent)}
-table.sched td.move{font-family:var(--font-mono);white-space:nowrap}
+/* ---------- 환급 계단 ---------- */
+.rail{list-style:none;margin:0;padding:0;display:flex;gap:0;align-items:flex-end;border-top:2px solid var(--rule-strong)}
+.rail .step{flex:1;border-left:1px solid var(--rule);padding:14px 12px 16px;
+  background:var(--paper-2);animation:rise 420ms var(--ease) both;animation-delay:calc(var(--i) * 60ms)}
+.rail .step:last-child{border-right:1px solid var(--rule)}
+@keyframes rise{from{transform:translateY(10px);opacity:0}to{transform:none;opacity:1}}
+.rail .step.gate{background:var(--accent);color:var(--paper)}
+.rail .amt{display:block;font-family:var(--font-mono);font-size:11px;line-height:1.5}
+.rail .pct{display:block;font-family:var(--font-display);font-weight:700;font-size:1.3rem;margin-top:6px}
+.rail .step.gate .amt{color:#F6F2EA}
+.gate-tag{display:block;font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;margin-top:4px}
 
-.caution{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:8px}
-.caut{border:1px solid var(--rule);border-left:3px solid var(--accent);background:var(--paper-2);padding:16px 18px}
-.caut h3{font-family:var(--font-body);font-weight:700;font-size:var(--fs-small);margin:0 0 8px;color:var(--accent)}
-.caut p{margin:0;font-size:var(--fs-small);color:var(--ink-soft)}
+/* ---------- 일정 레일 ---------- */
+.timeline{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  border-top:2px solid var(--rule-strong)}
+.timeline .node{padding:22px 22px 24px;border-right:1px solid var(--rule);position:relative}
+.timeline .node:last-child{border-right:none}
+.timeline .node.best{background:var(--paper-2)}
+.timeline .node.best::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--accent)}
+.day{display:block;font-family:var(--font-display);font-weight:700;font-size:1.6rem;line-height:1;color:var(--accent)}
+.date{display:block;font-family:var(--font-mono);font-size:11px;color:var(--muted);margin:4px 0 10px}
+.timeline b{display:block;font-size:var(--fs-small);font-weight:700}
+.where{display:block;font-size:12px;color:var(--muted);margin-bottom:12px}
+.extra{display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:12px}
+.extra i{display:block;height:6px;width:var(--w);background:var(--ink-soft);min-width:6px}
+.node.best .extra i{background:var(--accent)}
+.timeline p{margin:12px 0 0;font-size:12px;color:var(--ink-soft);line-height:1.6;max-width:34ch}
 
-.tail{max-width:var(--maxw);margin:0 auto;padding:56px 24px 96px}
-.tail h2{font-family:var(--font-display);font-size:var(--fs-h3);margin:0 0 16px}
+/* ---------- 함정 : 행잉 번호 ---------- */
+.caution{list-style:none;margin:0;padding:0;counter-reset:c}
+.caution li{position:relative;padding:0 0 20px 56px;border-bottom:1px solid var(--rule);margin-bottom:20px}
+.caution li:last-child{border-bottom:none;margin-bottom:0}
+.caution li::before{counter-increment:c;content:counter(c,decimal-leading-zero);
+  position:absolute;left:0;top:-2px;font-family:var(--font-display);font-weight:700;font-size:1.5rem;
+  color:transparent;-webkit-text-stroke:1.2px var(--accent)}
+.caution h3{margin:0 0 6px;font-family:var(--font-body);font-weight:700;font-size:var(--fs-body)}
+.caution p{margin:0;font-size:var(--fs-small);color:var(--ink-soft);max-width:78ch}
+
+.tail{max-width:var(--maxw);margin:0 auto;padding:52px 24px 96px;border-top:1px solid var(--rule)}
+.tail h2{font-family:var(--font-display);font-size:var(--fs-h3);margin:0 0 14px}
 .tail ul{font-size:var(--fs-small);color:var(--ink-soft);padding-left:18px}
-.tail li{margin-bottom:7px}
-.tail p{font-size:var(--fs-small);color:var(--ink-soft)}
+.tail li{margin-bottom:6px}
+.tail p{font-size:var(--fs-small);color:var(--ink-soft);max-width:78ch}
 
-@media (max-width:820px){
-  .wrap,section.block,.tail{padding-left:22px;padding-right:22px}
-  table.sum{font-size:12px}
-  table.sum th,.sum td{padding:9px 4px}
-  table.sum th[scope=row]{width:30%}
-  table.sum thead th:nth-child(3),table.sum td:nth-child(3){display:none}
-  table.sched thead th:nth-child(2),table.sched td:nth-child(2){display:none}
-  .store{padding:20px 18px}
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;gap:32px;padding-top:44px}
+  .store-grid{grid-template-columns:1fr;gap:20px}
+  .store.dominant{padding:24px 22px}
+  .store-pair{grid-template-columns:1fr}
+  .timeline{grid-template-columns:1fr}
+  .timeline .node{border-right:none;border-bottom:1px solid var(--rule)}
+  .rail{display:block;border-top:none}
+  .rail .step{border-left:3px solid var(--rule);border-right:none;padding:12px 14px}
+  .rail .step.gate{border-left-color:var(--accent)}
+}
+@media (max-width:620px){
+  .wrap,section.block,.tail{padding-left:20px;padding-right:20px}
+  .row{grid-template-columns:1fr;gap:8px;padding:14px 0}
+  .bar{order:2}
+  .num{text-align:left}
+  .num b{font-size:var(--fs-body)}
+  .ev{grid-template-columns:1fr}
+  .ev>div{padding:14px 0 4px}
+  .ref span{display:block;margin:2px 0 0}
+}
+@media (prefers-reduced-motion:reduce){
+  .fill,.rail .step{animation:none}
 }
 @media print{
-  .topbar,.tail,.src{display:none}
-  section.block{break-inside:avoid;padding:18px 0}
-  .store{break-inside:avoid;break-before:auto}
+  .topbar,.src,.tail ul{display:none}
+  section.block{padding:20px 0}
+  .row,.store,.timeline .node,.caution li{break-inside:avoid}
   body::after{display:none}
 }
 </style>
@@ -141,175 +206,287 @@ table.sched td.move{font-family:var(--font-mono);white-space:nowrap}
 </div>
 
 <main>
-<section class="hero wrap">
-  <p class="kicker">Galaxy Tab S · Spain vs Korea · 2026-10-18</p>
-  <h1>스페인에서 사면 <em>이득인가</em></h1>
-  <p class="lede">매장 페이지를 브라우저로 직접 열어 읽었다. 결론은 <b>“직전 세대 울트라의 고용량만 이득”</b>이다.
-    최신 S12 울트라와 기본형은 한국이 싸다. 그리고 이득은 <b>한국 출고가와 비교할 때</b> 커지고,
-    한국 <b>최대혜택가</b>(삼성 20% 환급·카드 조건)와 비교하면 256GB는 역전된다.</p>
-
-  <dl class="fig">
-    <div><dt>스페인 이득</dt><dd>S11 Ultra 1TB<small>약 40~46만원</small></dd></div>
-    <div><dt>사실상 본전</dt><dd>S11 Ultra 512GB<small>6만원 차</small></dd></div>
-    <div><dt>한국이 싸다</dt><dd>S12 Ultra · 256GB · S10+<small>최신과 기본형</small></dd></div>
-    <div><dt>환율</dt><dd>₩1,590/€<small>3개월 평균 고정</small></dd></div>
-  </dl>
-
-  <div class="note">
-    <b>왜 고용량이 유리한가.</b> 스페인은 용량 한 단계가 <b>€100</b>(≈15.9만원)인데,
-    한국은 2026년 메모리 폭등으로 256→512GB <b>+29.9만원</b>, 512GB→1TB <b>+59.9만원</b> 올랐다.
-    한국의 고용량 인상폭이 그대로 스페인 이득이 된다.
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Galaxy Tab S · Spain vs Korea · 2026-10-18</p>
+      <h1>직전 세대 <em>울트라 고용량만 이득</em></h1>
+      <p class="lede">최신 S12 울트라와 기본형은 한국이 싸다. 스페인 이득은
+        <b>한국 출고가와 비교할 때</b> 커지고, 최대혜택가와 비교하면 256GB는 역전된다.</p>
+      <p class="vstamp">매장은 D11 엘코르테 잉글레스 — 추가 이동 0분</p>
+    </div>
+    <div>
+      <dl class="ev">
+<div class="ev es"><dt>이득</dt><dd>S11 Ultra 1TB<small>약 40~46만원</small></dd></div>
+<div class="ev tie"><dt>본전</dt><dd>S11 Ultra 512GB<small>6만원 차</small></dd></div>
+<div class="ev kr"><dt>한국</dt><dd>S12 Ultra · 256GB · S10+<small>최신과 기본형</small></dd></div>
+      </dl>
+      <p class="note"><b>왜 고용량이 유리한가.</b> 스페인은 용량 한 단계가 <b>€100</b>(≈15.9만원)인데,
+        한국은 2026년 메모리 폭등으로 256→512GB <b>+29.9만원</b>, 512GB→1TB <b>+59.9만원</b> 올랐다.
+        한국의 고용량 인상폭이 그대로 스페인 이득이 된다.</p>
+    </div>
   </div>
 </section>
 
 <section class="block">
   <h2>모델별 판정</h2>
-  <p class="lead">한국 출고가 · 한국 최대혜택가 · 스페인 실구매(환급 반영) · 입국세까지 넣은 금액.
-    입국세는 부부 합산 면세 한도 ₩2,219,904(US$1,600) 초과분에 약 20%로 계산했다.</p>
-  <div class="tscroll">
-  <table class="sum">
-    <caption>실구매가 비교 — 2026-10-18 조회</caption>
-    <thead>
-      <tr><th scope="col"></th><th scope="col">한국 출고가</th><th scope="col">한국 최대혜택가</th>
-          <th scope="col">스페인 정가</th><th scope="col">스페인 + 입국세</th><th scope="col">판정</th></tr>
-    </thead>
-    <tbody>
-<tr class="kr"><th scope="row">Tab S12 Ultra 256GB<small>Wi-Fi</small></th><td>1,899,700<small>출고가</small></td><td>—</td><td class="sp">€1,539<small>환급 13.70%</small></td><td class="sp">2,111,212</td><td class="verdict">한국이 21만원 싸다 — 최신은 한국<small>차이 211,512</small></td></tr>
-<tr class="es"><th scope="row">Tab S11 Ultra 1TB<small>Wi-Fi</small></th><td>2,647,700<small>출고가</small></td><td>—</td><td class="sp">€1,599<small>환급 14.05%</small></td><td class="sp">2,184,624</td><td class="verdict">스페인이 46만원 싸다 (입국세 빼면 40만)<small>차이 463,076</small></td></tr>
-<tr class="tie"><th scope="row">Tab S11 Ultra 512GB<small>Wi-Fi</small></th><td>2,048,200<small>출고가</small></td><td>1,777,682</td><td class="sp">€1,253<small>환급 13.70%</small></td><td class="sp">1,718,875</td><td class="verdict">한국 최대혜택가와 6만원 차 — 사실상 본전<small>차이 58,807</small></td></tr>
-<tr class="kr"><th scope="row">Tab S11 Ultra 256GB<small>Wi-Fi</small></th><td>1,749,000<small>출고가</small></td><td>1,507,990</td><td class="sp">€999<small>환급 불가</small></td><td class="sp">1,587,990</td><td class="verdict">한국 최대혜택가가 8만원 싸다<small>차이 80,000</small></td></tr>
-<tr class="es"><th scope="row">Tab S10 Ultra 256GB<small>Wi-Fi</small></th><td>1,610,000<small>출고가</small></td><td>—</td><td class="sp">€979<small>환급 12.85%</small></td><td class="sp">1,356,227</td><td class="verdict">스페인이 25만원 싸다 — 재고·환급 확인 필요<small>차이 253,773</small></td></tr>
-<tr class="kr"><th scope="row">Tab S11 (11") 128GB<small>Wi-Fi</small></th><td>1,149,500<small>출고가</small></td><td>1,006,900</td><td class="sp">€899<small>환급 12.90%</small></td><td class="sp">1,244,687</td><td class="verdict">한국이 24만원 싸다<small>차이 237,787</small></td></tr>
-<tr class="kr"><th scope="row">Tab S10+ 256GB<small>Wi-Fi</small></th><td>1,399,200<small>출고가</small></td><td>980,000</td><td class="sp">€1,219<small>환급 13.70%</small></td><td class="sp">1,672,233</td><td class="verdict">한국이 70만원 싸다 — 한국 특가가 압도적<small>차이 692,233</small></td></tr>
-    </tbody>
-  </table>
+  <p class="lead">막대는 <b>한국에서 살 수 있는 가장 싼 값</b>(최대혜택가가 있으면 그 값, 없으면 출고가)과
+    <b>스페인 실구매 + 입국세</b>의 차이다. 가운데 선이 0이고, 오른쪽이 스페인 이득, 왼쪽이 한국 이득이다.
+    스페인 실구매에는 환급률(€1,000.01 이상 13.70~14.05%)을 반영했고, 입국세는 부부 합산 면세 한도
+    ₩2,219,904 초과분에 약 20%로 계산했다.</p>
+  <div class="ladder">
+
+<article class="row kr" style="--i:0">
+  <div class="who">
+    <span class="gen">현행</span>
+    <b>Tab S12 Ultra</b>
+    <span class="spec">14.6" · 12GB/256GB · Wi-Fi</span>
   </div>
+  <div class="bar" role="img" aria-label="한국이 싸다 211,512원 차이">
+    <span class="axis" aria-hidden="true"></span>
+    <span class="fill" style="--w:15.28%" aria-hidden="true"></span>
+  </div>
+  <div class="num">
+    <b>−211,512</b><small>한국이 싸다</small>
+  </div>
+  <p class="ref">스페인 <b>2,111,212</b> <span>€1,539 · 환급 13.70% · 면세</span>
+     <span>출고가 1,899,700 대비 −211,512</span></p>
+</article>
+
+<article class="row es" style="--i:1">
+  <div class="who">
+    <span class="gen">1세대 전</span>
+    <b>Tab S11 Ultra</b>
+    <span class="spec">14.6" · 16GB/1TB · Wi-Fi</span>
+  </div>
+  <div class="bar" role="img" aria-label="스페인이 싸다 463,076원 차이">
+    <span class="axis" aria-hidden="true"></span>
+    <span class="fill" style="--w:33.45%" aria-hidden="true"></span>
+  </div>
+  <div class="num">
+    <b>+463,076</b><small>스페인이 싸다</small>
+  </div>
+  <p class="ref">스페인 <b>2,184,624</b> <span>€1,599 · 환급 14.05% · 면세</span>
+     <span>출고가 2,647,700 대비 +463,076</span></p>
+</article>
+
+<article class="row es" style="--i:2">
+  <div class="who">
+    <span class="gen">1세대 전</span>
+    <b>Tab S11 Ultra</b>
+    <span class="spec">14.6" · 12GB/512GB · Wi-Fi</span>
+  </div>
+  <div class="bar" role="img" aria-label="사실상 본전 58,807원 차이">
+    <span class="axis" aria-hidden="true"></span>
+    <span class="fill" style="--w:4.25%" aria-hidden="true"></span>
+  </div>
+  <div class="num">
+    <b>+58,807</b><small>사실상 본전</small>
+  </div>
+  <p class="ref">스페인 <b>1,718,875</b> <span>€1,253 · 환급 13.70% · 면세</span>
+     <span>출고가 2,048,200 대비 +329,325 · 최대혜택가 1,777,682 대비 +58,807</span></p>
+</article>
+
+<article class="row kr" style="--i:3">
+  <div class="who">
+    <span class="gen">1세대 전</span>
+    <b>Tab S11 Ultra</b>
+    <span class="spec">14.6" · 12GB/256GB · Wi-Fi</span>
+  </div>
+  <div class="bar" role="img" aria-label="사실상 본전 80,000원 차이">
+    <span class="axis" aria-hidden="true"></span>
+    <span class="fill" style="--w:5.78%" aria-hidden="true"></span>
+  </div>
+  <div class="num">
+    <b>−80,000</b><small>사실상 본전</small>
+  </div>
+  <p class="ref">스페인 <b>1,587,990</b> <span>€999 · 환급 불가 · 면세</span>
+     <span>출고가 1,749,000 대비 +161,010 · 최대혜택가 1,507,990 대비 −80,000</span></p>
+</article>
+
+<article class="row es" style="--i:4">
+  <div class="who">
+    <span class="gen">2세대 전</span>
+    <b>Tab S10 Ultra</b>
+    <span class="spec">14.6" · 12GB/256GB · Wi-Fi</span>
+  </div>
+  <div class="bar" role="img" aria-label="스페인이 싸다 253,773원 차이">
+    <span class="axis" aria-hidden="true"></span>
+    <span class="fill" style="--w:18.33%" aria-hidden="true"></span>
+  </div>
+  <div class="num">
+    <b>+253,773</b><small>스페인이 싸다</small>
+  </div>
+  <p class="ref">스페인 <b>1,356,227</b> <span>€979 · 환급 12.85% · 면세</span>
+     <span>출고가 1,610,000 대비 +253,773</span></p>
+</article>
+
+<article class="row kr" style="--i:5">
+  <div class="who">
+    <span class="gen">1세대 전</span>
+    <b>Tab S11</b>
+    <span class="spec">11.0" · 12GB/128GB · Wi-Fi</span>
+  </div>
+  <div class="bar" role="img" aria-label="한국이 싸다 237,787원 차이">
+    <span class="axis" aria-hidden="true"></span>
+    <span class="fill" style="--w:17.18%" aria-hidden="true"></span>
+  </div>
+  <div class="num">
+    <b>−237,787</b><small>한국이 싸다</small>
+  </div>
+  <p class="ref">스페인 <b>1,244,687</b> <span>€899 · 환급 12.90% · 면세</span>
+     <span>출고가 1,149,500 대비 −95,187 · 최대혜택가 1,006,900 대비 −237,787</span></p>
+</article>
+
+<article class="row kr" style="--i:6">
+  <div class="who">
+    <span class="gen">2세대 전</span>
+    <b>Tab S10+</b>
+    <span class="spec">12.4" · 12GB/256GB · Wi-Fi</span>
+  </div>
+  <div class="bar" role="img" aria-label="한국이 싸다 692,233원 차이">
+    <span class="axis" aria-hidden="true"></span>
+    <span class="fill" style="--w:50.00%" aria-hidden="true"></span>
+  </div>
+  <div class="num">
+    <b>−692,233</b><small>한국이 싸다</small>
+  </div>
+  <p class="ref">스페인 <b>1,672,233</b> <span>€1,219 · 환급 13.70% · 면세</span>
+     <span>출고가 1,399,200 대비 −273,033 · 최대혜택가 980,000 대비 −692,233</span></p>
+</article>
+  </div>
+  <p class="ladder-note"><b>512GB 막대가 눈에 띄게 짧은 것이 요점이다.</b> 6만원 차이 — 사실상 본전이다.
+    확실한 이득은 <b>1TB</b> 하나뿐이고, 반대편에서는 <b>S10+가 69만원</b> 차이로 한국 특가가 이긴다.
+    한국 특가(삼성 20% 환급·카드 조건)를 못 끌어내면 스페인 쪽으로 20~35만원 더 기운다.</p>
 </section>
 
 <section class="block">
-  <h2>매장 세 곳 — 실측</h2>
-  <p class="lead">512GB(Wi-Fi) 기준. 스페인은 <b>IVA 포함 표시가</b>이고, 환급은 대행사 수수료를 뺀 뒤
+  <h2>매장 세 곳</h2>
+  <p class="lead">512GB(Wi-Fi) 기준. 스페인 표시가는 <b>IVA 포함</b>이고, 환급은 대행사 수수료를 뺀 뒤
     카드로 2주~3개월 뒤에 들어온다.</p>
 
-<article class="store win">
-  <header class="store-head">
-    <span class="tag">최저가 · 환급 없음</span>
-    <h2>삼성닷컴 ES</h2>
-    <p class="price">€1,099 <span>정가 €1,399</span> · Tax Free <b>불가</b></p>
-  </header>
-  <ul class="why"><li>스페인 판매 <b>최저가</b>다. 512GB가 €1,099, 256GB가 €999(정가 €1,199).</li><li>그런데 <b>삼성 온라인몰은 Tax Free 서류(DIVA)를 발급하지 않는다</b> — 삼성 공식 답변과 커뮤니티 확인.</li><li>그래서 환급 13.7%(€150)를 <b>포기</b>하는 셈이다. 현금 €1,099 그대로 지불한다.</li></ul>
-  
-  <p class="fit"><b>일정에 끼우기</b> — 스페인 주소로 <b>배송</b>이라 호텔 도착일(D9)에 맞추거나, 결제만 온라인으로 하고 환급을 포기한다.</p>
-  <p class="src"><a href="https://www.samsung.com/es/tablets/galaxy-tab-s11/buy/">매장 페이지</a></p>
+<article class="store dominant">
+  <span class="stamp">일정에 이미 있음 · 추가 이동 0분</span>
+  <h3>엘코르테 잉글레스</h3>
+  <p class="lede">D11에 그냥 들르면 끝난다</p>
+  <div class="store-grid">
+    <div>
+      <ul class="pts"><li><b>D11(2/26) 일정에 이미 들어 있다</b> — "10:30 El Corte Inglés — 즉시 환급". 추가 이동이 0분이다.</li><li>실구매 <b>€1,121 = 1,781,984원</b>. 미디어마르크트보다 <b>6만 3천원</b> 비싸다.</li><li><b>당일 수출</b>이라 "3개월 내 수출" 조건이 자동 충족된다. International Shopping Bureau에서 서류를 한 번에 처리한다.</li></ul>
+      <p class="second">1TB는 €1,599(정가 €1,839) · 환급 14.05% → <b>2,184,624원</b>. 1TB는 이 매장이 유일하게 실측된 스페인 경로다.</p>
+      <p class="caveat">512GB Wi-Fi 재고는 방문 전 확인 — 조회 시점에 같은 매장의 "Wi-Fi+5G" 변형은 품절로 표시됐다.</p>
+      <p class="src"><a href="https://www.elcorteingles.es/electronica/A56390882-8806097711834-pr-tablet-samsung-galaxy-tab-s11-ultra-wi-fi-5g-12gb-512gb-gris-512-gb-12-gb-ram/">엘코르테 잉글레스 — Tab S11 Ultra 512GB</a></p>
+    </div>
+    <dl class="math">
+      <div><dt>매장가</dt><dd>€1,299<small>정가 €1,539 · 15% 할인</small></dd></div>
+      <div><dt>환급 13.70%</dt><dd>€177.96</dd></div>
+      <div class="hi"><dt>실구매</dt><dd>₩1,781,978</dd></div>
+    </dl>
+  </div>
 </article>
+  <div class="store-pair">
 
-<article class="store es">
-  <header class="store-head">
-    <span class="tag">512GB 실질 최저</span>
-    <h2>미디어마르크트 ES</h2>
-    <p class="price">€1,253 <span>재고 있음</span> · Tax Free <b>13.70%</b></p>
-  </header>
-  <ul class="why"><li><b>자체 Tax Free 안내 페이지</b>가 있어 매장에서 DIVA 서류를 받을 수 있다.</li><li>€1,253 × 13.70% = €171.66 환급 → 실구매 <b>€1,081.34 = 1,718,868원</b>.</li><li>삼성닷컴(€1,099, 환급 없음 = 1,746,948원)보다 <b>2만 8천원</b> 싸다 — 차이가 크지 않다.</li></ul>
-  <dl class="fig"><div><dt>환급 후 실구매</dt><dd>₩1,718,875</dd></div><div><dt>환급액</dt><dd>€171.66</dd></div></dl>
-  <p class="fit"><b>일정에 끼우기</b> — 바르셀로나 시내 매장. 호텔(H10 Casanova · Gran Via)에서 <b>도보 15~20분</b> 추가. D10 쇼핑 동선에 붙인다.</p>
-  <p class="src"><a href="https://www.mediamarkt.es/es/brand/samsung/tablets/galaxy-tab-s11">매장 페이지</a></p>
+<article class="store">
+  <span class="stamp off">512GB 실질 최저</span>
+  <h3>미디어마르크트 ES</h3>
+  <ul class="pts"><li><b>자체 Tax Free 안내 페이지</b>가 있어 매장에서 DIVA 서류를 받을 수 있다.</li><li>€1,253 × 13.70% = €171.66 환급 → 실구매 <b>€1,081 = 1,718,875원</b>.</li></ul>
+  <p class="second">바르셀로나 시내 매장. 호텔(H10 Casanova · Gran Via)에서 <b>도보 15~20분</b> 추가 — D10 쇼핑 동선에 붙인다.</p>
+  <dl class="math"><div><dt>매장가</dt><dd>€1,253<small>재고 있음</small></dd></div><div class="hi"><dt>환급 후</dt><dd>₩1,718,875</dd></div></dl>
+  <p class="src"><a href="https://www.mediamarkt.es/es/brand/samsung/tablets/galaxy-tab-s11">미디어마르크트 — Galaxy Tab S11</a></p>
 </article>
-
-<article class="store fit">
-  <header class="store-head">
-    <span class="tag">일정에 이미 있음 · 추가 이동 0분</span>
-    <h2>엘코르테 잉글레스</h2>
-    <p class="price">€1,299 <span>정가 €1,539 · 15% 할인</span> · Tax Free <b>13.70%</b></p>
-  </header>
-  <ul class="why"><li><b>D11(2/26) 일정에 이미 들어 있다</b> — "10:30 El Corte Inglés — 즉시 환급". 추가 이동이 0분이다.</li><li>실구매 <b>€1,121.04 = 1,781,984원</b>. 미디어마르크트보다 <b>6만 3천원</b> 비싸다.</li><li><b>당일 수출</b>이라 "3개월 내 수출" 조건이 자동 충족되고, International Shopping Bureau에서 서류를 한 번에 처리한다.</li></ul>
-  <dl class="fig"><div><dt>환급 후 실구매</dt><dd>₩1,781,978</dd></div><div><dt>환급액</dt><dd>€177.96</dd></div></dl>
-  <p class="fit"><b>일정에 끼우기</b> — 1TB는 €1,599(정가 €1,839). 환급 14.05% → <b>2,184,632원</b>. 1TB는 이 매장이 유일하게 실측된 스페인 경로다. <b>512GB Wi-Fi 재고는 방문 전 확인</b> — 조회 시점에 같은 매장의 'Wi-Fi+5G' 변형은 품절로 표시됐다.</p>
-  <p class="src"><a href="https://www.elcorteingles.es/electronica/A56390882-8806097711834-pr-tablet-samsung-galaxy-tab-s11-ultra-wi-fi-5g-12gb-512gb-gris-512-gb-12-gb-ram/">엘코르테 잉글레스 — Tab S11 Ultra 512GB 매장 페이지</a></p>
+<article class="store">
+  <span class="stamp off">최저가 · 환급 불가</span>
+  <h3>삼성닷컴 ES</h3>
+  <ul class="pts"><li>스페인 판매 <b>최저가</b>다. 512GB €1,099, 256GB €999(정가 €1,199).</li><li>그런데 <b>삼성 온라인몰은 Tax Free 서류(DIVA)를 발급하지 않는다</b> — 공식 답변으로 확인.</li></ul>
+  <p class="second">스페인 주소로 <b>배송</b>이라 호텔 도착일(D9)에 맞추거나, 결제만 온라인으로 하고 환급을 포기한다.</p>
+  <dl class="math"><div class="hi"><dt>매장가 · 환급 불가</dt><dd>€1,099<small>정가 €1,399</small></dd></div></dl>
+  <p class="src"><a href="https://www.samsung.com/es/tablets/galaxy-tab-s11/buy/">삼성닷컴 ES — Tab S11 구매</a></p>
 </article>
-  <div class="note">
-    <b>핵심 구조.</b> 최저가 매장(삼성닷컴 ES, 환급 불가)과 환급 가능 매장(미디어마르크트, €154 비쌈)의
-    최종액이 <b>€1,081 ~ €1,099로 사실상 같다.</b> 그래서 환급은 “보너스”가 아니라
-    <b>최저가를 포기한 대가</b>다. 엘코르테 잉글레스는 일정에 이미 있어 <b>이동 0분</b>이지만 <b>+6.3만원</b>이다.
   </div>
 </section>
 
 <section class="block">
-  <h2>환급률 — 스페인 재무부 최소 환급표</h2>
-  <p class="lead">Global Blue·Planet이 지급해야 하는 <b>법정 최소 환급액</b>(AEAT)이다.
-    실수령은 이 값 근처에서 정해진다.</p>
-  <div class="tscroll">
-  <table class="ref">
-    <caption class="sr-only">구매액별 최소 환급</caption>
-    <thead><tr><th scope="col">구매액 (IVA 포함)</th><th scope="col">최소 환급</th><th scope="col">가격 대비</th></tr></thead>
-    <tbody>
-<tr><th scope="row">€875.01 ~ 900.00</th><td>€116.00</td><td>12.9%</td></tr>
-<tr><th scope="row">€975.01 ~ 1,000.00</th><td>€128.50</td><td>12.85%</td></tr>
-<tr class=hi><th scope="row">€1,000.01 ~ 1,500.00</th><td>13.70%</td><td>13.70%</td></tr>
-<tr class=hi><th scope="row">€1,500.01 ~ 2,000.00</th><td>14.05%</td><td>14.05%</td></tr>
-<tr><th scope="row">€3,000.01 ~ 4,000.00</th><td>14.90%</td><td>14.90%</td></tr>
-<tr><th scope="row">€5,000 초과</th><td>15.70%</td><td>15.70%</td></tr>
-    </tbody>
-  </table>
-  </div>
-  <div class="note">
-    <b>€1,000.01을 넘겨야 환급률이 12.85% → 13.70%로 뛴다.</b> 512GB(€1,253)·1TB(€1,599)는 자동 충족이다.
-    21%가 아닌 이유 — ① IVA 21%는 세전가 기준이라 가격에 든 부가세는 <b>17.36%</b>뿐이고,
-    ② 대행사가 그 부가세의 <b>20~27%</b>를 떼간다(누진).
-    <b>한 매장·같은 날·한 영수증</b>으로 합쳐야 누진 수수료에서 유리하다.
-  </div>
+  <h2>환급률 — €1,000.01 문턱</h2>
+  <p class="lead">스페인 재무부(AEAT)가 정한 <b>최소 환급액</b>이다. Global Blue·Planet은 이 값 이상을
+    지급해야 하고, 실수령은 이 근처에서 정해진다.</p>
+  <ul class="rail">
+<li class="step" style="--i:0"><span class="amt">€975.01 ~ 1,000.00</span><span class="pct">€128.50</span></li>
+<li class="step gate" style="--i:1"><span class="amt">€1,000.01 ~ 1,500.00</span><span class="pct">13.70%</span><span class="gate-tag">문턱</span></li>
+<li class="step" style="--i:2"><span class="amt">€1,500.01 ~ 2,000.00</span><span class="pct">14.05%</span></li>
+<li class="step" style="--i:3"><span class="amt">€3,000.01 ~ 4,000.00</span><span class="pct">14.90%</span></li>
+<li class="step" style="--i:4"><span class="amt">€5,000 초과</span><span class="pct">15.70%</span></li>
+  </ul>
+  <p class="ladder-note"><b>€1,000.01을 넘겨야 환급률이 12.85% → 13.70%로 뛴다.</b>
+    512GB(€1,253)·1TB(€1,599)는 자동으로 넘는다. 21%가 아닌 이유 — ① IVA 21%는 세전가 기준이라
+    가격에 든 부가세는 <b>17.36%</b>뿐이고, ② 대행사가 그 부가세의 <b>20~27%</b>를 떼간다(누진).
+    <b>한 매장·같은 날·한 영수증</b>으로 합쳐야 누진 수수료에서 유리하다.</p>
 </section>
 
 <section class="block">
   <h2>일정에 끼우는 위치</h2>
-  <p class="lead">이번 여행에서 추가로 움직이는 거리를 최소화한 순서다.</p>
-  <div class="tscroll">
-  <table class="sched">
-    <caption class="sr-only">일차별 구매 위치</caption>
-    <thead><tr><th scope="col">일차</th><th scope="col">도시</th><th scope="col">매장</th>
-      <th scope="col">추가 이동</th><th scope="col">메모</th></tr></thead>
-    <tbody>
-<tr class=hi><th scope="row">D11 · 2/26 (금)</th><td>바르셀로나</td><td>엘코르테 잉글레스 (카탈루냐 광장)</td><td class="move">0분</td><td>일정에 이미 포함. 당일 수출이라 환급 조건 최적. 512GB €1,299 · 1TB €1,599</td></tr>
-<tr><th scope="row">D10 · 2/25 (목)</th><td>바르셀로나</td><td>미디어마르크트 (시내)</td><td class="move">+15~20분</td><td>그라시아 거리 쇼핑 동선에서 이탈. 512GB €1,253 = 스페인 실질 최저</td></tr>
-<tr><th scope="row">D9 · 2/24 (수)</th><td>바르셀로나</td><td>삼성닷컴 ES (온라인 주문)</td><td class="move">+0분 (배송 대기)</td><td>환급 포기 대신 최저가 €1,099. 호텔 배송이면 일정 부담 없음</td></tr>
-    </tbody>
-  </table>
-  </div>
-  <div class="note">
-    <b>D11이 정답이다.</b> 이미 엘코르테 잉글레스에 들르도록 잡혀 있고, <b>당일 수출</b>이라
-    “3개월 내 수출” 조건이 자동 충족된다. 포장을 뜯지 않은 채로 공항에 가져가면 된다.
+  <p class="lead">막대는 <b>추가로 걷는 시간</b>이다. D11은 0분이라 막대가 없고, 대신 그 카드가 강조돼 있다.</p>
+  <ul class="timeline">
+
+<li class="node best" style="--i:0">
+  <span class="day">D11</span>
+  <span class="date">2/26 (금)</span>
+  <b>엘코르테 잉글레스</b>
+  <span class="where">카탈루냐 광장</span>
+  <span class="extra"><i style="--w:0%"></i>0분</span>
+  <p>512GB €1,299 · 1TB €1,599. 당일 수출이라 환급 조건 최적</p>
+</li>
+
+<li class="node" style="--i:1">
+  <span class="day">D10</span>
+  <span class="date">2/25 (목)</span>
+  <b>미디어마르크트</b>
+  <span class="where">시내</span>
+  <span class="extra"><i style="--w:75%"></i>+15~20분</span>
+  <p>512GB €1,253 — 스페인 실질 최저. 그라시아 쇼핑 동선에서 이탈</p>
+</li>
+
+<li class="node" style="--i:2">
+  <span class="day">D9</span>
+  <span class="date">2/24 (수)</span>
+  <b>삼성닷컴 ES</b>
+  <span class="where">온라인 주문</span>
+  <span class="extra"><i style="--w:0%"></i>0분</span>
+  <p>환급 포기 대신 최저가 €1,099. 호텔 배송이면 일정 부담 없음</p>
+</li>
+  </ul>
+  <p class="ladder-note"><b>D11이 정답이다.</b> 이미 엘코르테 잉글레스에 들르도록 잡혀 있고,
+    <b>당일 수출</b>이라 "3개월 내 수출" 조건이 자동 충족된다. 포장을 뜯지 않은 채로 공항에 가져가면 된다.
     단 <b>세관은 DIVA 키오스크가 아니라 사람 있는 데스크</b>로 — 복귀편이 독일 경유다
     (<a href="taxrefund.html">택스리펀 매뉴얼 §3</a>).
-    더 싸게 사려면 D10에 미디어마르크트를 <b>15~20분</b> 더 쓰는 쪽이다.
-  </div>
+    더 싸게 사려면 D10에 미디어마르크트를 <b>15~20분</b> 더 쓰는 쪽이다.</p>
 </section>
 
 <section class="block">
   <h2>반드시 지킬 것</h2>
-  <div class="caution">
-<article class="caut"><h3>Wi-Fi 모델만 산다</h3><p>Wi-Fi는 <b>SM-X730 단일 글로벌 모델</b>로 한국·스페인 하드웨어가 같다. 셀룰러는 한국 <code>SM-X736N</code> / 글로벌 <code>SM-X736B</code>로 달라 <b>한국 통신사 VoLTE 위험</b>이 있다.</p></article>
-<article class="caut"><h3>면세 한도는 부부 합산 하나뿐</h3><p>US$1,600 ≈ <b>₩2,219,904</b>. 태블릿과 <b>명품 트랙이 같은 풀을 나눠 쓴다</b>. €1,099~1,299는 모두 한도 안이라 <b>완전 면세</b>, €1,599(1TB)는 초과분에 약 20%(약 6.4만원). 명품(예: 다무르 €1,520)과 동시에 사면 초과분에 세금이 붙는다.</p></article>
-<article class="caut"><h3>세관은 키오스크가 아니라 사람 있는 데스크</h3><p>복귀편이 <b>독일 경유</b>다. DIVA 키오스크에 넣었다가 거부되면 다른 나라에서 재승인을 못 받는다. BCN 수출 통로의 <b>세관 데스크</b>로 간다 — 자세한 절차는 택스리펀 매뉴얼 §3.</p></article>
-<article class="caut"><h3>국내 A/S는 유상수리 원칙</h3><p>삼성전자서비스는 해외구매품을 <b>유상수리</b>로 처리하고, 부품 미확보 시 지연·불가가 될 수 있다. Wi-Fi 단일 모델이라 상대적으로 안전하다. <b>삼성페이(한국)</b> 등 CSC 기반 기능은 EU 펌웨어에서 제한될 수 있다.</p></article>
-<article class="caut"><h3>환율이 절반을 정한다</h3><p>계획 환율은 보수적으로 <b>₩1,589.58/€</b>(3개월 평균)를 쓴다. 현재가(₩1,499)라면 스페인 실구매가가 <b>약 5.7%</b> 낮아진다 — 512GB가 1,718,868 → <b>1,620,927원</b>. 반대로 유로가 오르면 이득이 사라진다.</p></article>
-  </div>
+  <ol class="caution">
+<li><h3>Wi-Fi 모델만 산다</h3><p>Wi-Fi는 <b>SM-X730 단일 글로벌 모델</b>로 한국·스페인 하드웨어가 같다. 셀룰러는 한국 <code>SM-X736N</code> / 글로벌 <code>SM-X736B</code>로 달라 <b>한국 통신사 VoLTE 위험</b>이 있다.</p></li>
+<li><h3>면세 한도는 부부 합산 하나뿐</h3><p>US$1,600 ≈ <b>₩2,219,900</b>. 태블릿과 <b>명품 트랙이 같은 풀을 나눠 쓴다</b>. €1,099~1,299는 모두 한도 안이라 <b>완전 면세</b>, €1,599(1TB)는 초과분에 약 6.4만원. 명품(예: 다무르 €1,520)과 동시에 사면 초과분에 세금이 붙는다.</p></li>
+<li><h3>세관은 키오스크가 아니라 사람 있는 데스크</h3><p>복귀편이 <b>독일 경유</b>다. DIVA 키오스크에 넣었다가 거부되면 다른 나라에서 재승인을 못 받는다. BCN 수출 통로의 <b>세관 데스크</b>로 간다.</p></li>
+<li><h3>국내 A/S는 유상수리 원칙</h3><p>삼성전자서비스는 해외구매품을 <b>유상수리</b>로 처리하고, 부품 미확보 시 지연·불가가 될 수 있다. Wi-Fi 단일 모델이라 상대적으로 안전하다. <b>삼성페이(한국)</b> 등 CSC 기반 기능은 EU 펌웨어에서 제한될 수 있다.</p></li>
+  </ol>
 </section>
 
 <section class="tail">
   <h2>출처 (2026-10-18)</h2>
   <ul>
-    <li>삼성닷컴 ES — Tab S11 / S12 구매 페이지 (€999 · €1,099 · S12 Ultra €1,539)</li>
-    <li>미디어마르크트 ES — Galaxy Tab S11 브랜드 페이지 (€1,253, 재고 있음)</li>
-    <li>엘코르테 잉글레스 — Tab S11 Ultra Wi-Fi 12GB+512GB(€1,299) · 16GB+1TB(€1,599)</li>
-    <li>스페인 재무부(AEAT) — 여행자 부가세 최소 환급표 PDF (본 페이지 환급률의 근거)</li>
-    <li>삼성 EU 커뮤니티 · Wise — “삼성 온라인몰은 Tax Free 서류를 발급하지 않는다”</li>
-    <li>삼성전자서비스 — 해외구매 제품 A/S 기준(유상수리 원칙)</li>
-    <li>나무위키 — 갤럭시 탭 S11 한국 출고가(2026년 3·4월 두 차례 인상) · 다나와 — 쇼핑몰 최저가</li>
-    <li>머니투데이(2026-10-01) — 갤럭시 탭 S12 울트라 출고가</li>
-    <li>Worten.es — 본토 온라인 판매 종료 공지(후보 제외 사유)</li>
+<li><a href="https://www.samsung.com/es/tablets/galaxy-tab-s11/buy/">삼성닷컴 ES — Tab S11 / S12 구매 페이지 (€999 · €1,099 · S12 Ultra €1,539)</a></li>
+<li><a href="https://www.mediamarkt.es/es/brand/samsung/tablets/galaxy-tab-s11">미디어마르크트 ES — Galaxy Tab S11 브랜드 페이지 (€1,253, 재고 있음)</a></li>
+<li><a href="https://www.elcorteingles.es/electronica/">엘코르테 잉글레스 — Tab S11 Ultra 512GB(€1,299) · 1TB(€1,599)</a></li>
+<li><a href="https://www.hacienda.gob.es/SGT/NormativaDoctrina/proyectos/tributarios/anexo%20tablas%20devolucion%20iva%20a%20viajeros.pdf">스페인 재무부(AEAT) — 여행자 부가세 최소 환급표 PDF</a></li>
+<li><a href="https://eu.community.samsung.com/">삼성 EU 커뮤니티 · Wise — "삼성 온라인몰은 Tax Free 서류를 발급하지 않는다"</a></li>
+<li><a href="https://www.samsungsvc.co.kr/notice/3029667">삼성전자서비스 — 해외구매 제품 A/S 기준(유상수리 원칙)</a></li>
+<li><a href="https://namu.wiki/w/%EA%B0%A4%EB%9F%AD%EC%8B%9C%20%ED%83%AD%20S11">나무위키 — 갤럭시 탭 S11 한국 출고가(2026년 3·4월 두 차례 인상)</a></li>
+<li><a href="https://www.mt.co.kr/tech/2026/10/01/2026100110264919929">머니투데이(2026-10-01) — 갤럭시 탭 S12 울트라 출고가</a></li>
+<li><a href="https://www.worten.es/">Worten.es — 본토 온라인 판매 종료 공지(후보 제외 사유)</a></li>
   </ul>
   <p>환율 ₩1,589.58/€ (최근 3개월 평균 고정) · US$1 = ₩1,387.44.
     입국세는 <b>간이세율 약 20%, 초과분에만</b> 적용하고 자진신고 기준으로 계산했다.
-    스페인 매장 가격은 조회 시점 값이며 재고·프로모션에 따라 변한다.</p>
+    스페인 매장 가격은 조회 시점 값이며 재고·프로모션에 따라 변한다.
+    수치는 <code>data/galaxytab.json</code> 한 곳에서 온다.</p>
   <p>전체 계획: <a href="index.html">요약</a> · <a href="itinerary.html">일차별 일정</a> ·
     <a href="jewelry.html">주얼리</a> · <a href="earrings.html">귀고리 Top 10</a> ·
     <a href="taxrefund.html">택스리펀 매뉴얼</a> · <a href="reservations.html">예약 캘린더</a></p>
