@@ -1,149 +1,346 @@
 <!doctype html>
-<html lang="ko"><head><meta charset="utf-8">
+<html lang="ko">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>포르투갈–스페인 2027-02 · 10박 11일</title>
+<title>요약 — 포르투갈·스페인 2027-02 · 4도시 10박 11일</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Gowun+Batang:wght@400;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/tokens.css">
 <style>
-:root{--ink:#111827;--mut:#6b7280;--line:#e5e7eb;--accent:#dc2626}
 *{box-sizing:border-box}
-body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;color:var(--ink);background:#f8fafc;
-  word-break:keep-all;line-break:strict;overflow-wrap:break-word;hyphens:none}
-main{max-width:920px;margin:0 auto;padding:26px 16px 80px}
-header{border-bottom:3px solid var(--ink);padding-bottom:14px;margin-bottom:20px}
-h1{font-size:1.55rem;margin:0 0 6px;letter-spacing:-.02em}
-.sub{color:var(--mut);font-size:.94rem}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:9px;margin:16px 0}
-.kpi{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px}
-.kpi b{display:block;font-size:1.08rem}
-.kpi span{color:var(--mut);font-size:.78rem}
-h2{font-size:1.12rem;margin:34px 0 10px;padding-top:14px;border-top:1px solid var(--line)}
-img{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);display:block}
-table{width:100%;border-collapse:collapse;margin:10px 0 0;font-size:.88rem;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
-th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
-thead th{background:#f1f5f9;font-size:.78rem;color:#374151}
-td.t{white-space:nowrap;color:#374151;font-variant-numeric:tabular-nums;width:54px}
-td.src{white-space:nowrap;font-size:.74rem;color:var(--mut)}
-td.c,th:last-child{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
-tr.stay td{background:#f0f9ff}
-tr.sum td{background:#fef2f2;font-weight:600}
-.warn{background:#fffbeb;border:1px solid #fcd34d;border-radius:10px;padding:11px 13px;margin:14px 0;font-size:.9rem}
-footer{margin-top:40px;padding-top:14px;border-top:1px solid var(--line);color:var(--mut);font-size:.83rem}
-</style></head><body><main>
-<header>
-  <h1>포르투갈–스페인 · 2027년 2월</h1>
-  <div class="sub">2/16(화)~2/26(금) · 10박 11일 · 2인(부부) · 리스본 IN / 바르셀로나 OUT</div>
-</header>
-<nav style="display:flex;gap:14px;flex-wrap:wrap;margin:14px 0 6px;font-size:.9rem">
-  <a href="itinerary.html" style="color:var(--accent)">📅 일차별 일정 (시간·비용)</a>
-  <a href="jewelry.html" style="color:var(--accent)">💎 주얼리 4종 실가격</a>
-  <a href="earrings.html" style="color:var(--accent)">👂 귀고리 Top 10 (화사)</a>
-  <a href="taxrefund.html" style="color:var(--accent)">🧾 택스리펀 매뉴얼</a>
-  <a href="galaxytab.html" style="color:var(--accent)">📱 갤럭시 탭 — 스페인 구매 판정</a>
-  <a href="reservations.html" style="color:var(--accent)">📅 예약 캘린더</a>
-</nav>
-<div class="kpis">
-  <div class="kpi"><b>7,053,012원</b><span>2인 총액 (1인 3,526,506)</span></div>
-  <div class="kpi"><b>4,267,632원</b><span>현지 지출(2인)</span></div>
-  <div class="kpi"><b>10박 11일</b><span>도시 4곳 · 이동 3회</span></div>
-  <div class="kpi"><b>₩1,590/€</b><span>3개월 평균 환율</span></div>
-</div>
-<div class="warn"><b>세비야를 빼고 바르셀로나를 4박(2/22~26)</b>으로 늘렸다 — 세비야 숙박 52.5만 절감,
-바르셀로나 +2박 31.7만·그라나다 주말 프리미엄 9.9만 증가로 <b>총액은 사실상 그대로</b>다.
-<b>그라나다가 주말(2/20~22)</b>이라 잉글라테라 1박 11.7만원(평일 6.8만) — 절충안은 <b>La Perla Granada Suites 8.6만</b>(8.5·4,032후기·중심 450m).
-표의 <b>근거</b> 열에서 실조회/공식/실메뉴/추정을 구분했다.</div>
-<h2>전체 동선</h2>
-<img src="img/00-전체동선.jpg" alt="전체 동선 지도">
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--font-body); font-size:var(--fs-body); line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  word-break:keep-all; line-break:strict; overflow-wrap:break-word; hyphens:none}
+body::after{content:""; position:fixed; inset:0; pointer-events:none; z-index:99; opacity:.035;
+  background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 var(--s-5)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+a{color:var(--accent)}
 
-<section id="D1">
-  <h2>D1 · 2/16 (화) — 인천 → 리스본</h2>
-  <img src="img/00-전체동선.jpg" alt="D1 지도" loading="lazy">
-  <table class="sched"><thead><tr><th>시각</th><th>일정</th><th>근거</th><th>비용(2인)</th></tr></thead>
-  <tbody><tr class='stay'><td class='t'>—</td><td>숙박 — 리스본 · Ouro Rossio Hotel (9.3·693후기·중심 150m)</td><td class='src'>Booking 실조회</td><td class='c'>135,459</td></tr><tr><td class='t'>06:30</td><td>기상 · 집 → 인천공항 (공항버스)</td><td class='src'>추정</td><td class='c'>30,000</td></tr><tr><td class='t'>07:40</td><td>공항 조식(커피·샌드위치)</td><td class='src'>추정</td><td class='c'>20,000</td></tr><tr><td class='t'>08:30</td><td>체크인 · 수하물 · 출국심사</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>10:30</td><td>ICN 출발 · <b>항공(가는편, 루프트한자 FRA 18h55 · 2인)</b></td><td class='src'>항공 조회</td><td class='c'>1,258,562</td></tr><tr><td class='t'>—</td><td>경유 1회 · 총 16~20시간 · 기내식</td><td class='src'>추정</td><td class='c'>35,000</td></tr><tr><td class='t'>19:30</td><td>리스본(LIS) 도착 · 입국</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>20:10</td><td>메트로 Aeroporto → 바이샤 (25분 · €1.90/인)</td><td class='src'>공식 요금</td><td class='c'>6,000</td></tr><tr><td class='t'>20:45</td><td>숙소 체크인 · 짐 풀기</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>21:40</td><td>저녁 — 좌식 레스토랑 (prato do dia €16~24)</td><td class='src'>실제 메뉴</td><td class='c'>65,000</td></tr><tr><td class='t'>22:50</td><td>마트 물·간식</td><td class='src'>추정</td><td class='c'>15,000</td></tr><tr><td class='t'>23:20</td><td>취침</td><td class='src'></td><td class='c'></td></tr><tr class='sum'><td></td><td>숙박 135,459 · 식비 135,000 · 입장·이동 1,294,562</td><td></td><td class='c'>1,565,021</td></tr></tbody></table>
+/* ── 상단 바 */
+.topbar{position:sticky; top:0; z-index:40; background:var(--paper); border-bottom:1px solid var(--rule)}
+.topbar .wrap{display:flex; align-items:baseline; gap:var(--s-4); padding-top:var(--s-3); padding-bottom:var(--s-3)}
+.topbar .brand{font-family:var(--font-display); font-weight:700; font-size:var(--fs-small); letter-spacing:-.01em}
+.topbar .meta{margin-left:auto; font-family:var(--font-mono); font-size:var(--fs-caption); color:var(--muted)}
+.topbar nav{display:flex; gap:var(--s-4); flex-wrap:wrap; font-family:var(--font-mono); font-size:var(--fs-caption)}
+.topbar a{text-decoration:none; border-bottom:1px solid currentColor}
+
+/* ── 히어로 */
+.hero{padding:var(--s-9) 0 var(--s-8); border-bottom:3px solid var(--rule-strong)}
+.kicker{font-family:var(--font-mono); font-size:var(--fs-caption); letter-spacing:.14em;
+  text-transform:uppercase; color:var(--accent); margin:0 0 var(--s-5)}
+.hero h1{font-family:var(--font-display); font-weight:700; font-size:var(--fs-hero); line-height:1.02;
+  letter-spacing:-.02em; margin:0 0 var(--s-5); text-wrap:balance}
+.hero h1 em{font-style:italic; color:var(--accent)}
+.hero .lede{max-width:52ch; font-size:var(--fs-lead); color:var(--ink-soft); margin:0 0 var(--s-7)}
+.figures{display:flex; flex-wrap:wrap; gap:var(--s-7); border-top:1px solid var(--rule); padding-top:var(--s-5); margin:0}
+.figures div{min-width:132px}
+.figures dt{font-family:var(--font-mono); font-size:var(--fs-caption); color:var(--muted);
+  letter-spacing:.08em; text-transform:uppercase; margin-bottom:var(--s-1)}
+.figures dd{margin:0; font-family:var(--font-display); font-weight:700; font-size:var(--fs-h3); letter-spacing:-.01em}
+.figures dd small{display:block; font-family:var(--font-body); font-weight:400; font-size:var(--fs-small);
+  color:var(--muted); letter-spacing:0}
+
+/* ── 블록 */
+.block{border-top:1px solid var(--rule); padding:var(--s-7) 0}
+.block:first-of-type{border-top:none}
+.block h2{font-family:var(--font-display); font-weight:700; font-size:var(--fs-h3);
+  margin:0 0 var(--s-2); letter-spacing:-.01em}
+.block .sub{color:var(--muted); font-size:var(--fs-small); margin:0 0 var(--s-5); max-width:64ch}
+
+/* ── 동선 리본 */
+.route{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:var(--s-5)}
+.stop{border-top:2px solid var(--ink); padding-top:var(--s-3); display:flex; flex-direction:column; gap:2px}
+.stop:first-child{border-top-color:var(--accent)}
+.stop .when{font-family:var(--font-mono); font-size:var(--fs-caption); color:var(--accent); letter-spacing:.06em}
+.stop .name{font-family:var(--font-display); font-weight:700; font-size:var(--fs-h3); line-height:1.15}
+.stop .note{font-size:var(--fs-small); color:var(--ink-soft)}
+.stop .price{font-family:var(--font-mono); font-size:var(--fs-caption); color:var(--muted); margin-top:var(--s-2)}
+.stop .price em{font-style:normal; opacity:.75}
+
+/* ── 원장(표) */
+.ledger{width:100%; border-collapse:collapse; font-size:var(--fs-small)}
+.ledger caption{text-align:left; font-family:var(--font-mono); font-size:var(--fs-caption);
+  letter-spacing:.1em; text-transform:uppercase; color:var(--muted); padding-bottom:var(--s-3)}
+.ledger th{text-align:left; font-family:var(--font-mono); font-size:var(--fs-caption); font-weight:500;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--muted);
+  padding:0 var(--s-2) var(--s-2) 0; border-bottom:2px solid var(--rule-strong)}
+.ledger td{padding:var(--s-3) var(--s-2) var(--s-3) 0; border-bottom:1px solid var(--rule); vertical-align:top}
+.ledger tbody tr:hover{background:var(--paper-2)}
+.ledger td.t, .ledger td.dt{font-family:var(--font-mono); font-size:var(--fs-caption); color:var(--ink-soft); white-space:nowrap}
+.ledger td.t{width:46px}
+.ledger td.w b{font-weight:700}
+.ledger td.w small{display:block; color:var(--muted); font-size:0.8125rem; line-height:1.5}
+.ledger td.w a{text-decoration:none; border-bottom:1px solid currentColor}
+.ledger td.num, .ledger th.num{font-family:var(--font-mono); text-align:right; white-space:nowrap;
+  font-variant-numeric:tabular-nums; width:104px}
+.ledger tr.sum td{border-top:2px solid var(--rule-strong); border-bottom:none; font-weight:700}
+.ledger tr.sum td:first-child{font-family:var(--font-body)}
+
+/* ── 지도·메모 */
+figure{margin:0}
+figure img{width:100%; height:auto; display:block; border:1px solid var(--rule); filter:saturate(.94)}
+figure figcaption{font-family:var(--font-mono); font-size:var(--fs-caption); color:var(--muted); margin-top:var(--s-1)}
+.note{border-left:3px solid var(--accent); background:var(--paper-2); padding:var(--s-4) var(--s-5);
+  font-size:var(--fs-small); color:var(--ink-soft)}
+.note b{color:var(--ink)}
+.cols{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:var(--s-7)}
+ul.plain{margin:0; padding-left:1.1em; font-size:var(--fs-small); color:var(--ink-soft)}
+ul.plain li{margin-bottom:var(--s-2)}
+ul.plain b{color:var(--ink)}
+
+footer{border-top:3px solid var(--rule-strong); margin-top:var(--s-8); padding:var(--s-6) 0 var(--s-9);
+  color:var(--muted); font-size:var(--fs-caption)}
+
+/* ── 로드 시 1회 스태거드 */
+.reveal{animation:reveal var(--dur) var(--ease) both}
+@keyframes reveal{from{opacity:0; transform:translateY(12px)} to{opacity:1; transform:none}}
+.stop:nth-child(2){animation-delay:80ms} .stop:nth-child(3){animation-delay:160ms}
+.stop:nth-child(4){animation-delay:240ms}
+
+@media (max-width:820px){
+  .topbar .meta{display:none}
+  .hero{padding:var(--s-8) 0 var(--s-7)}
+  .route{grid-template-columns:1fr 1fr; gap:var(--s-4)}
+  .ledger td.dt{display:none}
+  .ledger th:nth-child(3){display:none}
+  .ledger td.num, .ledger th.num{width:84px}
+}
+@media print{
+  .topbar{display:none} body::after{display:none}
+  .block, .hero{border-color:var(--rule-strong)}
+  .ledger tbody tr:hover{background:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal, .stop{animation:none; opacity:1; transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="brand">이베리아 2027-02</span>
+    <nav>
+      <a href="itinerary.html">일차별 일정</a>
+      <a href="reservations.html">예약 캘린더</a>
+      <a href="jewelry.html">주얼리</a>
+      <a href="earrings.html">귀고리</a>
+      <a href="taxrefund.html">택스리펀</a>
+      <a href="galaxytab.html">갤럭시 탭</a>
+    </nav>
+    <span class="meta">2/16–2/26 · 10박 11일 · 2인</span>
+  </div>
+</div>
+
+<main>
+<section class="hero wrap">
+  <p class="kicker">Portugal &amp; Spain · 16–26 February 2027</p>
+  <h1>네 도시를 <em>열하루</em>에,<br>마지막 나흘은 바르셀로나에</h1>
+  <p class="lede">리스본에서 포르투로 기차를 타고, 그라나다에서 알함브라를 보고, 바르셀로나에 사흘을 온전히 남겼다.
+    세비야를 빼고 바르셀로나를 늘렸는데 총액은 거의 그대로다.</p>
+  <dl class="figures">
+    <div><dt>총액 · 2인</dt><dd>7,053,012<small>원 (1인 3,526,506)</small></dd></div>
+    <div><dt>현지 지출</dt><dd>4,267,632<small>항공 제외</small></dd></div>
+    <div><dt>항공 · 2인</dt><dd>2,385,380<small>가는편 + 오는편</small></dd></div>
+    <div><dt>일수</dt><dd>10박 11일<small>4도시 · 이동 3회</small></dd></div>
+    <div><dt>환율</dt><dd>1,590<small>원 / € (3개월 평균)</small></dd></div>
+  </dl>
 </section>
-<section id="D2">
-  <h2>D2 · 2/17 (수) — 리스본 — 벨렝 &amp; 알파마</h2>
-  <img src="img/D02-리스본-벨렝알파마.jpg" alt="D2 지도" loading="lazy">
-  <table class="sched"><thead><tr><th>시각</th><th>일정</th><th>근거</th><th>비용(2인)</th></tr></thead>
-  <tbody><tr class='stay'><td class='t'>—</td><td>숙박 — 리스본 · Ouro Rossio Hotel</td><td class='src'>Booking 실조회</td><td class='c'>135,459</td></tr><tr><td class='t'>07:30</td><td>기상 · 숙소 조식</td><td class='src'>추정</td><td class='c'>15,000</td></tr><tr><td class='t'>08:20</td><td>트램/버스 → 벨렝 (리스보아 카드)</td><td class='src'>공식 요금</td><td class='c'></td></tr><tr><td class='t'>08:45</td><td>제로니무스 수도원 오픈런 (카드 포함)</td><td class='src'>공식 요금</td><td class='c'></td></tr><tr><td class='t'>10:20</td><td>파스테이스 드 벨렝 — 에그타르트 2 + 커피</td><td class='src'>실제 메뉴</td><td class='c'>8,000</td></tr><tr><td class='t'>12:30</td><td>점심 — 타임아웃 마켓 푸드홀</td><td class='src'>실제 메뉴</td><td class='c'>48,000</td></tr><tr><td class='t'>14:40</td><td>상조르즈 성 (카드 포함)</td><td class='src'>공식 요금</td><td class='c'></td></tr><tr><td class='t'>17:45</td><td>산타루치아 전망대 야경 (일몰 18:16)</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>19:10</td><td>카페 휴식</td><td class='src'>실제 메뉴</td><td class='c'>25,000</td></tr><tr><td class='t'>20:30</td><td>저녁 — 알파마 좌식(생선구이·그릴)</td><td class='src'>실제 메뉴</td><td class='c'>70,000</td></tr><tr><td class='t'>22:30</td><td>숙소 복귀 · 취침</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>—</td><td>리스보아 카드 48시간 (2인 · 온라인 5% 할인)</td><td class='src'>공식 요금</td><td class='c'>154,000</td></tr><tr class='sum'><td></td><td>숙박 135,459 · 식비 166,000 · 입장·이동 154,000</td><td></td><td class='c'>455,459</td></tr></tbody></table>
+
+<section class="block wrap">
+  <h2>동선 — 서에서 동으로, 되돌아가지 않는다</h2>
+  <p class="sub">리스본(서) → 포르투(북) → 그라나다(남동) → 바르셀로나(북동). 이동은 기차 1회, 비행 2회뿐이다.</p>
+  <div class="route"><div class="stop">
+        <span class="when">2/16–18 · 2박</span>
+        <span class="name">리스본</span>
+        <span class="note">벨렝 에그타르트 · 알파마</span>
+        <span class="price">135,459 <em>원/박</em></span>
+      </div><div class="stop">
+        <span class="when">2/18–20 · 2박</span>
+        <span class="name">포르투</span>
+        <span class="note">기차 3h · 렐루 서점 · 모루 정원</span>
+        <span class="price">111,769 <em>원/박</em></span>
+      </div><div class="stop">
+        <span class="when">2/20–22 · 2박</span>
+        <span class="name">그라나다</span>
+        <span class="note">알함브라 · 알바이신</span>
+        <span class="price">117,034 <em>원/박</em></span>
+      </div><div class="stop">
+        <span class="when">2/22–26 · 4박</span>
+        <span class="name">바르셀로나</span>
+        <span class="note">가우디 3일 · 명품 쇼핑</span>
+        <span class="price">158,527 <em>원/박</em></span>
+      </div></div>
 </section>
-<section id="D3">
-  <h2>D3 · 2/18 (목) — 리스본 → 포르투</h2>
-  <img src="img/D03-포르투이동.jpg" alt="D3 지도" loading="lazy">
-  <table class="sched"><thead><tr><th>시각</th><th>일정</th><th>근거</th><th>비용(2인)</th></tr></thead>
-  <tbody><tr class='stay'><td class='t'>—</td><td>숙박 — 포르투 · chic&basic Gravity (9.2·3,487후기·중심 350m)</td><td class='src'>Booking 실조회</td><td class='c'>111,769</td></tr><tr><td class='t'>07:00</td><td>기상 · 조식 · 체크아웃</td><td class='src'>추정</td><td class='c'>15,000</td></tr><tr><td class='t'>08:10</td><td>메트로 → 오리엔테역</td><td class='src'>공식 요금</td><td class='c'>6,000</td></tr><tr><td class='t'>09:30</td><td>CP 기차 AP 3시간 → 캄파냐 (시각 예약 시 확정)</td><td class='src'>추정</td><td class='c'>95,000</td></tr><tr><td class='t'>13:40</td><td>점심 — 볼량 시장 식당가</td><td class='src'>실제 메뉴</td><td class='c'>45,000</td></tr><tr><td class='t'>15:00</td><td>상벤투역 → 렐루 서점 (시간 지정 예약)</td><td class='src'>추정</td><td class='c'>25,000</td></tr><tr><td class='t'>16:30</td><td>파브리카 다 나타 (산타카타리나)</td><td class='src'>실제 메뉴</td><td class='c'>20,000</td></tr><tr><td class='t'>20:00</td><td>저녁 — 히베이라 대구구이·스테이크</td><td class='src'>실제 메뉴</td><td class='c'>70,000</td></tr><tr><td class='t'>22:30</td><td>취침 (비 오면 실내 위주)</td><td class='src'></td><td class='c'></td></tr><tr class='sum'><td></td><td>숙박 111,769 · 식비 150,000 · 입장·이동 126,000</td><td></td><td class='c'>387,769</td></tr></tbody></table>
+
+<section class="block wrap">
+  <h2>일차 요약</h2>
+  <p class="sub">행을 누르면 그날 시각표·비용 원장으로 간다. 항공은 D1(가는편)·D11(오는편)에 들어 있다.</p>
+  <table class="ledger">
+    <caption>일차별 합계 (2인)</caption>
+    <thead><tr><th scope="col">일</th><th scope="col">도시</th><th scope="col">날짜</th><th class="num" scope="col">그날 합계</th></tr></thead>
+    <tbody><tr>
+        <td class="t">D1</td>
+        <td class="w"><a href="itinerary.html#day-1">인천 → 리스본</a>
+          <small>인천 → 리스본, 바이샤 체크인</small></td>
+        <td class="dt">2/16 (화)</td>
+        <td class="num">1,565,021</td>
+      </tr><tr>
+        <td class="t">D2</td>
+        <td class="w"><a href="itinerary.html#day-2">리스본 — 벨렝 &amp; 알파마</a>
+          <small>벨렝 에그타르트 → 알파마 야경</small></td>
+        <td class="dt">2/17 (수)</td>
+        <td class="num">455,459</td>
+      </tr><tr>
+        <td class="t">D3</td>
+        <td class="w"><a href="itinerary.html#day-3">리스본 → 포르투</a>
+          <small>CP 기차 3h · 볼량 시장 · 렐루 서점</small></td>
+        <td class="dt">2/18 (목)</td>
+        <td class="num">387,769</td>
+      </tr><tr>
+        <td class="t">D4</td>
+        <td class="w"><a href="itinerary.html#day-4">포르투 — 위에서 아래로</a>
+          <small>클레리구스 → 동루이스 다리 → 일몰</small></td>
+        <td class="dt">2/19 (금)</td>
+        <td class="num">311,769</td>
+      </tr><tr>
+        <td class="t">D5</td>
+        <td class="w"><a href="itinerary.html#day-5">포르투 → 그라나다</a>
+          <small>OPO→AGP 1h25 + 알사 버스 · 대성당</small></td>
+        <td class="dt">2/20 (토)</td>
+        <td class="num">359,034</td>
+      </tr><tr>
+        <td class="t">D6</td>
+        <td class="w"><a href="itinerary.html#day-6">그라나다 — 알함브라</a>
+          <small>알함브라 오전 · 산니콜라스 전망대</small></td>
+        <td class="dt">2/21 (일)</td>
+        <td class="num">274,034</td>
+      </tr><tr>
+        <td class="t">D7</td>
+        <td class="w"><a href="itinerary.html#day-7">그라나다 → 바르셀로나</a>
+          <small>부엘링 1h28 · 고딕 지구 · 람블라스</small></td>
+        <td class="dt">2/22 (월)</td>
+        <td class="num">539,527</td>
+      </tr><tr>
+        <td class="t">D8</td>
+        <td class="w"><a href="itinerary.html#day-8">바르셀로나 — 가우디 &amp; 쇼핑 (비 1.9mm · 실내)</a>
+          <small>사그라다 · 카사 밀라·바트요 · 시착</small></td>
+        <td class="dt">2/23 (화)</td>
+        <td class="num">566,527</td>
+      </tr><tr>
+        <td class="t">D9</td>
+        <td class="w"><a href="itinerary.html#day-9">바르셀로나 — 구시가지 &amp; 미술 (0.7mm)</a>
+          <small>보케리아 · 피카소 · 몬주이크 MNAC</small></td>
+        <td class="dt">2/24 (수)</td>
+        <td class="num">532,527</td>
+      </tr><tr>
+        <td class="t">D10</td>
+        <td class="w"><a href="itinerary.html#day-10">바르셀로나 — 야외 &amp; 쇼핑 마무리 (0.1mm · 가장 맑음)</a>
+          <small>구엘 공원 · 벙커스 · 쇼핑 마무리</small></td>
+        <td class="dt">2/25 (목)</td>
+        <td class="num">404,527</td>
+      </tr><tr>
+        <td class="t">D11</td>
+        <td class="w"><a href="itinerary.html#day-11">바르셀로나 → 인천</a>
+          <small>엘보른 · El Corte Inglés → 귀국</small></td>
+        <td class="dt">2/26 (금)</td>
+        <td class="num">1,256,818</td>
+      </tr></tbody>
+  </table>
 </section>
-<section id="D4">
-  <h2>D4 · 2/19 (금) — 포르투 — 위에서 아래로</h2>
-  <img src="img/D04-포르투.jpg" alt="D4 지도" loading="lazy">
-  <table class="sched"><thead><tr><th>시각</th><th>일정</th><th>근거</th><th>비용(2인)</th></tr></thead>
-  <tbody><tr class='stay'><td class='t'>—</td><td>숙박 — 포르투 · chic&basic Gravity</td><td class='src'>Booking 실조회</td><td class='c'>111,769</td></tr><tr><td class='t'>07:30</td><td>기상 · 조식</td><td class='src'>추정</td><td class='c'>15,000</td></tr><tr><td class='t'>09:00</td><td>클레리구스 성당 종탑 전망</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>10:00</td><td>알마스 성당 (아줄레주)</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>10:40</td><td>파브리카 다 나타(나타)</td><td class='src'>실제 메뉴</td><td class='c'>12,000</td></tr><tr><td class='t'>12:30</td><td>점심 — 구시가지 좌식</td><td class='src'>실제 메뉴</td><td class='c'>50,000</td></tr><tr><td class='t'>14:00</td><td>숙소 휴식 (오르막 대비)</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>16:30</td><td>동 루이스 1세 다리 상층 횡단</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>17:45</td><td>모루 정원 일몰(18:13) · 음료</td><td class='src'>실제 메뉴</td><td class='c'>20,000</td></tr><tr><td class='t'>19:30</td><td>가이아 카페 와인</td><td class='src'>실제 메뉴</td><td class='c'>25,000</td></tr><tr><td class='t'>20:30</td><td>저녁 — 가이아/리베이라</td><td class='src'>실제 메뉴</td><td class='c'>70,000</td></tr><tr><td class='t'>22:30</td><td>볼트 귀가 (오르막)</td><td class='src'>추정</td><td class='c'>8,000</td></tr><tr class='sum'><td></td><td>숙박 111,769 · 식비 192,000 · 입장·이동 8,000</td><td></td><td class='c'>311,769</td></tr></tbody></table>
+
+<section class="block wrap">
+  <h2>전체 동선 지도</h2>
+  <figure>
+    <img src="img/00-전체동선.jpg" alt="리스본·포르투·그라나다·바르셀로나 전체 동선 지도">
+    <figcaption>© OpenStreetMap contributors · 일차별 확대 지도는 <a href="itinerary.html">일차별 일정</a>에 있다.</figcaption>
+  </figure>
 </section>
-<section id="D5">
-  <h2>D5 · 2/20 (토) — 포르투 → 그라나다</h2>
-  <img src="img/D05-그라나다이동.jpg" alt="D5 지도" loading="lazy">
-  <table class="sched"><thead><tr><th>시각</th><th>일정</th><th>근거</th><th>비용(2인)</th></tr></thead>
-  <tbody><tr class='stay'><td class='t'>—</td><td>숙박 — 그라나다 · Hotel Inglaterra (8.5·3,710후기·중심 150m) <b>주말</b></td><td class='src'>Booking 실조회</td><td class='c'>117,034</td></tr><tr><td class='t'>06:30</td><td>기상 · 조식 · 체크아웃</td><td class='src'>추정</td><td class='c'>15,000</td></tr><tr><td class='t'>07:30</td><td>볼트 → OPO 공항</td><td class='src'>추정</td><td class='c'>20,000</td></tr><tr><td class='t'>10:00</td><td>라이언에어 직항 1h25 OPO→AGP (편도 ₩22,484/인 + 수하물)</td><td class='src'>항공 조회</td><td class='c'>75,000</td></tr><tr><td class='t'>12:30</td><td>알사 버스 AGP→그라나다 1시간 45분 (€12~16/인)</td><td class='src'>추정</td><td class='c'>30,000</td></tr><tr><td class='t'>15:00</td><td>숙소 체크인 · 짐 풀기</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>15:40</td><td>점심 — 누에바 광장 권 타파스 (완전식사 €20~25/인)</td><td class='src'>실제 메뉴</td><td class='c'>40,000</td></tr><tr><td class='t'>17:00</td><td>그라나다 대성당 (€7×2)</td><td class='src'>공식 요금</td><td class='c'>22,000</td></tr><tr><td class='t'>18:30</td><td>알바이신 골목 산책 (낮 19.9℃ · 해질녘)</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>20:00</td><td>저녁 — La Trastienda (하몬·치즈)</td><td class='src'>실제 메뉴</td><td class='c'>40,000</td></tr><tr><td class='t'>22:00</td><td>취침</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>—</td><td><b>직항 대안</b> 볼로테아 OPO→GRX 1h27 (주 2회 · 월·금) — 날짜가 맞으면 환승 없음</td><td class='src'>항공 조회</td><td class='c'></td></tr><tr class='sum'><td></td><td>숙박 117,034 · 식비 95,000 · 입장·이동 147,000</td><td></td><td class='c'>359,034</td></tr></tbody></table>
+
+<section class="block wrap">
+  <div class="note">
+    <b>바르셀로나를 2박 → 4박으로.</b> 세비야(주말 26.3만/박)를 빼고 그 2박을 바르셀로나로 옮겼다 —
+    숙박 52.5만 절감이 바르셀로나 +2박 31.7만, 그라나다 주말 프리미엄 9.9만과 상쇄돼 <b>총액 +4.1만</b>이다.
+    마지막 사흘(D8·D9·D10)은 비 예보에 맞춰 <b>실내 → 구시가지 → 야외</b>로 나눴다.
+  </div>
 </section>
-<section id="D6">
-  <h2>D6 · 2/21 (일) — 그라나다 — 알함브라</h2>
-  <img src="img/D06-그라나다-알함브라.jpg" alt="D6 지도" loading="lazy">
-  <table class="sched"><thead><tr><th>시각</th><th>일정</th><th>근거</th><th>비용(2인)</th></tr></thead>
-  <tbody><tr class='stay'><td class='t'>—</td><td>숙박 — 그라나다 · Hotel Inglaterra</td><td class='src'>Booking 실조회</td><td class='c'>117,034</td></tr><tr><td class='t'>07:15</td><td>기상 · 조식 (아침 6.8℃)</td><td class='src'>추정</td><td class='c'>15,000</td></tr><tr><td class='t'>08:15</td><td>버스 C30/C32 → 알함브라</td><td class='src'>추정</td><td class='c'>6,000</td></tr><tr><td class='t'>08:45</td><td>알함브라 일반권 (€22.27×2 · 나스리 오전 지정)</td><td class='src'>공식 요금</td><td class='c'>71,000</td></tr><tr><td class='t'>12:40</td><td>점심 — 숙소 근처 좌식</td><td class='src'>실제 메뉴</td><td class='c'>35,000</td></tr><tr><td class='t'>16:00</td><td>알바이신 → 산니콜라스 전망대</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>18:30</td><td>일몰(19:02)</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>20:00</td><td>저녁 — 타파스(음료 시 무료 · 맥주 €2.8~3)</td><td class='src'>실제 메뉴</td><td class='c'>30,000</td></tr><tr><td class='t'>22:00</td><td>취침</td><td class='src'></td><td class='c'></td></tr><tr class='sum'><td></td><td>숙박 117,034 · 식비 80,000 · 입장·이동 77,000</td><td></td><td class='c'>274,034</td></tr></tbody></table>
+
+<section class="block wrap">
+  <div class="cols">
+    <div>
+      <h2>바르셀로나 사흘</h2>
+      <ul class="plain"><li><b>D8 2/23</b> — 비 1.9mm → 실내: 사그라다 파밀리아 · 카사 밀라·바트요 · 명품·주얼리 시착</li><li><b>D9 2/24</b> — 구시가지·미술: 보케리아 · 대성당 · 피카소 미술관 · 몬주이크 MNAC</li><li><b>D10 2/25</b> — 가장 맑음 → 야외: 구엘 공원 · 카르멜 벙커스 전망대 · 쇼핑 마무리</li></ul>
+      <p class="sub">D10을 지로나(AVE 38분 · 왕복 €22/인)나 몬세라트(€22/인) 당일치기로 바꿀 수 있다.</p>
+    </div>
+    <div>
+      <h2>주의 두 가지</h2>
+      <ul class="plain">
+        <li><b>그라나다가 주말(2/20~22)</b> — 잉글라테라 1박 11.7만(평일 6.8만).
+          La Perla Granada Suites(8.6만·8.5·4,032후기)로 바꾸면 6만 절약.</li>
+        <li><b>포르투 → 그라나다 직항(볼로테아 OPO→GRX)은 주 2회(월·금)</b> — 2/20이 토요일이라
+          기본은 라이언에어 OPO→AGP 1h25 + 알사 버스 1h45.</li>
+        <li>여행을 늘리는 건 2/27~3/1 <b>삼일절 연휴</b>와 겹쳐 항공료가 뛴다 — 박수 재배분이 맞다.</li>
+      </ul>
+    </div>
+  </div>
 </section>
-<section id="D7">
-  <h2>D7 · 2/22 (월) — 그라나다 → 바르셀로나</h2>
-  <img src="img/D07-바르셀로나이동.jpg" alt="D7 지도" loading="lazy">
-  <table class="sched"><thead><tr><th>시각</th><th>일정</th><th>근거</th><th>비용(2인)</th></tr></thead>
-  <tbody><tr class='stay'><td class='t'>—</td><td>숙박 — 바르셀로나 · H10 Casanova (9.0·2,381후기·중심 0.8km)</td><td class='src'>Booking 실조회</td><td class='c'>158,527</td></tr><tr><td class='t'>06:45</td><td>기상 · 조식 · 체크아웃</td><td class='src'>추정</td><td class='c'>15,000</td></tr><tr><td class='t'>07:45</td><td>볼트 → GRX 공항</td><td class='src'>추정</td><td class='c'>25,000</td></tr><tr><td class='t'>09:30</td><td>부엘링 직항 1h28 GRX→BCN (편도 ₩41,616/인+수하물)</td><td class='src'>항공 조회</td><td class='c'>113,000</td></tr><tr><td class='t'>11:40</td><td>Aerobús → 카탈루냐 광장</td><td class='src'>추정</td><td class='c'>25,000</td></tr><tr><td class='t'>13:30</td><td>점심 — 바르셀로나 레스토랑 (2인 1끼 €49~86)</td><td class='src'>실제 메뉴</td><td class='c'>78,000</td></tr><tr><td class='t'>15:00</td><td>고딕 지구 산책 (비 0.9mm)</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>17:00</td><td>람블라스 · 보케리아(하몬 컵 €5)</td><td class='src'>실제 메뉴</td><td class='c'>15,000</td></tr><tr><td class='t'>18:30</td><td>카페</td><td class='src'>실제 메뉴</td><td class='c'>15,000</td></tr><tr><td class='t'>20:30</td><td>저녁 — El Glop (2인 실결제 €76.15)</td><td class='src'>실제 메뉴</td><td class='c'>95,000</td></tr><tr><td class='t'>22:30</td><td>취침 (소매치기 주의)</td><td class='src'></td><td class='c'></td></tr><tr class='sum'><td></td><td>숙박 158,527 · 식비 218,000 · 입장·이동 163,000</td><td></td><td class='c'>539,527</td></tr></tbody></table>
+
+<section class="block wrap">
+  <div class="cols">
+    <div>
+      <h2>총액 구성</h2>
+      <table class="ledger">
+        <caption>2인 기준 · 상세는 일차별 일정</caption>
+        <thead><tr><th scope="col">항목</th><th class="num" scope="col">2인</th></tr></thead>
+        <tbody><tr><td>항공 (왕복, 실측)</td><td class="num">2,385,380</td></tr><tr><td>숙박 10박</td><td class="num">1,362,632</td></tr><tr><td>식비 11일 (실제 메뉴)</td><td class="num">1,780,000</td></tr><tr><td>입장료·시내교통</td><td class="num">3,197,380</td></tr><tr><td>도시 간 이동 (기차·항공·버스)</td><td class="num">313,000</td></tr><tr><td>여유·기념품</td><td class="num">400,000</td></tr><tr class="sum"><td>합계 — 2인</td><td class="num">7,053,012</td></tr></tbody>
+      </table>
+      <p class="sub">1,000만 상한 대비 여유 2,946,988원. 환율 100원 = 2인 예산 약 66만원.</p>
+    </div>
+    <div>
+      <h2>발권 시점 — 11월 초 결제</h2>
+      <p class="sub">오늘(10/19) 결제하지 못하고 <b>11월 초에 결제</b>한다면 약 19일 늦게 사는 것이다.
+        웃돈은 2인 0~8만원(0~3%)으로 추정하고, 큰 상승은 출발 6~8주 전에 온다.</p>
+      <table class="ledger">
+        <caption>11월 초 항공 (2인)</caption>
+        <thead><tr><th scope="col">상황</th><th class="num" scope="col">가격</th></tr></thead>
+        <tbody>
+          <tr><td>특가 유지</td><td class="num">270~278만</td></tr>
+          <tr><td>특가 일부 소진</td><td class="num">284~297만</td></tr>
+          <tr><td>성수 진입</td><td class="num">310만</td></tr>
+        </tbody>
+      </table>
+      <p class="sub">진짜 리스크는 가격이 아니라 <b>저가 좌석(fare bucket) 소진</b>이다.
+        2인 240만 이하면 즉시 결제, 숙소는 지금 무료취소로 선점한다.</p>
+    </div>
+  </div>
 </section>
-<section id="D8">
-  <h2>D8 · 2/23 (화) — 바르셀로나 — 가우디 &amp; 쇼핑 (비 1.9mm · 실내)</h2>
-  <img src="img/D08-바르셀로나-가우디.jpg" alt="D8 지도" loading="lazy">
-  <table class="sched"><thead><tr><th>시각</th><th>일정</th><th>근거</th><th>비용(2인)</th></tr></thead>
-  <tbody><tr class='stay'><td class='t'>—</td><td>숙박 — 바르셀로나 · H10 Casanova</td><td class='src'>Booking 실조회</td><td class='c'>158,527</td></tr><tr><td class='t'>07:30</td><td>기상 · 조식(주방)</td><td class='src'>추정</td><td class='c'>15,000</td></tr><tr><td class='t'>08:30</td><td>메트로 → 사그라다</td><td class='src'>추정</td><td class='c'>6,000</td></tr><tr><td class='t'>09:00</td><td>사그라다 파밀리아 (€26×2 · 내부 관람)</td><td class='src'>공식 요금</td><td class='c'>83,000</td></tr><tr><td class='t'>11:30</td><td>카사 밀라 · 카사 바트요 (€35+€29 상당 · 실내)</td><td class='src'>추정</td><td class='c'>111,000</td></tr><tr><td class='t'>13:30</td><td>점심 — 파세이그 데 그라시아 권 좌식</td><td class='src'>실제 메뉴</td><td class='c'>78,000</td></tr><tr><td class='t'>15:00</td><td><b>명품</b> — 샤넬·LV·로에베·프라다 (파세이그 데 그라시아)</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>17:00</td><td><b>주얼리</b> — 반클리프·까르띠에·티파니·불가리 (60분 · 시착·가격 확인)</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>18:40</td><td>카페</td><td class='src'>실제 메뉴</td><td class='c'>20,000</td></tr><tr><td class='t'>20:30</td><td>저녁 — Tapa Tapa(2인 €49.25) 또는 그라시아</td><td class='src'>실제 메뉴</td><td class='c'>95,000</td></tr><tr><td class='t'>22:30</td><td>숙소 복귀</td><td class='src'></td><td class='c'></td></tr><tr class='sum'><td></td><td>숙박 158,527 · 식비 208,000 · 입장·이동 200,000</td><td></td><td class='c'>566,527</td></tr></tbody></table>
+
+<section class="block wrap">
+  <h2>명품 포함 총액</h2>
+  <p class="sub">주얼리 값은 <b>공식 사이트(한국·일본·스페인) 직접 조회</b>(2026-10-18). 택스리펀 후 실구매 기준.
+    상세: <a href="jewelry.html">주얼리</a> · <a href="earrings.html">귀고리</a> · <a href="taxrefund.html">택스리펀</a>.</p>
+  <table class="ledger">
+    <caption>여행 + 쇼핑 (2인)</caption>
+    <thead><tr><th scope="col">후보</th><th class="num" scope="col">쇼핑액</th>
+      <th class="num" scope="col">여행+쇼핑</th><th class="num" scope="col">1,000만</th><th class="num" scope="col">1,200만</th></tr></thead>
+    <tbody><tr><td>없음</td><td class="num">0</td><td class="num">7,053,012</td><td class="num">가능</td><td class="num">가능</td></tr><tr><td>까르띠에 다무르 펜던트 SM  (€1,520)</td><td class="num">2,103,938</td><td class="num">9,156,950</td><td class="num">가능</td><td class="num">가능</td></tr><tr><td>까르띠에 트리니티 이어링 플레인  (€2,040)</td><td class="num">2,823,707</td><td class="num">9,876,719</td><td class="num">가능</td><td class="num">가능</td></tr><tr><td>불가리 세르펜티 바이퍼 링  (€2,770)</td><td class="num">3,834,151</td><td class="num">10,887,163</td><td class="num">—</td><td class="num">가능</td></tr><tr><td>반클리프 알함브라 펜던트 오닉스  (€3,100)</td><td class="num">4,290,927</td><td class="num">11,343,939</td><td class="num">—</td><td class="num">가능</td></tr><tr class=sum><td>까르띠에 트리니티 이어링 클래식  (€3,800)</td><td class="num">5,259,846</td><td class="num">12,312,858</td><td class="num">—</td><td class="num">초과</td></tr></tbody>
+  </table>
+  <p class="sub">트리니티 이어링 클래식(€3,800)을 넣으면 12,312,858원 — 절대 상한 1,200만원을 넘는다.
+    1,000만 안에서 주얼리를 넣으려면 트리니티 이어링 플레인(€2,040)까지가 한계다.</p>
 </section>
-<section id="D9">
-  <h2>D9 · 2/24 (수) — 바르셀로나 — 구시가지 &amp; 미술 (0.7mm)</h2>
-  <img src="img/D09-바르셀로나-구시가지.jpg" alt="D9 지도" loading="lazy">
-  <table class="sched"><thead><tr><th>시각</th><th>일정</th><th>근거</th><th>비용(2인)</th></tr></thead>
-  <tbody><tr class='stay'><td class='t'>—</td><td>숙박 — 바르셀로나 · H10 Casanova</td><td class='src'>Booking 실조회</td><td class='c'>158,527</td></tr><tr><td class='t'>07:30</td><td>기상 · 조식</td><td class='src'>추정</td><td class='c'>15,000</td></tr><tr><td class='t'>09:00</td><td>람블라스 · 보케리아 시장 (하몬 컵 €5)</td><td class='src'>실제 메뉴</td><td class='c'>15,000</td></tr><tr><td class='t'>10:00</td><td>바르셀로나 대성당 (€11×2 · 고딕 지구)</td><td class='src'>공식 요금</td><td class='c'>35,000</td></tr><tr><td class='t'>11:30</td><td>엘 보른 골목 · 산타마리아 델 마르</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>12:30</td><td>점심 — 엘 보른 좌식 (2인 1끼 €49~86)</td><td class='src'>실제 메뉴</td><td class='c'>78,000</td></tr><tr><td class='t'>14:00</td><td>피카소 미술관 (€12×2)</td><td class='src'>공식 요금</td><td class='c'>38,000</td></tr><tr><td class='t'>16:00</td><td>몬주이크 케이블카 (€12.5×2)</td><td class='src'>공식 요금</td><td class='c'>40,000</td></tr><tr><td class='t'>17:00</td><td>MNAC — 카탈루냐 미술관 (€12×2)</td><td class='src'>공식 요금</td><td class='c'>38,000</td></tr><tr><td class='t'>18:40</td><td>카페</td><td class='src'>실제 메뉴</td><td class='c'>20,000</td></tr><tr><td class='t'>20:30</td><td>저녁 — 엘 보른/보르네 좌식</td><td class='src'>실제 메뉴</td><td class='c'>95,000</td></tr><tr><td class='t'>22:30</td><td>취침</td><td class='src'></td><td class='c'></td></tr><tr class='sum'><td></td><td>숙박 158,527 · 식비 223,000 · 입장·이동 151,000</td><td></td><td class='c'>532,527</td></tr></tbody></table>
-</section>
-<section id="D10">
-  <h2>D10 · 2/25 (목) — 바르셀로나 — 야외 &amp; 쇼핑 마무리 (0.1mm · 가장 맑음)</h2>
-  <img src="img/D10-바르셀로나-야외.jpg" alt="D10 지도" loading="lazy">
-  <table class="sched"><thead><tr><th>시각</th><th>일정</th><th>근거</th><th>비용(2인)</th></tr></thead>
-  <tbody><tr class='stay'><td class='t'>—</td><td>숙박 — 바르셀로나 · H10 Casanova</td><td class='src'>Booking 실조회</td><td class='c'>158,527</td></tr><tr><td class='t'>07:30</td><td>기상 · 조식</td><td class='src'>추정</td><td class='c'>15,000</td></tr><tr><td class='t'>08:30</td><td>메트로 → 구엘 공원</td><td class='src'>추정</td><td class='c'>6,000</td></tr><tr><td class='t'>09:00</td><td>구엘 공원 유료 구역 (€10×2 · 맑은 날로 배치)</td><td class='src'>공식 요금</td><td class='c'>32,000</td></tr><tr><td class='t'>11:30</td><td>카르멜 벙커스 전망대 (무료 · 시내 파노라마)</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>13:00</td><td>점심 — 그라시아 지구</td><td class='src'>실제 메뉴</td><td class='c'>78,000</td></tr><tr><td class='t'>14:30</td><td><b>쇼핑 마무리</b> — 파세이그 데 그라시아 명품 · 주얼리 구매</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>16:30</td><td>El Corte Inglés — 택스리펀 서류·가격 비교(구매액 별도)</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>18:40</td><td>카페</td><td class='src'>실제 메뉴</td><td class='c'>20,000</td></tr><tr><td class='t'>20:30</td><td>저녁 — El Nacional 또는 그라시아</td><td class='src'>실제 메뉴</td><td class='c'>95,000</td></tr><tr><td class='t'>22:30</td><td>숙소 복귀 · 짐 정리</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>—</td><td><b>대안</b> 지로나(AVE 38분 · 왕복 €22/인) 또는 몬세라트(€22/인) 당일치기 — 쇼핑을 D8·D11로 분산</td><td class='src'>추정</td><td class='c'></td></tr><tr class='sum'><td></td><td>숙박 158,527 · 식비 208,000 · 입장·이동 38,000</td><td></td><td class='c'>404,527</td></tr></tbody></table>
-</section>
-<section id="D11">
-  <h2>D11 · 2/26 (금) — 바르셀로나 → 인천</h2>
-  <img src="img/D11-출국.jpg" alt="D11 지도" loading="lazy">
-  <table class="sched"><thead><tr><th>시각</th><th>일정</th><th>근거</th><th>비용(2인)</th></tr></thead>
-  <tbody><tr><td class='t'>07:00</td><td>기상 · 조식 · 체크아웃(짐 보관)</td><td class='src'>추정</td><td class='c'>15,000</td></tr><tr><td class='t'>09:00</td><td>엘보른 · 카탈루냐 광장 기념품</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>10:30</td><td>El Corte Inglés — 즉시 환급(구매액은 쇼핑 별도)</td><td class='src'></td><td class='c'></td></tr><tr><td class='t'>11:30</td><td>점심 — 시내 좌식</td><td class='src'>실제 메뉴</td><td class='c'>60,000</td></tr><tr><td class='t'>13:00</td><td>Aerobús → BCN 공항</td><td class='src'>추정</td><td class='c'>25,000</td></tr><tr><td class='t'>14:00</td><td>택스리펀 셀프 기계 → 체크인</td><td class='src'>공식 요금</td><td class='c'></td></tr><tr><td class='t'>16:30</td><td>BCN 출발 · <b>항공(오는편, 1회 경유 16h10 · 2인)</b></td><td class='src'>항공 조회</td><td class='c'>1,126,818</td></tr><tr><td class='t'>—</td><td>공항·기내 간식</td><td class='src'>추정</td><td class='c'>30,000</td></tr><tr class='sum'><td></td><td>숙박  · 식비 105,000 · 입장·이동 1,151,818</td><td></td><td class='c'>1,256,818</td></tr></tbody></table>
-</section>
-<h2>발권 시점 — 11월 초 결제</h2>
-<p class="sub">오늘(10/17) 결제하지 못하고 <b>11월 초에 결제</b>한다면 19일 늦게 사는 것이다(122일 전 → 103일 전).
-<b>웃돈은 2인 0~8만원</b>(0~3%)으로 추정. 큰 상승은 출발 6~8주 전에 온다.</p>
-<table><thead><tr><th>상황</th><th>11월 초 항공(2인)</th><th>웃돈</th></tr></thead><tbody>
-<tr><td>특가 유지</td><td class="c">270~278만</td><td class="c">+0~8만</td></tr>
-<tr><td>특가 일부 소진</td><td class="c">284~297만</td><td class="c">+13.5~27만</td></tr>
-<tr><td>성수 진입·좌석 부족</td><td class="c">310만</td><td class="c">+40.5만</td></tr>
-</tbody></table>
-<div class="warn"><b>진짜 리스크는 가격이 아니라 저가 좌석(fare bucket) 소진</b>이다.
-10/17 기준선 — ICN→LIS 왕복최저 <b>₩767,195</b> / ICN→BCN <b>₩619,894</b> / 2월 실측 2인 <b>270만</b>(루프트한자).<br>
-<b>할 일</b>: ① 11월 1일 바로 결제 ② 후보 4개(카타르·에티하드·KLM·AF) 같은 날 동시 조회
-③ 2인 240만 이하 즉시 결제 ④ <b>숙소는 지금 무료취소로 선점</b>(연 6% 상승 회피).</div>
-<h2>총액</h2>
-<table><thead><tr><th>항목</th><th>근거</th><th>2인</th></tr></thead><tbody>
-<tr><td>현지 합계(숙박·식비·입장·이동·교통)</td><td class="src"></td><td class="c">4,267,632</td></tr>
-<tr><td>항공(D1·D11 실측)</td><td class="src">항공 조회</td><td class="c">2,385,380</td></tr>
-<tr><td>여유·기념품</td><td class="src"></td><td class="c">400,000</td></tr>
-<tr class="sum"><td>합계</td><td></td><td class="c">7,053,012</td></tr>
-</tbody></table>
-<h2>명품 포함 총액</h2>
-<p class="sub">주얼리 값은 <b>공식 사이트(한국·일본·스페인) 직접 조회</b>(2026-10-18). 택스리펀 후 실구매 기준. 상세: <a href="jewelry.html">주얼리 페이지</a></p>
-<table><thead><tr><th>후보</th><th class="c">쇼핑액</th><th class="c">여행+쇼핑</th><th class="c">1,000만</th><th class="c">1,200만</th></tr></thead><tbody>
-<tr><td>없음</td><td class="c">0</td><td class="c"><b>7,053,012</b></td><td class="c">✅</td><td class="c">✅</td></tr><tr><td>까르띠에 다무르 펜던트 SM  (€1,520)</td><td class="c">2,103,938</td><td class="c"><b>9,156,950</b></td><td class="c">✅</td><td class="c">✅</td></tr><tr><td>까르띠에 트리니티 이어링 플레인  (€2,040)</td><td class="c">2,823,707</td><td class="c"><b>9,876,719</b></td><td class="c">✅</td><td class="c">✅</td></tr><tr><td>불가리 세르펜티 바이퍼 링  (€2,770)</td><td class="c">3,834,151</td><td class="c"><b>10,887,163</b></td><td class="c">—</td><td class="c">✅</td></tr><tr><td>반클리프 알함브라 펜던트 오닉스  (€3,100)</td><td class="c">4,290,927</td><td class="c"><b>11,343,939</b></td><td class="c">—</td><td class="c">✅</td></tr><tr class=sum><td>까르띠에 트리니티 이어링 클래식  (€3,800)</td><td class="c">5,259,846</td><td class="c"><b>12,312,858</b></td><td class="c">—</td><td class="c">🚫 초과</td></tr>
-</tbody></table>
-<div class="warn"><b>트리니티 이어링 클래식(€3,800)을 넣으면 12,312,858원</b> — 절대 상한 1,200만원을 넘는다.
-<b>1,000만 안에서 주얼리를 넣으려면 트리니티 이어링 플레인(€2,040)</b>이 한계다.</div>
-<footer>지도 © OpenStreetMap contributors · 숙박 Booking 실시간 조회 · 관광지 공식 요금 · 식비 실제 메뉴(2026-10-17 조회)</footer>
-</main></body></html>
+</main>
+
+<footer class="wrap">
+  <p>지도 © OpenStreetMap contributors · 숙박 Booking 실시간 조회(2026-10-19) · 관광지 공식 요금 · 식비 실제 메뉴.
+     값의 근거는 <a href="itinerary.html">일차별 일정</a>의 근거 열에 있다.</p>
+  <p>계획 전문 · <a href="https://gist.github.com/kimhs950627/ce52eea9438f0109c8e5546bf3dafbe1">plan.md</a> ·
+     저장소 <a href="https://github.com/kimhs950627/iberia-2027-02">GitHub</a></p>
+</footer>
+
+</body></html>
