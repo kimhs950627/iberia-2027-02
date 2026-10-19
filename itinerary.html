@@ -37,7 +37,7 @@ body::after{
 .topbar a{color:var(--accent); text-decoration:none; border-bottom:1px solid currentColor}
 
 /* ── 히어로 */
-.hero{padding:var(--s-9) 0 var(--s-8); border-bottom:3px solid var(--rule-strong)}
+.hero{padding-top:var(--s-9); padding-bottom:var(--s-8); border-bottom:3px solid var(--rule-strong)}
 .kicker{
   font-family:var(--font-mono); font-size:var(--fs-caption); letter-spacing:.14em;
   text-transform:uppercase; color:var(--accent); margin:0 0 var(--s-5);
@@ -56,7 +56,7 @@ body::after{
 
 /* ── 칩 내비 */
 .chips{
-  display:flex; gap:var(--s-2); overflow-x:auto; padding:var(--s-4) 0; position:sticky; top:49px; z-index:30;
+  display:flex; gap:var(--s-2); overflow-x:auto; padding-top:var(--s-4); padding-bottom:var(--s-4); position:sticky; top:49px; z-index:30;
   background:var(--paper); border-bottom:1px solid var(--rule); scrollbar-width:none;
 }
 .chips::-webkit-scrollbar{display:none}
@@ -136,13 +136,18 @@ body::after{
 }
 
 /* ── 마무리 */
-.tail{padding:var(--s-8) 0 var(--s-9); display:grid; gap:var(--s-6); grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.tail{padding-top:var(--s-8); padding-bottom:var(--s-9); display:grid; gap:var(--s-6); grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
 .tail h2{font-family:var(--font-display); font-size:var(--fs-h3); margin:0 0 var(--s-3)}
 .tail p{margin:0 0 var(--s-2); color:var(--ink-soft); font-size:var(--fs-small)}
 .tail a{color:var(--accent); border-bottom:1px solid currentColor; text-decoration:none}
 
 @media (max-width:720px){
   :root{--rail:0px; --fs-day:2.75rem; --s-5:22px; --s-7:36px}
+  .topbar .wrap{flex-wrap:wrap; row-gap:var(--s-2)}
+  .topbar .meta{display:none}
+  /* 폰에서는 칩을 좌우로 밀지 않고 여러 줄로 접어 11일이 한눈에 보이게 한다 */
+  .chips{position:static; flex-wrap:wrap; overflow:visible; row-gap:var(--s-2)}
+  .chip{flex:0 1 auto}
   .wrap{padding:0 max(22px, env(safe-area-inset-left))}
   .day{
     grid-template-columns:1fr; gap:var(--s-3);
@@ -177,8 +182,7 @@ body::after{
   <div class="wrap">
     <span class="brand">이베리아 2027-02 · 날짜별 일정</span>
     <span class="meta">2/16–2/26 · 10박 11일 · 2인</span>
-    <a href="jewelry.html">주얼리</a>
-    <a href="earrings.html">귀고리</a>
+    <a href="earrings.html">귀고리 10종</a>
     <a href="taxrefund.html">택스리펀</a>
     <a href="galaxytab.html">갤럭시 탭</a>
     <a href="reservations.html">예약</a>

@@ -30,7 +30,7 @@ a{color:var(--accent)}
 .topbar a{text-decoration:none; border-bottom:1px solid currentColor}
 
 /* ── 히어로 */
-.hero{padding:var(--s-9) 0 var(--s-8); border-bottom:3px solid var(--rule-strong)}
+.hero{padding-top:var(--s-9); padding-bottom:var(--s-8); border-bottom:3px solid var(--rule-strong)}
 .kicker{font-family:var(--font-mono); font-size:var(--fs-caption); letter-spacing:.14em;
   text-transform:uppercase; color:var(--accent); margin:0 0 var(--s-5)}
 .hero h1{font-family:var(--font-display); font-weight:700; font-size:var(--fs-hero); line-height:1.02;
@@ -46,7 +46,7 @@ a{color:var(--accent)}
   color:var(--muted); letter-spacing:0}
 
 /* ── 블록 */
-.block{border-top:1px solid var(--rule); padding:var(--s-7) 0}
+.block{border-top:1px solid var(--rule); padding-top:var(--s-7); padding-bottom:var(--s-7)}
 .block:first-of-type{border-top:none}
 .block h2{font-family:var(--font-display); font-weight:700; font-size:var(--fs-h3);
   margin:0 0 var(--s-2); letter-spacing:-.01em}
@@ -93,7 +93,7 @@ ul.plain{margin:0; padding-left:1.1em; font-size:var(--fs-small); color:var(--in
 ul.plain li{margin-bottom:var(--s-2)}
 ul.plain b{color:var(--ink)}
 
-footer{border-top:3px solid var(--rule-strong); margin-top:var(--s-8); padding:var(--s-6) 0 var(--s-9);
+footer{border-top:3px solid var(--rule-strong); margin-top:var(--s-8); padding-top:var(--s-6); padding-bottom:var(--s-9);
   color:var(--muted); font-size:var(--fs-caption)}
 
 /* ── 로드 시 1회 스태거드 */
@@ -104,11 +104,20 @@ footer{border-top:3px solid var(--rule-strong); margin-top:var(--s-8); padding:v
 
 @media (max-width:820px){
   .topbar .meta{display:none}
-  .hero{padding:var(--s-8) 0 var(--s-7)}
+  .hero{padding-top:var(--s-8); padding-bottom:var(--s-7)}
   .route{grid-template-columns:1fr 1fr; gap:var(--s-4)}
   .ledger td.dt{display:none}
   .ledger th:nth-child(3){display:none}
   .ledger td.num, .ledger th.num{width:84px}
+  /* 넓은 표는 좌우로 밀지 않고 행마다 라벨-값으로 접는다 */
+  .ledger.stacked thead{display:none}
+  .ledger.stacked tbody tr{display:block; border-bottom:1px solid var(--rule); padding:var(--s-3) 0}
+  .ledger.stacked tbody td{display:flex; justify-content:space-between; gap:var(--s-4);
+    border:none; padding:2px 0; width:auto; text-align:right}
+  .ledger.stacked tbody td::before{content:attr(data-label); font-family:var(--font-mono);
+    font-size:var(--fs-caption); color:var(--muted); letter-spacing:.06em; text-align:left}
+  .ledger.stacked tbody td:first-child{display:block; text-align:left; font-weight:700}
+  .ledger.stacked tbody td:first-child::before{display:none}
 }
 @media print{
   .topbar{display:none} body::after{display:none}
@@ -129,8 +138,7 @@ footer{border-top:3px solid var(--rule-strong); margin-top:var(--s-8); padding:v
     <nav>
       <a href="itinerary.html">일차별 일정</a>
       <a href="reservations.html">예약 캘린더</a>
-      <a href="jewelry.html">주얼리</a>
-      <a href="earrings.html">귀고리</a>
+      <a href="earrings.html">귀고리 10종</a>
       <a href="taxrefund.html">택스리펀</a>
       <a href="galaxytab.html">갤럭시 탭</a>
     </nav>
@@ -324,12 +332,12 @@ footer{border-top:3px solid var(--rule-strong); margin-top:var(--s-8); padding:v
 <section class="block wrap">
   <h2>명품 포함 총액</h2>
   <p class="sub">주얼리 값은 <b>공식 사이트(한국·일본·스페인) 직접 조회</b>(2026-10-18). 택스리펀 후 실구매 기준.
-    상세: <a href="jewelry.html">주얼리</a> · <a href="earrings.html">귀고리</a> · <a href="taxrefund.html">택스리펀</a>.</p>
-  <table class="ledger">
+    상세: <a href="earrings.html">귀고리 10종 비교</a> · <a href="taxrefund.html">택스리펀</a>.</p>
+  <table class="ledger stacked">
     <caption>여행 + 쇼핑 (2인)</caption>
     <thead><tr><th scope="col">후보</th><th class="num" scope="col">쇼핑액</th>
       <th class="num" scope="col">여행+쇼핑</th><th class="num" scope="col">1,000만</th><th class="num" scope="col">1,200만</th></tr></thead>
-    <tbody><tr><td>없음</td><td class="num">0</td><td class="num">7,053,012</td><td class="num">가능</td><td class="num">가능</td></tr><tr><td>까르띠에 다무르 펜던트 SM  (€1,520)</td><td class="num">2,103,938</td><td class="num">9,156,950</td><td class="num">가능</td><td class="num">가능</td></tr><tr><td>까르띠에 트리니티 이어링 플레인  (€2,040)</td><td class="num">2,823,707</td><td class="num">9,876,719</td><td class="num">가능</td><td class="num">가능</td></tr><tr><td>불가리 세르펜티 바이퍼 링  (€2,770)</td><td class="num">3,834,151</td><td class="num">10,887,163</td><td class="num">—</td><td class="num">가능</td></tr><tr><td>반클리프 알함브라 펜던트 오닉스  (€3,100)</td><td class="num">4,290,927</td><td class="num">11,343,939</td><td class="num">—</td><td class="num">가능</td></tr><tr class=sum><td>까르띠에 트리니티 이어링 클래식  (€3,800)</td><td class="num">5,259,846</td><td class="num">12,312,858</td><td class="num">—</td><td class="num">초과</td></tr></tbody>
+    <tbody><tr><td data-label="후보">없음</td><td class="num" data-label="쇼핑액">0</td><td class="num" data-label="여행+쇼핑">7,053,012</td><td class="num" data-label="1,000만 이내">가능</td><td class="num" data-label="1,200만 이내">가능</td></tr><tr><td data-label="후보">까르띠에 다무르 펜던트 SM  (€1,520)</td><td class="num" data-label="쇼핑액">2,103,938</td><td class="num" data-label="여행+쇼핑">9,156,950</td><td class="num" data-label="1,000만 이내">가능</td><td class="num" data-label="1,200만 이내">가능</td></tr><tr><td data-label="후보">까르띠에 트리니티 이어링 플레인  (€2,040)</td><td class="num" data-label="쇼핑액">2,823,707</td><td class="num" data-label="여행+쇼핑">9,876,719</td><td class="num" data-label="1,000만 이내">가능</td><td class="num" data-label="1,200만 이내">가능</td></tr><tr><td data-label="후보">불가리 세르펜티 바이퍼 링  (€2,770)</td><td class="num" data-label="쇼핑액">3,834,151</td><td class="num" data-label="여행+쇼핑">10,887,163</td><td class="num" data-label="1,000만 이내">—</td><td class="num" data-label="1,200만 이내">가능</td></tr><tr><td data-label="후보">반클리프 알함브라 펜던트 오닉스  (€3,100)</td><td class="num" data-label="쇼핑액">4,290,927</td><td class="num" data-label="여행+쇼핑">11,343,939</td><td class="num" data-label="1,000만 이내">—</td><td class="num" data-label="1,200만 이내">가능</td></tr><tr class=sum><td data-label="후보">까르띠에 트리니티 이어링 클래식  (€3,800)</td><td class="num" data-label="쇼핑액">5,259,846</td><td class="num" data-label="여행+쇼핑">12,312,858</td><td class="num" data-label="1,000만 이내">—</td><td class="num" data-label="1,200만 이내">초과</td></tr></tbody>
   </table>
   <p class="sub">트리니티 이어링 클래식(€3,800)을 넣으면 12,312,858원 — 절대 상한 1,200만원을 넘는다.
     1,000만 안에서 주얼리를 넣으려면 트리니티 이어링 플레인(€2,040)까지가 한계다.</p>
