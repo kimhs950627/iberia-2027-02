@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>숙소 — 호텔·에어비앤비 Top 5 · 이베리아 2027-02</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Gowun+Batang:wght@400;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/tokens.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);
+  font-size:var(--fs-body);line-height:1.75;-webkit-font-smoothing:antialiased;
+  word-break:keep-all;line-break:strict;overflow-wrap:break-word;hyphens:none}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:99;opacity:.035;
+  background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--s-5)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+a{color:var(--accent)}
+.topbar{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--rule)}
+.topbar .wrap{display:flex;align-items:baseline;gap:var(--s-4);padding-top:var(--s-3);padding-bottom:var(--s-3)}
+.topbar .brand{font-family:var(--font-display);font-weight:700;font-size:var(--fs-small)}
+.topbar nav{display:flex;gap:var(--s-4);flex-wrap:wrap;font-family:var(--font-mono);font-size:var(--fs-caption)}
+.topbar .meta{margin-left:auto;font-family:var(--font-mono);font-size:var(--fs-caption);color:var(--muted)}
+.topbar a{text-decoration:none;border-bottom:1px solid currentColor}
+.hero{padding-top:var(--s-9);padding-bottom:var(--s-8);border-bottom:3px solid var(--rule-strong)}
+.kicker{font-family:var(--font-mono);font-size:var(--fs-caption);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);margin:0 0 var(--s-5)}
+.hero h1{font-family:var(--font-display);font-weight:700;font-size:var(--fs-hero);line-height:1.02;
+  letter-spacing:-.02em;margin:0 0 var(--s-5);text-wrap:balance}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero .lede{max-width:56ch;font-size:var(--fs-lead);color:var(--ink-soft);margin:0 0 var(--s-7)}
+.block{border-top:1px solid var(--rule);padding-top:var(--s-7);padding-bottom:var(--s-7)}
+.block h2{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h3);margin:0 0 var(--s-2)}
+.block .sub{color:var(--muted);font-size:var(--fs-small);margin:0 0 var(--s-5);max-width:64ch}
+.city{padding-top:var(--s-8);padding-bottom:var(--s-7);border-top:3px solid var(--rule-strong)}
+.city-head{margin-bottom:var(--s-5)}
+.city-head .when{font-family:var(--font-mono);font-size:var(--fs-caption);letter-spacing:.06em;
+  color:var(--accent);margin:0 0 var(--s-1)}
+.city-head h2{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h3);margin:0 0 var(--s-2)}
+.city-head .verdict{margin:0;color:var(--ink-soft);font-size:var(--fs-small);max-width:70ch}
+.ledger{width:100%;border-collapse:collapse;font-size:var(--fs-small);margin-bottom:var(--s-5)}
+.ledger caption{text-align:left;font-family:var(--font-mono);font-size:var(--fs-caption);
+  letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-bottom:var(--s-3)}
+.ledger th{text-align:left;font-family:var(--font-mono);font-size:var(--fs-caption);font-weight:500;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  padding:0 var(--s-2) var(--s-2) 0;border-bottom:2px solid var(--rule-strong)}
+.ledger td{padding:var(--s-3) var(--s-2) var(--s-3) 0;border-bottom:1px solid var(--rule);vertical-align:top}
+.ledger tbody tr:hover{background:var(--paper-2)}
+.ledger td.nm{font-weight:700}
+.ledger td.nm small{display:block;font-weight:400;color:var(--muted);font-size:0.8125rem}
+.ledger td.num,.ledger th.num{font-family:var(--font-mono);text-align:right;white-space:nowrap;
+  font-variant-numeric:tabular-nums}
+.ledger td.loc{color:var(--ink-soft);white-space:nowrap}
+.ledger td.note{color:var(--ink-soft);font-size:0.8125rem}
+.excluded{font-size:var(--fs-small);color:var(--muted)}
+ul.crit{margin:0;padding-left:1.1em;font-size:var(--fs-small);color:var(--ink-soft)}
+ul.crit li{margin-bottom:var(--s-2)}
+footer{border-top:3px solid var(--rule-strong);margin-top:var(--s-8);padding-top:var(--s-6);padding-bottom:var(--s-9);
+  color:var(--muted);font-size:var(--fs-caption)}
+@media (max-width:820px){
+  .topbar .meta{display:none}
+  .hero{padding-top:var(--s-8);padding-bottom:var(--s-7)}
+  .ledger td.loc,.ledger th:nth-child(5){display:none}
+  .ledger td.note,.ledger th:nth-child(6){display:none}
+  .ledger{font-size:0.8125rem}
+}
+@media print{
+  .topbar{display:none} body::after{display:none}
+  .city{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="brand">이베리아 2027-02 · 숙소</span>
+    <nav>
+      <a href="index.html">요약</a>
+      <a href="itinerary.html">일차별 일정</a>
+      <a href="reservations.html">예약 캘린더</a>
+      <a href="earrings.html">귀고리 10종</a>
+      <a href="taxrefund.html">택스리펀</a>
+      <a href="galaxytab.html">갤럭시 탭</a>
+    </nav>
+    <span class="meta">2/16–2/26 · 10박 · 2인</span>
+  </div>
+</div>
+
+<main>
+<section class="hero wrap">
+  <p class="kicker">Accommodation · Lisbon → Porto → Granada → Barcelona</p>
+  <h1>네 도시, <em>호텔 5</em>와 <em>에어비앤비 5</em></h1>
+  <p class="lede">2인·우리 날짜로 실제 조회한 값만 적었다. 판정 기준은 <b>예산 · 가성비 · 넓음 · 깔끔 · 깨끗 · 교통 · 안전</b> 일곱 가지다.</p>
+</section>
+
+<section class="block wrap">
+  <h2>고른 기준</h2>
+  <ul class="crit"><li><b>예산</b> — 계획 1박 값 ±20% 안. 넘으면 표에 그렇게 적었다.</li><li><b>가성비</b> — 평점·후기수로 나눈 값이 아니라 **같은 조건에서 더 싼 곳**</li><li><b>넓음</b> — 2인이 캐리어 2개를 펼 공간 — 후기에서 'rooms are small' 언급 여부</li><li><b>깔끔·깨끗</b> — 청결도 8.5 이상 + 최근 후기 기준</li><li><b>교통</b> — 역·지하철·주요 관광지 **도보 15분** 또는 대중교통 10분</li><li><b>안전</b> — 야간 귀가 동선이 밝고 사람 많은 쪽(소매치기 구역·외곽 회피)</li></ul>
+  <p class="sub">값은 <b>Booking.com 실시간(2026-10-19, CDP 실 크롬)</b>과 <b>Airbnb 전체숙소(2026-10-19, CDP)</b> 조회다.
+    에어비앤비 총액에는 청소비·서비스 수수료가 들어 있어 1박 환산을 함께 적었다. 조회 시점 값이므로 결제 전에 다시 확인한다.</p>
+</section>
+
+<article class="city" id="리스본">
+      <header class="city-head">
+        <p class="when">2/16–18 · 2박</p>
+        <h2>리스본</h2>
+        <p class="verdict">중심(로시우·바이샤)이 평지이고 지하철·트램이 모인다. 언덕(그라사·알파마) 숙소는 밤 귀가가 불리해 뺐다.</p>
+      </header>
+      <div class="tables">
+        <table class="ledger">
+        <caption>호텔 Top 5 · 1박(2인) · Booking 실조회</caption>
+        <thead><tr><th scope="col">숙소</th><th class="num" scope="col">1박</th>
+          <th class="num" scope="col">평점</th><th class="num" scope="col">후기</th>
+          <th scope="col">위치</th><th scope="col">판정</th></tr></thead>
+        <tbody><tr><td class="nm">Ouro Rossio Hotel</td><td class="num">134,852</td><td class="num">9.3</td><td class="num">697</td><td class="loc">로시우 광장 150m</td><td class="note">**추천** · 평지·중심, 밤에도 사람 많음</td></tr><tr><td class="nm">Rossio Plaza Hotel</td><td class="num">142,749</td><td class="num">8.9</td><td class="num">3,309</td><td class="loc">로시우 150m</td><td class="note">같은 자리, 후기 3,300</td></tr><tr><td class="nm">Altis Prime Hotel</td><td class="num">116,539</td><td class="num">9.2</td><td class="num">1,295</td><td class="loc">아베니다 1.2km</td><td class="note">가성비 · 평지·조용, 지하철 5분</td></tr><tr><td class="nm">HF Fénix Music</td><td class="num">118,488</td><td class="num">9.0</td><td class="num">3,056</td><td class="loc">마르케스 드 폼발 1.7km</td><td class="note">지하철 2분, 조식 좋음</td></tr><tr><td class="nm">Portugal Boutique Hotel</td><td class="num">184,985</td><td class="num">9.4</td><td class="num">2,648</td><td class="loc">바이샤 250m</td><td class="note">평점 최고, 예산 초과</td></tr></tbody>
+      </table>
+        <table class="ledger">
+        <caption>에어비앤비 Top 5 · 전체 숙소 · 2박 총액(수수료 포함)</caption>
+        <thead><tr><th scope="col">숙소</th><th class="num" scope="col">총액</th>
+          <th class="num" scope="col">1박 환산</th><th class="num" scope="col">평점</th>
+          <th scope="col">지역</th></tr></thead>
+        <tbody><tr><td class="nm">그라사 1BR · 4.91(584)</td><td class="num">263,635</td><td class="num">131,818</td><td class="num">4.91</td><td class="loc">그라사</td></tr><tr><td class="nm">바이샤 1BR · 4.91(461)</td><td class="num">293,594</td><td class="num">146,797</td><td class="num">4.91</td><td class="loc">산타마리아 마이오르</td></tr><tr><td class="nm">바이샤 1BR · 4.92(462)</td><td class="num">301,085</td><td class="num">150,542</td><td class="num">4.92</td><td class="loc">산타마리아 마이오르</td></tr><tr><td class="nm">캄푸드우리크 1BR · 4.92(344)</td><td class="num">332,539</td><td class="num">166,270</td><td class="num">4.92</td><td class="loc">캄푸드우리크</td></tr><tr><td class="nm">바이샤 1BR(2침대) · 4.95(64)</td><td class="num">332,541</td><td class="num">166,270</td><td class="num">4.95</td><td class="loc">산타마리아 마이오르</td></tr></tbody>
+      </table>
+      </div>
+    </article><article class="city" id="포르투">
+      <header class="city-head">
+        <p class="when">2/18–20 · 2박</p>
+        <h2>포르투</h2>
+        <p class="verdict">숙소값이 5도시 중 가장 싸다. 상벤투역·볼량시장·리베이라가 도보권인 중심(350~500m)이 정답이고, 언덕 위는 짐 들고 힘들다.</p>
+      </header>
+      <div class="tables">
+        <table class="ledger">
+        <caption>호텔 Top 5 · 1박(2인) · Booking 실조회</caption>
+        <thead><tr><th scope="col">숙소</th><th class="num" scope="col">1박</th>
+          <th class="num" scope="col">평점</th><th class="num" scope="col">후기</th>
+          <th scope="col">위치</th><th scope="col">판정</th></tr></thead>
+        <tbody><tr><td class="nm">chic&basic Gravity</td><td class="num">108,664</td><td class="num">9.2</td><td class="num">3,482</td><td class="loc">중심 350m</td><td class="note">**현재 픽** · 도보권·청결</td></tr><tr><td class="nm">The Social Hub Porto</td><td class="num">93,036</td><td class="num">9.0</td><td class="num">3,626</td><td class="loc">중심 200m</td><td class="note">**가성비 최고** · 역·시장 도보</td></tr><tr><td class="nm">Moov Hotel Porto Centro</td><td class="num">91,319</td><td class="num">8.8</td><td class="num">4,106</td><td class="loc">중심 0.5km</td><td class="note">후기 4,100 · 실속</td></tr><tr><td class="nm">Oca Ribeira do Porto Hotel</td><td class="num">101,240</td><td class="num">8.9</td><td class="num">1,781</td><td class="loc">리베이라 1km</td><td class="note">강변 도보권</td></tr><tr><td class="nm">One Shot Aliados Goldsmith</td><td class="num">130,607</td><td class="num">8.9</td><td class="num">1,187</td><td class="loc">중심 400m</td><td class="note">프리미엄 · 알리알두스</td></tr></tbody>
+      </table>
+        <table class="ledger">
+        <caption>에어비앤비 Top 5 · 전체 숙소 · 2박 총액(수수료 포함)</caption>
+        <thead><tr><th scope="col">숙소</th><th class="num" scope="col">총액</th>
+          <th class="num" scope="col">1박 환산</th><th class="num" scope="col">평점</th>
+          <th scope="col">지역</th></tr></thead>
+        <tbody><tr><td class="nm">포르투 1BR · 4.98(115)</td><td class="num">131,818</td><td class="num">65,909</td><td class="num">4.98</td><td class="loc">포르투</td></tr><tr><td class="nm">포르투 1BR · 4.90(303)</td><td class="num">197,728</td><td class="num">98,864</td><td class="num">4.90</td><td class="loc">포르투</td></tr><tr><td class="nm">포르투 1BR(침대2) · 4.96(382)</td><td class="num">212,706</td><td class="num">106,353</td><td class="num">4.96</td><td class="loc">포르투</td></tr><tr><td class="nm">포르투 1BR(침대4) · 4.92(250)</td><td class="num">236,673</td><td class="num">118,336</td><td class="num">4.92</td><td class="loc">포르투</td></tr><tr><td class="nm">포르투 1BR(침대3) · 4.95(310)</td><td class="num">238,021</td><td class="num">119,010</td><td class="num">4.95</td><td class="loc">포르투</td></tr></tbody>
+      </table>
+      </div>
+    </article><article class="city" id="그라나다">
+      <header class="city-head">
+        <p class="when">2/20–22 · 2박 · 주말</p>
+        <h2>그라나다</h2>
+        <p class="verdict">주말이라 값이 뛴다. 대성당·누에바 광장 권이 도보 동선의 중심이고, 알바이신 안쪽은 오르막·계단이 많다.</p>
+      </header>
+      <div class="tables">
+        <table class="ledger">
+        <caption>호텔 Top 5 · 1박(2인) · Booking 실조회</caption>
+        <thead><tr><th scope="col">숙소</th><th class="num" scope="col">1박</th>
+          <th class="num" scope="col">평점</th><th class="num" scope="col">후기</th>
+          <th scope="col">위치</th><th scope="col">판정</th></tr></thead>
+        <tbody><tr><td class="nm">Áurea Catedral by Eurostars</td><td class="num">214,622</td><td class="num">9.3</td><td class="num">5,519</td><td class="loc">대성당 바로 옆</td><td class="note">**확정** · 4성·엘리베이터·24h</td></tr><tr><td class="nm">Hotel Granada Centro</td><td class="num">104,352</td><td class="num">8.9</td><td class="num">5,377</td><td class="loc">중심 0.7km</td><td class="note">가성비 · 2/18까지 무료취소</td></tr><tr><td class="nm">Hotel Posada del Toro</td><td class="num">112,602</td><td class="num">9.1</td><td class="num">1,809</td><td class="loc">중심 200m</td><td class="note">평점 최고 · 부티크</td></tr><tr><td class="nm">Hotel Sacromonte</td><td class="num">101,240</td><td class="num">8.6</td><td class="num">3,964</td><td class="loc">중심 350m</td><td class="note">조용 · 엘리베이터·24h</td></tr><tr><td class="nm">Arteaga Hostal & Baños Árabes</td><td class="num">95,541</td><td class="num">9.0</td><td class="num">1,464</td><td class="loc">중심 500m</td><td class="note">아랍 목욕탕 보유</td></tr></tbody>
+      </table>
+        <table class="ledger">
+        <caption>에어비앤비 Top 5 · 전체 숙소 · 2박 · 주말 총액(수수료 포함)</caption>
+        <thead><tr><th scope="col">숙소</th><th class="num" scope="col">총액</th>
+          <th class="num" scope="col">1박 환산</th><th class="num" scope="col">평점</th>
+          <th scope="col">지역</th></tr></thead>
+        <tbody><tr><td class="nm">알바이신 1BR · 4.88(1,043)</td><td class="num">280,113</td><td class="num">140,056</td><td class="num">4.88</td><td class="loc">알바이신</td></tr><tr><td class="nm">레알레호 1BR · 4.83(182)</td><td class="num">310,072</td><td class="num">155,036</td><td class="num">4.83</td><td class="loc">레알레호-산 마티아스</td></tr><tr><td class="nm">그라나다 1BR · 4.95(304)</td><td class="num">334,039</td><td class="num">167,020</td><td class="num">4.95</td><td class="loc">그라나다</td></tr><tr><td class="nm">그라나다 1BR · 4.85(806)</td><td class="num">346,022</td><td class="num">173,011</td><td class="num">4.85</td><td class="loc">그라나다</td></tr><tr><td class="nm">레알레호 1BR · 4.97(451)</td><td class="num">353,511</td><td class="num">176,756</td><td class="num">4.97</td><td class="loc">레알레호-산 마티아스</td></tr></tbody>
+      </table>
+      </div>
+    </article><article class="city" id="바르셀로나">
+      <header class="city-head">
+        <p class="when">2/22–26 · 4박</p>
+        <h2>바르셀로나</h2>
+        <p class="verdict">에어비앤비가 호텔보다 **비싸다**(청소비+수수료). 확장지구(Eixample)·카탈루냐 광장 권 호텔이 교통·안전·청결 모두 유리하다.</p>
+      </header>
+      <div class="tables">
+        <table class="ledger">
+        <caption>호텔 Top 5 · 1박(2인) · Booking 실조회</caption>
+        <thead><tr><th scope="col">숙소</th><th class="num" scope="col">1박</th>
+          <th class="num" scope="col">평점</th><th class="num" scope="col">후기</th>
+          <th scope="col">위치</th><th scope="col">판정</th></tr></thead>
+        <tbody><tr><td class="nm">H10 Casanova</td><td class="num">158,527</td><td class="num">9.0</td><td class="num">2,381</td><td class="loc">중심 0.8km</td><td class="note">**현재 픽** · 4박, 그라시아 접근</td></tr><tr><td class="nm">The Conica Deluxe B&B</td><td class="num">137,308</td><td class="num">9.1</td><td class="num">1,255</td><td class="loc">중심 1.4km</td><td class="note">**가성비** · 4박 8.5만 절약</td></tr><tr><td class="nm">Hotel Lleó</td><td class="num">168,104</td><td class="num">8.5</td><td class="num">7,701</td><td class="loc">카탈루냐 350m</td><td class="note">위치 최고 · 후기 7,700</td></tr><tr><td class="nm">AC Hotel Irla by Marriott</td><td class="num">223,103</td><td class="num">8.2</td><td class="num">57</td><td class="loc">중심 2.4km</td><td class="note">체인 · 후기 적음</td></tr><tr><td class="nm">Barceló Raval</td><td class="num">172,108</td><td class="num">8.0</td><td class="num">2,358</td><td class="loc">중심 0.9km</td><td class="note">루프탑 · 평점 낮음</td></tr></tbody>
+      </table>
+        <table class="ledger">
+        <caption>에어비앤비 Top 5 · 전체 숙소 · 4박 총액(수수료 포함)</caption>
+        <thead><tr><th scope="col">숙소</th><th class="num" scope="col">총액</th>
+          <th class="num" scope="col">1박 환산</th><th class="num" scope="col">평점</th>
+          <th scope="col">지역</th></tr></thead>
+        <tbody><tr><td class="nm">그라사 2BR · 4.79(1,358)</td><td class="num">934,708</td><td class="num">233,677</td><td class="num">4.79</td><td class="loc">그라사</td></tr><tr><td class="nm">에익삼플레 1BR · 5.00(98)</td><td class="num">1,005,113</td><td class="num">251,278</td><td class="num">5.00</td><td class="loc">에익삼플레</td></tr><tr><td class="nm">바리 고딕 로프트 · 4.91(510)</td><td class="num">1,024,585</td><td class="num">256,146</td><td class="num">4.91</td><td class="loc">바리 고딕</td></tr><tr><td class="nm">그라사 1BR · 4.96(390)</td><td class="num">1,036,568</td><td class="num">259,142</td><td class="num">4.96</td><td class="loc">그라시아</td></tr><tr><td class="nm">에익삼플레 2BR · 4.78(258)</td><td class="num">1,062,033</td><td class="num">265,508</td><td class="num">4.78</td><td class="loc">에익삼플레</td></tr></tbody>
+      </table>
+      </div>
+    </article>
+
+<section class="block wrap">
+  <h2>최종 추천</h2>
+  <table class="ledger">
+    <caption>도시별 1순위 (2인 · 우리 날짜)</caption>
+    <thead><tr><th scope="col">도시</th><th scope="col">숙소</th><th scope="col">왜</th></tr></thead>
+    <tbody><tr><td class="nm">리스본</td><td><b>Ouro Rossio Hotel</b><small>9.3 · 로시우 150m</small></td><td class="note">평지 + 중심 + 후기 697. 언덕 숙소(그라사·알파마)는 밤 귀가가 불리해 뺐다.</td></tr><tr><td class="nm">포르투</td><td><b>chic&basic Gravity</b><small>9.2 · 중심 350m</small></td><td class="note">역·시장·리베이라가 도보권. 값은 The Social Hub(9.3만)가 더 싸지만 위치·평점 균형에서 이쪽.</td></tr><tr><td class="nm">그라나다</td><td><b>Áurea Catedral by Eurostars</b><small>9.3 · 대성당 옆</small></td><td class="note">4성·엘리베이터·24시간 프런트. 알함브라 오전 출발이 편하다.</td></tr><tr><td class="nm">바르셀로나</td><td><b>H10 Casanova</b><small>9.0 · 중심 0.8km</small></td><td class="note">4박 기준 63.4만. 에어비앤비(최소 93.5만)보다 싸고 청소·보안이 낫다.</td></tr></tbody>
+  </table>
+  <p class="sub">포르투는 <b>The Social Hub Porto</b>(9.3만 · 9.0 · 중심 200m), 바르셀로나는 <b>The Conica Deluxe</b>(13.7만 · 9.1)로 내려가면
+    4박 기준 8.5만원을 더 아낀다 — 위치·평점 차이가 작아서 값이 더 중요하면 이쪽이 낫다.</p>
+</section>
+
+<section class="block wrap">
+  <h2>주의</h2>
+  <ul class="crit"><li>**에어비앤비는 포르투에서만 이긴다** — 2박 13.2만(1박 6.6만, 평점 4.98·115후기). 리스본·그라나다·바르셀로나는 호텔이 더 싸거나 비슷하다.</li><li>에어비앤비는 **청소비·서비스 수수료·도시세**가 총액에 포함돼 있고, **현금 요구·셀프 체크인 함정** 후기가 섞인다. 취소 정책은 대개 48시간 전.</li><li>5도시 공통 — **주말(금·토 체크인)** 요금이 평일의 1.5~2배다. 그라나다 2/20~22, 바르셀로나 2/22~26이 그 구간에 걸린다.</li><li>지금은 **무료취소 요금제로 선점**해 두고, 12월에 값이 내려가면 갈아탄다. Booking 무료취소 마감은 대개 체크인 2~3일 전.</li></ul>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Booking.com 실시간 조회(2026-10-19, CDP 실 크롬) · Airbnb 전체숙소 조회(2026-10-19, CDP) · 2인 · 세금 포함. 값은 변동된다.</p>
+    <p>전체 계획: <a href="index.html">요약</a> · <a href="itinerary.html">일차별 일정</a> · <a href="reservations.html">예약 캘린더</a> ·
+       <a href="taxrefund.html">택스리펀</a> · <a href="earrings.html">귀고리 10종</a> · <a href="galaxytab.html">갤럭시 탭</a></p>
+  </div>
+</footer>
+</body>
+</html>
