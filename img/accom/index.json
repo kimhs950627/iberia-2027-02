@@ -1,0 +1,162 @@
+{
+ "lisbon-h1": {
+  "url": "https://www.booking.com/hotel/pt/ouro-rossio.ko.html",
+  "img": "accom/lisbon-h1.jpg"
+ },
+ "lisbon-h3": {
+  "url": "https://www.booking.com/hotel/pt/altis-prime-de-apartamentos.ko.html",
+  "img": "accom/lisbon-h3.jpg"
+ },
+ "lisbon-h4": {
+  "url": "https://www.booking.com/hotel/pt/fenix-garden.ko.html",
+  "img": "accom/lisbon-h4.jpg"
+ },
+ "porto-h1": {
+  "url": "https://www.booking.com/hotel/pt/chic-amp-basic-gravity.ko.html",
+  "img": "accom/porto-h1.jpg"
+ },
+ "porto-h2": {
+  "url": "https://www.booking.com/hotel/pt/the-social-hub-porto.ko.html",
+  "img": "accom/porto-h2.jpg"
+ },
+ "porto-h3": {
+  "url": "https://www.booking.com/hotel/pt/moov-hotel-porto-centro.ko.html",
+  "img": "accom/porto-h3.jpg"
+ },
+ "porto-h4": {
+  "url": "https://www.booking.com/hotel/pt/ribeira-do-porto.ko.html",
+  "img": "accom/porto-h4.jpg"
+ },
+ "porto-h5": {
+  "url": "https://www.booking.com/hotel/pt/one-shot-aliados-goldsmith-12.ko.html",
+  "img": "accom/porto-h5.jpg"
+ },
+ "granada-h2": {
+  "url": "https://www.booking.com/hotel/es/granada-centro.ko.html",
+  "img": "accom/granada-h2.jpg"
+ },
+ "granada-h3": {
+  "url": "https://www.booking.com/hotel/es/posada-pilar-del-toro.ko.html",
+  "img": "accom/granada-h3.jpg"
+ },
+ "granada-h4": {
+  "url": "https://www.booking.com/hotel/es/sacromonte.ko.html",
+  "img": "accom/granada-h4.jpg"
+ },
+ "granada-h5": {
+  "url": "https://www.booking.com/hotel/es/hostal-arteaga.ko.html",
+  "img": "accom/granada-h5.jpg"
+ },
+ "barcelona-h1": {
+  "url": "https://www.booking.com/hotel/es/h10-casanova.ko.html",
+  "img": "accom/barcelona-h1.jpg"
+ },
+ "barcelona-h2": {
+  "url": "https://www.booking.com/hotel/es/the-conica-deluxe-bed-amp-breakfast.ko.html",
+  "img": "accom/barcelona-h2.jpg"
+ },
+ "barcelona-h3": {
+  "url": "https://www.booking.com/hotel/es/lleo.ko.html",
+  "img": "accom/barcelona-h3.jpg"
+ },
+ "lisbon-h2": {
+  "url": "https://www.booking.com/hotel/pt/rossio-plaza.ko.html",
+  "img": "accom/lisbon-h2.jpg"
+ },
+ "lisbon-h5": {
+  "url": "https://www.booking.com/hotel/pt/portugal-boutique.ko.html",
+  "img": "accom/lisbon-h5.jpg"
+ },
+ "granada-h1": {
+  "url": "https://www.booking.com/hotel/es/aurea-catedral.ko.html",
+  "img": "accom/granada-h1.jpg"
+ },
+ "barcelona-h4": {
+  "url": "https://www.booking.com/hotel/es/h-la-paloma.ko.html",
+  "img": "accom/barcelona-h4.jpg"
+ },
+ "barcelona-h5": {
+  "url": "https://www.booking.com/hotel/es/ronda.ko.html",
+  "img": "accom/barcelona-h5.jpg"
+ },
+ "lisbon-a1": {
+  "url": "https://www.airbnb.co.kr/rooms/1148064?checkin=2027-02-16&checkout=2027-02-18&adults=2",
+  "img": "accom/lisbon-a1.jpg"
+ },
+ "lisbon-a2": {
+  "url": "https://www.airbnb.co.kr/rooms/15355591?checkin=2027-02-16&checkout=2027-02-18&adults=2",
+  "img": "accom/lisbon-a2.jpg"
+ },
+ "lisbon-a3": {
+  "url": "https://www.airbnb.co.kr/rooms/31929913?checkin=2027-02-16&checkout=2027-02-18&adults=2",
+  "img": "accom/lisbon-a3.jpg"
+ },
+ "lisbon-a4": {
+  "url": "https://www.airbnb.co.kr/rooms/635404000587905839?checkin=2027-02-16&checkout=2027-02-18&adults=2",
+  "img": "accom/lisbon-a4.jpg"
+ },
+ "lisbon-a5": {
+  "url": "https://www.airbnb.co.kr/rooms/1522724235891728226?checkin=2027-02-16&checkout=2027-02-18&adults=2",
+  "img": "accom/lisbon-a5.jpg"
+ },
+ "porto-a1": {
+  "url": "https://www.airbnb.co.kr/rooms/1399514947263430014?checkin=2027-02-18&checkout=2027-02-20&adults=2",
+  "img": "accom/porto-a1.jpg"
+ },
+ "porto-a2": {
+  "url": "https://www.airbnb.co.kr/rooms/45874308?checkin=2027-02-18&checkout=2027-02-20&adults=2",
+  "img": "accom/porto-a2.jpg"
+ },
+ "porto-a3": {
+  "url": "https://www.airbnb.co.kr/rooms/45873793?checkin=2027-02-18&checkout=2027-02-20&adults=2",
+  "img": "accom/porto-a3.jpg"
+ },
+ "porto-a4": {
+  "url": "https://www.airbnb.co.kr/rooms/38350016?checkin=2027-02-18&checkout=2027-02-20&adults=2",
+  "img": "accom/porto-a4.jpg"
+ },
+ "porto-a5": {
+  "url": "https://www.airbnb.co.kr/rooms/54157415?checkin=2027-02-18&checkout=2027-02-20&adults=2",
+  "img": "accom/porto-a5.jpg"
+ },
+ "granada-a1": {
+  "url": "https://www.airbnb.co.kr/rooms/14872443?checkin=2027-02-20&checkout=2027-02-22&adults=2",
+  "img": "accom/granada-a1.jpg"
+ },
+ "granada-a2": {
+  "url": "https://www.airbnb.co.kr/rooms/743836308119912390?checkin=2027-02-20&checkout=2027-02-22&adults=2",
+  "img": "accom/granada-a2.jpg"
+ },
+ "granada-a3": {
+  "url": "https://www.airbnb.co.kr/rooms/851192699901310402?checkin=2027-02-20&checkout=2027-02-22&adults=2",
+  "img": "accom/granada-a3.jpg"
+ },
+ "granada-a4": {
+  "url": "https://www.airbnb.co.kr/rooms/15611942?checkin=2027-02-20&checkout=2027-02-22&adults=2",
+  "img": "accom/granada-a4.jpg"
+ },
+ "granada-a5": {
+  "url": "https://www.airbnb.co.kr/rooms/52351670?checkin=2027-02-20&checkout=2027-02-22&adults=2",
+  "img": "accom/granada-a5.jpg"
+ },
+ "barcelona-a1": {
+  "url": "https://www.airbnb.co.kr/rooms/33816957?checkin=2027-02-22&checkout=2027-02-26&adults=2",
+  "img": "accom/barcelona-a1.jpg"
+ },
+ "barcelona-a2": {
+  "url": "https://www.airbnb.co.kr/rooms/2379004?checkin=2027-02-22&checkout=2027-02-26&adults=2",
+  "img": "accom/barcelona-a2.jpg"
+ },
+ "barcelona-a3": {
+  "url": "https://www.airbnb.co.kr/rooms/23990630?checkin=2027-02-22&checkout=2027-02-26&adults=2",
+  "img": "accom/barcelona-a3.jpg"
+ },
+ "barcelona-a4": {
+  "url": "https://www.airbnb.co.kr/rooms/53487752?checkin=2027-02-22&checkout=2027-02-26&adults=2",
+  "img": "accom/barcelona-a4.jpg"
+ },
+ "barcelona-a5": {
+  "url": "https://www.airbnb.co.kr/rooms/1720065?checkin=2027-02-22&checkout=2027-02-26&adults=2",
+  "img": "accom/barcelona-a5.jpg"
+ }
+}
