@@ -15,7 +15,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-bo
   word-break:keep-all;line-break:strict;overflow-wrap:break-word;hyphens:none}
 body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:99;opacity:.035;
   background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad-x)}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 a{color:var(--accent)}
 .topbar{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--rule)}
@@ -42,7 +42,7 @@ a{color:var(--accent)}
 .fig dd small{display:block;font-family:var(--font-body);font-weight:400;font-size:12px;color:var(--muted)}
 
 .step{display:grid;grid-template-columns:76px minmax(0,1fr);gap:32px;max-width:var(--maxw);
-  margin:0 auto;padding:52px 24px;border-bottom:1px solid var(--rule)}
+  margin:0 auto;padding:52px var(--pad-x);border-bottom:1px solid var(--rule)}
 .step-rail{display:flex;justify-content:flex-start}
 .num{font-family:var(--font-display);font-weight:700;font-size:3.4rem;line-height:.85;
   color:transparent;-webkit-text-stroke:1.5px var(--accent)}
@@ -56,7 +56,7 @@ ol.do li{margin-bottom:10px}
 .warn{font-size:var(--fs-small);background:var(--paper-2);border-left:3px solid var(--accent);
   padding:12px 16px;margin:0}
 
-.tail{max-width:var(--maxw);margin:0 auto;padding:56px 24px 96px}
+.tail{max-width:var(--maxw);margin:0 auto;padding:56px var(--pad-x) 96px}
 .tail h2{font-family:var(--font-display);font-size:var(--fs-h3);margin:0 0 16px}
 table.fail{width:100%;border-collapse:collapse;font-size:var(--fs-small);margin:0 0 26px}
 table.fail th,table.fail td{padding:10px 8px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
@@ -72,9 +72,9 @@ table.calc tr.hi th,table.calc tr.hi td{background:var(--paper-2);font-weight:70
 table.calc tr.win th,table.calc tr.win td{color:var(--accent);font-weight:700}
 
 @media (max-width:820px){
-  .step{grid-template-columns:1fr;gap:14px;padding:38px 22px}
+  .step{grid-template-columns:1fr;gap:14px;padding:38px var(--pad-x)}
   .num{font-size:2.4rem}
-  .wrap,.tail{padding-left:22px;padding-right:22px}
+  .wrap,.tail{padding-left:var(--pad-x);padding-right:var(--pad-x)}
   table.fail th[scope=row],table.fail td.bad{width:auto}
   .flow{font-size:11px}
 }

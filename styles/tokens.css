@@ -30,7 +30,8 @@
 
   /* shape */
   --rail: 88px;
-  --maxw: 1120px;
+  --maxw: 1080px;                          /* 본문 최대 폭 */
+  --pad-x: clamp(28px, 5vw, 80px);         /* 좌우 여백 — 컨테이너 안쪽에 둔다(폰 28px) */
 
   /* motion */
   --ease: cubic-bezier(.22,.61,.36,1);

@@ -21,7 +21,7 @@ body::after{
   content:""; position:fixed; inset:0; pointer-events:none; z-index:99; opacity:.035;
   background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
 }
-.wrap{max-width:var(--maxw); margin:0 auto; padding:0 var(--s-5)}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 var(--pad-x)}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 /* ── 상단 바 */
@@ -74,7 +74,7 @@ body::after{
 .day{
   display:grid; grid-template-columns:var(--rail) minmax(0,1fr); gap:var(--s-6);
   max-width:var(--maxw); margin:0 auto;
-  padding:var(--s-8) max(var(--s-5), env(safe-area-inset-left)) var(--s-8) max(var(--s-5), env(safe-area-inset-left));
+  padding:var(--s-8) var(--pad-x);
   border-bottom:1px solid var(--rule);
   opacity:0; transform:translateY(12px);
   animation:reveal var(--dur) var(--ease) forwards;
@@ -148,10 +148,10 @@ body::after{
   /* 폰에서는 칩을 좌우로 밀지 않고 여러 줄로 접어 11일이 한눈에 보이게 한다 */
   .chips{position:static; flex-wrap:wrap; overflow:visible; row-gap:var(--s-2)}
   .chip{flex:0 1 auto}
-  .wrap{padding:0 max(22px, env(safe-area-inset-left))}
+  .wrap{padding:0 var(--pad-x)}
   .day{
     grid-template-columns:1fr; gap:var(--s-3);
-    padding:var(--s-7) max(22px, env(safe-area-inset-left));
+    padding:var(--s-7) var(--pad-x);
   }
   .day-rail{flex-direction:row; align-items:baseline; gap:var(--s-3)}
   .day-num{line-height:.9}
