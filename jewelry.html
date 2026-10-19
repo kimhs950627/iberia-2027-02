@@ -11,7 +11,8 @@
 <style>
 *{box-sizing:border-box}
 body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--font-body);
-  font-size:var(--fs-body); line-height:1.75; -webkit-font-smoothing:antialiased}
+  font-size:var(--fs-body); line-height:1.75; -webkit-font-smoothing:antialiased;
+  word-break:keep-all;line-break:strict;overflow-wrap:break-word;hyphens:none}
 body::after{content:""; position:fixed; inset:0; pointer-events:none; z-index:99; opacity:.035;
   background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
 .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px}
@@ -153,7 +154,7 @@ a{color:var(--accent)}
     <b>환율</b> ₩1,590/€ (최근 3개월 평균 고정) · ¥1 = ₩8.78 (100엔 = 878원).
     <b>일본 면세</b> = 공식가 ÷ 1.1 (소비세 10%). <b>스페인</b> = 정가 × 0.87 (IVA 21% 포함 → 실수령 13%).
     <br><b>결론 — 일본이 스페인보다 유리하다.</b> 네 품목 모두 일본 이득(13~18%)이 스페인(6~10%)보다 크다.
-    한국 정가가 높고 엔화가 약한 탓이다. 스페인은 <b>세비야·바르셀로나 일정에서 바로 살 수 있다</b>는 게 장점이다.
+    한국 정가가 높고 엔화가 약한 탓이다. 스페인은 <b>바르셀로나 일정에서 바로 살 수 있다</b>는 게 장점이다.
   </div>
 </section>
 

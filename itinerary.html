@@ -15,7 +15,8 @@ body{
   margin:0; background:var(--paper); color:var(--ink);
   font-family:var(--font-body); font-size:var(--fs-body); line-height:1.75;
   -webkit-font-smoothing:antialiased;
-}
+
+  word-break:keep-all;line-break:strict;overflow-wrap:break-word;hyphens:none}
 body::after{
   content:""; position:fixed; inset:0; pointer-events:none; z-index:99; opacity:.035;
   background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -189,11 +190,11 @@ body::after{
 <section class="hero wrap">
   <p class="kicker">Portugal &amp; Spain · 16–26 February 2027</p>
   <h1>열하루를 <em>한 장씩</em>,<br>시간과 값까지 적어 둔 일정</h1>
-  <p class="lede">리스본에서 바르셀로나까지 다섯 도시. 하루에 이동 한 번, 관광 두 묶음.
-    각 날의 시각·장소·비용을 원장처럼 적었다. 값의 근거도 옆에 남겼다.</p>
+  <p class="lede">리스본에서 바르셀로나까지 네 도시. 하루에 이동 한 번, 관광 두 묶음.
+    마지막 네 박은 바르셀로나에 몰아 두어 마지막 사흘을 온전히 쓴다. 값의 근거도 옆에 남겼다.</p>
   <dl class="figures">
-    <div><dt>총액 · 2인</dt><dd>7,012,172<small>원 (1인 3,506,086)</small></dd></div>
-    <div><dt>현지 지출</dt><dd>4,226,792<small>항공 제외</small></dd></div>
+    <div><dt>총액 · 2인</dt><dd>7,053,012<small>원 (1인 3,526,506)</small></dd></div>
+    <div><dt>현지 지출</dt><dd>4,267,632<small>항공 제외</small></dd></div>
     <div><dt>항공 · 2인</dt><dd>2,385,380<small>가는편 + 오는편</small></dd></div>
     <div><dt>여유·기념품</dt><dd>400,000<small>일자별 합계에 없음</small></dd></div>
     <div><dt>환율</dt><dd>1,590<small>원 / € (3개월 평균)</small></dd></div>
@@ -381,37 +382,37 @@ body::after{
   <div class="day-body">
     <header class="day-head">
       <p class="day-date">2/20 (토)</p>
-      <h2 class="day-city">포르투 → 세비야</h2>
+      <h2 class="day-city">포르투 → 그라나다</h2>
     </header>
 
     <figure class="day-map">
-      <img src="img/D05-세비야이동.jpg" alt="D5 포르투 → 세비야 지도" loading="lazy">
+      <img src="img/D05-그라나다이동.jpg" alt="D5 포르투 → 그라나다 지도" loading="lazy">
       <figcaption>지도 © OpenStreetMap contributors</figcaption>
     </figure>
 
     <table class="ledger">
-      <caption class="sr-only">D5 포르투 → 세비야 시간표</caption>
+      <caption class="sr-only">D5 포르투 → 그라나다 시간표</caption>
       <thead>
         <tr><th scope="col">시각</th><th scope="col">일정</th><th scope="col">근거</th><th scope="col">비용(2인)</th></tr>
       </thead>
       <tbody>
-<tr class="ledger-stay"><td class="t">—</td><td class="what"><span class="stay-label">숙박</span> 세비야 · Eurostars Torre Sevilla (9.1·6,310후기·중심 1.3km) <b>주말</b></td><td class="src">Booking 실조회</td><td class="cost">262,550</td></tr>
+<tr class="ledger-stay"><td class="t">—</td><td class="what"><span class="stay-label">숙박</span> 그라나다 · Hotel Inglaterra (8.5·3,710후기·중심 150m) <b>주말</b></td><td class="src">Booking 실조회</td><td class="cost">117,034</td></tr>
 <tr class=""><td class="t">06:30</td><td class="what">기상 · 조식 · 체크아웃</td><td class="src">추정</td><td class="cost">15,000</td></tr>
 <tr class=""><td class="t">07:30</td><td class="what">볼트 → OPO 공항</td><td class="src">추정</td><td class="cost">20,000</td></tr>
-<tr class=""><td class="t">10:00</td><td class="what">라이언에어 직항 1h15 OPO→SVQ (편도 ₩22,496/인 + 수하물)</td><td class="src">항공 조회</td><td class="cost">75,000</td></tr>
-<tr class=""><td class="t">12:30</td><td class="what">EA 버스 → 중심가</td><td class="src">추정</td><td class="cost">12,000</td></tr>
-<tr class="free"><td class="t">13:20</td><td class="what">숙소 체크인</td><td class="src"></td><td class="cost">—</td></tr>
-<tr class=""><td class="t">14:00</td><td class="what">점심 — 살모레호·하몬 (타파스 완전식사 €20~25/인)</td><td class="src">실제 메뉴</td><td class="cost">40,000</td></tr>
-<tr class="free"><td class="t">15:30</td><td class="what"><b>스페인 광장 + 마리아 루이사 공원</b> (무료 · 넓고 조용)</td><td class="src">공식 요금</td><td class="cost">—</td></tr>
-<tr class="free"><td class="t">17:00</td><td class="what">숙소 휴식</td><td class="src"></td><td class="cost">—</td></tr>
-<tr class=""><td class="t">19:00</td><td class="what">츄레리아 간식</td><td class="src">실제 메뉴</td><td class="cost">15,000</td></tr>
-<tr class=""><td class="t">20:30</td><td class="what">저녁 — 세비야 레스토랑</td><td class="src">실제 메뉴</td><td class="cost">70,000</td></tr>
-<tr class="free"><td class="t">22:30</td><td class="what">취침</td><td class="src"></td><td class="cost">—</td></tr>
-<tr class="ledger-sum"><td></td><td>숙박 262,550 · 식비 140,000 · 입장·이동 107,000</td><td></td><td class="cost">509,550</td></tr>
+<tr class=""><td class="t">10:00</td><td class="what">라이언에어 직항 1h25 OPO→AGP (편도 ₩22,484/인 + 수하물)</td><td class="src">항공 조회</td><td class="cost">75,000</td></tr>
+<tr class=""><td class="t">12:30</td><td class="what">알사 버스 AGP→그라나다 1시간 45분 (€12~16/인)</td><td class="src">추정</td><td class="cost">30,000</td></tr>
+<tr class="free"><td class="t">15:00</td><td class="what">숙소 체크인 · 짐 풀기</td><td class="src"></td><td class="cost">—</td></tr>
+<tr class=""><td class="t">15:40</td><td class="what">점심 — 누에바 광장 권 타파스 (완전식사 €20~25/인)</td><td class="src">실제 메뉴</td><td class="cost">40,000</td></tr>
+<tr class=""><td class="t">17:00</td><td class="what">그라나다 대성당 (€7×2)</td><td class="src">공식 요금</td><td class="cost">22,000</td></tr>
+<tr class="free"><td class="t">18:30</td><td class="what">알바이신 골목 산책 (낮 19.9℃ · 해질녘)</td><td class="src"></td><td class="cost">—</td></tr>
+<tr class=""><td class="t">20:00</td><td class="what">저녁 — La Trastienda (하몬·치즈)</td><td class="src">실제 메뉴</td><td class="cost">40,000</td></tr>
+<tr class="free"><td class="t">22:00</td><td class="what">취침</td><td class="src"></td><td class="cost">—</td></tr>
+<tr class="free"><td class="t">—</td><td class="what"><b>직항 대안</b> 볼로테아 OPO→GRX 1h27 (주 2회 · 월·금) — 날짜가 맞으면 환승 없음</td><td class="src">항공 조회</td><td class="cost">—</td></tr>
+<tr class="ledger-sum"><td></td><td>숙박 117,034 · 식비 95,000 · 입장·이동 147,000</td><td></td><td class="cost">359,034</td></tr>
       </tbody>
     </table>
 
-    <p class="day-stamp"><span>이 날 합계</span><b>509,550</b></p>
+    <p class="day-stamp"><span>이 날 합계</span><b>359,034</b></p>
   </div>
 </article>
 
@@ -424,35 +425,34 @@ body::after{
   <div class="day-body">
     <header class="day-head">
       <p class="day-date">2/21 (일)</p>
-      <h2 class="day-city">세비야 — 가장 맑은 날</h2>
+      <h2 class="day-city">그라나다 — 알함브라</h2>
     </header>
 
     <figure class="day-map">
-      <img src="img/D06-세비야.jpg" alt="D6 세비야 — 가장 맑은 날 지도" loading="lazy">
+      <img src="img/D06-그라나다-알함브라.jpg" alt="D6 그라나다 — 알함브라 지도" loading="lazy">
       <figcaption>지도 © OpenStreetMap contributors</figcaption>
     </figure>
 
     <table class="ledger">
-      <caption class="sr-only">D6 세비야 — 가장 맑은 날 시간표</caption>
+      <caption class="sr-only">D6 그라나다 — 알함브라 시간표</caption>
       <thead>
         <tr><th scope="col">시각</th><th scope="col">일정</th><th scope="col">근거</th><th scope="col">비용(2인)</th></tr>
       </thead>
       <tbody>
-<tr class="ledger-stay"><td class="t">—</td><td class="what"><span class="stay-label">숙박</span> 세비야 · Eurostars Torre Sevilla <b>주말</b></td><td class="src">Booking 실조회</td><td class="cost">262,550</td></tr>
-<tr class=""><td class="t">07:30</td><td class="what">기상 · 조식</td><td class="src">추정</td><td class="cost">15,000</td></tr>
-<tr class=""><td class="t">09:00</td><td class="what">세비야 대성당 + 히랄다탑 (€13×2 · 경사로 탑)</td><td class="src">공식 요금</td><td class="cost">41,000</td></tr>
-<tr class=""><td class="t">11:20</td><td class="what">산타크루스 골목 · 카페</td><td class="src">실제 메뉴</td><td class="cost">20,000</td></tr>
-<tr class=""><td class="t">12:30</td><td class="what">점심 — 좌식 타파스 (타파스 €3~5/접시)</td><td class="src">실제 메뉴</td><td class="cost">45,000</td></tr>
-<tr class=""><td class="t">14:00</td><td class="what">세비야 알카사르 (€15.5×2 · 예약 필수)</td><td class="src">공식 요금</td><td class="cost">49,000</td></tr>
-<tr class="free"><td class="t">18:00</td><td class="what">메트로폴 파라솔</td><td class="src"></td><td class="cost">—</td></tr>
-<tr class=""><td class="t">18:40</td><td class="what">일몰(19:09) · 음료</td><td class="src">실제 메뉴</td><td class="cost">10,000</td></tr>
-<tr class=""><td class="t">20:30</td><td class="what">저녁 — 트리아나/아레날</td><td class="src">실제 메뉴</td><td class="cost">70,000</td></tr>
-<tr class="free"><td class="t">22:30</td><td class="what">취침</td><td class="src"></td><td class="cost">—</td></tr>
-<tr class="ledger-sum"><td></td><td>숙박 262,550 · 식비 160,000 · 입장·이동 90,000</td><td></td><td class="cost">512,550</td></tr>
+<tr class="ledger-stay"><td class="t">—</td><td class="what"><span class="stay-label">숙박</span> 그라나다 · Hotel Inglaterra</td><td class="src">Booking 실조회</td><td class="cost">117,034</td></tr>
+<tr class=""><td class="t">07:15</td><td class="what">기상 · 조식 (아침 6.8℃)</td><td class="src">추정</td><td class="cost">15,000</td></tr>
+<tr class=""><td class="t">08:15</td><td class="what">버스 C30/C32 → 알함브라</td><td class="src">추정</td><td class="cost">6,000</td></tr>
+<tr class=""><td class="t">08:45</td><td class="what">알함브라 일반권 (€22.27×2 · 나스리 오전 지정)</td><td class="src">공식 요금</td><td class="cost">71,000</td></tr>
+<tr class=""><td class="t">12:40</td><td class="what">점심 — 숙소 근처 좌식</td><td class="src">실제 메뉴</td><td class="cost">35,000</td></tr>
+<tr class="free"><td class="t">16:00</td><td class="what">알바이신 → 산니콜라스 전망대</td><td class="src"></td><td class="cost">—</td></tr>
+<tr class="free"><td class="t">18:30</td><td class="what">일몰(19:02)</td><td class="src"></td><td class="cost">—</td></tr>
+<tr class=""><td class="t">20:00</td><td class="what">저녁 — 타파스(음료 시 무료 · 맥주 €2.8~3)</td><td class="src">실제 메뉴</td><td class="cost">30,000</td></tr>
+<tr class="free"><td class="t">22:00</td><td class="what">취침</td><td class="src"></td><td class="cost">—</td></tr>
+<tr class="ledger-sum"><td></td><td>숙박 117,034 · 식비 80,000 · 입장·이동 77,000</td><td></td><td class="cost">274,034</td></tr>
       </tbody>
     </table>
 
-    <p class="day-stamp"><span>이 날 합계</span><b>512,550</b></p>
+    <p class="day-stamp"><span>이 날 합계</span><b>274,034</b></p>
   </div>
 </article>
 
@@ -465,107 +465,27 @@ body::after{
   <div class="day-body">
     <header class="day-head">
       <p class="day-date">2/22 (월)</p>
-      <h2 class="day-city">세비야 → 그라나다</h2>
-    </header>
-
-    <figure class="day-map">
-      <img src="img/D07-그라나다이동.jpg" alt="D7 세비야 → 그라나다 지도" loading="lazy">
-      <figcaption>지도 © OpenStreetMap contributors</figcaption>
-    </figure>
-
-    <table class="ledger">
-      <caption class="sr-only">D7 세비야 → 그라나다 시간표</caption>
-      <thead>
-        <tr><th scope="col">시각</th><th scope="col">일정</th><th scope="col">근거</th><th scope="col">비용(2인)</th></tr>
-      </thead>
-      <tbody>
-<tr class="ledger-stay"><td class="t">—</td><td class="what"><span class="stay-label">숙박</span> 그라나다 · Hotel Inglaterra (8.5·3,728후기·중심 150m)</td><td class="src">Booking 실조회</td><td class="cost">67,591</td></tr>
-<tr class=""><td class="t">07:00</td><td class="what">기상 · 조식 · 체크아웃</td><td class="src">추정</td><td class="cost">15,000</td></tr>
-<tr class=""><td class="t">09:00</td><td class="what">Alsa 버스 3시간 → 그라나다</td><td class="src">추정</td><td class="cost">45,000</td></tr>
-<tr class=""><td class="t">13:00</td><td class="what">점심 — 누에바 광장 권</td><td class="src">실제 메뉴</td><td class="cost">40,000</td></tr>
-<tr class=""><td class="t">14:30</td><td class="what">그라나다 대성당</td><td class="src">추정</td><td class="cost">22,000</td></tr>
-<tr class="free"><td class="t">16:00</td><td class="what">알바이신 골목 (낮 20℃)</td><td class="src"></td><td class="cost">—</td></tr>
-<tr class=""><td class="t">18:00</td><td class="what">카페 · 젤라또</td><td class="src">실제 메뉴</td><td class="cost">15,000</td></tr>
-<tr class=""><td class="t">20:00</td><td class="what">저녁 — La Trastienda (하몬·치즈)</td><td class="src">실제 메뉴</td><td class="cost">40,000</td></tr>
-<tr class="free"><td class="t">22:30</td><td class="what">취침</td><td class="src"></td><td class="cost">—</td></tr>
-<tr class="ledger-sum"><td></td><td>숙박 67,591 · 식비 110,000 · 입장·이동 67,000</td><td></td><td class="cost">244,591</td></tr>
-      </tbody>
-    </table>
-
-    <p class="day-stamp"><span>이 날 합계</span><b>244,591</b></p>
-  </div>
-</article>
-
-<article class="day" id="D8">
-  <div class="day-rail" aria-hidden="true">
-    <span class="day-num">8</span>
-    <span class="day-tag">관광</span>
-  </div>
-
-  <div class="day-body">
-    <header class="day-head">
-      <p class="day-date">2/23 (화)</p>
-      <h2 class="day-city">그라나다 — 알함브라</h2>
-    </header>
-
-    <figure class="day-map">
-      <img src="img/D08-그라나다-알함브라.jpg" alt="D8 그라나다 — 알함브라 지도" loading="lazy">
-      <figcaption>지도 © OpenStreetMap contributors</figcaption>
-    </figure>
-
-    <table class="ledger">
-      <caption class="sr-only">D8 그라나다 — 알함브라 시간표</caption>
-      <thead>
-        <tr><th scope="col">시각</th><th scope="col">일정</th><th scope="col">근거</th><th scope="col">비용(2인)</th></tr>
-      </thead>
-      <tbody>
-<tr class="ledger-stay"><td class="t">—</td><td class="what"><span class="stay-label">숙박</span> 그라나다 · Hotel Inglaterra</td><td class="src">Booking 실조회</td><td class="cost">67,591</td></tr>
-<tr class=""><td class="t">07:15</td><td class="what">기상 · 조식 (아침 5.2℃)</td><td class="src">추정</td><td class="cost">15,000</td></tr>
-<tr class=""><td class="t">08:15</td><td class="what">버스 C30/C32 → 알함브라</td><td class="src">추정</td><td class="cost">6,000</td></tr>
-<tr class=""><td class="t">08:45</td><td class="what">알함브라 일반권 (€22.27×2 · 나스리 오전 지정)</td><td class="src">공식 요금</td><td class="cost">71,000</td></tr>
-<tr class=""><td class="t">12:40</td><td class="what">점심 — 숙소 근처 좌식</td><td class="src">실제 메뉴</td><td class="cost">35,000</td></tr>
-<tr class="free"><td class="t">16:00</td><td class="what">알바이신 → 산니콜라스 전망대</td><td class="src"></td><td class="cost">—</td></tr>
-<tr class="free"><td class="t">18:30</td><td class="what">일몰(19:02)</td><td class="src"></td><td class="cost">—</td></tr>
-<tr class=""><td class="t">20:00</td><td class="what">저녁 — 타파스(음료 시 무료 · 맥주 €2.8~3)</td><td class="src">실제 메뉴</td><td class="cost">30,000</td></tr>
-<tr class="free"><td class="t">22:00</td><td class="what">취침</td><td class="src"></td><td class="cost">—</td></tr>
-<tr class="ledger-sum"><td></td><td>숙박 67,591 · 식비 80,000 · 입장·이동 77,000</td><td></td><td class="cost">224,591</td></tr>
-      </tbody>
-    </table>
-
-    <p class="day-stamp"><span>이 날 합계</span><b>224,591</b></p>
-  </div>
-</article>
-
-<article class="day" id="D9">
-  <div class="day-rail" aria-hidden="true">
-    <span class="day-num">9</span>
-    <span class="day-tag">이동</span>
-  </div>
-
-  <div class="day-body">
-    <header class="day-head">
-      <p class="day-date">2/24 (수)</p>
       <h2 class="day-city">그라나다 → 바르셀로나</h2>
     </header>
 
     <figure class="day-map">
-      <img src="img/D09-바르셀로나이동.jpg" alt="D9 그라나다 → 바르셀로나 지도" loading="lazy">
+      <img src="img/D07-바르셀로나이동.jpg" alt="D7 그라나다 → 바르셀로나 지도" loading="lazy">
       <figcaption>지도 © OpenStreetMap contributors</figcaption>
     </figure>
 
     <table class="ledger">
-      <caption class="sr-only">D9 그라나다 → 바르셀로나 시간표</caption>
+      <caption class="sr-only">D7 그라나다 → 바르셀로나 시간표</caption>
       <thead>
         <tr><th scope="col">시각</th><th scope="col">일정</th><th scope="col">근거</th><th scope="col">비용(2인)</th></tr>
       </thead>
       <tbody>
-<tr class="ledger-stay"><td class="t">—</td><td class="what"><span class="stay-label">숙박</span> 바르셀로나 · H10 Casanova (9.0·2,379후기·중심 0.8km)</td><td class="src">Booking 실조회</td><td class="cost">158,527</td></tr>
+<tr class="ledger-stay"><td class="t">—</td><td class="what"><span class="stay-label">숙박</span> 바르셀로나 · H10 Casanova (9.0·2,381후기·중심 0.8km)</td><td class="src">Booking 실조회</td><td class="cost">158,527</td></tr>
 <tr class=""><td class="t">06:45</td><td class="what">기상 · 조식 · 체크아웃</td><td class="src">추정</td><td class="cost">15,000</td></tr>
 <tr class=""><td class="t">07:45</td><td class="what">볼트 → GRX 공항</td><td class="src">추정</td><td class="cost">25,000</td></tr>
 <tr class=""><td class="t">09:30</td><td class="what">부엘링 직항 1h28 GRX→BCN (편도 ₩41,616/인+수하물)</td><td class="src">항공 조회</td><td class="cost">113,000</td></tr>
 <tr class=""><td class="t">11:40</td><td class="what">Aerobús → 카탈루냐 광장</td><td class="src">추정</td><td class="cost">25,000</td></tr>
 <tr class=""><td class="t">13:30</td><td class="what">점심 — 바르셀로나 레스토랑 (2인 1끼 €49~86)</td><td class="src">실제 메뉴</td><td class="cost">78,000</td></tr>
-<tr class="free"><td class="t">15:00</td><td class="what">고딕 지구 산책</td><td class="src"></td><td class="cost">—</td></tr>
+<tr class="free"><td class="t">15:00</td><td class="what">고딕 지구 산책 (비 0.9mm)</td><td class="src"></td><td class="cost">—</td></tr>
 <tr class=""><td class="t">17:00</td><td class="what">람블라스 · 보케리아(하몬 컵 €5)</td><td class="src">실제 메뉴</td><td class="cost">15,000</td></tr>
 <tr class=""><td class="t">18:30</td><td class="what">카페</td><td class="src">실제 메뉴</td><td class="cost">15,000</td></tr>
 <tr class=""><td class="t">20:30</td><td class="what">저녁 — El Glop (2인 실결제 €76.15)</td><td class="src">실제 메뉴</td><td class="cost">95,000</td></tr>
@@ -578,6 +498,91 @@ body::after{
   </div>
 </article>
 
+<article class="day" id="D8">
+  <div class="day-rail" aria-hidden="true">
+    <span class="day-num">8</span>
+    <span class="day-tag">관광</span>
+  </div>
+
+  <div class="day-body">
+    <header class="day-head">
+      <p class="day-date">2/23 (화)</p>
+      <h2 class="day-city">바르셀로나 — 가우디 &amp; 쇼핑 (비 1.9mm · 실내)</h2>
+    </header>
+
+    <figure class="day-map">
+      <img src="img/D08-바르셀로나-가우디.jpg" alt="D8 바르셀로나 — 가우디 &amp; 쇼핑 (비 1.9mm · 실내) 지도" loading="lazy">
+      <figcaption>지도 © OpenStreetMap contributors</figcaption>
+    </figure>
+
+    <table class="ledger">
+      <caption class="sr-only">D8 바르셀로나 — 가우디 &amp; 쇼핑 (비 1.9mm · 실내) 시간표</caption>
+      <thead>
+        <tr><th scope="col">시각</th><th scope="col">일정</th><th scope="col">근거</th><th scope="col">비용(2인)</th></tr>
+      </thead>
+      <tbody>
+<tr class="ledger-stay"><td class="t">—</td><td class="what"><span class="stay-label">숙박</span> 바르셀로나 · H10 Casanova</td><td class="src">Booking 실조회</td><td class="cost">158,527</td></tr>
+<tr class=""><td class="t">07:30</td><td class="what">기상 · 조식(주방)</td><td class="src">추정</td><td class="cost">15,000</td></tr>
+<tr class=""><td class="t">08:30</td><td class="what">메트로 → 사그라다</td><td class="src">추정</td><td class="cost">6,000</td></tr>
+<tr class=""><td class="t">09:00</td><td class="what">사그라다 파밀리아 (€26×2 · 내부 관람)</td><td class="src">공식 요금</td><td class="cost">83,000</td></tr>
+<tr class=""><td class="t">11:30</td><td class="what">카사 밀라 · 카사 바트요 (€35+€29 상당 · 실내)</td><td class="src">추정</td><td class="cost">111,000</td></tr>
+<tr class=""><td class="t">13:30</td><td class="what">점심 — 파세이그 데 그라시아 권 좌식</td><td class="src">실제 메뉴</td><td class="cost">78,000</td></tr>
+<tr class="free"><td class="t">15:00</td><td class="what"><b>명품</b> — 샤넬·LV·로에베·프라다 (파세이그 데 그라시아)</td><td class="src"></td><td class="cost">—</td></tr>
+<tr class="free"><td class="t">17:00</td><td class="what"><b>주얼리</b> — 반클리프·까르띠에·티파니·불가리 (60분 · 시착·가격 확인)</td><td class="src"></td><td class="cost">—</td></tr>
+<tr class=""><td class="t">18:40</td><td class="what">카페</td><td class="src">실제 메뉴</td><td class="cost">20,000</td></tr>
+<tr class=""><td class="t">20:30</td><td class="what">저녁 — Tapa Tapa(2인 €49.25) 또는 그라시아</td><td class="src">실제 메뉴</td><td class="cost">95,000</td></tr>
+<tr class="free"><td class="t">22:30</td><td class="what">숙소 복귀</td><td class="src"></td><td class="cost">—</td></tr>
+<tr class="ledger-sum"><td></td><td>숙박 158,527 · 식비 208,000 · 입장·이동 200,000</td><td></td><td class="cost">566,527</td></tr>
+      </tbody>
+    </table>
+
+    <p class="day-stamp"><span>이 날 합계</span><b>566,527</b></p>
+  </div>
+</article>
+
+<article class="day" id="D9">
+  <div class="day-rail" aria-hidden="true">
+    <span class="day-num">9</span>
+    <span class="day-tag">관광</span>
+  </div>
+
+  <div class="day-body">
+    <header class="day-head">
+      <p class="day-date">2/24 (수)</p>
+      <h2 class="day-city">바르셀로나 — 구시가지 &amp; 미술 (0.7mm)</h2>
+    </header>
+
+    <figure class="day-map">
+      <img src="img/D09-바르셀로나-구시가지.jpg" alt="D9 바르셀로나 — 구시가지 &amp; 미술 (0.7mm) 지도" loading="lazy">
+      <figcaption>지도 © OpenStreetMap contributors</figcaption>
+    </figure>
+
+    <table class="ledger">
+      <caption class="sr-only">D9 바르셀로나 — 구시가지 &amp; 미술 (0.7mm) 시간표</caption>
+      <thead>
+        <tr><th scope="col">시각</th><th scope="col">일정</th><th scope="col">근거</th><th scope="col">비용(2인)</th></tr>
+      </thead>
+      <tbody>
+<tr class="ledger-stay"><td class="t">—</td><td class="what"><span class="stay-label">숙박</span> 바르셀로나 · H10 Casanova</td><td class="src">Booking 실조회</td><td class="cost">158,527</td></tr>
+<tr class=""><td class="t">07:30</td><td class="what">기상 · 조식</td><td class="src">추정</td><td class="cost">15,000</td></tr>
+<tr class=""><td class="t">09:00</td><td class="what">람블라스 · 보케리아 시장 (하몬 컵 €5)</td><td class="src">실제 메뉴</td><td class="cost">15,000</td></tr>
+<tr class=""><td class="t">10:00</td><td class="what">바르셀로나 대성당 (€11×2 · 고딕 지구)</td><td class="src">공식 요금</td><td class="cost">35,000</td></tr>
+<tr class="free"><td class="t">11:30</td><td class="what">엘 보른 골목 · 산타마리아 델 마르</td><td class="src"></td><td class="cost">—</td></tr>
+<tr class=""><td class="t">12:30</td><td class="what">점심 — 엘 보른 좌식 (2인 1끼 €49~86)</td><td class="src">실제 메뉴</td><td class="cost">78,000</td></tr>
+<tr class=""><td class="t">14:00</td><td class="what">피카소 미술관 (€12×2)</td><td class="src">공식 요금</td><td class="cost">38,000</td></tr>
+<tr class=""><td class="t">16:00</td><td class="what">몬주이크 케이블카 (€12.5×2)</td><td class="src">공식 요금</td><td class="cost">40,000</td></tr>
+<tr class=""><td class="t">17:00</td><td class="what">MNAC — 카탈루냐 미술관 (€12×2)</td><td class="src">공식 요금</td><td class="cost">38,000</td></tr>
+<tr class=""><td class="t">18:40</td><td class="what">카페</td><td class="src">실제 메뉴</td><td class="cost">20,000</td></tr>
+<tr class=""><td class="t">20:30</td><td class="what">저녁 — 엘 보른/보르네 좌식</td><td class="src">실제 메뉴</td><td class="cost">95,000</td></tr>
+<tr class="free"><td class="t">22:30</td><td class="what">취침</td><td class="src"></td><td class="cost">—</td></tr>
+<tr class="ledger-sum"><td></td><td>숙박 158,527 · 식비 223,000 · 입장·이동 151,000</td><td></td><td class="cost">532,527</td></tr>
+      </tbody>
+    </table>
+
+    <p class="day-stamp"><span>이 날 합계</span><b>532,527</b></p>
+  </div>
+</article>
+
 <article class="day" id="D10">
   <div class="day-rail" aria-hidden="true">
     <span class="day-num">10</span>
@@ -587,38 +592,37 @@ body::after{
   <div class="day-body">
     <header class="day-head">
       <p class="day-date">2/25 (목)</p>
-      <h2 class="day-city">바르셀로나 — 가우디 &amp; 쇼핑</h2>
+      <h2 class="day-city">바르셀로나 — 야외 &amp; 쇼핑 마무리 (0.1mm · 가장 맑음)</h2>
     </header>
 
     <figure class="day-map">
-      <img src="img/D10-바르셀로나.jpg" alt="D10 바르셀로나 — 가우디 &amp; 쇼핑 지도" loading="lazy">
+      <img src="img/D10-바르셀로나-야외.jpg" alt="D10 바르셀로나 — 야외 &amp; 쇼핑 마무리 (0.1mm · 가장 맑음) 지도" loading="lazy">
       <figcaption>지도 © OpenStreetMap contributors</figcaption>
     </figure>
 
     <table class="ledger">
-      <caption class="sr-only">D10 바르셀로나 — 가우디 &amp; 쇼핑 시간표</caption>
+      <caption class="sr-only">D10 바르셀로나 — 야외 &amp; 쇼핑 마무리 (0.1mm · 가장 맑음) 시간표</caption>
       <thead>
         <tr><th scope="col">시각</th><th scope="col">일정</th><th scope="col">근거</th><th scope="col">비용(2인)</th></tr>
       </thead>
       <tbody>
 <tr class="ledger-stay"><td class="t">—</td><td class="what"><span class="stay-label">숙박</span> 바르셀로나 · H10 Casanova</td><td class="src">Booking 실조회</td><td class="cost">158,527</td></tr>
-<tr class=""><td class="t">07:30</td><td class="what">기상 · 조식(주방)</td><td class="src">추정</td><td class="cost">15,000</td></tr>
-<tr class=""><td class="t">08:30</td><td class="what">메트로 → 사그라다</td><td class="src">추정</td><td class="cost">6,000</td></tr>
-<tr class=""><td class="t">09:00</td><td class="what">사그라다 파밀리아 (€26×2 · 내부 관람)</td><td class="src">공식 요금</td><td class="cost">83,000</td></tr>
-<tr class=""><td class="t">11:00</td><td class="what">→ 구엘 공원</td><td class="src">추정</td><td class="cost">6,000</td></tr>
-<tr class=""><td class="t">11:40</td><td class="what">구엘 공원 유료 구역</td><td class="src">추정</td><td class="cost">32,000</td></tr>
+<tr class=""><td class="t">07:30</td><td class="what">기상 · 조식</td><td class="src">추정</td><td class="cost">15,000</td></tr>
+<tr class=""><td class="t">08:30</td><td class="what">메트로 → 구엘 공원</td><td class="src">추정</td><td class="cost">6,000</td></tr>
+<tr class=""><td class="t">09:00</td><td class="what">구엘 공원 유료 구역 (€10×2 · 맑은 날로 배치)</td><td class="src">공식 요금</td><td class="cost">32,000</td></tr>
+<tr class="free"><td class="t">11:30</td><td class="what">카르멜 벙커스 전망대 (무료 · 시내 파노라마)</td><td class="src"></td><td class="cost">—</td></tr>
 <tr class=""><td class="t">13:00</td><td class="what">점심 — 그라시아 지구</td><td class="src">실제 메뉴</td><td class="cost">78,000</td></tr>
-<tr class=""><td class="t">14:30</td><td class="what">카사 밀라 · 카사 바트요</td><td class="src">추정</td><td class="cost">111,000</td></tr>
-<tr class="free"><td class="t">16:30</td><td class="what"><b>명품 쇼핑</b> — 샤넬·LV·로에베·프라다 (파세이그 데 그라시아)</td><td class="src"></td><td class="cost">—</td></tr>
-<tr class="free"><td class="t">17:40</td><td class="what"><b>주얼리</b> — 반클리프·까르띠에·티파니·불가리 (같은 거리 · 60분)</td><td class="src"></td><td class="cost">—</td></tr>
+<tr class="free"><td class="t">14:30</td><td class="what"><b>쇼핑 마무리</b> — 파세이그 데 그라시아 명품 · 주얼리 구매</td><td class="src"></td><td class="cost">—</td></tr>
+<tr class="free"><td class="t">16:30</td><td class="what">El Corte Inglés — 택스리펀 서류·가격 비교(구매액 별도)</td><td class="src"></td><td class="cost">—</td></tr>
 <tr class=""><td class="t">18:40</td><td class="what">카페</td><td class="src">실제 메뉴</td><td class="cost">20,000</td></tr>
-<tr class=""><td class="t">20:30</td><td class="what">저녁 — Tapa Tapa(2인 €49.25) 또는 그라시아</td><td class="src">실제 메뉴</td><td class="cost">95,000</td></tr>
+<tr class=""><td class="t">20:30</td><td class="what">저녁 — El Nacional 또는 그라시아</td><td class="src">실제 메뉴</td><td class="cost">95,000</td></tr>
 <tr class="free"><td class="t">22:30</td><td class="what">숙소 복귀 · 짐 정리</td><td class="src"></td><td class="cost">—</td></tr>
-<tr class="ledger-sum"><td></td><td>숙박 158,527 · 식비 208,000 · 입장·이동 238,000</td><td></td><td class="cost">604,527</td></tr>
+<tr class="free"><td class="t">—</td><td class="what"><b>대안</b> 지로나(AVE 38분 · 왕복 €22/인) 또는 몬세라트(€22/인) 당일치기 — 쇼핑을 D8·D11로 분산</td><td class="src">추정</td><td class="cost">—</td></tr>
+<tr class="ledger-sum"><td></td><td>숙박 158,527 · 식비 208,000 · 입장·이동 38,000</td><td></td><td class="cost">404,527</td></tr>
       </tbody>
     </table>
 
-    <p class="day-stamp"><span>이 날 합계</span><b>604,527</b></p>
+    <p class="day-stamp"><span>이 날 합계</span><b>404,527</b></p>
   </div>
 </article>
 
@@ -664,16 +668,16 @@ body::after{
 <section class="tail wrap">
   <div>
     <h2>합계 맞추기</h2>
-    <p><b>일자별 합계</b> 6,612,172원 = 현지 4,226,792 + 항공 2,385,380.</p>
+    <p><b>일자별 합계</b> 6,653,012원 = 현지 4,267,632 + 항공 2,385,380.</p>
     <p><b>여유·기념품</b> 400,000원은 일자별 표에 없다(특정 날에 배정하지 않음).</p>
-    <p><b>총액</b> <b>7,012,172원</b> (1인 3,506,086).</p>
+    <p><b>총액</b> <b>7,053,012원</b> (1인 3,526,506).</p>
     <p>요약 페이지의 총액과 같은 값이다.</p>
   </div>
   <div>
     <h2>값의 근거</h2>
-    <p><b>Booking 실조회</b> — 숙박 5곳, 2026-10-17 조회.</p>
-    <p><b>공식 요금</b> — 알함브라 €22.27 · 사그라다 €26 · 알카사르 €15.5 · 리스보아 카드 48h €51.</p>
-    <p><b>실제 메뉴</b> — 리스본 prato do dia €16–24 · 세비야 타파스 €3–5 · 바르셀로나 2인 1끼 €49–86.</p>
+    <p><b>Booking 실조회</b> — 숙박 4곳, 2026-10-19 조회.</p>
+    <p><b>공식 요금</b> — 알함브라 €22.27 · 사그라다 €26 · 바르셀로나 대성당 €11 · 피카소 €12 · MNAC €12 · 리스보아 카드 48h €51.</p>
+    <p><b>실제 메뉴</b> — 리스본 prato do dia €16–24 · 그라나다 타파스 €3–5(음료 시 무료) · 바르셀로나 2인 1끼 €49–86.</p>
     <p><b>항공 조회</b> — 스카이스캐너 날짜 지정(2/16·2/26), 2인 합계.</p>
   </div>
   <div>

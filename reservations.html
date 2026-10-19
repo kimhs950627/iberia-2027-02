@@ -11,7 +11,8 @@
 <style>
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);
-  font-size:var(--fs-body);line-height:1.75;-webkit-font-smoothing:antialiased}
+  font-size:var(--fs-body);line-height:1.75;-webkit-font-smoothing:antialiased;
+  word-break:keep-all;line-break:strict;overflow-wrap:break-word;hyphens:none}
 body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:99;opacity:.035;
   background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
@@ -100,10 +101,9 @@ tr.detail td{border-bottom:2px solid var(--rule-strong);padding-top:0}
     11월에 항공과 알함브라가 몰려 있고, 12월에 사그라다·기차·성당이 열립니다.</p>
   <div class="flow"><b>2026-11-01</b>  항공 결제 (루프트한자)
 <b>2026-11-15</b>  알함브라 주시 ← 최대 병목
-<b>2026-11월</b>    세비야 알카사르 확인
 <b>2026-12-20</b>  CP 기차(60일 전) · 사그라다(2개월 전)
-<b>2026-12월</b>    세비야·그라나다 대성당 · 렐루 서점 · 라이언에어
-<b>2027-01월</b>    Alsa 버스 · 부엘링</div>
+<b>2026-12월</b>    카사 밀라·바트요 · 구엘 공원 · 그라나다 대성당 · 렐루 서점 · 라이언에어
+<b>2027-01월</b>    알사 버스(AGP→그라나다) · 부엘링(GRX→BCN)</div>
 </section>
 
 <section class="cal">
@@ -134,7 +134,7 @@ tr.detail td{border-bottom:2px solid var(--rule-strong);padding-top:0}
 <tr>
   <td class="n">2</td>
   <td class="open"><b>2026-11-15</b><small>확인 시작</small></td>
-  <td class="what"><b>알함브라 궁전 + 나스리 궁전</b><small>방문 2027-02-23 (화) 08:45</small></td>
+  <td class="what"><b>알함브라 궁전 + 나스리 궁전</b><small>방문 2027-02-21 (일) 08:45</small></td>
   <td class="rule">방문일 **3개월 전 = 11/23**. 실제로는 트랜치로 풀려 11월 중순부터 확인</td>
   <td class="price">€22.27 × 2</td>
   <td class="site">tickets.alhambra-patronato.es</td>
@@ -149,22 +149,6 @@ tr.detail td{border-bottom:2px solid var(--rule-strong);padding-top:0}
 
 <tr>
   <td class="n">3</td>
-  <td class="open"><b>2026-11월</b><small>확인 시작</small></td>
-  <td class="what"><b>세비야 알카사르 (Real Alcázar)</b><small>방문 2027-02-21 (일) 14:00</small></td>
-  <td class="rule">공식 오픈 시점 **미기재** → 11월부터 매주 확인</td>
-  <td class="price">€15.50 × 2 (+쿠아르토 레알 알토 €5.50)</td>
-  <td class="site">alcazarsevilla.org → alcazardesevilla.infoticketing.com</td>
-</tr>
-<tr class="detail">
-  <td></td>
-  <td colspan="5">
-    <p class="need"><b>준비물</b> — 여권 이름 · 방문일/시간대 · 카드</p>
-    <p class="warn">**겨울 운영 09:30–17:00**(10/1~3/31), 17:45부터 퇴장. **환불 불가**. 일반권에 Antiquarium·트리아나 세라믹 박물관 등이 포함된다. ⚠️ 이전 문서에 적었던 **'월요일 16~17시 €1' 특별가는 공식 페이지에서 확인되지 않았다** — 예약 페이지에서 직접 확인한다.</p>
-  </td>
-</tr>
-
-<tr>
-  <td class="n">4</td>
   <td class="open"><b>2026-12-20</b><small>확인 시작</small></td>
   <td class="what"><b>CP 기차 리스본 → 포르투 (AP)</b><small>방문 2027-02-18 (목) 09:30</small></td>
   <td class="rule">**60일 전** 오픈 = 12/20</td>
@@ -180,10 +164,10 @@ tr.detail td{border-bottom:2px solid var(--rule-strong);padding-top:0}
 </tr>
 
 <tr>
-  <td class="n">5</td>
+  <td class="n">4</td>
   <td class="open"><b>2026-12-20</b><small>확인 시작</small></td>
-  <td class="what"><b>사그라다 파밀리아</b><small>방문 2027-02-25 (목) 09:00</small></td>
-  <td class="rule">방문일 **약 2개월 전 = 12/25** (공식 FAQ)</td>
+  <td class="what"><b>사그라다 파밀리아</b><small>방문 2027-02-23 (화) 09:00</small></td>
+  <td class="rule">방문일 **약 2개월 전 = 12/23** (공식 FAQ)</td>
   <td class="price">€26 × 2</td>
   <td class="site">sagradafamilia.org</td>
 </tr>
@@ -196,25 +180,41 @@ tr.detail td{border-bottom:2px solid var(--rule-strong);padding-top:0}
 </tr>
 
 <tr>
-  <td class="n">6</td>
+  <td class="n">5</td>
   <td class="open"><b>2026-12월</b><small>확인 시작</small></td>
-  <td class="what"><b>세비야 대성당 + 히랄다탑</b><small>방문 2027-02-21 (일) 09:00</small></td>
-  <td class="rule">공식 오픈 시점 미기재 → 12월 확인</td>
-  <td class="price">€13 × 2</td>
-  <td class="site">catedraldesevilla.es</td>
+  <td class="what"><b>카사 밀라 · 카사 바트요</b><small>방문 2027-02-23 (화) 11:30</small></td>
+  <td class="rule">시간 지정 티켓 상시 판매 → 12월 동시 구매</td>
+  <td class="price">€35 + €29 상당 × 2</td>
+  <td class="site">casamila.es · casabatllo.es</td>
 </tr>
 <tr class="detail">
   <td></td>
   <td colspan="5">
-    <p class="need"><b>준비물</b> — 여권 이름 · 방문일 · 카드</p>
-    <p class="warn">히랄다탑은 **경사로**라 엘리베이터가 없다. **일요일 오전은 미사 시간**이라 개방이 늦거나 일부 제한될 수 있다 — 예약 페이지에서 일요일 시간표를 확인한다.</p>
+    <p class="need"><b>준비물</b> — 이름 · 날짜/시간 · 카드</p>
+    <p class="warn">둘 다 **시간 지정**이라 사그라다 시간에 맞춰 붙인다. 바트요는 **골드·블루** 등 등급이 나뉜다 — 기본권으로 충분하다.</p>
+  </td>
+</tr>
+
+<tr>
+  <td class="n">6</td>
+  <td class="open"><b>2026-12월</b><small>확인 시작</small></td>
+  <td class="what"><b>구엘 공원 (유료 구역)</b><small>방문 2027-02-25 (목) 09:00</small></td>
+  <td class="rule">시간 지정 티켓 상시 판매 → 12월 구매</td>
+  <td class="price">€10 × 2</td>
+  <td class="site">parkguell.barcelona</td>
+</tr>
+<tr class="detail">
+  <td></td>
+  <td colspan="5">
+    <p class="need"><b>준비물</b> — 이름 · 날짜/시간 · 카드</p>
+    <p class="warn">**유료 구역만** 시간 지정이다(자유구역은 무료). 비 예보를 보고 **가장 맑은 2/25**로 잡았다 — 비가 오면 2/23과 바꾼다.</p>
   </td>
 </tr>
 
 <tr>
   <td class="n">7</td>
   <td class="open"><b>2026-12월</b><small>확인 시작</small></td>
-  <td class="what"><b>그라나다 대성당</b><small>방문 2027-02-22 (월) 14:30</small></td>
+  <td class="what"><b>그라나다 대성당</b><small>방문 2027-02-20 (토) 17:00</small></td>
   <td class="rule">미기재 → 12월 확인</td>
   <td class="price">22,000 (2인, 추정)</td>
   <td class="site">catedraldegranada.com</td>
@@ -223,7 +223,7 @@ tr.detail td{border-bottom:2px solid var(--rule-strong);padding-top:0}
   <td></td>
   <td colspan="5">
     <p class="need"><b>준비물</b> — 여권 이름(불필요할 수 있음) · 카드</p>
-    <p class="warn">개인 관람은 현장 구매가 되는 경우가 많지만 **시간 지정 예약**이 열리면 미리 잡는다.</p>
+    <p class="warn">개인 관람은 현장 구매가 되는 경우가 많지만 **시간 지정 예약**이 열리면 미리 잡는다. 왕실 예배당(Capilla Real)은 별도 요금.</p>
   </td>
 </tr>
 
@@ -246,7 +246,7 @@ tr.detail td{border-bottom:2px solid var(--rule-strong);padding-top:0}
 <tr>
   <td class="n">9</td>
   <td class="open"><b>2026-12월</b><small>확인 시작</small></td>
-  <td class="what"><b>Ryanair 포르투 → 세비야 (OPO→SVQ)</b><small>방문 2027-02-20 (토) 10:00</small></td>
+  <td class="what"><b>Ryanair 포르투 → 말라가 (OPO→AGP)</b><small>방문 2027-02-20 (토) 10:00</small></td>
   <td class="rule">저가항공은 **빠를수록 싸다**</td>
   <td class="price">75,000 (2인 · 수하물 포함)</td>
   <td class="site">ryanair.com</td>
@@ -255,30 +255,30 @@ tr.detail td{border-bottom:2px solid var(--rule-strong);padding-top:0}
   <td></td>
   <td colspan="5">
     <p class="need"><b>준비물</b> — 여권 이름 · 카드</p>
-    <p class="warn">**수하물이 별도**다. 위탁 1개를 미리 붙여야 공항에서 폭탄 맞지 않는다. 탑승 2시간 전 도착.</p>
+    <p class="warn">**수하물이 별도**다. 위탁 1개를 미리 붙여야 공항에서 폭탄 맞지 않는다. 탑승 2시간 전 도착. **직항 대안은 볼로테아 OPO→GRX(1h27, 주 2회 월·금)** — 날짜가 맞으면 환승·버스 없이 그라나다 직행이다.</p>
   </td>
 </tr>
 
 <tr>
   <td class="n">10</td>
   <td class="open"><b>2027-01월</b><small>확인 시작</small></td>
-  <td class="what"><b>Alsa 버스 세비야 → 그라나다</b><small>방문 2027-02-22 (월) 09:00</small></td>
+  <td class="what"><b>알사 버스 말라가 → 그라나다</b><small>방문 2027-02-20 (토) 12:30</small></td>
   <td class="rule">통상 1~2개월 전 오픈</td>
-  <td class="price">45,000 (2인)</td>
+  <td class="price">30,000 (2인, €12~16/인)</td>
   <td class="site">alsa.es</td>
 </tr>
 <tr class="detail">
   <td></td>
   <td colspan="5">
     <p class="need"><b>준비물</b> — 이름 · 좌석 · 카드</p>
-    <p class="warn">3시간. 좌석 지정을 한다. 2월 안달루시아는 안개·비로 지연이 있을 수 있어 **알함브라가 있는 다음 날**로 잡혀 있다(여유 1일).</p>
+    <p class="warn">**1시간 45분~2시간**. 공항(AGP)에서 바로 타는 편이 있어 시내로 나가지 않는다. 좌석 지정을 한다. 2월 안달루시아는 안개·비로 지연이 있을 수 있어 **알함브라가 있는 다음 날**로 잡혀 있다(여유 1일).</p>
   </td>
 </tr>
 
 <tr>
   <td class="n">11</td>
   <td class="open"><b>2027-01월</b><small>확인 시작</small></td>
-  <td class="what"><b>Vueling 그라나다 → 바르셀로나 (GRX→BCN)</b><small>방문 2027-02-24 (수) 09:30</small></td>
+  <td class="what"><b>Vueling 그라나다 → 바르셀로나 (GRX→BCN)</b><small>방문 2027-02-22 (월) 09:30</small></td>
   <td class="rule">통상 1~2개월 전 오픈</td>
   <td class="price">113,000 (2인 · 수하물 포함)</td>
   <td class="site">vueling.com</td>
@@ -287,7 +287,7 @@ tr.detail td{border-bottom:2px solid var(--rule-strong);padding-top:0}
   <td></td>
   <td colspan="5">
     <p class="need"><b>준비물</b> — 여권 이름 · 카드</p>
-    <p class="warn">**수하물 별도**. 1시간 28분 직항. 바르셀로나 이동일이라 늦어도 저녁 전 도착한다.</p>
+    <p class="warn">**수하물 별도**. 1시간 28분 직항, 주 128편. 늦어도 점심 전에 바르셀로나에 도착해 오후를 쓴다.</p>
   </td>
 </tr>
     </tbody>
@@ -303,11 +303,12 @@ tr.detail td{border-bottom:2px solid var(--rule-strong);padding-top:0}
     <li>매진되면 <b>전날·당일 재판매분</b>이 풀린다. 안전장치로 남겨 둔다.</li>
   </ul>
 
-  <h2>정정 — 알카사르 특별가</h2>
-  <p>이전 문서에 <b>"세비야 알카사르 월요일 16~17시 €1"</b>이라고 적었는데,
-     공식 페이지(<i>alcazarsevilla.org/prepara-la-visita</i>)에서는 <b>확인되지 않았다.</b>
-     공식 페이지가 말하는 것은 <b>"집행위원회가 정한 날과 시간에 무료 공개 관람이 있다"</b>는 것뿐이다.
-     예약 페이지에서 직접 확인하기 전까지는 <b>일반권 €15.50</b>으로 예산을 잡는다.</p>
+  <h2>정정 — 세비야를 뺐다</h2>
+  <p>2026-10-19 결정으로 <b>세비야(2박)를 빼고 바르셀로나를 4박</b>으로 늘렸다(2/22~26).
+     알카사르·대성당 예약 항목은 삭제했다. 대신 <b>포르투 → 그라나다</b> 구간이 새로 생겨
+     라이언에어 OPO→AGP + 알사 버스, 또는 볼로테아 OPO→GRX 직항(주 2회)을 쓴다.</p>
+  <p>이전 문서에 <b>"세비야 알카사르 월요일 16~17시 €1"</b>이라고 적었던 특별가는 공식 페이지에서
+     확인되지 않았다 — 세비야를 빼면서 이 항목 자체가 사라졌다.</p>
 
   <h2>공통 준비물</h2>
   <ul>
@@ -318,7 +319,7 @@ tr.detail td{border-bottom:2px solid var(--rule-strong);padding-top:0}
   </ul>
 
   <p style="margin-top:18px">비용·시간 출처: 각 공식 사이트(2026-10-18 조회).
-     알카사르 €15.50 / 사그라다 €26 / 알함브라 €22.27 / 세비야 대성당 €13.</p>
+     사그라다 €26 / 알함브라 €22.27 / 바르셀로나 대성당 €11 / 피카소 €12 / MNAC €12 / 구엘 공원 €10.</p>
   <p>전체 계획: <a href="index.html">요약</a> · <a href="itinerary.html">일차별 일정</a> · <a href="taxrefund.html">택스리펀</a> · <a href="galaxytab.html">갤럭시 탭</a> · <a href="jewelry.html">주얼리</a> · <a href="earrings.html">귀고리</a></p>
 </section>
 </main>
