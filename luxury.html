@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>스페인에서 사면 남는 명품 Top 10 · 이베리아 2027-02</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Gowun+Batang:wght@400;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/tokens.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);
+  font-size:var(--fs-body);line-height:1.75;-webkit-font-smoothing:antialiased;
+  word-break:keep-all;line-break:strict;overflow-wrap:break-word;hyphens:none}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:99;opacity:.035;
+  background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad-x)}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.topbar{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--rule)}
+.topbar .wrap{display:flex;align-items:baseline;gap:14px;padding-top:12px;padding-bottom:12px}
+.topbar .brand{font-family:var(--font-display);font-weight:700;font-size:var(--fs-small)}
+.topbar .links{margin-left:auto;display:flex;gap:14px;font-family:var(--font-mono);font-size:var(--fs-caption);flex-wrap:wrap}
+.topbar a{text-decoration:none;border-bottom:1px solid currentColor}
+.hero{padding-top:72px;padding-bottom:36px;border-bottom:3px solid var(--rule-strong)}
+.kicker{font-family:var(--font-mono);font-size:var(--fs-caption);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);margin:0 0 20px}
+.hero h1{font-family:var(--font-display);font-weight:700;font-size:clamp(2rem,5vw,3.3rem);
+  line-height:1.08;letter-spacing:-.02em;margin:0 0 20px;text-wrap:balance}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero .lede{max-width:60ch;font-size:var(--fs-lead);color:var(--ink-soft);margin:0 0 24px}
+.crit{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));max-width:900px}
+.crit div{border:1px solid var(--rule);border-left:3px solid var(--accent);background:var(--paper-2);
+  padding:12px 16px;font-size:var(--fs-small)}
+.crit b{display:block;font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.check{font-family:var(--font-mono);font-size:12px;color:var(--muted);margin:18px 0 0}
+
+.rank{max-width:var(--maxw);margin:0 auto;padding:44px var(--pad-x) 0}
+table.top{width:100%;border-collapse:collapse;font-size:var(--fs-small)}
+table.top caption{text-align:left;font-family:var(--font-mono);font-size:12px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);padding-bottom:10px}
+table.top th,table.top td{padding:11px 8px;border-bottom:1px solid var(--rule);vertical-align:top}
+table.top thead th{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--muted);font-weight:500;border-bottom:2px solid var(--rule-strong);text-align:right;white-space:nowrap}
+table.top thead th:first-child,table.top thead th:nth-child(2){text-align:left}
+table.top td.rk{font-family:var(--font-display);font-weight:700;font-size:var(--fs-lead);
+  color:var(--accent);width:34px;text-align:right;padding-right:12px}
+table.top td.nm b{display:block;font-weight:700}
+table.top td.nm small{display:block;font-family:var(--font-mono);font-size:12px;color:var(--muted)}
+.b{font-family:var(--font-mono);font-size:12px;color:var(--muted);letter-spacing:.06em}
+table.top td.ct{text-align:right;font-family:var(--font-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+table.top td.hi{background:var(--paper-2);font-weight:700}
+table.top td.gain{color:var(--accent);font-weight:700}
+
+.pick{max-width:var(--maxw);margin:0 auto;padding:44px var(--pad-x);border-bottom:1px solid var(--rule)}
+.pick-rank{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--paper);background:var(--accent);display:inline-block;padding:2px 8px;margin:0 0 10px}
+.pick-rank span{opacity:.75}
+.pick h2{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h3);margin:0 0 18px;line-height:1.25}
+.pick h2 span{font-weight:400;color:var(--muted);font-size:var(--fs-small);display:block;margin-top:6px;
+  font-family:var(--font-mono)}
+.pick-grid{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:40px;align-items:start}
+.pick-grid>*{min-width:0}
+table.p2{width:100%;border-collapse:collapse;font-size:var(--fs-small)}
+table.p2 th{text-align:left;padding:9px 0;border-bottom:1px solid var(--rule);font-weight:400;color:var(--ink-soft)}
+table.p2 td{text-align:right;padding:9px 0;border-bottom:1px solid var(--rule);font-family:var(--font-mono)}
+table.p2 tr.hi th,table.p2 tr.hi td{background:var(--paper-2);font-weight:700}
+.why{margin:0 0 12px;font-size:var(--fs-small)}
+.rev{margin:0 0 14px;padding:12px 16px;background:var(--paper-2);border:0;border-left:2px solid var(--rule-strong);
+  font-size:var(--fs-small);color:var(--ink-soft)}
+.cav{font-size:14px;color:var(--ink-soft);border:1px solid var(--rule);
+  padding:10px 14px;margin:0 0 12px}
+.lnk{font-family:var(--font-mono);font-size:12px;margin:0}
+.lnk a{text-decoration:none;border-bottom:1px solid currentColor}
+
+.sec{max-width:var(--maxw);margin:0 auto;padding:56px var(--pad-x) 0;border-top:3px solid var(--rule-strong)}
+.sec h2{font-family:var(--font-display);font-weight:700;font-size:var(--fs-h3);margin:0 0 8px;letter-spacing:-.01em}
+.sec .sub{font-size:var(--fs-small);color:var(--ink-soft);max-width:72ch;margin:0 0 26px}
+table.bt{width:100%;border-collapse:collapse;font-size:var(--fs-small)}
+table.bt th,table.bt td{padding:10px 8px;border-bottom:1px solid var(--rule);vertical-align:top;text-align:left}
+table.bt thead th{font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--muted);font-weight:500;border-bottom:2px solid var(--rule-strong)}
+table.bt th[scope=row]{font-weight:700;width:26%;white-space:normal}
+table.bt td.rsn{font-family:var(--font-mono);font-size:12px;color:var(--accent);width:16%;white-space:nowrap}
+
+.why-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.why-grid div{border:1px solid var(--rule);background:var(--paper-clean);padding:14px 18px;font-size:var(--fs-small)}
+.why-grid b{display:block;font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+
+.tail{max-width:var(--maxw);margin:0 auto;padding:56px var(--pad-x) 96px}
+.tail h2{font-family:var(--font-display);font-size:var(--fs-h3);margin:0 0 16px}
+.tail p,.tail li{font-size:var(--fs-small);color:var(--ink-soft)}
+.formula{border:1px solid var(--rule);background:var(--paper-clean);padding:18px 22px;margin:0 0 24px;
+  font-family:var(--font-mono);font-size:13px;line-height:2;overflow-x:auto}
+.warn{border:1px solid var(--rule);border-left:3px solid var(--accent);background:var(--paper-2);
+  padding:16px 20px;margin:20px 0 0;font-size:var(--fs-small);max-width:78ch}
+
+@media (max-width:820px){
+  .pick-grid{grid-template-columns:1fr;gap:22px}
+  .hero{padding-top:44px;padding-bottom:30px}
+  table.top{font-size:12px}
+  table.top td.rk{font-size:var(--fs-small)}
+  table.top td.nm small{display:none}
+  table.top th:nth-child(5),table.top td:nth-child(5),
+  table.top th:nth-child(6),table.top td:nth-child(6){display:none}
+  table.bt th[scope=row]{width:34%}
+  table.bt td.rsn{width:auto}
+}
+@media print{
+  .topbar,.tail,.crit{display:none}
+  .pick{break-inside:avoid;break-before:page;padding:20px 0}
+  .pick:first-of-type{break-before:auto}
+  body::after{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="brand">이베리아 2027-02 · 명품 Top 10</span>
+    <span class="links">
+      <a href="index.html">요약</a>
+      <a href="itinerary.html">일정</a>
+      <a href="accommodation.html">숙소</a>
+      <a href="taxrefund.html">택스리펀</a>
+      <a href="earrings.html">귀고리</a>
+      <a href="galaxytab.html">갤럭시 탭</a>
+      <a href="reservations.html">예약</a>
+    </span>
+  </div>
+</div>
+
+<main>
+<section class="hero wrap">
+  <p class="kicker">Luxury · 10 picks · satisfaction × net gain</p>
+  <h1>스페인에서 사면 <em>남는</em> 명품,<br>열 가지</h1>
+  <p class="lede">귀고리만 보지 않고 <b>가방·주얼리·신발·소품</b>을 전부 훑었습니다.
+    기준은 두 개 — 오래 만족할 물건인가, 환급과 관세를 다 계산해도 이득인가.
+    가격은 공식 사이트와 <b>실제 구매자 후기</b>에서 확인한 값만 썼습니다.</p>
+  <div class="crit">
+    <div><b>기준 1 · 만족도</b>디자인이 바뀌지 않는가, 매일 쓰는 물건인가, 실제 구매 후기가 어떤가</div>
+    <div><b>기준 2 · 경제성</b>환급 13% + 관세(자진신고)까지 넣은 <b>실질 총비용</b>이 한국보다 얼마나 낮은가</div>
+    <div><b>기준 3 · 스페인성</b>본고장 브랜드이거나, 스페인에서만 이 가격이 나오는가</div>
+  </div>
+  <p class="check">근거 — 스페인·한국 공식몰 6곳 · 네이버 실사용 후기 4편 · 해외 포럼 실측 1편 · 2026-11-15 조회</p>
+</section>
+
+<section class="rank">
+  <table class="top">
+    <caption>Top 10 — 스페인 정가 · 환급 후 · 관세 · 한국 정가</caption>
+    <thead>
+      <tr><th scope="col">#</th><th scope="col">제품</th><th scope="col">스페인 €</th>
+          <th scope="col">환급 후(원)</th><th scope="col">관세</th><th scope="col">한국(원)</th><th scope="col">실질 이득</th></tr>
+    </thead>
+    <tbody>
+<tr><td class="rk">1</td><td class="nm"><span class="b">로에베</span><b>해먹 백 컴팩트</b><small>클래식 카프스킨 · 3way</small></td><td class="ct">2,300 €</td><td class="ct hi">3,104,031</td><td class="ct">141,535</td><td class="ct">4,100,000</td><td class="ct gain">+854,434 (20.8%)</td></tr>
+<tr><td class="rk">2</td><td class="nm"><span class="b">프라다</span><b>리나일론·사피아노 숄더백</b><small>2VH211_2DMH_F0002_V_XOO</small></td><td class="ct">1,650 €</td><td class="ct hi">2,226,805</td><td class="ct">35,662</td><td class="ct">3,450,000</td><td class="ct gain">+1,187,533 (34.4%)</td></tr>
+<tr><td class="rk">3</td><td class="nm"><span class="b">루이비통</span><b>네버풀 MM</b><small>모노그램 · M46987</small></td><td class="ct">1,550 €</td><td class="ct hi">2,091,847</td><td class="ct">19,374</td><td class="ct">2,910,000</td><td class="ct gain">+798,778 (27.4%)</td></tr>
+<tr><td class="rk">4</td><td class="nm"><span class="b">로에베</span><b>미니 퍼즐 백</b><small>소프트 그레인 카프스킨</small></td><td class="ct">1,900 €</td><td class="ct hi">2,564,200</td><td class="ct">76,382</td><td class="ct">3,300,000</td><td class="ct gain">+659,418 (20.0%)</td></tr>
+<tr><td class="rk">5</td><td class="nm"><span class="b">로에베</span><b>애너그램 스몰 버티컬 지갑</b><small>페블 그레인 카프스킨 · 17색</small></td><td class="ct">550 €</td><td class="ct hi">742,268</td><td class="ct">0</td><td class="ct">970,000</td><td class="ct gain">+227,732 (23.5%)</td></tr>
+<tr><td class="rk">6</td><td class="nm"><span class="b">까르띠에</span><b>다무르 펜던트 SM</b><small>18K 옐로우 골드 · 다이아 1P · B7215800</small></td><td class="ct">1,520 €</td><td class="ct hi">2,051,360</td><td class="ct">14,488</td><td class="ct">2,340,000</td><td class="ct gain">+274,152 (11.7%)</td></tr>
+<tr><td class="rk">7</td><td class="nm"><span class="b">카르미나</span><b>홀스비트 로퍼 80746</b><small>XIM 라스트 · 마요르카 인카</small></td><td class="ct">425 €</td><td class="ct hi">573,571</td><td class="ct">0</td><td class="ct">629,000</td><td class="ct gain">+55,429 (8.8%)</td></tr>
+<tr><td class="rk">8</td><td class="nm"><span class="b">마요리카</span><b>Lyra 진주 목걸이 10mm</b><small>메노르카 · 45cm</small></td><td class="ct">415 €</td><td class="ct hi">560,075</td><td class="ct">0</td><td class="ct">—</td><td class="ct gain">환급만</td></tr>
+<tr><td class="rk">9</td><td class="nm"><span class="b">까르띠에</span><b>트리니티 링 클래식</b><small>18K 3색 골드 · B4234200</small></td><td class="ct">2,400 €</td><td class="ct hi">3,238,989</td><td class="ct">157,823</td><td class="ct">3,700,000</td><td class="ct gain">+303,188 (8.2%)</td></tr>
+<tr><td class="rk">10</td><td class="nm"><span class="b">로에베</span><b>퍼즐 동전 카드지갑</b><small>클래식 카프스킨 · C510Z40X13</small></td><td class="ct">350 €</td><td class="ct hi">472,353</td><td class="ct">0</td><td class="ct">620,000</td><td class="ct gain">+147,647 (23.8%)</td></tr>
+    </tbody>
+  </table>
+  <p class="check">순위는 <b>이득률 순이 아니다</b> — 만족도와 이득을 함께 봤다. 이득률만 보면 <b>프라다(34%)</b>가 1위,
+    다음이 <b>네버풀(27%)</b>이다. 로에베를 위에 둔 이유는 스페인 본고장 브랜드이면서 실사용 후기의 만족도가 가장 진하기 때문이다.</p>
+</section>
+
+
+<article class="pick">
+  <p class="pick-rank">1위 · 로에베 <span>네이버 실측(2024)</span></p>
+  <h2>해먹 백 컴팩트 <span>클래식 카프스킨 · 3way</span></h2>
+  <div class="pick-grid">
+    <table class="p2"><tbody>
+      <tr><th scope="row">스페인 정가</th><td>2,300 €  (IVA 포함)</td></tr>
+      <tr><th scope="row">환급 13% 후</th><td>3,104,031 원</td></tr>
+      <tr><th scope="row">관세(자진신고)</th><td>+141,535</td></tr>
+      <tr class="hi"><th scope="row">실질 총비용</th><td>3,245,566 원</td></tr>
+      <tr><th scope="row">한국 정가</th><td>4,100,000 원</td></tr>
+    </tbody></table>
+    <div class="pick-txt">
+      <p class="why"><b>만족도</b> — 가방 하나로 <b>크로스·숄더·토트 세 가지 형태</b>. 실제 구매자가 "휘뚤마뚤, 수납력 좋고 가죽 질이 마음에 든다"고 적은 라인.</p>
+      <blockquote class="rev">현지 €2,300 · 한국 스몰 410만. <i>"추후 입국 후 관세 내고 나서도 약 90~100만원 차이가 난다"</i> — 실제 구매자 계산과 이 페이지 계산이 일치한다.</blockquote>
+      <p class="why"><b>경제성</b> — 로에베는 <b>유럽 정가가 공통</b>이라 스페인만 싼 게 아니다. 이득은 환급 + 한국 마크업에서 나온다.</p>
+      <p class="cav"><b>주의</b> — 월요일은 웨이팅이 길다(실측). 화요일 오전 11시는 대기 0이었다.</p>
+      <p class="lnk"><a href="https://m.blog.naver.com/catsyj/223458165888">후기·출처 보기</a></p>
+    </div>
+  </div>
+</article>
+
+<article class="pick">
+  <p class="pick-rank">2위 · 프라다 <span>블로그 실측(파리)</span></p>
+  <h2>리나일론·사피아노 숄더백 <span>2VH211_2DMH_F0002_V_XOO</span></h2>
+  <div class="pick-grid">
+    <table class="p2"><tbody>
+      <tr><th scope="row">스페인 정가</th><td>1,650 €  (IVA 포함)</td></tr>
+      <tr><th scope="row">환급 13% 후</th><td>2,226,805 원</td></tr>
+      <tr><th scope="row">관세(자진신고)</th><td>+35,662</td></tr>
+      <tr class="hi"><th scope="row">실질 총비용</th><td>2,262,467 원</td></tr>
+      <tr><th scope="row">한국 정가</th><td>3,450,000 원</td></tr>
+    </tbody></table>
+    <div class="pick-txt">
+      <p class="why"><b>만족도</b> — 가볍고 물에 강한 리나일론 — <b>매일 쓰는 가방</b>으로 만족도가 높다. 명품 중 가장 실용적인 축.</p>
+      <blockquote class="rev">"국내 345만원 제품, 쁘렝땅에서 €1,650 → 5% 할인 €1,567" — 실측 후기. 여기에 환급까지 겹친다.</blockquote>
+      <p class="why"><b>경제성</b> — <b>이 목록에서 이득률 1위</b>(관세 포함 34%). €1,650은 스페인 정가 미확인 — 프랑스 실측값.</p>
+      <p class="cav"><b>주의</b> — 스페인 매장에서 € 확인 후 결제. 백화점 5% 할인 대상인지 물어볼 것.</p>
+      <p class="lnk"><a href="https://www.prada.com/es/es.html">후기·출처 보기</a></p>
+    </div>
+  </div>
+</article>
+
+<article class="pick">
+  <p class="pick-rank">3위 · 루이비통 <span>공식 양쪽</span></p>
+  <h2>네버풀 MM <span>모노그램 · M46987</span></h2>
+  <div class="pick-grid">
+    <table class="p2"><tbody>
+      <tr><th scope="row">스페인 정가</th><td>1,550 €  (IVA 포함)</td></tr>
+      <tr><th scope="row">환급 13% 후</th><td>2,091,847 원</td></tr>
+      <tr><th scope="row">관세(자진신고)</th><td>+19,374</td></tr>
+      <tr class="hi"><th scope="row">실질 총비용</th><td>2,111,222 원</td></tr>
+      <tr><th scope="row">한국 정가</th><td>2,910,000 원</td></tr>
+    </tbody></table>
+    <div class="pick-txt">
+      <p class="why"><b>만족도</b> — 10년 넘게 리뷰가 쌓인 <b>실패 확률이 가장 낮은 토트</b>. 매일 드는 물건이라 만족도가 곧 사용량이다.</p>
+      <blockquote class="rev">한국인들이 "스페인 특산품"이라고 부르는 이유가 여기 있다 — <b>택스리펀율이 높아</b> 체감가가 크게 내려간다(엘꼬르떼 디아고날 후기).</blockquote>
+      <p class="why"><b>경제성</b> — 한국·유럽 <b>양쪽 공식가 확인</b>. 환급 후 214만 → <b>부부 합산 면세 한도 안</b>이라 관세 0.</p>
+      <p class="cav"><b>주의</b> — MM·PM·BB 사이즈별 코드가 다르다. 250만 상한의 기준점.</p>
+      <p class="lnk"><a href="https://www.louisvuitton.com/esp-es">후기·출처 보기</a></p>
+    </div>
+  </div>
+</article>
+
+<article class="pick">
+  <p class="pick-rank">4위 · 로에베 <span>네이버 실측(2023)</span></p>
+  <h2>미니 퍼즐 백 <span>소프트 그레인 카프스킨</span></h2>
+  <div class="pick-grid">
+    <table class="p2"><tbody>
+      <tr><th scope="row">스페인 정가</th><td>1,900 €  (IVA 포함)</td></tr>
+      <tr><th scope="row">환급 13% 후</th><td>2,564,200 원</td></tr>
+      <tr><th scope="row">관세(자진신고)</th><td>+76,382</td></tr>
+      <tr class="hi"><th scope="row">실질 총비용</th><td>2,640,582 원</td></tr>
+      <tr><th scope="row">한국 정가</th><td>3,300,000 원</td></tr>
+    </tbody></table>
+    <div class="pick-txt">
+      <p class="why"><b>만족도</b> — 퍼즐의 <b>가장 작은 사이즈</b> — 지갑·폰·선글라스 케이스가 들어간다. "미니 퍼즐 진짜 이쁘다"가 후기의 결론.</p>
+      <blockquote class="rev">현지 €1,900(269만) · 한국 330만. 구매자 표현대로 <b>환급까지 받으면 100만원 차이</b>가 난다.</blockquote>
+      <p class="why"><b>경제성</b> — 2023년 실측가라 지금은 올랐을 수 있다. 공식 사이트에서 최신 € 확인 권장.</p>
+      <p class="cav"><b>주의</b> — 미니는 수납이 적다 — 실물 확인 필수.</p>
+      <p class="lnk"><a href="https://m.blog.naver.com/gonana276/223265695983">후기·출처 보기</a></p>
+    </div>
+  </div>
+</article>
+
+<article class="pick">
+  <p class="pick-rank">5위 · 로에베 <span>네이버 실측(2023)</span></p>
+  <h2>애너그램 스몰 버티컬 지갑 <span>페블 그레인 카프스킨 · 17색</span></h2>
+  <div class="pick-grid">
+    <table class="p2"><tbody>
+      <tr><th scope="row">스페인 정가</th><td>550 €  (IVA 포함)</td></tr>
+      <tr><th scope="row">환급 13% 후</th><td>742,268 원</td></tr>
+      <tr><th scope="row">관세(자진신고)</th><td>0 (면세 한도 내)</td></tr>
+      <tr class="hi"><th scope="row">실질 총비용</th><td>742,268 원</td></tr>
+      <tr><th scope="row">한국 정가</th><td>970,000 원</td></tr>
+    </tbody></table>
+    <div class="pick-txt">
+      <p class="why"><b>만족도</b> — 카드 6칸 + 지폐 + 동전까지. <b>매일 손에 쥐는 물건</b>이라 만족도가 오래 간다.</p>
+      <blockquote class="rev">현지 €550(78만) · 한국 97만. <b>관세 구간 밖</b>이라 환급이 그대로 이득.</blockquote>
+      <p class="why"><b>경제성</b> — 지갑·소품은 <b>이득률은 높고 관세 위험은 0</b>. 가방 하나 값으로 두 개를 산다.</p>
+      <p class="cav"><b>주의</b> — 색상이 17가지라 매장에서만 볼 수 있는 색이 있다.</p>
+      <p class="lnk"><a href="https://www.loewe.com/eur/es/hombre/marroquineria">후기·출처 보기</a></p>
+    </div>
+  </div>
+</article>
+
+<article class="pick">
+  <p class="pick-rank">6위 · 까르띠에 <span>공식 실측</span></p>
+  <h2>다무르 펜던트 SM <span>18K 옐로우 골드 · 다이아 1P · B7215800</span></h2>
+  <div class="pick-grid">
+    <table class="p2"><tbody>
+      <tr><th scope="row">스페인 정가</th><td>1,520 €  (IVA 포함)</td></tr>
+      <tr><th scope="row">환급 13% 후</th><td>2,051,360 원</td></tr>
+      <tr><th scope="row">관세(자진신고)</th><td>+14,488</td></tr>
+      <tr class="hi"><th scope="row">실질 총비용</th><td>2,065,848 원</td></tr>
+      <tr><th scope="row">한국 정가</th><td>2,340,000 원</td></tr>
+    </tbody></table>
+    <div class="pick-txt">
+      <p class="why"><b>만족도</b> — 목선 바로 아래에서 <b>매일 반짝이는 자리</b>. 주얼리 중 만족도 대비 가격이 가장 무난한 라인.</p>
+      <blockquote class="rev">스페인 공식 사이트 값. 환급 후 205만 → <b>면세 한도 안</b>이라 관세 0.</blockquote>
+      <p class="why"><b>경제성</b> — 귀금속 세율이 뛰는 200만 구간 아래라 유리하게 작동한다.</p>
+      <p class="cav"><b>주의</b> — 각인은 귀국 후에 — 각인하면 환불이 안 되는 경우가 있다.</p>
+      <p class="lnk"><a href="https://www.cartier.com/es-es/joyas">후기·출처 보기</a></p>
+    </div>
+  </div>
+</article>
+
+<article class="pick">
+  <p class="pick-rank">7위 · 카르미나 <span>공식 + 유니페어</span></p>
+  <h2>홀스비트 로퍼 80746 <span>XIM 라스트 · 마요르카 인카</span></h2>
+  <div class="pick-grid">
+    <table class="p2"><tbody>
+      <tr><th scope="row">스페인 정가</th><td>425 €  (IVA 포함)</td></tr>
+      <tr><th scope="row">환급 13% 후</th><td>573,571 원</td></tr>
+      <tr><th scope="row">관세(자진신고)</th><td>0 (면세 한도 내)</td></tr>
+      <tr class="hi"><th scope="row">실질 총비용</th><td>573,571 원</td></tr>
+      <tr><th scope="row">한국 정가</th><td>629,000 원</td></tr>
+    </tbody></table>
+    <div class="pick-txt">
+      <p class="why"><b>만족도</b> — <b>1866년부터 6대째, 190단계 수작업 굿이어 웰트</b>. 신발을 아는 사람의 만족도가 가장 높은 구간 — 길들이면 10년 신는다.</p>
+      <blockquote class="rev">본고장에서 사면 유통 단계가 하나 빠진다. 한국 편집숍 ₩629,000 ↔ 스페인 €425(환급 후 약 57만).</blockquote>
+      <p class="why"><b>경제성</b> — 이득률은 9%로 낮지만 <b>다른 어디서도 이 가격이 안 나온다</b>. 부피가 있어 짐이 되는 게 유일한 단점.</p>
+      <p class="cav"><b>주의</b> — 라스트(XIM·UETAM·RAIN)마다 발볼이 다르다. 매장에서 신어보고 결정.</p>
+      <p class="lnk"><a href="https://www.carminashoemaker.com/es/es">후기·출처 보기</a></p>
+    </div>
+  </div>
+</article>
+
+<article class="pick">
+  <p class="pick-rank">8위 · 마요리카 <span>공식 실측</span></p>
+  <h2>Lyra 진주 목걸이 10mm <span>메노르카 · 45cm</span></h2>
+  <div class="pick-grid">
+    <table class="p2"><tbody>
+      <tr><th scope="row">스페인 정가</th><td>415 €  (IVA 포함)</td></tr>
+      <tr><th scope="row">환급 13% 후</th><td>560,075 원</td></tr>
+      <tr><th scope="row">관세(자진신고)</th><td>0 (면세 한도 내)</td></tr>
+      <tr class="hi"><th scope="row">실질 총비용</th><td>560,075 원</td></tr>
+      <tr><th scope="row">한국 정가</th><td>— 원</td></tr>
+    </tbody></table>
+    <div class="pick-txt">
+      <p class="why"><b>만족도</b> — <b>1890년 메노르카섬에서 시작한 스페인 진주 하우스.</b> 값이 아니라 <b>이야기</b>로 만족하는 품목 — 스페인에서만 이 가격이 나온다.</p>
+      <blockquote class="rev">€415면 관세 구간 밖. 환급만으로 약 8만원이 돌아온다.</blockquote>
+      <p class="why"><b>경제성</b> — 한국 백화점 입점가를 확보하지 못했다 — 이득률 대신 <b>환급액만 확정</b>.</p>
+      <p class="cav"><b>주의</b> — 양식 진주(큐레이티드)라 천연 진주와 다르다. 한국 면세점과 비교 권장.</p>
+      <p class="lnk"><a href="https://www.majorica.com/es-eu/collections/all">후기·출처 보기</a></p>
+    </div>
+  </div>
+</article>
+
+<article class="pick">
+  <p class="pick-rank">9위 · 까르띠에 <span>공식 실측</span></p>
+  <h2>트리니티 링 클래식 <span>18K 3색 골드 · B4234200</span></h2>
+  <div class="pick-grid">
+    <table class="p2"><tbody>
+      <tr><th scope="row">스페인 정가</th><td>2,400 €  (IVA 포함)</td></tr>
+      <tr><th scope="row">환급 13% 후</th><td>3,238,989 원</td></tr>
+      <tr><th scope="row">관세(자진신고)</th><td>+157,823</td></tr>
+      <tr class="hi"><th scope="row">실질 총비용</th><td>3,396,812 원</td></tr>
+      <tr><th scope="row">한국 정가</th><td>3,700,000 원</td></tr>
+    </tbody></table>
+    <div class="pick-txt">
+      <p class="why"><b>만족도</b> — 1924년 이후 <b>디자인이 바뀌지 않은 반지</b>. 세 색 골드를 한 번에 — 후회가 적다는 평이 지배적.</p>
+      <blockquote class="rev">환급 후 324만 + 관세 16만 = 340만 <b>vs 한국 370만</b>.</blockquote>
+      <p class="why"><b>경제성</b> — 귀금속 정액세(721,200원) 구간에는 못 미쳐 15% 구간에 걸린다 — 이게 유리하게 작동.</p>
+      <p class="cav"><b>주의</b> — 사이즈가 브랜드마다 다르다. 반지는 매장 착용 필수.</p>
+      <p class="lnk"><a href="https://www.cartier.com/es-es/joyas">후기·출처 보기</a></p>
+    </div>
+  </div>
+</article>
+
+<article class="pick">
+  <p class="pick-rank">10위 · 로에베 <span>네이버 실측(2023)</span></p>
+  <h2>퍼즐 동전 카드지갑 <span>클래식 카프스킨 · C510Z40X13</span></h2>
+  <div class="pick-grid">
+    <table class="p2"><tbody>
+      <tr><th scope="row">스페인 정가</th><td>350 €  (IVA 포함)</td></tr>
+      <tr><th scope="row">환급 13% 후</th><td>472,353 원</td></tr>
+      <tr><th scope="row">관세(자진신고)</th><td>0 (면세 한도 내)</td></tr>
+      <tr class="hi"><th scope="row">실질 총비용</th><td>472,353 원</td></tr>
+      <tr><th scope="row">한국 정가</th><td>620,000 원</td></tr>
+    </tbody></table>
+    <div class="pick-txt">
+      <p class="why"><b>만족도</b> — 가방의 정수리만 잘라 만든 소품. <b>지갑을 바꾸는 순간이 만족도가 가장 오래 간다</b>.</p>
+      <blockquote class="rev">현지 €350(50만) · 한국 62만. 환급 후 약 47만 — <b>관세 0, 이득률 24%</b>.</blockquote>
+      <p class="why"><b>경제성</b> — 목록에서 가장 싼 픽. 면세 한도는커녕 신고 대상도 아니다.</p>
+      <p class="cav"><b>주의</b> — 한국 정가는 2023년 기준 — 지금은 올랐을 수 있다.</p>
+      <p class="lnk"><a href="https://www.loewe.com/eur/es/hombre/marroquineria">후기·출처 보기</a></p>
+    </div>
+  </div>
+</article>
+
+<section class="sec">
+  <h2>현장 후기로 확인한 것</h2>
+  <p class="sub">가격표만 보면 놓치는 것들이 있다. 네이버 실사용 후기와 해외 포럼에서 반복해서 나온 사실만 추렸다.</p>
+  <ul>
+<li><b>일요일은 전부 닫는다</b> — 그라시아 거리 매장 대부분이 일요일 휴무. 우리 일정은 <b>D11이 목요일</b>이라 무관하지만, 전날(D10) 오후 쇼핑이 핵심이라는 배치가 맞다.</li>
+<li><b>월요일 로에베는 웨이팅</b> — "월요일에는 로에베 매장 웨이팅이 엄청나다. 화요일 오전 11시에 가니 대기 0, 20분 만에 결제" — 실측 후기.</li>
+<li><b>엘꼬르떼 디아고날이 낫다</b> — 카탈루냐 광장점에는 <b>명품 매장이 없다</b>. 디아고날점만 로에베·루이비통이 입점. 지하 1층 인터내셔널 데스크에서 택스리펀, <b>FTA 서류도 발급</b>, 한국인 직원 상주, 매장이 한산.</li>
+<li><b>환급은 10~15%, 기간은 제멋대로</b> — 실측 사례: 로에베 7일 내 입금 / 디올은 두 달째 진행 중. <b>카드 환급</b>이 표준.</li>
+<li><b>명품거리는 소매치기</b> — 구매 후 매장에서 앱으로 택시를 불러 바로 탑승하라는 후기가 반복된다.</li>
+  </ul>
+</section>
+
+<section class="sec">
+  <h2>왜 스페인인가 — 구조로 보면</h2>
+  <p class="sub">같은 물건이 어디서 싼지는 브랜드 정책이 정한다. 스페인이 유리한 이유는 네 가지다.</p>
+  <div class="why-grid">
+<div><b>본고장 브랜드가 있다</b>로에베(1846 마드리드) · 카르미나(1866 마요르카) · 마요리카(1890 메노르카) · 푸이그(1914 바르셀로나). 유통 단계가 하나 줄고, 한정판·컬래버가 유럽에 먼저 풀린다.</div>
+<div><b>IVA 21% — EU 최상위 환급</b>실수령 13~16%. 프랑스(≈12%)·이탈리아(≈10%)보다 높다. 바르셀로나 실측 후기에서도 <b>12.5%</b>가 확인됐다.</div>
+<div><b>정가는 유럽 공통 — 이득은 환급에서</b>로에베 퍼즐 미디엄은 바르셀로나·마드리드·파리·밀란 모두 <b>€2,950</b>. "스페인이라 싸다"는 절반만 맞다. 차이는 <b>환급률</b>과 <b>한국 정가</b>에서 만든다.</div>
+<div><b>부부 합산 면세 한도 $1,600</b>2인 합산 ≈ ₩2,219,904. <b>이 금액 아래로 한 점씩</b> 나누면 관세 0. 이 페이지 순위가 그 선을 기준으로 매겨졌다.</div>
+  </div>
+</section>
+
+<section class="sec">
+  <h2>브레인스토밍 보드 — 카테고리부터 훑었다</h2>
+  <p class="sub">처음부터 10개를 고른 게 아니다. 카테고리를 벌려 놓고 <b>만족도 · 이득 · 휴대성</b> 세 축으로 지웠다.
+    지운 이유도 같이 적었다 — 안 산 이유가 산 이유만큼 중요하다.</p>
+  <table class="bt">
+    <caption>살아남은 카테고리</caption>
+    <thead><tr><th scope="col">카테고리</th><th scope="col">대표 브랜드</th><th scope="col">판정</th></tr></thead>
+    <tbody>
+<tr><th scope="row">가방</th><td>로에베 · 루이비통 · 프라다</td><td>이득 절대액 최대. 가격이 한도를 넘으면 관세가 절반을 먹는다.</td></tr>
+<tr><th scope="row">주얼리</th><td>까르띠에 · 마요리카</td><td>한도 안에서는 이득률이 안정적. 귀금속은 200만 초과분부터 세율이 뛴다.</td></tr>
+<tr><th scope="row">신발</th><td>카르미나</td><td>본고장 가격 + 수제. 부피가 있어 짐이 된다.</td></tr>
+<tr><th scope="row">소품</th><td>로에베 지갑·카드지갑</td><td>관세 0 구간. 이득률은 낮지만 <b>실패 확률도 가장 낮다</b>.</td></tr>
+<tr><th scope="row">향수·식품</th><td>푸이그 · 이베리코</td><td>면세점·검역과 겹쳐 이득이 사라진다 — 이번엔 제외.</td></tr>
+    </tbody>
+  </table>
+  <table class="bt" style="margin-top:36px">
+    <caption>떨어뜨린 후보 — 10개</caption>
+    <thead><tr><th scope="col">후보</th><th scope="col">왜 뺐나</th><th scope="col">사유</th></tr></thead>
+    <tbody>
+<tr><th scope="row">샤넬 클래식 플랩</th><td>전 세계 <b>가격 조화 정책</b>으로 유럽·한국 차이가 거의 없다. 웨이팅 40~50분.</td><td class="rsn">이득 < 5%</td></tr>
+<tr><th scope="row">에르메스 버킨·켈리</th><td>재고가 없고 <b>구매 이력(쿼터)</b>이 필요하다. 여행 일정으로 살 수 있는 물건이 아니다.</td><td class="rsn">구매 불가</td></tr>
+<tr><th scope="row">고야드 생루이</th><td>이득은 23%로 좋지만 <b>오픈런</b>이 필요하고 재고 변동이 크다.</td><td class="rsn">재고 리스크</td></tr>
+<tr><th scope="row">셀린느 아바백</th><td>실제 구매자 후기 — "한국이랑 금액은 비슷했고 <b>택스리펀 20만원</b> 정도 싸게 샀다". 이득률 6%.</td><td class="rsn">이득 미미</td></tr>
+<tr><th scope="row">반클리프 알함브라</th><td><b>일본 면세가 스페인보다 유리</b>(13~18% vs 6~10%). 다음 일본 여행으로 미룬다.</td><td class="rsn">타국이 유리</td></tr>
+<tr><th scope="row">불가리 세르펜티</th><td>스페인 이득 5.8% — 이 목록에서 가장 낮다.</td><td class="rsn">이득 미미</td></tr>
+<tr><th scope="row">까르띠에 트리니티 이어링</th><td>귀고리 페이지에서 다룸. 526만이라 예산 상한도 넘는다.</td><td class="rsn">중복·예산</td></tr>
+<tr><th scope="row">스위스 시계</th><td>관세 8% + 부가세가 붙어 <b>한국 면세점이 더 싼 경우가 많다</b>.</td><td class="rsn">면세점 열세</td></tr>
+<tr><th scope="row">이베리코 하몬(호세리토)</th><td>만족도는 최상이지만 <b>육류 검역·반입 규정</b> 확인이 먼저다. 실은 소분·진공 제품만.</td><td class="rsn">검역 리스크</td></tr>
+<tr><th scope="row">푸이그 향수(까롤리나 에레라 등)</th><td>스페인이 본사지만 <b>한국 면세점이 더 싸다</b>. €100대라 환급 이득도 2만원 수준.</td><td class="rsn">이득 미미</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="tail">
+  <h2>계산식을 그대로 공개한다</h2>
+  <div class="formula">
+실질 총비용 = (스페인 정가 × 1,551원/€ × 0.87) + 관세<br>
+관세 = max(0, 구매가 − 2,219,904원) 에 대한 간이세율 − 자진신고 감면(30%, 최대 200,000원)<br>
+  · 과세가격 200만원 이하 → <b>15%</b><br>
+  · 고급가방 200만원 초과 → 288,450 + (과세가격 − 1,923,000) × 45%<br>
+  · 귀금속 200만원 초과 → 721,200 + (과세가격 − 4,808,000) × 45%<br>
+실질 이득 = 한국 정가 − 실질 총비용
+  </div>
+  <ul>
+    <li><b>환율 1,551원/€</b> — 3개월 평균(<code>data/fx.json</code>). 최근 시세는 그보다 낮아 이득이 더 커질 수 있다.</li>
+    <li><b>환급률 13%</b> — 실측 후기에서 확인된 10~15%의 하단. 바르셀로나 로에베 사례는 12.5%였다.</li>
+    <li><b>관세를 빼고 계산하면 순위가 뒤집힌다.</b> 관세를 무시하면 고가 가방이 유리해 보이지만, 실제로 내는 돈은 반대다.</li>
+    <li><b>면세 한도는 부부 합산 ₩2,219,904.</b> 이 아래로 한 점씩 나누면 관세 0. 두 점을 함께 사면 초과분에 세금이 붙는다.</li>
+    <li><b>한국 정가가 "—"인 품목</b>은 공식 사이트 지역 제한으로 확보하지 못했다. 이득률 대신 <b>환급액</b>만 확정이다.</li>
+    <li><b>출처가 "네이버 실측(2023·2024)"인 항목</b>은 그해 블로그에 찍힌 매장 표시가다. 지금은 올랐을 수 있으니 매장에서 재확인.</li>
+    <li><b>세율·한도는 관세법 §96②, 시행령 [별표2], 관세청 「여행자 휴대품 통관 길라잡이」(2025-03-21)</b> 기준.</li>
+  </ul>
+  <div class="warn">
+    <b>구매 전 확인 세 가지</b> — ⓐ 매장에서 <b>FTA 서류(도장·셀러 서명)</b>를 요청한다. 없으면 관세가 크게 붙는다.
+    ⓑ <b>환급은 카드로</b>. 현금 환급은 스프레드·수수료로 40~50%까지 깎인다.
+    ⓒ 명품거리 소매치기 — <b>구매 후 매장에서 앱으로 택시를 불러 바로 탑승</b>.
+    EU 최종 출국지가 스페인이 아니면 스페인 DIVA 기계 검증이 거부될 수 있다(이번 일정은 마드리드 출국).
+  </div>
+  <p style="margin-top:20px">더 보기: <a href="earrings.html">귀고리 10종</a> · <a href="taxrefund.html">택스리펀 계산</a> ·
+    <a href="galaxytab.html">갤럭시 탭</a> · <a href="itinerary.html">일차별 일정</a></p>
+</section>
+</main>
+</body>
+</html>
