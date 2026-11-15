@@ -31,8 +31,6 @@ a{color:var(--accent)}
 
 /* ── 히어로 */
 .hero{padding-top:var(--s-9); padding-bottom:var(--s-8); border-bottom:3px solid var(--rule-strong)}
-.kicker{font-family:var(--font-mono); font-size:var(--fs-caption); letter-spacing:.14em;
-  text-transform:uppercase; color:var(--accent); margin:0 0 var(--s-5)}
 .hero h1{font-family:var(--font-display); font-weight:700; font-size:var(--fs-hero); line-height:1.02;
   letter-spacing:-.02em; margin:0 0 var(--s-5); text-wrap:balance}
 .hero h1 em{font-style:italic; color:var(--accent)}
@@ -85,7 +83,7 @@ a{color:var(--accent)}
 figure{margin:0}
 figure img{width:100%; height:auto; display:block; border:1px solid var(--rule); filter:saturate(.94)}
 .wx{font-family:var(--font-mono); font-size:var(--fs-small); color:var(--ink);
-  background:var(--paper-2); border-left:3px solid var(--accent); padding:var(--s-2) var(--s-3);
+  background:var(--paper-2); border:1px solid var(--rule); padding:var(--s-2) var(--s-3);
   margin:0 0 var(--s-4); line-height:1.5}
 .wx b{font-weight:500}
 .opt{margin:var(--s-5) 0 0; border:1px dashed var(--rule-strong); border-radius:6px;
@@ -104,7 +102,7 @@ figure img{width:100%; height:auto; display:block; border:1px solid var(--rule);
 .gallery figcaption{font-family:var(--font-display); font-weight:700; font-size:var(--fs-small); color:var(--ink); margin-top:var(--s-2)}
 .gallery figcaption small{display:block; font-family:var(--font-mono); font-weight:400; font-size:var(--fs-caption); color:var(--muted)}
 figure figcaption{font-family:var(--font-mono); font-size:var(--fs-caption); color:var(--muted); margin-top:var(--s-1)}
-.note{border-left:3px solid var(--accent); background:var(--paper-2); padding:var(--s-4) var(--s-5);
+.note{border:1px solid var(--rule-strong); background:var(--paper-2); padding:var(--s-4) var(--s-5);
   font-size:var(--fs-small); color:var(--ink-soft)}
 .note b{color:var(--ink)}
 .cols{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:var(--s-7)}
@@ -169,7 +167,6 @@ footer{border-top:3px solid var(--rule-strong); margin-top:var(--s-8); padding-t
 
 <main>
 <section class="hero wrap">
-  <p class="kicker">Portugal &amp; Spain · 13–24 February 2027</p>
   <h1>리스본에 내려 <em>벨렝</em>부터,<br>바르셀로나에서 비행기로</h1>
   <p class="lede">리스본에 내려 <b>제로니무스 수도원과 에그타르트</b>만 먹고 그날 저녁 포르투로 넘어가요.
     도루강의 노을을 보고, 세비야에서 알카사르를 걷고, 그라나다에서 알함브라를 오르고,
@@ -178,8 +175,8 @@ footer{border-top:3px solid var(--rule-strong); margin-top:var(--s-8); padding-t
     <img src="img/00-전체동선.jpg" alt="전체 동선 지도 — 리스본·포르투·세비야·그라나다·바르셀로나">
   </figure>
   <dl class="figures">
-    <div><dt>총액 · 2인</dt><dd>6,835,876<small>원 (1인 3,417,938)</small></dd></div>
-    <div><dt>현지 지출</dt><dd>3,746,876<small>항공 제외</small></dd></div>
+    <div><dt>총액 · 2인</dt><dd>6,810,716<small>원 (1인 3,405,358)</small></dd></div>
+    <div><dt>현지 지출</dt><dd>3,721,716<small>항공 제외</small></dd></div>
     <div><dt>항공 · 2인</dt><dd>2,689,000<small>가는편 + 오는편</small></dd></div>
     <div><dt>일수</dt><dd>9박 10일<small>5도시 · 이동 6회</small></dd></div>
     <div><dt>환율</dt><dd>1,540<small>원 / € (3개월 평균)</small></dd></div>
@@ -212,7 +209,7 @@ footer{border-top:3px solid var(--rule-strong); margin-top:var(--s-8); padding-t
       </div><div class="stop">
         <span class="when">2/20–23 · 3박</span>
         <span class="name">바르셀로나</span>
-        <span class="note">부엘링 1h25 · 구엘 · 사그라다</span>
+        <span class="note">쇼핑 · 가우디 · 몬세라트 합창단</span>
         <span class="price">128,171 <em>원/박</em></span>
       </div></div>
 </section>
@@ -267,22 +264,22 @@ footer{border-top:3px solid var(--rule-strong); margin-top:var(--s-8); padding-t
         <td class="num">313,195</td>
       </tr><tr>
         <td class="t">D8 · 2/20(토)</td>
-        <td class="w"><a href="itinerary.html#day-8">그라나다 → 바르셀로나</a>
-          <small>부엘링 1h25 → 바르셀로나 · 명품 시착</small></td>
+        <td class="w"><a href="itinerary.html#day-8">그라나다 → 바르셀로나 — 쇼핑 ①</a>
+          <small>부엘링 1h25 → 바르셀로나 · 쇼핑 ①</small></td>
         <td class="dt">2/20 (토)</td>
         <td class="num">510,531</td>
       </tr><tr>
         <td class="t">D9 · 2/21(일)</td>
-        <td class="w"><a href="itinerary.html#day-9">바르셀로나 — 가우디 · 성당 내부투어</a>
-          <small>구엘 · 사그라다 한국어 가이드</small></td>
+        <td class="w"><a href="itinerary.html#day-9">바르셀로나 — 가우디 건축</a>
+          <small>가우디 — 구엘 · 사그라다 내부</small></td>
         <td class="dt">2/21 (일)</td>
-        <td class="num">485,431</td>
+        <td class="num">405,631</td>
       </tr><tr>
         <td class="t">D10</td>
-        <td class="w"><a href="itinerary.html#day-10">바르셀로나 — 여유일</a>
-          <small>여유일 — 람블라스 · 택스리펀 정리</small></td>
+        <td class="w"><a href="itinerary.html#day-10">바르셀로나 — 몬세라트 · 소년합창단</a>
+          <small>몬세라트 · 에스콜라니아 13:00 · 쇼핑 ②</small></td>
         <td class="dt">2/22 (월)</td>
-        <td class="num">303,025</td>
+        <td class="num">357,665</td>
       </tr><tr>
         <td class="t">D11</td>
         <td class="w"><a href="itinerary.html#day-11">바르셀로나 → 인천</a>
@@ -296,7 +293,7 @@ footer{border-top:3px solid var(--rule-strong); margin-top:var(--s-8); padding-t
 <section class="block">
   <div class="wrap"><h2>날짜별 지도 — 크게 보기</h2>
   <p class="sub">각 날짜의 동선을 지도 위에 번호로 얹었어요. 누르면 그날의 시각표로 넘어가요.</p></div>
-  <div class="wrap"><div class="gallery"><figure><a href="itinerary.html#day-2" aria-label="D2 · 2/14(일) 2/14 (일) 리스본 → 포르투 일정 보기"><img src="img/D02-리스본포르투.jpg" alt="D2 · 2/14(일) 2/14 (일) 리스본 → 포르투 지도" loading="lazy"></a><figcaption>D2 · 2/14 (일) — 리스본 → 포르투<small>LIS 10:30 · 제로니무스 · 21:05 포르투</small></figcaption></figure><figure><a href="itinerary.html#day-3" aria-label="D3 · 2/15(월) 2/15 (월) 포르투 — 리베이라 · 렐루 서점 일정 보기"><img src="img/D03-포르투.jpg" alt="D3 · 2/15(월) 2/15 (월) 포르투 — 리베이라 · 렐루 서점 지도" loading="lazy"></a><figcaption>D3 · 2/15 (월) — 포르투 — 리베이라 · 렐루 서점<small>렐루 서점 · 리베이라 · 카사 게데스</small></figcaption></figure><figure><a href="itinerary.html#day-4" aria-label="D4 · 2/16(화) 2/16 (화) 포르투 → 세비야 일정 보기"><img src="img/D04-포르투세비야.jpg" alt="D4 · 2/16(화) 2/16 (화) 포르투 → 세비야 지도" loading="lazy"></a><figcaption>D4 · 2/16 (화) — 포르투 → 세비야<small>라이언 2h15 → 세비야 · 대성당</small></figcaption></figure><figure><a href="itinerary.html#day-5" aria-label="D5 · 2/17(수) 2/17 (수) 세비야 — 스냅 · 알카사르 일정 보기"><img src="img/D05-세비야.jpg" alt="D5 · 2/17(수) 2/17 (수) 세비야 — 스냅 · 알카사르 지도" loading="lazy"></a><figcaption>D5 · 2/17 (수) — 세비야 — 스냅 · 알카사르<small>스냅 촬영 · 레알 알카사르</small></figcaption></figure><figure><a href="itinerary.html#day-6" aria-label="D6 · 2/18(목) 2/18 (목) 세비야 → 그라나다 일정 보기"><img src="img/D06-세비야그라나다.jpg" alt="D6 · 2/18(목) 2/18 (목) 세비야 → 그라나다 지도" loading="lazy"></a><figcaption>D6 · 2/18 (목) — 세비야 → 그라나다<small>알사 버스 3h → 그라나다 · 알바이신</small></figcaption></figure><figure><a href="itinerary.html#day-7" aria-label="D7 · 2/19(금) 2/19 (금) 그라나다 — 알함브라 일정 보기"><img src="img/D07-그라나다알함브라.jpg" alt="D7 · 2/19(금) 2/19 (금) 그라나다 — 알함브라 지도" loading="lazy"></a><figcaption>D7 · 2/19 (금) — 그라나다 — 알함브라<small>알함브라 나사리 궁전 · 헤네랄리페</small></figcaption></figure><figure><a href="itinerary.html#day-8" aria-label="D8 · 2/20(토) 2/20 (토) 그라나다 → 바르셀로나 일정 보기"><img src="img/D08-그라나다바르셀로나.jpg" alt="D8 · 2/20(토) 2/20 (토) 그라나다 → 바르셀로나 지도" loading="lazy"></a><figcaption>D8 · 2/20 (토) — 그라나다 → 바르셀로나<small>부엘링 1h25 → 바르셀로나 · 명품 시착</small></figcaption></figure><figure><a href="itinerary.html#day-9" aria-label="D9 · 2/21(일) 2/21 (일) 바르셀로나 — 가우디 · 성당 내부투어 일정 보기"><img src="img/D09-바르셀로나.jpg" alt="D9 · 2/21(일) 2/21 (일) 바르셀로나 — 가우디 · 성당 내부투어 지도" loading="lazy"></a><figcaption>D9 · 2/21 (일) — 바르셀로나 — 가우디 · 성당 내부투어<small>구엘 · 사그라다 한국어 가이드</small></figcaption></figure><figure><a href="itinerary.html#day-10" aria-label="D10 2/22 (월) 바르셀로나 — 여유일 일정 보기"><img src="img/D10-바르셀로나자유일.jpg" alt="D10 2/22 (월) 바르셀로나 — 여유일 지도" loading="lazy"></a><figcaption>D10 · 2/22 (월) — 바르셀로나 — 여유일<small>여유일 — 람블라스 · 택스리펀 정리</small></figcaption></figure><figure><a href="itinerary.html#day-11" aria-label="D11 2/23 (화) 바르셀로나 → 인천 일정 보기"><img src="img/D11-바르셀로나출국.jpg" alt="D11 2/23 (화) 바르셀로나 → 인천 지도" loading="lazy"></a><figcaption>D11 · 2/23 (화) — 바르셀로나 → 인천<small>AF1149 BCN 10:05 → 2/24 11:15 인천</small></figcaption></figure></div></div>
+  <div class="wrap"><div class="gallery"><figure><a href="itinerary.html#day-2" aria-label="D2 · 2/14(일) 2/14 (일) 리스본 → 포르투 일정 보기"><img src="img/S-D02b-리스본벨렝.jpg" alt="D2 · 2/14(일) 2/14 (일) 리스본 → 포르투 지도" loading="lazy"></a><figcaption>D2 · 2/14 (일) — 리스본 → 포르투<small>LIS 10:30 · 제로니무스 · 21:05 포르투</small></figcaption></figure><figure><a href="itinerary.html#day-3" aria-label="D3 · 2/15(월) 2/15 (월) 포르투 — 리베이라 · 렐루 서점 일정 보기"><img src="img/S-D03-포르투.jpg" alt="D3 · 2/15(월) 2/15 (월) 포르투 — 리베이라 · 렐루 서점 지도" loading="lazy"></a><figcaption>D3 · 2/15 (월) — 포르투 — 리베이라 · 렐루 서점<small>렐루 서점 · 리베이라 · 카사 게데스</small></figcaption></figure><figure><a href="itinerary.html#day-4" aria-label="D4 · 2/16(화) 2/16 (화) 포르투 → 세비야 일정 보기"><img src="img/S-D04b-세비야시내.jpg" alt="D4 · 2/16(화) 2/16 (화) 포르투 → 세비야 지도" loading="lazy"></a><figcaption>D4 · 2/16 (화) — 포르투 → 세비야<small>라이언 2h15 → 세비야 · 대성당</small></figcaption></figure><figure><a href="itinerary.html#day-5" aria-label="D5 · 2/17(수) 2/17 (수) 세비야 — 스냅 · 알카사르 일정 보기"><img src="img/S-D05-세비야.jpg" alt="D5 · 2/17(수) 2/17 (수) 세비야 — 스냅 · 알카사르 지도" loading="lazy"></a><figcaption>D5 · 2/17 (수) — 세비야 — 스냅 · 알카사르<small>스냅 촬영 · 레알 알카사르</small></figcaption></figure><figure><a href="itinerary.html#day-6" aria-label="D6 · 2/18(목) 2/18 (목) 세비야 → 그라나다 일정 보기"><img src="img/S-D06b-그라나다알바이신.jpg" alt="D6 · 2/18(목) 2/18 (목) 세비야 → 그라나다 지도" loading="lazy"></a><figcaption>D6 · 2/18 (목) — 세비야 → 그라나다<small>알사 버스 3h → 그라나다 · 알바이신</small></figcaption></figure><figure><a href="itinerary.html#day-7" aria-label="D7 · 2/19(금) 2/19 (금) 그라나다 — 알함브라 일정 보기"><img src="img/S-D07-그라나다알함브라.jpg" alt="D7 · 2/19(금) 2/19 (금) 그라나다 — 알함브라 지도" loading="lazy"></a><figcaption>D7 · 2/19 (금) — 그라나다 — 알함브라<small>알함브라 나사리 궁전 · 헤네랄리페</small></figcaption></figure><figure><a href="itinerary.html#day-8" aria-label="D8 · 2/20(토) 2/20 (토) 그라나다 → 바르셀로나 — 쇼핑 ① 일정 보기"><img src="img/S-D08b-바르셀로나쇼핑.jpg" alt="D8 · 2/20(토) 2/20 (토) 그라나다 → 바르셀로나 — 쇼핑 ① 지도" loading="lazy"></a><figcaption>D8 · 2/20 (토) — 그라나다 → 바르셀로나 — 쇼핑 ①<small>부엘링 1h25 → 바르셀로나 · 쇼핑 ①</small></figcaption></figure><figure><a href="itinerary.html#day-9" aria-label="D9 · 2/21(일) 2/21 (일) 바르셀로나 — 가우디 건축 일정 보기"><img src="img/S-D09-바르셀로나.jpg" alt="D9 · 2/21(일) 2/21 (일) 바르셀로나 — 가우디 건축 지도" loading="lazy"></a><figcaption>D9 · 2/21 (일) — 바르셀로나 — 가우디 건축<small>가우디 — 구엘 · 사그라다 내부</small></figcaption></figure><figure><a href="itinerary.html#day-10" aria-label="D10 2/22 (월) 바르셀로나 — 몬세라트 · 소년합창단 일정 보기"><img src="img/S-D10a-몬세라트노선.jpg" alt="D10 2/22 (월) 바르셀로나 — 몬세라트 · 소년합창단 지도" loading="lazy"></a><figcaption>D10 · 2/22 (월) — 바르셀로나 — 몬세라트 · 소년합창단<small>몬세라트 · 에스콜라니아 13:00 · 쇼핑 ②</small></figcaption></figure><figure><a href="itinerary.html#day-11" aria-label="D11 2/23 (화) 바르셀로나 → 인천 일정 보기"><img src="img/S-D11-바르셀로나출국.jpg" alt="D11 2/23 (화) 바르셀로나 → 인천 지도" loading="lazy"></a><figcaption>D11 · 2/23 (화) — 바르셀로나 → 인천<small>AF1149 BCN 10:05 → 2/24 11:15 인천</small></figcaption></figure></div></div>
 </section>
 
 <section class="block wrap">
@@ -340,7 +337,7 @@ footer{border-top:3px solid var(--rule-strong); margin-top:var(--s-8); padding-t
   <div class="cols">
     <div>
       <h2>리스본은 하루, 나머지는 이틀씩</h2>
-      <ul class="plain"><li><b>D2 (2/14) 2/14</b> — 리스본 — 제로니무스 · 파스테이스 드 벨렝 → 21:05 포르투</li><li><b>D2 · 2/14(일)–3 (2/14–15) 2/14–15</b> — 포르투 — 렐루 서점 · 리베이라 · 카사 게데스</li><li><b>D4 · 2/16(화)–5 (2/16–17) 2/16–17</b> — 세비야 — 대성당 · 엘 링콘시요 · 스냅 · 레알 알카사르</li><li><b>D6 · 2/18(목)–7 (2/18–19) 2/18–19</b> — 그라나다 — 알바이신 · 라 트라스티엔다 · 알함브라</li><li><b>D8 · 2/20(토)–11 (2/20–23) 2/20–23</b> — 바르셀로나 — 명품 시착 · 구엘 · 사그라다(한국어 가이드) · 여유일 · 출국</li></ul>
+      <ul class="plain"><li><b>D2 (2/14) 2/14</b> — 리스본 — 제로니무스 · 파스테이스 드 벨렝 → 21:05 포르투</li><li><b>D2 · 2/14(일)–3 (2/14–15) 2/14–15</b> — 포르투 — 렐루 서점 · 리베이라 · 카사 게데스</li><li><b>D4 · 2/16(화)–5 (2/16–17) 2/16–17</b> — 세비야 — 대성당 · 엘 링콘시요 · 스냅 · 레알 알카사르</li><li><b>D6 · 2/18(목)–7 (2/18–19) 2/18–19</b> — 그라나다 — 알바이신 · 라 트라스티엔다 · 알함브라</li><li><b>D8 · 2/20(토)–11 (2/20–23) 2/20–23</b> — 바르셀로나 — 쇼핑 ① · 가우디(구엘·사그라다) · 몬세라트 소년합창단 · 쇼핑 ② · 출국</li></ul>
       <p class="sub">리스본 0박 · 포르투 2박 · 세비야 2박 · 그라나다 2박 · 바르셀로나 3박이에요. 리스본을 빼서 바르셀로나에 하루를 더 줬어요.</p>
     </div>
     <div>
@@ -362,9 +359,9 @@ footer{border-top:3px solid var(--rule-strong); margin-top:var(--s-8); padding-t
       <table class="ledger">
         <caption>2인 기준 · 상세는 일차별 일정</caption>
         <thead><tr><th scope="col">항목</th><th class="num" scope="col">2인</th></tr></thead>
-        <tbody><tr><td>항공 (KL856·AF264 다구간 1장, 11/15 실결제)</td><td class="num">2,689,000</td></tr><tr><td>숙박 9박</td><td class="num">1,254,469</td></tr><tr><td>식비 10일 (지정 식당 실메뉴 + 현장 예산)</td><td class="num">1,112,517</td></tr><tr><td>입장료·시내교통</td><td class="num">832,019</td></tr><tr><td>도시 간 이동 (기차·항공·버스)</td><td class="num">547,871</td></tr><tr><td>여유·기념품</td><td class="num">400,000</td></tr><tr class="sum"><td>합계 — 2인</td><td class="num">6,835,876</td></tr></tbody>
+        <tbody><tr><td>항공 (KL856·AF264 다구간 1장, 11/15 실결제)</td><td class="num">2,689,000</td></tr><tr><td>숙박 9박</td><td class="num">1,254,469</td></tr><tr><td>식비 10일 (지정 식당 실메뉴 + 현장 예산)</td><td class="num">1,056,881</td></tr><tr><td>입장료·시내교통</td><td class="num">862,495</td></tr><tr><td>도시 간 이동 (기차·항공·버스)</td><td class="num">547,871</td></tr><tr><td>여유·기념품</td><td class="num">400,000</td></tr><tr class="sum"><td>합계 — 2인</td><td class="num">6,810,716</td></tr></tbody>
       </table>
-      <p class="sub">1,000만원 상한 대비 여유는 3,164,124원이에요. 환율이 100원 움직이면 2인 예산은 약 66만원 달라져요.</p>
+      <p class="sub">1,000만원 상한 대비 여유는 3,189,284원이에요. 환율이 100원 움직이면 2인 예산은 약 66만원 달라져요.</p>
     </div>
     <div>
       <h2>발권 시점 — 지금이 적기예요</h2>
@@ -393,9 +390,9 @@ footer{border-top:3px solid var(--rule-strong); margin-top:var(--s-8); padding-t
     <caption>여행 + 쇼핑 (2인)</caption>
     <thead><tr><th scope="col">후보</th><th class="num" scope="col">쇼핑액</th>
       <th class="num" scope="col">여행+쇼핑</th><th class="num" scope="col">1,000만</th><th class="num" scope="col">1,200만</th></tr></thead>
-    <tbody><tr><td data-label="후보">없음</td><td class="num" data-label="쇼핑액">0</td><td class="num" data-label="여행+쇼핑">6,835,876</td><td class="num" data-label="1,000만 이내">가능</td><td class="num" data-label="1,200만 이내">가능</td></tr><tr><td data-label="후보">까르띠에 다무르 펜던트 SM  (€1,520)</td><td class="num" data-label="쇼핑액">2,103,938</td><td class="num" data-label="여행+쇼핑">8,939,814</td><td class="num" data-label="1,000만 이내">가능</td><td class="num" data-label="1,200만 이내">가능</td></tr><tr><td data-label="후보">까르띠에 트리니티 이어링 플레인  (€2,040)</td><td class="num" data-label="쇼핑액">2,823,707</td><td class="num" data-label="여행+쇼핑">9,659,583</td><td class="num" data-label="1,000만 이내">가능</td><td class="num" data-label="1,200만 이내">가능</td></tr><tr><td data-label="후보">불가리 세르펜티 바이퍼 링  (€2,770)</td><td class="num" data-label="쇼핑액">3,834,151</td><td class="num" data-label="여행+쇼핑">10,670,027</td><td class="num" data-label="1,000만 이내">—</td><td class="num" data-label="1,200만 이내">가능</td></tr><tr><td data-label="후보">반클리프 알함브라 펜던트 오닉스  (€3,100)</td><td class="num" data-label="쇼핑액">4,290,927</td><td class="num" data-label="여행+쇼핑">11,126,803</td><td class="num" data-label="1,000만 이내">—</td><td class="num" data-label="1,200만 이내">가능</td></tr><tr class=sum><td data-label="후보">까르띠에 트리니티 이어링 클래식  (€3,800)</td><td class="num" data-label="쇼핑액">5,259,846</td><td class="num" data-label="여행+쇼핑">12,095,722</td><td class="num" data-label="1,000만 이내">—</td><td class="num" data-label="1,200만 이내">초과</td></tr></tbody>
+    <tbody><tr><td data-label="후보">없음</td><td class="num" data-label="쇼핑액">0</td><td class="num" data-label="여행+쇼핑">6,810,716</td><td class="num" data-label="1,000만 이내">가능</td><td class="num" data-label="1,200만 이내">가능</td></tr><tr><td data-label="후보">까르띠에 다무르 펜던트 SM  (€1,520)</td><td class="num" data-label="쇼핑액">2,103,938</td><td class="num" data-label="여행+쇼핑">8,914,654</td><td class="num" data-label="1,000만 이내">가능</td><td class="num" data-label="1,200만 이내">가능</td></tr><tr><td data-label="후보">까르띠에 트리니티 이어링 플레인  (€2,040)</td><td class="num" data-label="쇼핑액">2,823,707</td><td class="num" data-label="여행+쇼핑">9,634,423</td><td class="num" data-label="1,000만 이내">가능</td><td class="num" data-label="1,200만 이내">가능</td></tr><tr><td data-label="후보">불가리 세르펜티 바이퍼 링  (€2,770)</td><td class="num" data-label="쇼핑액">3,834,151</td><td class="num" data-label="여행+쇼핑">10,644,867</td><td class="num" data-label="1,000만 이내">—</td><td class="num" data-label="1,200만 이내">가능</td></tr><tr><td data-label="후보">반클리프 알함브라 펜던트 오닉스  (€3,100)</td><td class="num" data-label="쇼핑액">4,290,927</td><td class="num" data-label="여행+쇼핑">11,101,643</td><td class="num" data-label="1,000만 이내">—</td><td class="num" data-label="1,200만 이내">가능</td></tr><tr class=sum><td data-label="후보">까르띠에 트리니티 이어링 클래식  (€3,800)</td><td class="num" data-label="쇼핑액">5,259,846</td><td class="num" data-label="여행+쇼핑">12,070,562</td><td class="num" data-label="1,000만 이내">—</td><td class="num" data-label="1,200만 이내">초과</td></tr></tbody>
   </table>
-  <p class="sub">트리니티 이어링 클래식(€3,800)까지 넣으면 12,095,722원이라 절대 상한 1,200만원을 넘어요.
+  <p class="sub">트리니티 이어링 클래식(€3,800)까지 넣으면 12,070,562원이라 절대 상한 1,200만원을 넘어요.
     1,000만원 안에서 주얼리를 넣으시려면 트리니티 이어링 플레인(€2,040)까지가 한계예요.</p>
 </section>
 <section class="block wrap">
