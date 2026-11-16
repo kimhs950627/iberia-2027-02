@@ -1,0 +1,177 @@
+{
+ "schiphol": {
+  "day": "D1",
+  "caption": "암스테르담 스키폴 환승",
+  "author": "Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "file": "File:Schiphol Airport terminal long exposure.jpg"
+ },
+ "klm": {
+  "day": "D1",
+  "caption": "KL856 기재",
+  "author": "Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "file": "File:KLM Boeing 787-9 PH-BHM at Schiphol 27-08-2021.jpg"
+ },
+ "belem": {
+  "day": "D2",
+  "caption": "벨렝 탑",
+  "author": "Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "file": "File:Torre Belém April 2009-4a.jpg"
+ },
+ "pasteis": {
+  "day": "D2",
+  "caption": "파스텔 드 나타",
+  "author": "Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "file": "File:Funchal (Madeira, Portugal), Rua Dr. Fernão de Ornelas, Nata 7 - Fernão Ornelas -- 2025 -- 1205.jpg"
+ },
+ "ribeira-porto": {
+  "day": "D2",
+  "caption": "포르투 리베이라",
+  "author": "Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "file": "File:Dornas no porto de Aguiño. Ribeira. Galiza R31.jpg"
+ },
+ "lello": {
+  "day": "D3",
+  "caption": "렐루 서점",
+  "author": "Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "file": "File:Interior view of Livraria Lello 08.jpg"
+ },
+ "bifana": {
+  "day": "D3",
+  "caption": "비파나 — 돼지고기 샌드위치",
+  "author": "Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "file": "File:Porto-style Bifana sandwich with egg.jpg"
+ },
+ "sevilla-cathedral": {
+  "day": "D4",
+  "caption": "세비야 대성당",
+  "author": "Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "file": "File:Trascoro, Catedral de Sevilla, Sevilla, España, 2015-12-06, DD 109-111 HDR.JPG"
+ },
+ "giralda": {
+  "day": "D4",
+  "caption": "히랄다 탑",
+  "author": "Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "file": "File:La Giralda, Seville, Spain - Sep 2009.jpg"
+ },
+ "plaza-espana": {
+  "day": "D5",
+  "caption": "스페인 광장 — 스냅 촬영",
+  "author": "Wikimedia Commons",
+  "license": "CC BY 2.0",
+  "file": "File:Seville, Plaza de España (38625005691) (edited).jpg"
+ },
+ "alcazar": {
+  "day": "D5",
+  "caption": "알카사르",
+  "author": "Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "file": "File:Alcázar Seville April 2019-11.jpg"
+ },
+ "albaicin": {
+  "day": "D6",
+  "caption": "알바이신",
+  "author": "Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "file": "File:View of Albaicín from Alhambra. Granada, Spain.jpg"
+ },
+ "san-nicolas": {
+  "day": "D6",
+  "caption": "산니콜라스 전망대",
+  "author": "Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "file": "File:Granada - View from Mirador de San Nicolás - 02.jpg"
+ },
+ "alhambra": {
+  "day": "D7",
+  "caption": "알함브라",
+  "author": "Wikimedia Commons",
+  "license": "CC0",
+  "file": "File:Pavillon Cour des Lions Alhambra Granada Spain.jpg"
+ },
+ "generalife": {
+  "day": "D7",
+  "caption": "헤네랄리페",
+  "author": "Wikimedia Commons",
+  "license": "CC0",
+  "file": "File:Generalife palace, detail, Granada, Spain.jpg"
+ },
+ "jamon": {
+  "day": "D7",
+  "caption": "하몬 이베리코",
+  "author": "M a n u e l",
+  "license": "CC BY 2.0",
+  "file": "File:Tosta de jamon iberico en Toledo 2.jpg"
+ },
+ "passeig": {
+  "day": "D8",
+  "caption": "파세이그 데 그라시아",
+  "author": "Wikimedia Commons",
+  "license": "CC0",
+  "file": "File:Passeig de Gràcia and Carrer de Provença crossroads seen from Casa Milà, Barcelona, 2023.jpg"
+ },
+ "casa-batllo": {
+  "day": "D8",
+  "caption": "카사 바트요",
+  "author": "Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "file": "File:Casa Batlló 01.jpg"
+ },
+ "guell": {
+  "day": "D9",
+  "caption": "구엘 공원",
+  "author": "Wikimedia Commons",
+  "license": "CC BY-SA 3.0",
+  "file": "File:Park Güell 02.jpg"
+ },
+ "sagrada": {
+  "day": "D9",
+  "caption": "사그라다 파밀리아",
+  "author": "Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "file": "File:Barcelona - Exterior of the Apse of the Sagrada Família - Western exposure.jpg"
+ },
+ "montserrat": {
+  "day": "D10",
+  "caption": "몬세라트 수도원",
+  "author": "Wikimedia Commons",
+  "license": "Public domain",
+  "file": "File:StaCeciliaMontserrat.jpg"
+ },
+ "crema": {
+  "day": "D10",
+  "caption": "크레마 카탈라나",
+  "author": "Wikimedia Commons",
+  "license": "CC BY-SA 4.0",
+  "file": "File:Food in Catalonia 06.jpg"
+ },
+ "bcn-airport": {
+  "day": "D11",
+  "caption": "바르셀로나 공항",
+  "author": "Wikimedia Commons",
+  "license": "CC0",
+  "file": "File:El Prat Airport Catholic Chapel.jpg"
+ },
+ "cdg": {
+  "day": "D11",
+  "caption": "파리 CDG 환승",
+  "author": "Wikimedia Commons",
+  "license": "CC0",
+  "file": "File:Charles de Gaulle International Airport in France.jpg"
+ },
+ "tapas": {
+  "day": "D9",
+  "caption": "타파스 — 파타타스 브라바스",
+  "author": "Wikimedia Commons",
+  "license": "CC BY 4.0",
+  "file": "File:Patatas bravas. Tapa de bar (España).jpg"
+ }
+}
