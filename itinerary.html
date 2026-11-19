@@ -8,9 +8,39 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Gowun+Batang:wght@400;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+
+/* ── 동적 지도 (Leaflet) */
+.lmap-chips{display:flex; flex-wrap:wrap; gap:.4rem; margin:0 0 var(--s-4)}
+.lmap-chips button{font-family:var(--font-mono); font-size:.8125rem; line-height:1.4;
+  padding:.35rem .65rem; border:1px solid var(--rule-strong); background:transparent;
+  color:var(--ink); border-radius:999px; cursor:pointer}
+.lmap-chips button:hover{background:var(--paper-2)}
+.lmap-chips button[aria-pressed="true"]{background:var(--ink); color:var(--paper); border-color:var(--ink)}
+.lmap-chips button:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+.lmap{height:min(72vh,560px); border:1px solid var(--rule); background:var(--paper-2); z-index:0; overflow:hidden}
+.lmap-open{display:none; font-family:var(--font-mono); font-size:.875rem; padding:.6rem 1rem;
+  border:1px solid var(--ink); background:transparent; color:var(--ink); border-radius:999px; cursor:pointer}
+.lmap-open:hover{background:var(--ink); color:var(--paper)}
+@media (max-width:699px){
+  .lmap:not(.is-on){display:none}
+  .lmap-open{display:inline-block}
+}
+.lmap-cap{font-size:var(--fs-small); color:var(--muted); margin:var(--s-3) 0 0}
+.leaflet-container{font-family:var(--font-body); font-size:13px}
+.leaflet-popup-content b{font-weight:700}
+.leaflet-control-attribution{background:var(--paper-clean)!important; color:var(--ink-soft)!important}
+.leaflet-control-attribution a{color:var(--ink-soft)!important}
+.leaflet-bar a{color:var(--ink); background:var(--paper-clean)}
+.leaflet-tooltip.lmap-num{padding:0; border:none; background:transparent; box-shadow:none;
+  color:rgb(251,250,248); font-family:var(--font-mono); font-size:11px; font-weight:600}
+.leaflet-tooltip.lmap-food{padding:2px 6px; border:1px solid var(--accent); color:var(--accent);
+  background:var(--paper-clean); font-size:11px; border-radius:999px; box-shadow:none}
+@media print{.lmap,.lmap-chips{display:none}}
+
 body{
   margin:0; background:var(--paper); color:var(--ink);
   font-family:var(--font-body); font-size:var(--fs-body); line-height:1.75;
@@ -250,8 +280,8 @@ body::after{
   <p class="lede">리스본에서 바르셀로나까지 다섯 도시를 아흐레에 담았어요. 도시마다 must-see는 하나에서 둘,
     나머지는 「시간이 되면 여기도」로 내려 두었고, 값의 근거도 줄마다 옆에 적어 두었어요.</p>
   <dl class="figures">
-    <div><dt>총액 · 2인</dt><dd>8,278,774<small>원 (1인 4,139,387)</small></dd></div>
-    <div><dt>현지 지출</dt><dd>5,189,774<small>항공 제외</small></dd></div>
+    <div><dt>총액 · 2인</dt><dd>8,294,086<small>원 (1인 4,147,043)</small></dd></div>
+    <div><dt>현지 지출</dt><dd>5,205,086<small>항공 제외</small></dd></div>
     <div><dt>항공 · 2인</dt><dd>2,689,000<small>가는편 + 오는편</small></dd></div>
     <div><dt>여유·기념품</dt><dd>400,000<small>일자별 합계에 없음</small></dd></div>
     <div><dt>환율</dt><dd>1,531<small>원 / € (3개월 평균)</small></dd></div>
@@ -259,6 +289,18 @@ body::after{
 </section>
 
 <nav class="chips wrap" aria-label="일차 바로가기"><a class="chip" href="#day-1"><b>D1</b><span>· 2/13</span></a><a class="chip" href="#day-2"><b>D2</b><span>· 2/14</span></a><a class="chip" href="#day-3"><b>D3</b><span>· 2/15</span></a><a class="chip" href="#day-4"><b>D4</b><span>· 2/16</span></a><a class="chip" href="#day-5"><b>D5</b><span>· 2/17</span></a><a class="chip" href="#day-6"><b>D6</b><span>· 2/18</span></a><a class="chip" href="#day-7"><b>D7</b><span>· 2/19</span></a><a class="chip" href="#day-8"><b>D8</b><span>· 2/20</span></a><a class="chip" href="#day-9"><b>D9</b><span>· 2/21</span></a><a class="chip" href="#day-10"><b>D10</b><span>· 2/22</span></a><a class="chip" href="#day-11"><b>D11</b><span>· 2/23</span></a></nav>
+
+
+<section class="block wrap" id="live-map">
+  <h2>지도 — 손으로 확대해 보기</h2>
+  <p class="sub">날짜 칩을 고르면 그날 동선이 그려져요. 지도를 한 번 클릭하면 휠 확대로 들어가고, 숫자를 누르면 그 자리의 설명이 뜹니다.</p>
+  <div class="lmap-chips" id="lmap-chips" role="group" aria-label="날짜 선택"></div>
+  <button class="lmap-open" id="lmap-open" type="button">지도 펼치기 (데이터 사용)</button>
+  <div class="lmap" id="lmap" role="application" aria-label="여행 동선 지도 — 확대·이동 가능"></div>
+  <p class="lmap-cap" id="lmap-cap"></p>
+  <script id="geo" type="application/json">{"days":[{"id":"ALL","label":"전체","date":"","city":"5도시 동선","title":"전체 동선 — 리스본에서 바르셀로나로","subtitle":"2/13 밤 출국 ~ 2/24 귀국 · 9박 10일 · 5도시 · 마드리드 없음","points":[{"n":1,"name":"리스본","sub":"2/14 낮 (숙박 없음)","lat":38.7223,"lon":-9.1393},{"n":2,"name":"포르투","sub":"2/14–16 (2박)","lat":41.1579,"lon":-8.6291},{"n":3,"name":"세비야","sub":"2/16–18 (2박) · 라이언 2h15","lat":37.3891,"lon":-5.9845},{"n":4,"name":"그라나다","sub":"2/18–20 (2박) · 버스 3h","lat":37.1773,"lon":-3.5986},{"n":5,"name":"바르셀로나","sub":"2/20–23 (3박)","lat":41.3874,"lon":2.1686}],"food":[],"path":[1,2,3,4,5]},{"id":"D2","label":"D2","date":"2/14 (일)","city":"리스본 → 포르투","title":"D2 · 벨렝 도보 구간","subtitle":"12:20 제로니무스 → 14:20 마차박물관 → 15:30 벨렝 탑 (도보 10분권)","points":[{"n":1,"name":"제로니무스 수도원","sub":"12:20 · €18×2","lat":38.6979,"lon":-9.2065},{"n":2,"name":"국립 마차박물관","sub":"14:20 · €8×2","lat":38.6973,"lon":-9.204},{"n":3,"name":"벨렝 탑","sub":"15:30 외관·강변","lat":38.6916,"lon":-9.216}],"food":[{"name":"파스테이스 드 벨렝","sub":"13:40 에그타르트 4","lat":38.6975,"lon":-9.2032}],"path":[1,2,3]},{"id":"D3","label":"D3","date":"2/15 (월)","city":"포르투 (서점·리베이라·포트와이너리)","title":"D3 · 2/15(월) 포르투","subtitle":"09:15 렐루 · 10:30 상벤투 · 11:00 볼량 · 13:45 리베이라 · 14:30 그레이엄스","points":[{"n":1,"name":"숙소 · 토렐 팰리스","sub":"08:30 조식","lat":41.1476,"lon":-8.6057},{"n":2,"name":"렐루 서점","sub":"09:15 · €15.95×2","lat":41.1469,"lon":-8.615},{"n":3,"name":"상벤투 역","sub":"10:30 아줄레주","lat":41.1456,"lon":-8.6106},{"n":4,"name":"볼량 시장","sub":"11:00 월요일 영업","lat":41.149,"lon":-8.607},{"n":5,"name":"리베이라","sub":"13:45 강변","lat":41.1407,"lon":-8.6131},{"n":6,"name":"동 루이스 1세 다리","sub":"14:00 상층 보행","lat":41.1397,"lon":-8.6093},{"n":7,"name":"그레이엄스","sub":"14:30 투어+시음 €25×2","lat":41.1343,"lon":-8.6156}],"food":[{"name":"카사 게데스","sub":"12:15 페르닐 산드위치","lat":41.1473,"lon":-8.6052},{"name":"타베르나 두스 메르카도레스","sub":"19:30 바칼라우·문어밥","lat":41.1409,"lon":-8.6131}],"path":[1,2,3,4,5,6,7]},{"id":"D4","label":"D4","date":"2/16 (화)","city":"포르투 → 세비야","title":"D4 · 2/16(화) 세비야 시내","subtitle":"11:15 대성당 · 13:00 카사 모랄레스 · 17:00 트리아나 · 18:30 플라멩코","points":[{"n":1,"name":"숙소 · 알팔파","sub":"10:40 짐 보관","lat":37.391,"lon":-5.9915},{"n":2,"name":"세비야 대성당","sub":"11:15 · €13×2","lat":37.3861,"lon":-5.9926},{"n":3,"name":"산타크루스","sub":"16:00 골목 산책","lat":37.3852,"lon":-5.99},{"n":4,"name":"트리아나 시장","sub":"17:00 도자기 거리","lat":37.3866,"lon":-6.0035},{"n":5,"name":"카사 데 라 메모리아","sub":"18:30 플라멩코 €24×2","lat":37.3925,"lon":-5.992}],"food":[{"name":"카사 모랄레스","sub":"13:00 타파스 5","lat":37.3865,"lon":-5.9946},{"name":"보데가 산타크루스","sub":"20:15 솔로미요","lat":37.3862,"lon":-5.9905}],"path":[1,2,3,4,5]},{"id":"D5","label":"D5","date":"2/17 (수)","city":"세비야 (스냅·알카사르)","title":"D5 · 2/17(수) 세비야","subtitle":"09:00 스냅(스페인 광장) · 10:45 알카사르 · 16:30 토레 델 오로","points":[{"n":1,"name":"숙소 · 산티아고 15","sub":"06:45 기상","lat":37.391,"lon":-5.9915},{"n":2,"name":"스페인 광장","sub":"09:00 스냅 1시간","lat":37.3772,"lon":-5.9867},{"n":3,"name":"레알 알카사르","sub":"10:45 · €15.50×2","lat":37.383,"lon":-5.9903},{"n":4,"name":"토레 델 오로","sub":"16:30 해양박물관","lat":37.3825,"lon":-5.9965}],"food":[{"name":"바르 펠라요","sub":"13:00 솔로미요·크로켓","lat":37.3924,"lon":-5.9916},{"name":"엘 링콘시요","sub":"19:30 에스피나카스","lat":37.3933,"lon":-5.9883}],"path":[1,2,3,4]},{"id":"D6","label":"D6","date":"2/18 (목)","city":"세비야 → 그라나다","title":"D6 · 2/18(목) 그라나다","subtitle":"12:15 로스 디아만테스 · 15:30 카르투하 · 17:30 알바이신 · 20:00 타파스 크롤","points":[{"n":1,"name":"숙소 · 카테드랄","sub":"11:45 짐 보관","lat":37.1765,"lon":-3.5986},{"n":2,"name":"카르투하 수도원","sub":"15:30 · €5×2","lat":37.19,"lon":-3.6},{"n":3,"name":"알바이신","sub":"17:30 산책","lat":37.1811,"lon":-3.5925}],"food":[{"name":"로스 디아만테스","sub":"12:15 무료 타파","lat":37.1749,"lon":-3.5964},{"name":"보데가스 카스타녜다","sub":"20:00 타파스 크롤","lat":37.1758,"lon":-3.5966}],"path":[1,2,3]},{"id":"D7","label":"D7","date":"2/19 (금)","city":"그라나다 (알함브라·함맘)","title":"D7 · 2/19(금) 그라나다 — 알함브라","subtitle":"08:45 나사리 궁전 · 13:00 쿠니니 · 15:00 함맘","points":[{"n":1,"name":"숙소 · 카테드랄","sub":"07:30 조식","lat":37.1765,"lon":-3.5986},{"n":2,"name":"알함브라 · 나사리","sub":"08:45 · €22.27×2","lat":37.1761,"lon":-3.5881},{"n":3,"name":"헤네랄리페","sub":"12:30 정원","lat":37.177,"lon":-3.585},{"n":4,"name":"함맘 알 안달루스","sub":"15:00 온천 €55×2","lat":37.1767,"lon":-3.5962}],"food":[{"name":"쿠니니","sub":"13:00 소금구이 농어","lat":37.1761,"lon":-3.6006},{"name":"보데가스 카스타녜다","sub":"20:00 하몬·베르무트","lat":37.1758,"lon":-3.5966}],"path":[1,2,3,4]},{"id":"D8","label":"D8","date":"2/20 (토)","city":"그라나다 → 바르셀로나 (쇼핑 ①)","title":"D8 · 2/20(토) 쇼핑 ①","subtitle":"18:00 파세이그 데 그라시아 — 토요일 20:30까지 · 20:30 엘 글로프","points":[{"n":1,"name":"숙소 · 델 마르","sub":"17:10 체크인","lat":41.3855,"lon":2.197},{"n":2,"name":"파세이그 데 그라시아","sub":"18:00 명품·주얼리","lat":41.3917,"lon":2.1649}],"food":[{"name":"엘 나시오날","sub":"20:30 파세이그 데 그라시아 24","lat":41.3903,"lon":2.1684}],"path":[1,2]},{"id":"D9","label":"D9","date":"2/21 (일)","city":"바르셀로나 (가우디)","title":"D9 · 2/21(일) 바르셀로나 — 가우디","subtitle":"09:00 구엘 · 12:30 사그라다 · 15:45 카사 바트요 · 20:00 보른","points":[{"n":1,"name":"숙소 · 델 마르","sub":"08:10 메트로","lat":41.3855,"lon":2.197},{"n":2,"name":"구엘 공원","sub":"09:00 · €18×2","lat":41.4145,"lon":2.1527},{"n":3,"name":"사그라다 파밀리아","sub":"12:30 내부 €26×2","lat":41.4036,"lon":2.1744},{"n":4,"name":"카사 바트요","sub":"15:45 내부 €29×2","lat":41.3916,"lon":2.1649},{"n":5,"name":"카사 밀라","sub":"17:30 외관·파세이그 산책","lat":41.3953,"lon":2.1619}],"food":[{"name":"라 파라데타","sub":"14:15 생선구이","lat":41.4036,"lon":2.1755},{"name":"세르베세리아 카탈라나","sub":"20:00 몬타디토·문어","lat":41.3928,"lon":2.1614}],"path":[1,2,3,4,5]},{"id":"D10","label":"D10","date":"2/22 (월)","city":"바르셀로나 (몬세라트·소년합창단)","title":"D10 · 2/22(월) 몬세라트 수도원","subtitle":"13:00 에스콜라니아(평일) · 12:10 산상 뷔페 · 저녁은 바르셀로네타","points":[{"n":1,"name":"몬이스트롤","sub":"10:35 크레마예라","lat":41.6104,"lon":1.843},{"n":2,"name":"몬세라트 수도원","sub":"13:00 합창","lat":41.5934,"lon":1.8376}],"food":[{"name":"산상 뷔페","sub":"12:10 미라도르","lat":41.5934,"lon":1.8379}],"path":[1,2]},{"id":"D11","label":"D11","date":"2/23 (화)","city":"바르셀로나 → 인천","title":"D11 · 2/23(화) 바르셀로나 → 인천","subtitle":"06:40 택시 → BCN T1 · 10:05 AF1149 → CDG 12:05 → ICN 2/24 11:15","points":[{"n":1,"name":"숙소 · 델 마르","sub":"06:40 출발","lat":41.3855,"lon":2.197},{"n":2,"name":"BCN 공항 T1","sub":"07:10 도착 · 10:05 출국","lat":41.2974,"lon":2.0833}],"food":[],"path":[1,2]}]}</script>
+</section>
+
 
 
 <article class="day" id="day-1">
@@ -315,7 +357,7 @@ body::after{
 
     <div class="day-photos"><h3>그날 볼 것</h3><div class="photo-grid"><figure><img src="img/photos/belem.jpg" alt="벨렝 탑" loading="eager" width="800" height="600"><figcaption><b>벨렝 탑</b><span>Wikimedia Commons · CC BY-SA 3.0</span></figcaption></figure><figure><img src="img/photos/pasteis.jpg" alt="파스텔 드 나타" loading="eager" width="800" height="600"><figcaption><b>파스텔 드 나타</b><span>Wikimedia Commons · CC BY-SA 4.0</span></figcaption></figure><figure><img src="img/photos/ribeira-porto.jpg" alt="포르투 리베이라" loading="eager" width="800" height="600"><figcaption><b>포르투 리베이라</b><span>Wikimedia Commons · CC BY-SA 3.0</span></figcaption></figure></div><p class="photo-note">위키미디어 공용 자유 라이선스 사진 — 실제 방문 매장 사진은 아님</p></div>
 
-    <figure class="day-map"><img src="img/D02b-리스본벨렝.jpg" alt="D2 · 2/14 (일) 리스본 → 포르투 지도" loading="eager"><figcaption>지도 © OpenStreetMap contributors</figcaption></figure>
+    <figure class="day-map day-slider" data-slides="3"><div class="slides"><div class="slide" role="group" aria-label="공항 → 벨렝 → 인텐덴테 → 공항 1"><img src="img/D02c-리스본도착.jpg" alt="D2 리스본 → 포르투 공항 → 벨렝 → 인텐덴테 → 공항 지도" loading="eager"><span class="slide-tag">공항 → 벨렝 → 인텐덴테 → 공항</span></div><div class="slide" role="group" aria-label="벨렝 도보 구간 2" hidden><img src="img/D02b-리스본벨렝.jpg" alt="D2 리스본 → 포르투 벨렝 도보 구간 지도" loading="lazy"><span class="slide-tag">벨렝 도보 구간</span></div><div class="slide" role="group" aria-label="포르투 심야 도착 3" hidden><img src="img/D02d-포르투도착.jpg" alt="D2 리스본 → 포르투 포르투 심야 도착 지도" loading="lazy"><span class="slide-tag">포르투 심야 도착</span></div></div><div class="slider-nav"><button type="button" class="prev" aria-label="이전 지도">‹</button><div class="dots"><button type="button" aria-label="공항 → 벨렝 → 인텐덴테 → 공항 지도 보기" aria-current="true"></button><button type="button" aria-label="벨렝 도보 구간 지도 보기"></button><button type="button" aria-label="포르투 심야 도착 지도 보기"></button></div><button type="button" class="next" aria-label="다음 지도">›</button></div><figcaption>가는 길 · 현지 확대 © OpenStreetMap contributors</figcaption></figure>
 
     <table class="ledger">
       <caption class="sr-only">D2 · 2/14 (일) 리스본 → 포르투 시간표</caption>
@@ -433,7 +475,7 @@ body::after{
 <tr class="free"><td class="t">16:00</td><td class="what">산타크루스 골목 산책</td><td class="src"></td><td class="cost">—</td></tr>
 <tr class="free"><td class="t">17:00</td><td class="what"><b>트리아나 시장 · 도자기 거리</b> (이사벨 2세 다리)</td><td class="src">공식 요금</td><td class="cost">—</td></tr>
 <tr class=""><td class="t">18:30</td><td class="what"><b>카사 데 라 메모리아</b> — 플라멩코 1시간 (€24×2)</td><td class="src">공식 요금</td><td class="cost">73,496</td></tr>
-<tr class=""><td class="t">20:15</td><td class="what"><b>보데가 산타크루스</b> — 솔로미요·몬타디토 (2인 €30)</td><td class="src">실메뉴(11/15 조회)</td><td class="cost">45,935</td></tr>
+<tr class=""><td class="t">20:15</td><td class="what"><b>보데가 산타크루스</b> — 솔로미요·몬타디토 (2인 €30) · 공연장 도보 8분</td><td class="src">실메뉴(11/15 조회)</td><td class="cost">45,935</td></tr>
 <tr class="ledger-sum"><td></td><td>숙박 83,399 · 식비 114,838 · 입장·이동 367,806</td><td></td><td class="cost">566,043</td></tr>
       </tbody>
     </table>
@@ -473,11 +515,11 @@ body::after{
 <tr class=""><td class="t">09:00</td><td class="what"><b>스냅 촬영 1시간</b> — 스페인 광장 · 비노마드(2인)</td><td class="src">업체 후기 가격</td><td class="cost">220,000</td></tr>
 <tr class="free"><td class="t">10:15</td><td class="what">산타크루스 지나 알카사르로 도보 (15분)</td><td class="src"></td><td class="cost">—</td></tr>
 <tr class=""><td class="t">10:45</td><td class="what"><b>레알 알카사르</b> (€15.50×2) · 정원</td><td class="src">공식 요금</td><td class="cost">47,466</td></tr>
-<tr class=""><td class="t">13:00</td><td class="what"><b>바르 펠라요</b> — 솔로미요 알 위스키·크로켓 (2인 €38)</td><td class="src">실메뉴(11/15 조회)</td><td class="cost">58,184</td></tr>
+<tr class=""><td class="t">13:00</td><td class="what"><b>바르 펠라요</b> — 솔로미요 알 위스키·크로켓 (2인 €38) · 알카사르에서 도보 13분</td><td class="src">실메뉴(11/15 조회)</td><td class="cost">58,184</td></tr>
 <tr class="free"><td class="t">14:30</td><td class="what">숙소 휴식 · 사진 셀렉</td><td class="src">hotel-api 실조회(11/14)</td><td class="cost">—</td></tr>
 <tr class=""><td class="t">16:30</td><td class="what"><b>토레 델 오로</b> 해양박물관 (€3×2)</td><td class="src">공식 요금</td><td class="cost">9,187</td></tr>
-<tr class=""><td class="t">17:30</td><td class="what">과달키비르 강변 산책 · 카페 (2인 €10)</td><td class="src">예산(현장 결제)</td><td class="cost">15,312</td></tr>
-<tr class=""><td class="t">19:30</td><td class="what"><b>엘 링콘시요</b> — 에스피나카스·살모레호 (2인 €45)</td><td class="src">실메뉴(11/15 조회)</td><td class="cost">68,903</td></tr>
+<tr class=""><td class="t">17:30</td><td class="what">과달키비르 강변 산책 · 카페 (2인 €10) → 숙소 경유</td><td class="src">예산(현장 결제)</td><td class="cost">15,312</td></tr>
+<tr class=""><td class="t">19:30</td><td class="what"><b>엘 링콘시요</b> — 에스피나카스·살모레호 (2인 €45) · 숙소 도보 5분</td><td class="src">실메뉴(11/15 조회)</td><td class="cost">68,903</td></tr>
 <tr class="ledger-sum"><td></td><td>숙박 83,399 · 식비 157,711 · 입장·이동 276,653</td><td></td><td class="cost">517,763</td></tr>
       </tbody>
     </table>
@@ -558,7 +600,7 @@ body::after{
 <tr class=""><td class="t">07:30</td><td class="what">기상 · 조식 (2인 €10)</td><td class="src">예산(현장 결제)</td><td class="cost">15,312</td></tr>
 <tr class=""><td class="t">08:00</td><td class="what">C30 버스 → 알함브라 입구 (€1.60×2)</td><td class="src">공식 요금</td><td class="cost">4,900</td></tr>
 <tr class=""><td class="t">08:45</td><td class="what"><b>알함브라 · 나사리 궁전 + 헤네랄리페</b> (€22.27×2)</td><td class="src">공식 요금</td><td class="cost">68,198</td></tr>
-<tr class=""><td class="t">13:00</td><td class="what"><b>쿠니니</b> — 소금구이 농어·아로스 깔도소 (2인 €65)</td><td class="src">실메뉴(11/15 조회)</td><td class="cost">99,526</td></tr>
+<tr class=""><td class="t">13:00</td><td class="what"><b>쿠니니</b> — 소금구이 농어·아로스 깔도소 (2인 €65) · 알함브라에서 내리막 도보 18분</td><td class="src">실메뉴(11/15 조회)</td><td class="cost">99,526</td></tr>
 <tr class=""><td class="t">15:00</td><td class="what"><b>함맘 알 안달루스</b> — 온천 1.5시간 (€55×2)</td><td class="src">공식 요금</td><td class="cost">168,429</td></tr>
 <tr class="free"><td class="t">17:00</td><td class="what">숙소 휴식 · (선택) 카피야 레알</td><td class="src">hotel-api 실조회(11/14)</td><td class="cost">—</td></tr>
 <tr class=""><td class="t">20:00</td><td class="what"><b>보데가스 카스타녜다</b> — 하몬·베르무트 (2인 €32)</td><td class="src">실메뉴(11/15 조회)</td><td class="cost">48,997</td></tr>
@@ -608,15 +650,15 @@ body::after{
 <tr class=""><td class="t">16:40</td><td class="what">카탈루냐 광장 → 숙소 메트로 (€2.90×2)</td><td class="src">공식 요금</td><td class="cost">8,881</td></tr>
 <tr class="free"><td class="t">17:10</td><td class="what">숙소 체크인 · 짐 풀기</td><td class="src">hotel-api 실조회(11/14)</td><td class="cost">—</td></tr>
 <tr class="free"><td class="t">18:00</td><td class="what"><b>쇼핑 ①</b> — 파세이그 데 그라시아 명품·주얼리 (토요일 20:30까지)</td><td class="src"></td><td class="cost">—</td></tr>
-<tr class=""><td class="t">20:30</td><td class="what"><b>엘 글로프 그라시아</b> — 그릴·파에야 (2인 €50)</td><td class="src">실메뉴(11/15 조회)</td><td class="cost">76,558</td></tr>
+<tr class=""><td class="t">20:30</td><td class="what"><b>엘 나시오날</b> — 파세이그 데 그라시아 24 · 타파 홀 (2인 €60) · 쇼핑 거리 도보 2분</td><td class="src">실메뉴(11/15 조회)</td><td class="cost">91,870</td></tr>
 <tr class=""><td class="t">—</td><td class="what">도시세 바르셀로나 €8.40×2인×3박</td><td class="src">공식 요금</td><td class="cost">77,171</td></tr>
-<tr class="ledger-sum"><td></td><td>숙박 128,171 · 식비 119,431 · 입장·이동 446,261</td><td></td><td class="cost">693,863</td></tr>
+<tr class="ledger-sum"><td></td><td>숙박 128,171 · 식비 134,743 · 입장·이동 446,261</td><td></td><td class="cost">709,175</td></tr>
       </tbody>
     </table>
 
     <div class="day-opt"><h3>시간이 되면 여기도</h3><p class="day-opt-note">비워 둔 시간에만 넣는 후보 — 예약·비용은 현장 판단</p><ul><li><b>카사 바트요 · 카사 밀라 외관</b><span>파세이그 데 그라시아 도보 5분</span></li><li><b>El Corte Inglés 가우디점</b><span>쇼핑 ① 동선 · 택스리펀 카운터</span></li></ul></div>
 
-    <p class="day-stamp"><span>이 날 합계</span><b>693,863</b></p>
+    <p class="day-stamp"><span>이 날 합계</span><b>709,175</b></p>
   </div>
 </article>
 
@@ -698,6 +740,7 @@ body::after{
 <tr class="free"><td class="t">15:20</td><td class="what">크레마예라 하산 · FGC → 바르셀로나</td><td class="src"></td><td class="cost">—</td></tr>
 <tr class="free"><td class="t">16:40</td><td class="what">숙소 휴식</td><td class="src">hotel-api 실조회(11/14)</td><td class="cost">—</td></tr>
 <tr class="free"><td class="t">17:30</td><td class="what"><b>쇼핑 ②</b> — 파세이그 데 그라시아 · El Corte Inglés (평일 20:30까지)</td><td class="src"></td><td class="cost">—</td></tr>
+<tr class="free"><td class="t">19:20</td><td class="what">숙소로 복귀 · 짐 정리 (메트로 15분)</td><td class="src">hotel-api 실조회(11/14)</td><td class="cost">—</td></tr>
 <tr class=""><td class="t">20:00</td><td class="what"><b>라 마르 살라다</b> — 바르셀로네타 해산물밥 (2인 €75) · 숙소 도보 8분</td><td class="src">실메뉴(11/15 조회)</td><td class="cost">114,838</td></tr>
 <tr class="ledger-sum"><td></td><td>숙박 128,171 · 식비 194,459 · 입장·이동 124,943</td><td></td><td class="cost">447,573</td></tr>
       </tbody>
@@ -754,9 +797,9 @@ body::after{
 <section class="tail wrap">
   <div>
     <h2>합계 맞추기</h2>
-    <p><b>일자별 합계</b> 7,878,774원 = 현지 5,189,774 + 항공 2,689,000.</p>
+    <p><b>일자별 합계</b> 7,894,086원 = 현지 5,205,086 + 항공 2,689,000.</p>
     <p><b>여유·기념품</b> 400,000원은 일자별 표에 없다(특정 날에 배정하지 않음).</p>
-    <p><b>총액</b> <b>8,278,774원</b> (1인 4,139,387).</p>
+    <p><b>총액</b> <b>8,294,086원</b> (1인 4,147,043).</p>
     <p>요약 페이지의 총액과 같은 값이에요.</p>
   </div>
   <div>
@@ -779,6 +822,78 @@ body::after{
   </div>
 </section>
 </main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function(){
+  var el=document.getElementById('lmap'); if(!el||!window.L) return;
+  var opener=document.getElementById('lmap-open');
+  if(opener && window.matchMedia('(max-width:699px)').matches){
+    opener.addEventListener('click',function(){el.classList.add('is-on'); opener.style.display='none'; boot();});
+    return;
+  }
+  boot();
+
+  function boot(){
+  var data=JSON.parse(document.getElementById('geo').textContent);
+  var cs=getComputedStyle(document.documentElement);
+  var INK=cs.getPropertyValue('--ink').trim()||'rgb(30,42,34)';
+  var ACC=cs.getPropertyValue('--accent').trim()||'rgb(180,69,31)';
+  var chips=document.getElementById('lmap-chips'), cap=document.getElementById('lmap-cap');
+  var map=L.map('lmap',{scrollWheelZoom:false}).setView([39.8,-3.7],6);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,
+    attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+  map.on('click',function(){map.scrollWheelZoom.enable();});
+  map.on('mouseout',function(){map.scrollWheelZoom.disable();});
+  var layer=L.layerGroup().addTo(map);
+  function draw(day){
+    layer.clearLayers();
+    var byNum={};
+    (day.points||[]).forEach(function(p){
+      byNum[p.n]=p;
+      L.circleMarker([p.lat,p.lon],{radius:10,color:'rgb(251,250,248)',weight:2,fillColor:INK,fillOpacity:1})
+        .addTo(layer)
+        .bindTooltip(String(p.n),{permanent:true,direction:'center',className:'lmap-num'})
+        .bindPopup('<b>'+p.n+'. '+p.name+'</b>'+(p.sub?'<br>'+p.sub:''));
+    });
+    var line=(day.path||[]).map(function(n){return byNum[n];}).filter(Boolean)
+      .map(function(p){return [p.lat,p.lon];});
+    if(line.length>1) L.polyline(line,{color:ACC,weight:3,opacity:.85,dashArray:'7 6'}).addTo(layer);
+    (day.food||[]).forEach(function(f){
+      L.circleMarker([f.lat,f.lon],{radius:8,color:'rgb(251,250,248)',weight:2,fillColor:ACC,fillOpacity:1})
+        .addTo(layer)
+        .bindTooltip('F',{permanent:true,direction:'center',className:'lmap-num'})
+        .bindPopup('<b>'+f.name+'</b>'+(f.sub?'<br>'+f.sub:''));
+    });
+    var all=(day.points||[]).map(function(p){return [p.lat,p.lon];})
+      .concat((day.food||[]).map(function(f){return [f.lat,f.lon];}));
+    if(all.length) map.fitBounds(all,{padding:[34,34]});
+    cap.textContent=day.title+(day.subtitle?' — '+day.subtitle:'');
+  }
+  if(!chips||!data.days||!data.days.length){return;}
+  chips.innerHTML='';
+  data.days.forEach(function(d,i){
+    var b=document.createElement('button');
+    b.type='button';
+    b.textContent=d.label+(d.date?' · '+d.date.replace(/\s/g,''):'');
+    b.setAttribute('aria-pressed',i===0?'true':'false');
+    b.addEventListener('click',function(){
+      Array.prototype.forEach.call(chips.children,function(x){x.setAttribute('aria-pressed','false');});
+      b.setAttribute('aria-pressed','true');
+      try{history.replaceState(null,'','#'+d.id);}catch(e){}
+      draw(d);
+    });
+    chips.appendChild(b);
+  });
+  var want=(location.hash||'').replace('#','').toLowerCase();
+  var start=0;
+  data.days.forEach(function(d,i){ if(d.id.toLowerCase()===want){start=i;} });
+  Array.prototype.forEach.call(chips.children,function(x,ix){x.setAttribute('aria-pressed',ix===start?'true':'false');});
+  draw(data.days[start]);
+  }
+})();
+</script>
+
 <script>
 document.querySelectorAll('.day-slider').forEach(function (fig) {
   var slides = Array.prototype.slice.call(fig.querySelectorAll('.slide'));
