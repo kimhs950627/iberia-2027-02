@@ -200,6 +200,33 @@ body::after{
   border:1px solid var(--ink); background:transparent}
 .day-slider .dots button:hover{background:var(--paper-2)}
 .day-slider .dots button[aria-current="true"]{background:var(--accent); border-color:var(--accent)}
+
+/* ── 먹거리 카드 */
+.day-meals{margin:var(--s-6) 0 0}
+.day-meals>h3{font-family:var(--font-display); font-weight:700; font-size:var(--fs-small);
+  margin:0 0 var(--s-3); padding-bottom:var(--s-2); border-bottom:1px solid var(--rule)}
+.day-meals>h3 small{font-family:var(--font-mono); font-weight:400; font-size:10px;
+  letter-spacing:.06em; color:var(--muted); margin-left:8px}
+.meal-note{margin:0 0 var(--s-1); font-size:12px; color:var(--muted)}
+.meal{padding:var(--s-4) 0; border-bottom:1px solid var(--rule)}
+.meal:last-child{border-bottom:none}
+.meal-slot{font-family:var(--font-mono); font-size:10px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--accent); margin:0 0 2px}
+.meal h4{font-family:var(--font-display); font-weight:700; font-size:var(--fs-small);
+  margin:0; letter-spacing:-.01em}
+.meal-sub{font-family:var(--font-mono); font-size:11px; color:var(--muted); margin:1px 0 var(--s-2)}
+.meal-dishes{margin:0; padding:0; list-style:none; display:grid; gap:2px}
+.meal-dishes li{display:flex; justify-content:space-between; gap:var(--s-3);
+  font-size:13px; line-height:1.55; border-bottom:1px dotted var(--rule); padding:2px 0}
+.meal-dishes span{color:var(--ink)}
+.meal-dishes em{font-family:var(--font-mono); font-style:normal; font-size:11px;
+  color:var(--ink-soft); text-align:right; flex:0 0 auto}
+.meal-verdict{margin:var(--s-2) 0 0; font-size:13px; line-height:1.6; color:var(--ink-soft)}
+.meal-src{margin:var(--s-2) 0 0; font-family:var(--font-mono); font-size:10px; color:var(--muted)}
+.meal-src a{color:var(--accent); border-bottom:1px solid currentColor; text-decoration:none}
+.meal-shots{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:8px; margin-top:var(--s-3)}
+.meal-shots img{width:100%; height:auto; aspect-ratio:4/3; object-fit:cover;
+  border:1px solid var(--rule); display:block}
 @media print{
   .day-slider .slides{flex-direction:column; overflow:visible}
   .day-slider .dots{display:none}
@@ -336,6 +363,8 @@ body::after{
       </tbody>
     </table>
 
+    
+
     <div class="day-opt"><h3>시간이 되면 여기도</h3><p class="day-opt-note">비워 둔 시간에만 넣는 후보 — 예약·비용은 현장 판단</p><ul><li><b>공항 라운지</b><span>출국심사 후 자유 — 별도 비용</span></li></ul></div>
 
     <p class="day-stamp"><span>이 날 합계</span><b>2,819,000</b></p>
@@ -386,6 +415,30 @@ body::after{
       </tbody>
     </table>
 
+    <div class="day-meals"><h3>이 날 뭐 먹나 <small>한국 블로그 후기에서 확인한 실주문·가격</small></h3><p class="meal-note">가격은 후기 작성 시점 기준이고 해산물은 무게로 달라진다. 사진은 출처 블로그 본문 사진.</p>
+      <div class="meal">
+        <div class="meal-main">
+          <p class="meal-slot">13:40 점심</p>
+          <h4>파스테이스 드 벨렝</h4>
+          <p class="meal-sub">Pastéis de Belém · 벨렝</p>
+          <ul class="meal-dishes"><li><span>파스텔 드 나타(에그타르트)</span><em>1개 €1.15 · 6개 €6.90</em></li><li><span>계피·슈거 파우더</span><em>무료 — 매장에서 뿌려 먹기</em></li></ul>
+          <p class="meal-verdict">커스터드가 진하고 페이스트리가 과자처럼 바삭. 포장은 별도 입구, 매장은 QR 주문.</p>
+          <p class="meal-src">출처 <a href="https://10000joo.tistory.com/283" target="_blank" rel="noopener">10000JOO</a> · 2025-06-02 후기</p>
+        </div>
+        <div class="meal-shots"><img src="img/meals/d2-0-0.jpg" alt="파스테이스 드 벨렝 현장 사진" loading="lazy"><img src="img/meals/d2-0-1.jpg" alt="파스테이스 드 벨렝 현장 사진" loading="lazy"></div>
+      </div>
+      <div class="meal">
+        <div class="meal-main">
+          <p class="meal-slot">17:30 저녁</p>
+          <h4>세르베자리아 하미루</h4>
+          <p class="meal-sub">Cervejaria Ramiro · 인텐덴테</p>
+          <ul class="meal-dishes"><li><span>식전 빵</span><em>약 €4 (자동)</em></li><li><span>굴</span><em>1개 약 €3.5</em></li><li><span>맛조개</span><em>접시 €10대</em></li><li><span>타이거 새우</span><em>4마리 €70~80 (무게)</em></li><li><span>거북손(percebes)</span><em>100g €9</em></li><li><span>Prego(스테이크 샌드위치)</span><em>약 €7</em></li></ul>
+          <p class="meal-verdict">새우가 최고. 스파이더크랩은 속이 비고 짜서 비추. 짜게 싫으면 주문 때 말할 것. 월요일 휴무·1인 €25 예약금.</p>
+          <p class="meal-src">출처 <a href="https://blog.naver.com/lovely0477/223818605804" target="_blank" rel="noopener">러블리여사</a> · 2025-04-02 후기</p>
+        </div>
+        <div class="meal-shots"><img src="img/meals/d2-1-0.jpg" alt="세르베자리아 하미루 현장 사진" loading="lazy"><img src="img/meals/d2-1-1.jpg" alt="세르베자리아 하미루 현장 사진" loading="lazy"><img src="img/meals/d2-1-2.jpg" alt="세르베자리아 하미루 현장 사진" loading="lazy"></div>
+      </div></div>
+
     <div class="day-opt"><h3>시간이 되면 여기도</h3><p class="day-opt-note">비워 둔 시간에만 넣는 후보 — 예약·비용은 현장 판단</p><ul><li><b>알파마 · 미라도우루 전망대</b><span>짐 보관 후 1시간 — 택시 10분</span></li><li><b>Time Out Market</b><span>리스본 반나절을 시장 점심으로 바꿀 때</span></li><li><b>리스보아 카드 24h</b><span>€31/인 · 제로니무스 포함이라 이 동선에선 이득 없음</span></li></ul></div>
 
     <p class="day-stamp"><span>이 날 합계</span><b>765,962</b></p>
@@ -431,6 +484,41 @@ body::after{
 <tr class="ledger-sum"><td></td><td>숙박 224,292 · 식비 128,336 · 입장·이동 125,127</td><td></td><td class="cost">477,755</td></tr>
       </tbody>
     </table>
+
+    <div class="day-meals"><h3>이 날 뭐 먹나 <small>한국 블로그 후기에서 확인한 실주문·가격</small></h3><p class="meal-note">가격은 후기 작성 시점 기준이고 해산물은 무게로 달라진다. 사진은 출처 블로그 본문 사진.</p>
+      <div class="meal">
+        <div class="meal-main">
+          <p class="meal-slot">11:00 시장</p>
+          <h4>볼량 시장</h4>
+          <p class="meal-sub">Mercado do Bolhão · 카운터</p>
+          <ul class="meal-dishes"><li><span>정어리 타파스</span><em>1조각 €2.5</em></li><li><span>성게</span><em>1개 €4</em></li><li><span>문어 샐러드</span><em>€10</em></li><li><span>바칼라우 튀김</span><em>€3~4</em></li><li><span>포트와인</span><em>잔 €3.5</em></li></ul>
+          <p class="meal-verdict">여행 중 최고의 시장이라는 평. 카운터에서 조각 단위로 집어 먹는다.</p>
+          <p class="meal-src">출처 <a href="https://mok0nolg0.tistory.com/2800" target="_blank" rel="noopener">mok0nolg0</a> · 2025-11-21 후기</p>
+        </div>
+        <div class="meal-shots"><img src="img/meals/d3-0-0.jpg" alt="볼량 시장 현장 사진" loading="lazy"><img src="img/meals/d3-0-1.jpg" alt="볼량 시장 현장 사진" loading="lazy"></div>
+      </div>
+      <div class="meal">
+        <div class="meal-main">
+          <p class="meal-slot">12:15 점심</p>
+          <h4>카사 게데스</h4>
+          <p class="meal-sub">Casa Guedes · 페르닐 산드위치</p>
+          <ul class="meal-dishes"><li><span>페르닐 산드위치(house)</span><em>약 €5.6</em></li><li><span>세라 치즈 추가</span><em>약 €7.7</em></li><li><span>비파나</span><em>약 €8</em></li></ul>
+          <p class="meal-verdict">1970년대부터 한 집. 달콤한 양파·새콤 소스의 풀드포크가 인기. 하루 한 번만 간 걸 후회했다는 후기.</p>
+          <p class="meal-src">출처 <a href="https://blog.naver.com/uddonga/223960237504" target="_blank" rel="noopener">우똥아</a> · 2025-08-06 후기</p>
+        </div>
+        <div class="meal-shots"><img src="img/meals/d3-1-0.jpg" alt="카사 게데스 현장 사진" loading="lazy"><img src="img/meals/d3-1-1.jpg" alt="카사 게데스 현장 사진" loading="lazy"></div>
+      </div>
+      <div class="meal">
+        <div class="meal-main">
+          <p class="meal-slot">19:30 저녁</p>
+          <h4>타베르나 두스 메르카도레스</h4>
+          <p class="meal-sub">Taberna dos Mercadores · 리베이라</p>
+          <ul class="meal-dishes"><li><span>문어밥(arroz de polvo)</span><em>주력</em></li><li><span>해물밥</span><em>주력</em></li><li><span>소금구이 농어</span><em>약 €24</em></li><li><span>문어 샐러드</span><em>약 €11</em></li></ul>
+          <p class="meal-verdict">메인 2개 + 그린와인 2잔 €65로 만족. 다만 웨이팅이 길어 오픈 1시간 전 대기하는 후기도. 짜다는 평도 있으니 해물밥 쪽이 무난.</p>
+          <p class="meal-src">출처 <a href="https://mistyfriday.kr/4053" target="_blank" rel="noopener">mistyfriday</a> · 2025-10-31 후기</p>
+        </div>
+        <div class="meal-shots"><img src="img/meals/d3-2-0.jpg" alt="타베르나 두스 메르카도레스 현장 사진" loading="lazy"><img src="img/meals/d3-2-1.jpg" alt="타베르나 두스 메르카도레스 현장 사진" loading="lazy"></div>
+      </div></div>
 
     <div class="day-opt"><h3>시간이 되면 여기도</h3><p class="day-opt-note">비워 둔 시간에만 넣는 후보 — 예약·비용은 현장 판단</p><ul><li><b>가이아 텔레페리쿠</b><span>€6×2 · 강 위 5분</span></li><li><b>리베이라 파두</b><span>21:00 · €25×2 · 예약 2~3일 전</span></li><li><b>볼량 시장 카운터 점심</b><span>€15/인 — 카사 게데스 대체</span></li></ul></div>
 
@@ -480,6 +568,30 @@ body::after{
       </tbody>
     </table>
 
+    <div class="day-meals"><h3>이 날 뭐 먹나 <small>한국 블로그 후기에서 확인한 실주문·가격</small></h3><p class="meal-note">가격은 후기 작성 시점 기준이고 해산물은 무게로 달라진다. 사진은 출처 블로그 본문 사진.</p>
+      <div class="meal">
+        <div class="meal-main">
+          <p class="meal-slot">13:00 점심</p>
+          <h4>카사 모랄레스</h4>
+          <p class="meal-sub">Casa Morales · 세비야 대성당 뒤</p>
+          <ul class="meal-dishes"><li><span>피망구이</span><em>€7</em></li><li><span>갈리시아식 문어</span><em>€18</em></li><li><span>소꼬리찜(rabo de toro)</span><em>라시온</em></li><li><span>수제 베르무트</span><em>€1.8</em></li><li><span>쉐리</span><em>€2.5</em></li></ul>
+          <p class="meal-verdict">피망구이가 그날 먹은 타파스 중 최고. 문어는 감자 풋내로 아쉽, 소꼬리는 한국 갈비찜이 낫다는 평. 직접 담근 베르무트가 히트. 2인 저녁 €45.3.</p>
+          <p class="meal-src">출처 <a href="https://blog.naver.com/honey1458/223613120468" target="_blank" rel="noopener">honey1458</a> · 2024-10-10 후기</p>
+        </div>
+        <div class="meal-shots"><img src="img/meals/d4-0-0.jpg" alt="카사 모랄레스 현장 사진" loading="lazy"><img src="img/meals/d4-0-1.jpg" alt="카사 모랄레스 현장 사진" loading="lazy"></div>
+      </div>
+      <div class="meal">
+        <div class="meal-main">
+          <p class="meal-slot">20:15 저녁</p>
+          <h4>보데가 산타크루스</h4>
+          <p class="meal-sub">Bodega Santa Cruz · 유대인 거리</p>
+          <ul class="meal-dishes"><li><span>꿀가지 튀김</span><em>2조각 — 대표 메뉴</em></li><li><span>솔로미요 알 위스키</span><em>약 €3</em></li><li><span>프링가 몬타디토</span><em>€2.5~3</em></li><li><span>끌라라(레몬 맥주)</span><em>잔</em></li></ul>
+          <p class="meal-verdict">서서 먹는 곳, 꿀가지가 느끼함을 잡는다. 타파스 여러 개 + 음료 2잔에 €14로 가성비 좋다는 후기.</p>
+          <p class="meal-src">출처 <a href="https://blog.naver.com/yololo91/224387535124" target="_blank" rel="noopener">yololo91</a> · 2026-08-23 후기</p>
+        </div>
+        <div class="meal-shots"><img src="img/meals/d4-1-0.jpg" alt="보데가 산타크루스 현장 사진" loading="lazy"><img src="img/meals/d4-1-1.jpg" alt="보데가 산타크루스 현장 사진" loading="lazy"></div>
+      </div></div>
+
     <div class="day-opt"><h3>시간이 되면 여기도</h3><p class="day-opt-note">비워 둔 시간에만 넣는 후보 — 예약·비용은 현장 판단</p><ul><li><b>메트로폴 파라솔 전망대</b><span>€5×2 · 일몰 19:00</span></li><li><b>트리아나 도자기 공방</b><span>2시간 €35~60 · 1~2주 전 예약</span></li><li><b>이탈리카 로마 유적</b><span>반나절 · M-130 버스 30분</span></li></ul></div>
 
     <p class="day-stamp"><span>이 날 합계</span><b>565,194</b></p>
@@ -524,6 +636,30 @@ body::after{
       </tbody>
     </table>
 
+    <div class="day-meals"><h3>이 날 뭐 먹나 <small>한국 블로그 후기에서 확인한 실주문·가격</small></h3><p class="meal-note">가격은 후기 작성 시점 기준이고 해산물은 무게로 달라진다. 사진은 출처 블로그 본문 사진.</p>
+      <div class="meal">
+        <div class="meal-main">
+          <p class="meal-slot">13:00 점심</p>
+          <h4>바르 펠라요</h4>
+          <p class="meal-sub">Bar Pelayo · 알카사르 도보 13분</p>
+          <ul class="meal-dishes"><li><span>소꼬리찜</span><em>€14.33</em></li><li><span>하몽·계란·감자튀김</span><em>€11</em></li><li><span>틴토 데 베라노</span><em>€2.6</em></li><li><span>pan y picos</span><em>€1 자동</em></li></ul>
+          <p class="meal-verdict">2인 €32.8(2023 기준). 소꼬리찜 양이 많아 2인이면 소꼬리 1 + 타파스 1~2개가 적당. 한국어 메뉴판 있음.</p>
+          <p class="meal-src">출처 <a href="https://blog.naver.com/alswn0692/223264636483" target="_blank" rel="noopener">alswn0692</a> · 2023-11-14 후기</p>
+        </div>
+        <div class="meal-shots"><img src="img/meals/d5-0-0.jpg" alt="바르 펠라요 현장 사진" loading="lazy"><img src="img/meals/d5-0-1.jpg" alt="바르 펠라요 현장 사진" loading="lazy"></div>
+      </div>
+      <div class="meal">
+        <div class="meal-main">
+          <p class="meal-slot">19:30 저녁</p>
+          <h4>엘 링콘시요</h4>
+          <p class="meal-sub">El Rinconcillo · 1670년부터</p>
+          <ul class="meal-dishes"><li><span>에스피나카스 콘 가르반소스</span><em>€4~6</em></li><li><span>이베리코 하몽</span><em>€15~22</em></li><li><span>파드론 고추</span><em>라시온</em></li><li><span>살모레호</span><em>€5~7</em></li><li><span>상그리아</span><em>잔</em></li></ul>
+          <p class="meal-verdict">350년 된 타파스 바. 시금치·병아리콩을 따뜻한 빵에 얹어 먹는 게 별미. 개점 직전 줄이 생긴다.</p>
+          <p class="meal-src">출처 <a href="https://10000joo.tistory.com/284" target="_blank" rel="noopener">10000JOO</a> · 2025-06-05 후기</p>
+        </div>
+        <div class="meal-shots"><img src="img/meals/d5-1-0.jpg" alt="엘 링콘시요 현장 사진" loading="lazy"><img src="img/meals/d5-1-1.jpg" alt="엘 링콘시요 현장 사진" loading="lazy"></div>
+      </div></div>
+
     <div class="day-opt"><h3>시간이 되면 여기도</h3><p class="day-opt-note">비워 둔 시간에만 넣는 후보 — 예약·비용은 현장 판단</p><ul><li><b>에스파시오 투리나 공연</b><span>20:00 · €15×2 · 2027년 2월 편성 미공개</span></li><li><b>메트로폴 파라솔</b><span>€5×2 · 낮에 올라가면 대기 짧음</span></li><li><b>세비야 FC 홈경기</b><span>2/21 레알 마드리드전 — 일정 확정 시 즉시 예매</span></li></ul></div>
 
     <p class="day-stamp"><span>이 날 합계</span><b>517,292</b></p>
@@ -567,6 +703,30 @@ body::after{
       </tbody>
     </table>
 
+    <div class="day-meals"><h3>이 날 뭐 먹나 <small>한국 블로그 후기에서 확인한 실주문·가격</small></h3><p class="meal-note">가격은 후기 작성 시점 기준이고 해산물은 무게로 달라진다. 사진은 출처 블로그 본문 사진.</p>
+      <div class="meal">
+        <div class="meal-main">
+          <p class="meal-slot">12:15 점심</p>
+          <h4>로스 디아만테스</h4>
+          <p class="meal-sub">Los Diamantes · 무료 타파</p>
+          <ul class="meal-dishes"><li><span>음료</span><em>잔 €3.5~4</em></li><li><span>문어(뽈뽀) 작은 접시</span><em>€16</em></li><li><span>문어 큰 접시</span><em>€22</em></li><li><span>무료 타파</span><em>음료 1잔당 1접시 — 칼라마리·홍합 등</em></li></ul>
+          <p class="meal-verdict">음료만 시켜도 타파가 나온다. 문어는 &#x27;맛없을 수가 없는&#x27; 메뉴. 내부는 정신없지만 분위기 좋다는 평.</p>
+          <p class="meal-src">출처 <a href="https://blog.naver.com/joohr1838/224208290123" target="_blank" rel="noopener">joohr1838</a> · 2026-03-08 후기</p>
+        </div>
+        <div class="meal-shots"><img src="img/meals/d6-0-0.jpg" alt="로스 디아만테스 현장 사진" loading="lazy"><img src="img/meals/d6-0-1.jpg" alt="로스 디아만테스 현장 사진" loading="lazy"></div>
+      </div>
+      <div class="meal">
+        <div class="meal-main">
+          <p class="meal-slot">20:00 저녁</p>
+          <h4>보데가스 카스타녜다</h4>
+          <p class="meal-sub">Bodegas Castañeda · 타파스 크롤</p>
+          <ul class="meal-dishes"><li><span>베르무트</span><em>잔</em></li><li><span>따뜻한 모둠(중)</span><em>€18.8</em></li><li><span>카나페 모둠(중)</span><em>€17.65</em></li><li><span>하우스 샐러드</span><em>€8.6</em></li><li><span>무료 타파</span><em>음료당 1접시</em></li></ul>
+          <p class="meal-verdict">현지인 위주로 북적. 무료 타파로 홍합 빠에야가 나왔다. 예약 없음, 1인 €8~15.</p>
+          <p class="meal-src">출처 <a href="https://www.trvlogue.com/ko/granada-tapas-bar-guide" target="_blank" rel="noopener">TRVLOGUE</a> · 2026-09-26 후기</p>
+        </div>
+        
+      </div></div>
+
     <div class="day-opt"><h3>시간이 되면 여기도</h3><p class="day-opt-note">비워 둔 시간에만 넣는 후보 — 예약·비용은 현장 판단</p><ul><li><b>사크로몬테 잠브라</b><span>21:30 · €30×2 · 동굴 공연, 3~7일 전 예약</span></li><li><b>카피야 레알</b><span>€7×2 · 가톨릭 왕 부부 묘</span></li><li><b>그라나다 대성당</b><span>€7×2 · 대성당 옆 숙소라 30분이면 충분</span></li></ul></div>
 
     <p class="day-stamp"><span>이 날 합계</span><b>321,623</b></p>
@@ -607,6 +767,30 @@ body::after{
 <tr class="ledger-sum"><td></td><td>숙박 127,287 · 식비 163,476 · 입장·이동 240,997</td><td></td><td class="cost">531,760</td></tr>
       </tbody>
     </table>
+
+    <div class="day-meals"><h3>이 날 뭐 먹나 <small>한국 블로그 후기에서 확인한 실주문·가격</small></h3><p class="meal-note">가격은 후기 작성 시점 기준이고 해산물은 무게로 달라진다. 사진은 출처 블로그 본문 사진.</p>
+      <div class="meal">
+        <div class="meal-main">
+          <p class="meal-slot">13:00 점심</p>
+          <h4>쿠니니</h4>
+          <p class="meal-sub">Cunini · 알함브라 내리막</p>
+          <ul class="meal-dishes"><li><span>소금구이 농어</span><em>무게 결제</em></li><li><span>아로스 깔도소(해물 쌀요리)</span><em>2인용</em></li><li><span>작은 새우 6마리</span><em>€26 — 비싸다는 평</em></li></ul>
+          <p class="meal-verdict">해산물 전문점, 바에서는 작은 접시로도 가능. 한국어 후기가 없어 외국 후기 기준. 화이트와인 잔 €3.5.</p>
+          <p class="meal-src">출처 <a href="https://wanderlog.com/place/details/1503098/cunini" target="_blank" rel="noopener">Wanderlog</a> · 2021-01-22 후기</p>
+        </div>
+        <div class="meal-shots"><img src="img/meals/d7-0-0.jpg" alt="쿠니니 현장 사진" loading="lazy"><img src="img/meals/d7-0-1.jpg" alt="쿠니니 현장 사진" loading="lazy"></div>
+      </div>
+      <div class="meal">
+        <div class="meal-main">
+          <p class="meal-slot">20:00 저녁</p>
+          <h4>보데가스 카스타녜다</h4>
+          <p class="meal-sub">Bodegas Castañeda · 재방문</p>
+          <ul class="meal-dishes"><li><span>하몬 이베리코</span><em>접시</em></li><li><span>베르무트</span><em>잔</em></li><li><span>무료 타파</span><em>음료당 1접시</em></li></ul>
+          <p class="meal-verdict">하몬·베르무트로 가볍게. 3잔 + 모둠 €35 후기.</p>
+          <p class="meal-src">출처 <a href="https://www.trvlogue.com/ko/granada-tapas-bar-guide" target="_blank" rel="noopener">TRVLOGUE</a> · 2026-09-26 후기</p>
+        </div>
+        
+      </div></div>
 
     <div class="day-opt"><h3>시간이 되면 여기도</h3><p class="day-opt-note">비워 둔 시간에만 넣는 후보 — 예약·비용은 현장 판단</p><ul><li><b>엘 트리요</b><span>알바이신 테라스 · 2인 €60 · 2~3일 전 예약</span></li><li><b>사크로몬테 잠브라</b><span>€30×2 · 함맘 대신 고를 수 있어요</span></li><li><b>카피야 레알</b><span>€7×2 · 이사벨 여왕의 왕관·홀</span></li></ul></div>
 
@@ -656,6 +840,19 @@ body::after{
       </tbody>
     </table>
 
+    <div class="day-meals"><h3>이 날 뭐 먹나 <small>한국 블로그 후기에서 확인한 실주문·가격</small></h3><p class="meal-note">가격은 후기 작성 시점 기준이고 해산물은 무게로 달라진다. 사진은 출처 블로그 본문 사진.</p>
+      <div class="meal">
+        <div class="meal-main">
+          <p class="meal-slot">20:30 저녁</p>
+          <h4>엘 나시오날</h4>
+          <p class="meal-sub">El Nacional · 파세이그 데 그라시아 24</p>
+          <ul class="meal-dishes"><li><span>생굴</span><em>6개 단위</em></li><li><span>이베리코 크로켓</span><em>€9.5</em></li><li><span>문어 다리</span><em>구이</em></li><li><span>소금구이 농어</span><em>La Llotja 해산물 구역</em></li><li><span>빠에야</span><em>모두 €36</em></li><li><span>차가운/따뜻한 타파스</span><em>€7.0~7.25 / €7.25~9.5</em></li><li><span>맥주</span><em>소 €3.5 · 대 €6.5</em></li></ul>
+          <p class="meal-verdict">24개 카운터가 모인 푸드홀. 해산물 구역(La Llotja)에서 굴·문어·농어. 간이 슴슴해 무난, 가격은 사악하다는 평도.</p>
+          <p class="meal-src">출처 <a href="https://brunch.co.kr/@68c9bb6242eb418/24" target="_blank" rel="noopener">brunch</a> · 2025-09-03 후기</p>
+        </div>
+        <div class="meal-shots"><img src="img/meals/d8-0-0.jpg" alt="엘 나시오날 현장 사진" loading="lazy"><img src="img/meals/d8-0-1.jpg" alt="엘 나시오날 현장 사진" loading="lazy"></div>
+      </div></div>
+
     <div class="day-opt"><h3>시간이 되면 여기도</h3><p class="day-opt-note">비워 둔 시간에만 넣는 후보 — 예약·비용은 현장 판단</p><ul><li><b>카사 바트요 · 카사 밀라 외관</b><span>파세이그 데 그라시아 도보 5분</span></li><li><b>El Corte Inglés 가우디점</b><span>쇼핑 ① 동선 · 택스리펀 카운터</span></li></ul></div>
 
     <p class="day-stamp"><span>이 날 합계</span><b>708,366</b></p>
@@ -699,6 +896,30 @@ body::after{
 <tr class="ledger-sum"><td></td><td>숙박 128,171 · 식비 221,533 · 입장·이동 262,783</td><td></td><td class="cost">612,487</td></tr>
       </tbody>
     </table>
+
+    <div class="day-meals"><h3>이 날 뭐 먹나 <small>한국 블로그 후기에서 확인한 실주문·가격</small></h3><p class="meal-note">가격은 후기 작성 시점 기준이고 해산물은 무게로 달라진다. 사진은 출처 블로그 본문 사진.</p>
+      <div class="meal">
+        <div class="meal-main">
+          <p class="meal-slot">14:15 점심</p>
+          <h4>라 파라데타</h4>
+          <p class="meal-sub">La Paradeta · 생선 시장식</p>
+          <ul class="meal-dishes"><li><span>꼴뚜기 튀김</span><em>무게 결제 · &quot;역대급&quot;</em></li><li><span>문어 다리 구이</span><em>입에서 녹는다는 평</em></li><li><span>바지락 토마토 스튜</span><em>접시</em></li><li><span>왕새우 구이</span><em>무게</em></li><li><span>맛조개</span><em>기대보다 별로</em></li></ul>
+          <p class="meal-verdict">진열된 해산물을 골라 무게로 결제하고 조리법을 지정. 2인 한 끼 약 5만원. 14시에도 40분 대기.</p>
+          <p class="meal-src">출처 <a href="https://blog.naver.com/h_heather/223014348820" target="_blank" rel="noopener">h_heather</a> · 2024-05-28 후기</p>
+        </div>
+        <div class="meal-shots"><img src="img/meals/d9-0-0.jpg" alt="라 파라데타 현장 사진" loading="lazy"><img src="img/meals/d9-0-1.jpg" alt="라 파라데타 현장 사진" loading="lazy"></div>
+      </div>
+      <div class="meal">
+        <div class="meal-main">
+          <p class="meal-slot">20:00 저녁</p>
+          <h4>세르베세리아 카탈라나</h4>
+          <p class="meal-sub">Cervecería Catalana · 카사 밀라 도보 4분</p>
+          <ul class="meal-dishes"><li><span>꿀대구(bacalao al miel)</span><em>€13.45 — 최고 인기</em></li><li><span>푸아그라 소고기 몬타디토</span><em>€7.15</em></li><li><span>맛조개 구이</span><em>€11.2</em></li><li><span>판 콘 토마테</span><em>€3.3</em></li><li><span>샹그리아·꼬르따도</span><em>잔</em></li></ul>
+          <p class="meal-verdict">웨이팅 필수인 대표 타파스 바. 꿀대구·맛조개 만족, 푸아그라는 호불호. 2인 총 €64.75.</p>
+          <p class="meal-src">출처 <a href="https://kkae-danee.tistory.com/385" target="_blank" rel="noopener">깨단</a> · 2025-07-19 후기</p>
+        </div>
+        <div class="meal-shots"><img src="img/meals/d9-1-0.jpg" alt="세르베세리아 카탈라나 현장 사진" loading="lazy"><img src="img/meals/d9-1-1.jpg" alt="세르베세리아 카탈라나 현장 사진" loading="lazy"></div>
+      </div></div>
 
     <div class="day-opt"><h3>시간이 되면 여기도</h3><p class="day-opt-note">비워 둔 시간에만 넣는 후보 — 예약·비용은 현장 판단</p><ul><li><b>카사 밀라 내부</b><span>€29×2 · 옥상 전시</span></li><li><b>피카소 미술관</b><span>€12×2 · 보른까지 메트로 10분</span></li><li><b>팔라우 달마세스 플라멩코</b><span>€30~35 · 보른, 17:30/18:45/20:00/21:15</span></li></ul></div>
 
@@ -746,6 +967,30 @@ body::after{
       </tbody>
     </table>
 
+    <div class="day-meals"><h3>이 날 뭐 먹나 <small>한국 블로그 후기에서 확인한 실주문·가격</small></h3><p class="meal-note">가격은 후기 작성 시점 기준이고 해산물은 무게로 달라진다. 사진은 출처 블로그 본문 사진.</p>
+      <div class="meal">
+        <div class="meal-main">
+          <p class="meal-slot">12:10 점심</p>
+          <h4>몬세라트 산상 뷔페</h4>
+          <p class="meal-sub">Mirador dels Apòstols · 수도원</p>
+          <ul class="meal-dishes"><li><span>뷔페(1인)</span><em>현장가 — 2019년 €16.5</em></li><li><span>샐러드 바</span><em>종류 많음</em></li><li><span>빠에야·피자·라자냐·파스타</span><em>뷔페</em></li><li><span>과일·디저트·아이스크림</span><em>뷔페</em></li></ul>
+          <p class="meal-verdict">지중해식·국제 뷔페, 선결제 후 입장. 고기류는 평범하다는 평. 사찰 맞은편 건물 지하.</p>
+          <p class="meal-src">출처 <a href="https://www.montserratvisita.com/en/where-to-eat/buffet-montserrat" target="_blank" rel="noopener">montserratvisita</a> · 공식 후기</p>
+        </div>
+        
+      </div>
+      <div class="meal">
+        <div class="meal-main">
+          <p class="meal-slot">20:00 저녁</p>
+          <h4>라 마르 살라다</h4>
+          <p class="meal-sub">La Mar Salada · 바르셀로네타</p>
+          <ul class="meal-dishes"><li><span>빠에야</span><em>2인용 — 짜지 않고 좋다는 평</em></li><li><span>문어</span><em>부드럽다는 평</em></li><li><span>메뉴 델 디아(점심)</span><em>1인 €20(2021 기준) — 전식+본식+후식+음료</em></li></ul>
+          <p class="meal-verdict">해변가, 주변보다 낫지만 가격은 착하지 않음. 샹그리아는 도수 있고 최소 주문량이 많다. 숙소 도보 8분.</p>
+          <p class="meal-src">출처 <a href="https://kr.trip.com/moments/detail/barcelona-381-122002792/" target="_blank" rel="noopener">트립닷컴</a> · 2024-05-30 후기</p>
+        </div>
+        
+      </div></div>
+
     <div class="day-opt"><h3>시간이 되면 여기도</h3><p class="day-opt-note">비워 둔 시간에만 넣는 후보 — 예약·비용은 현장 판단</p><ul><li><b>산 조안 푸니쿨라</b><span>€17.50×2 · 전망대</span></li><li><b>MNAC</b><span>€12×2 · 로마네스크 벽화</span></li><li><b>람블라스 · 보케리아 시장</b><span>쇼핑 ②와 택일</span></li></ul></div>
 
     <p class="day-stamp"><span>이 날 합계</span><b>446,872</b></p>
@@ -787,6 +1032,8 @@ body::after{
 <tr class="ledger-sum"><td></td><td>숙박 — · 식비 15,278 · 입장·이동 105,834</td><td></td><td class="cost">121,112</td></tr>
       </tbody>
     </table>
+
+    
 
     <div class="day-opt"><h3>시간이 되면 여기도</h3><p class="day-opt-note">비워 둔 시간에만 넣는 후보 — 예약·비용은 현장 판단</p><ul><li><b>CDG 면세</b><span>환승 3시간 — 탑승구 이동 25분</span></li></ul></div>
 
