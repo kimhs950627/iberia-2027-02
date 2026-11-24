@@ -95,6 +95,7 @@ body::after{
 .chip b{font-size:var(--fs-small)}
 .chip:hover,.chip:focus-visible{border-color:var(--accent); color:var(--accent)}
 .chip:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+.chip-events{border-style:dashed; border-color:var(--accent); color:var(--accent)}
 
 /* ── 일차 블록 */
 .day{
@@ -249,6 +250,39 @@ body::after{
 .tail p{margin:0 0 var(--s-2); color:var(--ink-soft); font-size:var(--fs-small)}
 .tail a{color:var(--accent); border-bottom:1px solid currentColor; text-decoration:none}
 
+
+/* ── 2월 행사 조사 */
+.events{padding-top:var(--s-8); padding-bottom:var(--s-8); border-bottom:3px solid var(--rule-strong)}
+.ev-head{max-width:56ch}
+.ev-kicker{font-family:var(--font-mono); font-size:11px; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--accent); margin:0 0 var(--s-2)}
+.ev-head h2{font-family:var(--font-display); font-weight:700; font-size:clamp(1.6rem,3.2vw,2.4rem);
+  line-height:1.15; letter-spacing:-.02em; margin:0 0 var(--s-3); text-wrap:balance}
+.ev-head h2 em{font-style:italic; color:var(--accent)}
+.ev-lede{color:var(--ink-soft); font-size:var(--fs-small); margin:0 0 var(--s-6)}
+.ev-verdict{display:grid; gap:var(--s-6); grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  margin-bottom:var(--s-7)}
+.ev-verdict h3{font-family:var(--font-display); font-weight:700; font-size:var(--fs-small);
+  margin:0 0 var(--s-2); padding-bottom:6px; border-bottom:1px solid var(--rule-strong)}
+.ev-verdict ul{margin:0; padding-left:1.1em; display:grid; gap:5px}
+.ev-verdict li{font-size:13px; line-height:1.6; color:var(--ink-soft)}
+.ev-verdict li b{color:var(--ink); font-weight:500}
+.ev-note{margin:var(--s-2) 0 0; font-family:var(--font-mono); font-size:11px; color:var(--muted); line-height:1.5}
+.ev-table{width:100%; border-collapse:collapse; font-size:var(--fs-small)}
+.ev-table thead th{text-align:left; font-family:var(--font-mono); font-size:11px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--muted); font-weight:500;
+  padding:var(--s-2) var(--s-2) var(--s-2) 0; border-bottom:1px solid var(--rule)}
+.ev-table tbody td{padding:var(--s-3) var(--s-2) var(--s-3) 0; border-bottom:1px solid var(--rule); vertical-align:top}
+.ev-table td.e-date{font-family:var(--font-mono); font-size:12px; color:var(--accent); white-space:nowrap}
+.ev-table td.e-city{font-family:var(--font-mono); font-size:12px; color:var(--ink-soft); white-space:nowrap}
+.ev-table td.e-what{font-size:13px}
+.ev-table td.e-what span{display:block; font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:2px}
+.ev-table td.e-price{font-family:var(--font-mono); font-size:12px; white-space:nowrap; font-variant-numeric:tabular-nums}
+.ev-table td.e-state{font-family:var(--font-mono); font-size:11px; color:var(--muted)}
+.ev-foot{margin:var(--s-4) 0 0; font-family:var(--font-mono); font-size:11px; color:var(--muted); line-height:1.6}
+@media (max-width:720px){
+  .ev-table td.e-state, .ev-table thead th:nth-child(5){display:none}
+}
 @media (max-width:720px){
   :root{--rail:0px; --fs-day:2.75rem; --s-5:22px; --s-7:36px}
   .topbar .wrap{flex-wrap:wrap; row-gap:var(--s-2)}
@@ -315,7 +349,7 @@ body::after{
   </dl>
 </section>
 
-<nav class="chips wrap" aria-label="일차 바로가기"><a class="chip" href="#day-1"><b>D1</b><span>· 2/13</span></a><a class="chip" href="#day-2"><b>D2</b><span>· 2/14</span></a><a class="chip" href="#day-3"><b>D3</b><span>· 2/15</span></a><a class="chip" href="#day-4"><b>D4</b><span>· 2/16</span></a><a class="chip" href="#day-5"><b>D5</b><span>· 2/17</span></a><a class="chip" href="#day-6"><b>D6</b><span>· 2/18</span></a><a class="chip" href="#day-7"><b>D7</b><span>· 2/19</span></a><a class="chip" href="#day-8"><b>D8</b><span>· 2/20</span></a><a class="chip" href="#day-9"><b>D9</b><span>· 2/21</span></a><a class="chip" href="#day-10"><b>D10</b><span>· 2/22</span></a><a class="chip" href="#day-11"><b>D11</b><span>· 2/23</span></a></nav>
+<nav class="chips wrap" aria-label="일차 바로가기"><a class="chip" href="#day-1"><b>D1</b><span>· 2/13</span></a><a class="chip" href="#day-2"><b>D2</b><span>· 2/14</span></a><a class="chip" href="#day-3"><b>D3</b><span>· 2/15</span></a><a class="chip" href="#day-4"><b>D4</b><span>· 2/16</span></a><a class="chip" href="#day-5"><b>D5</b><span>· 2/17</span></a><a class="chip" href="#day-6"><b>D6</b><span>· 2/18</span></a><a class="chip" href="#day-7"><b>D7</b><span>· 2/19</span></a><a class="chip" href="#day-8"><b>D8</b><span>· 2/20</span></a><a class="chip" href="#day-9"><b>D9</b><span>· 2/21</span></a><a class="chip" href="#day-10"><b>D10</b><span>· 2/22</span></a><a class="chip" href="#day-11"><b>D11</b><span>· 2/23</span></a><a class="chip chip-events" href="#events"><b>2월</b><span>· 행사</span></a></nav>
 
 
 <section class="block wrap" id="live-map">
@@ -328,6 +362,51 @@ body::after{
   <script id="geo" type="application/json">{"days":[{"id":"ALL","label":"전체","date":"","city":"5도시 동선","title":"전체 동선 — 리스본에서 바르셀로나로","subtitle":"2/13 밤 출국 ~ 2/24 귀국 · 9박 10일 · 5도시 · 마드리드 없음","points":[{"n":1,"name":"리스본","sub":"2/14 낮 (숙박 없음)","lat":38.7223,"lon":-9.1393},{"n":2,"name":"포르투","sub":"2/14–16 (2박)","lat":41.1579,"lon":-8.6291},{"n":3,"name":"세비야","sub":"2/16–18 (2박) · 라이언 2h15","lat":37.3891,"lon":-5.9845},{"n":4,"name":"그라나다","sub":"2/18–20 (2박) · 버스 3h","lat":37.1773,"lon":-3.5986},{"n":5,"name":"바르셀로나","sub":"2/20–23 (3박)","lat":41.3874,"lon":2.1686}],"food":[],"path":[1,2,3,4,5]},{"id":"D2","label":"D2","date":"2/14 (일)","city":"리스본 → 포르투","title":"D2 · 벨렝 도보 구간","subtitle":"12:20 제로니무스 → 14:20 마차박물관 → 15:30 벨렝 탑 (도보 10분권)","points":[{"n":1,"name":"제로니무스 수도원","sub":"12:20 · €18×2","lat":38.6979,"lon":-9.2065},{"n":2,"name":"국립 마차박물관","sub":"14:20 · €8×2","lat":38.6973,"lon":-9.204},{"n":3,"name":"벨렝 탑","sub":"15:30 외관·강변","lat":38.6916,"lon":-9.216}],"food":[{"name":"파스테이스 드 벨렝","sub":"13:40 에그타르트 4","lat":38.6975,"lon":-9.2032}],"path":[1,2,3]},{"id":"D3","label":"D3","date":"2/15 (월)","city":"포르투 (서점·리베이라·포트와이너리)","title":"D3 · 2/15(월) 포르투","subtitle":"09:15 렐루 · 10:30 상벤투 · 11:00 볼량 · 13:45 리베이라 · 14:30 그레이엄스","points":[{"n":1,"name":"숙소 · 토렐 팰리스","sub":"08:30 조식","lat":41.1476,"lon":-8.6057},{"n":2,"name":"렐루 서점","sub":"09:15 · €15.95×2","lat":41.1469,"lon":-8.615},{"n":3,"name":"상벤투 역","sub":"10:30 아줄레주","lat":41.1456,"lon":-8.6106},{"n":4,"name":"볼량 시장","sub":"11:00 월요일 영업","lat":41.149,"lon":-8.607},{"n":5,"name":"리베이라","sub":"13:45 강변","lat":41.1407,"lon":-8.6131},{"n":6,"name":"동 루이스 1세 다리","sub":"14:00 상층 보행","lat":41.1397,"lon":-8.6093},{"n":7,"name":"그레이엄스","sub":"14:30 투어+시음 €25×2","lat":41.1343,"lon":-8.6156}],"food":[{"name":"카사 게데스","sub":"12:15 페르닐 산드위치","lat":41.1473,"lon":-8.6052},{"name":"타베르나 두스 메르카도레스","sub":"19:30 바칼라우·문어밥","lat":41.1409,"lon":-8.6131}],"path":[1,2,3,4,5,6,7]},{"id":"D4","label":"D4","date":"2/16 (화)","city":"포르투 → 세비야","title":"D4 · 2/16(화) 세비야 시내","subtitle":"11:15 대성당 · 13:00 카사 모랄레스 · 17:00 트리아나 · 18:30 플라멩코","points":[{"n":1,"name":"숙소 · 알팔파","sub":"10:40 짐 보관","lat":37.391,"lon":-5.9915},{"n":2,"name":"세비야 대성당","sub":"11:15 · €13×2","lat":37.3861,"lon":-5.9926},{"n":3,"name":"산타크루스","sub":"16:00 골목 산책","lat":37.3852,"lon":-5.99},{"n":4,"name":"트리아나 시장","sub":"17:00 도자기 거리","lat":37.3866,"lon":-6.0035},{"n":5,"name":"카사 데 라 메모리아","sub":"18:30 플라멩코 €24×2","lat":37.3925,"lon":-5.992}],"food":[{"name":"카사 모랄레스","sub":"13:00 타파스 5","lat":37.3865,"lon":-5.9946},{"name":"보데가 산타크루스","sub":"20:15 솔로미요","lat":37.3862,"lon":-5.9905}],"path":[1,2,3,4,5]},{"id":"D5","label":"D5","date":"2/17 (수)","city":"세비야 (스냅·알카사르)","title":"D5 · 2/17(수) 세비야","subtitle":"09:00 스냅(스페인 광장) · 10:45 알카사르 · 16:30 토레 델 오로","points":[{"n":1,"name":"숙소 · 산티아고 15","sub":"06:45 기상","lat":37.391,"lon":-5.9915},{"n":2,"name":"스페인 광장","sub":"09:00 스냅 1시간","lat":37.3772,"lon":-5.9867},{"n":3,"name":"레알 알카사르","sub":"10:45 · €15.50×2","lat":37.383,"lon":-5.9903},{"n":4,"name":"토레 델 오로","sub":"16:30 해양박물관","lat":37.3825,"lon":-5.9965}],"food":[{"name":"바르 펠라요","sub":"13:00 솔로미요·크로켓","lat":37.3924,"lon":-5.9916},{"name":"엘 링콘시요","sub":"19:30 에스피나카스","lat":37.3933,"lon":-5.9883}],"path":[1,2,3,4]},{"id":"D6","label":"D6","date":"2/18 (목)","city":"세비야 → 그라나다","title":"D6 · 2/18(목) 그라나다","subtitle":"12:15 로스 디아만테스 · 15:30 카르투하 · 17:30 알바이신 · 20:00 타파스 크롤","points":[{"n":1,"name":"숙소 · 카테드랄","sub":"11:45 짐 보관","lat":37.1765,"lon":-3.5986},{"n":2,"name":"카르투하 수도원","sub":"15:30 · €5×2","lat":37.19,"lon":-3.6},{"n":3,"name":"알바이신","sub":"17:30 산책","lat":37.1811,"lon":-3.5925}],"food":[{"name":"로스 디아만테스","sub":"12:15 무료 타파","lat":37.1749,"lon":-3.5964},{"name":"보데가스 카스타녜다","sub":"20:00 타파스 크롤","lat":37.1758,"lon":-3.5966}],"path":[1,2,3]},{"id":"D7","label":"D7","date":"2/19 (금)","city":"그라나다 (알함브라·함맘)","title":"D7 · 2/19(금) 그라나다 — 알함브라","subtitle":"08:45 나사리 궁전 · 13:00 쿠니니 · 15:00 함맘","points":[{"n":1,"name":"숙소 · 카테드랄","sub":"07:30 조식","lat":37.1765,"lon":-3.5986},{"n":2,"name":"알함브라 · 나사리","sub":"08:45 · €22.27×2","lat":37.1761,"lon":-3.5881},{"n":3,"name":"헤네랄리페","sub":"12:30 정원","lat":37.177,"lon":-3.585},{"n":4,"name":"함맘 알 안달루스","sub":"15:00 온천 €55×2","lat":37.1767,"lon":-3.5962}],"food":[{"name":"쿠니니","sub":"13:00 소금구이 농어","lat":37.1761,"lon":-3.6006},{"name":"보데가스 카스타녜다","sub":"20:00 하몬·베르무트","lat":37.1758,"lon":-3.5966}],"path":[1,2,3,4]},{"id":"D8","label":"D8","date":"2/20 (토)","city":"그라나다 → 바르셀로나 (쇼핑 ①)","title":"D8 · 2/20(토) 쇼핑 ①","subtitle":"18:00 파세이그 데 그라시아 — 토요일 20:30까지 · 20:30 엘 글로프","points":[{"n":1,"name":"숙소 · 델 마르","sub":"17:10 체크인","lat":41.3855,"lon":2.197},{"n":2,"name":"파세이그 데 그라시아","sub":"18:00 명품·주얼리","lat":41.3917,"lon":2.1649}],"food":[{"name":"엘 나시오날","sub":"20:30 파세이그 데 그라시아 24","lat":41.3903,"lon":2.1684}],"path":[1,2]},{"id":"D9","label":"D9","date":"2/21 (일)","city":"바르셀로나 (가우디)","title":"D9 · 2/21(일) 바르셀로나 — 가우디","subtitle":"09:00 구엘 · 12:30 사그라다 · 15:45 카사 바트요 · 20:00 보른","points":[{"n":1,"name":"숙소 · 델 마르","sub":"08:10 메트로","lat":41.3855,"lon":2.197},{"n":2,"name":"구엘 공원","sub":"09:00 · €18×2","lat":41.4145,"lon":2.1527},{"n":3,"name":"사그라다 파밀리아","sub":"12:30 내부 €26×2","lat":41.4036,"lon":2.1744},{"n":4,"name":"카사 바트요","sub":"15:45 내부 €29×2","lat":41.3916,"lon":2.1649},{"n":5,"name":"카사 밀라","sub":"17:30 외관·파세이그 산책","lat":41.3953,"lon":2.1619}],"food":[{"name":"라 파라데타","sub":"14:15 생선구이","lat":41.4036,"lon":2.1755},{"name":"세르베세리아 카탈라나","sub":"20:00 몬타디토·문어","lat":41.3928,"lon":2.1614}],"path":[1,2,3,4,5]},{"id":"D10","label":"D10","date":"2/22 (월)","city":"바르셀로나 (몬세라트·소년합창단)","title":"D10 · 2/22(월) 몬세라트 수도원","subtitle":"13:00 에스콜라니아(평일) · 12:10 산상 뷔페 · 저녁은 바르셀로네타","points":[{"n":1,"name":"몬이스트롤","sub":"10:35 크레마예라","lat":41.6104,"lon":1.843},{"n":2,"name":"몬세라트 수도원","sub":"13:00 합창","lat":41.5934,"lon":1.8376}],"food":[{"name":"산상 뷔페","sub":"12:10 미라도르","lat":41.5934,"lon":1.8379}],"path":[1,2]},{"id":"D11","label":"D11","date":"2/23 (화)","city":"바르셀로나 → 인천","title":"D11 · 2/23(화) 바르셀로나 → 인천","subtitle":"06:40 택시 → BCN T1 · 10:05 AF1149 → CDG 12:05 → ICN 2/24 11:15","points":[{"n":1,"name":"숙소 · 델 마르","sub":"06:40 출발","lat":41.3855,"lon":2.197},{"n":2,"name":"BCN 공항 T1","sub":"07:10 도착 · 10:05 출국","lat":41.2974,"lon":2.0833}],"food":[],"path":[1,2]}]}</script>
 </section>
 
+
+
+<section class="events wrap" id="events">
+  <header class="ev-head">
+    <p class="ev-kicker">2027년 2월 · 조사 2026-11-24</p>
+    <h2>크리스마스 마켓은 <em>없습니다</em>. 대신 공연이 있습니다.</h2>
+    <p class="ev-lede">일정 다섯 도시의 2월 중순~하순 행사를 공식 일정으로만 확인했다. 크리스마스 마켓은 전부 1월 초에 끝나므로
+    이 여행 날짜에는 해당하지 않는다. 대신 바르셀로나에서 공연 두 편이 우리 날짜에 정확히 걸린다.</p>
+  </header>
+
+  <div class="ev-verdict">
+    <div>
+      <h3>크리스마스 마켓 — 전부 끝난 뒤</h3>
+      <ul>
+        <li>리스본 <b>Wonderland Lisboa</b> — 2026-11-27~<b>2027-01-03</b></li>
+        <li>리스본 호시우 <b>Mercado de Natal</b> — 2026-11-13~<b>12-21</b></li>
+        <li>포르투 <b>Ferreira Borges</b> — 2026-11-14~<b>2027-01-06</b></li>
+        <li>포르투 <b>Praça da Fantasia</b>(보아비스타) — 2026-11-28~<b>2027-01-10</b></li>
+        <li>바르셀로나 <b>Fira de Santa Llúcia</b> — 2026-11-27~<b>12-23</b></li>
+        <li>세비야 <b>Nervión</b>·<b>크리스티나 정원</b> — 12월 초~<b>1월 4~5일</b></li>
+      </ul>
+      <p class="ev-note">2월까지 이어지는 마켓은 확인되지 않았음. “없다”는 전수 조사는 아니지만, 주요 마켓은 모두 1월에 닫는다.</p>
+    </div>
+    <div>
+      <h3>대신 겹치는 것</h3>
+      <ul>
+        <li><b>재의 수요일 2/10</b> — 사순절 시작. 우리 일정은 사순절 안이지만 성주간·부활절(3/28)과는 무관.</li>
+        <li><b>리스본 카니발 화요일 2/9</b> — 우리 도착(2/14)보다 앞.</li>
+        <li><b>카디스 카니발 2/4~14</b> — 2/14 폐막. 세비야는 2/19~20 카디스 공연단 초청 무대(FIBES).</li>
+        <li><b>세비야 마라톤 2/21 08:30</b> — 우리는 그날 바르셀로나. 영향 없음.</li>
+        <li><b>안달루시아의 날 2/28</b> — 귀국 뒤.</li>
+        <li><b>바르셀로나 산타 에울랄리아</b> — 2/12 개막만 확인. 인간탑·불꽃행렬 날짜는 미발표라 기대하지 않는 편.</li>
+      </ul>
+    </div>
+  </div>
+
+  <table class="ev-table">
+    <caption class="sr-only">2027년 2월 여행 기간 중 확인된 행사</caption>
+    <thead><tr><th scope="col">날짜</th><th scope="col">도시</th><th scope="col">행사</th><th scope="col">가격(1인)</th><th scope="col">확인</th></tr></thead>
+    <tbody><tr><td class="e-date">2/20 (토)</td><td class="e-city">바르셀로나</td><td class="e-what"><b>모차르트 〈레퀴엠〉</b><span>팔라우 데 라 무지카 · 18:30 · 57분</span></td><td class="e-price">1인 €22~68</td><td class="e-state">공식 편성 확인</td></tr><tr><td class="e-date">2/21 (일)</td><td class="e-city">바르셀로나</td><td class="e-what"><b>바그너 〈라인의 황금〉</b><span>리세우 극장 · 18:00 · 2시간 35분</span></td><td class="e-price">7존 €25부터</td><td class="e-state">공식 편성 확인</td></tr><tr><td class="e-date">2/19 (금)</td><td class="e-city">그라나다</td><td class="e-what">그라나다 시립오케스트라 〈Suite de sinfonías〉<span>Auditorio Manuel de Falla · 19:30</span></td><td class="e-price">1인 €18~32</td><td class="e-state">공식 편성 확인</td></tr><tr><td class="e-date">2/20 (토)</td><td class="e-city">바르셀로나</td><td class="e-what">피카소와 건축 展<span>피카소 미술관 · 10:00~19:00 (기간 2026-11-20~2027-03-07)</span></td><td class="e-price">1인 €14</td><td class="e-state">전시 기간 내</td></tr><tr><td class="e-date">2/14 (일)</td><td class="e-city">리스본</td><td class="e-what">〈아란후에스 협주곡〉 해설 음악회<span>벨렝 문화센터(CCB) · 11:00</span></td><td class="e-price">미확인</td><td class="e-state">날짜만 확인</td></tr><tr><td class="e-date">2/14 (일)</td><td class="e-city">리스본</td><td class="e-what">LX Market (일요 정기시장)<span>LX Factory · 10:00~18:00</span></td><td class="e-price">무료 입장</td><td class="e-state">날짜 확인</td></tr></tbody>
+  </table>
+
+  <p class="ev-foot">가격은 공시 정가이고 잔여석은 확인하지 못했다. 예약은 각 공연장 공식 페이지에서.
+  마켓 날짜는 시청·주최 측 공식 공지 기준.</p>
+</section>
 
 
 <article class="day" id="day-1">
@@ -792,7 +871,7 @@ body::after{
         
       </div></div>
 
-    <div class="day-opt"><h3>시간이 되면 여기도</h3><p class="day-opt-note">비워 둔 시간에만 넣는 후보 — 예약·비용은 현장 판단</p><ul><li><b>엘 트리요</b><span>알바이신 테라스 · 2인 €60 · 2~3일 전 예약</span></li><li><b>사크로몬테 잠브라</b><span>€30×2 · 함맘 대신 고를 수 있어요</span></li><li><b>카피야 레알</b><span>€7×2 · 이사벨 여왕의 왕관·홀</span></li></ul></div>
+    <div class="day-opt"><h3>시간이 되면 여기도</h3><p class="day-opt-note">비워 둔 시간에만 넣는 후보 — 예약·비용은 현장 판단</p><ul><li><b>그라나다 시립오케스트라 2/19 19:30</b><span>Auditorio Manuel de Falla · 지휘 Paul Goodwin · 1인 €18~32(2인 5.5~9.8만) — 함맘·저녁과 시간 충돌, 공연 보려면 저녁을 21:30로</span></li><li><b>엘 트리요</b><span>알바이신 테라스 · 2인 €60 · 2~3일 전 예약</span></li><li><b>사크로몬테 잠브라</b><span>€30×2 · 함맘 대신 고를 수 있어요</span></li><li><b>카피야 레알</b><span>€7×2 · 이사벨 여왕의 왕관·홀</span></li></ul></div>
 
     <p class="day-stamp"><span>이 날 합계</span><b>528,704</b></p>
   </div>
@@ -853,7 +932,7 @@ body::after{
         <div class="meal-shots"><img src="img/meals/d8-0-0.jpg" alt="엘 나시오날 현장 사진" loading="lazy"><img src="img/meals/d8-0-1.jpg" alt="엘 나시오날 현장 사진" loading="lazy"></div>
       </div></div>
 
-    <div class="day-opt"><h3>시간이 되면 여기도</h3><p class="day-opt-note">비워 둔 시간에만 넣는 후보 — 예약·비용은 현장 판단</p><ul><li><b>카사 바트요 · 카사 밀라 외관</b><span>파세이그 데 그라시아 도보 5분</span></li><li><b>El Corte Inglés 가우디점</b><span>쇼핑 ① 동선 · 택스리펀 카운터</span></li></ul></div>
+    <div class="day-opt"><h3>시간이 되면 여기도</h3><p class="day-opt-note">비워 둔 시간에만 넣는 후보 — 예약·비용은 현장 판단</p><ul><li><b>팔라우 데 라 무지카 · 모차르트 〈레퀴엠〉 2/20 18:30</b><span>1인 €22~68 · 57분 무휴지 · 쇼핑과 저녁 사이에 딱 맞음(공연장까지 도보 12분). 예매 palaumusica.cat</span></li><li><b>카사 바트요 · 카사 밀라 외관</b><span>파세이그 데 그라시아 도보 5분</span></li><li><b>El Corte Inglés 가우디점</b><span>쇼핑 ① 동선 · 택스리펀 카운터</span></li></ul></div>
 
     <p class="day-stamp"><span>이 날 합계</span><b>693,087</b></p>
   </div>
@@ -921,7 +1000,7 @@ body::after{
         <div class="meal-shots"><img src="img/meals/d9-1-0.jpg" alt="세르베세리아 카탈라나 현장 사진" loading="lazy"><img src="img/meals/d9-1-1.jpg" alt="세르베세리아 카탈라나 현장 사진" loading="lazy"></div>
       </div></div>
 
-    <div class="day-opt"><h3>시간이 되면 여기도</h3><p class="day-opt-note">비워 둔 시간에만 넣는 후보 — 예약·비용은 현장 판단</p><ul><li><b>카사 밀라 내부</b><span>€29×2 · 옥상 전시</span></li><li><b>피카소 미술관</b><span>€12×2 · 보른까지 메트로 10분</span></li><li><b>팔라우 달마세스 플라멩코</b><span>€30~35 · 보른, 17:30/18:45/20:00/21:15</span></li></ul></div>
+    <div class="day-opt"><h3>시간이 되면 여기도</h3><p class="day-opt-note">비워 둔 시간에만 넣는 후보 — 예약·비용은 현장 판단</p><ul><li><b>리세우 극장 · 바그너 〈라인의 황금〉 2/21 18:00</b><span>2시간 35분 · 7존 €25부터(2인 7.7만~) · 카사 바트요 직후라 동선 맞고, 저녁을 21:00로 미루면 가능</span></li><li><b>카사 밀라 내부</b><span>€29×2 · 옥상 전시</span></li><li><b>피카소 미술관</b><span>€12×2 · 보른까지 메트로 10분</span></li><li><b>팔라우 달마세스 플라멩코</b><span>€30~35 · 보른, 17:30/18:45/20:00/21:15</span></li></ul></div>
 
     <p class="day-stamp"><span>이 날 합계</span><b>573,909</b></p>
   </div>
@@ -1053,7 +1132,7 @@ body::after{
     <h2>값의 근거</h2>
     <p><b>hotel-api 실조회</b> — 숙박 4도시 16곳, 2026-11-14 조회.</p>
     <p><b>공식 요금</b> — 알함브라 €22.27 · 사그라다 €26 · 구엘 €18 · 카사 바트요 €29 · 대성당 €13 · 알카사르 €15.50 · 그레이엄스 €25 · 함맘 €55 · 플라멩코 €24 · 몬세라트 교통 €28.80 (1인).</p>
-    <p><b>실메뉴·현장가</b> — 2026-11-19 조회: 하미루 2인 €85 · 카사 게데스 €22 · 카사 모랄레스 €33 · 바르 펠라요 €38 · 로스 디아만테스 €25 · 쿠니니 €65 · 라 파라데타 €60 · 라 마르 살라다 €75.</p>
+    <p><b>실주문·영수증</b> — 블로그 후기(2026-11-23): 타베르나 €65·카사 모랄레스 €45.3·카탈라나 €64.75·산타크루스 €14는 영수증, 나머지는 후기 단품가로 2인분 계산.</p>
     <p><b>시내교통·수하물·도시세</b> — 공항버스 EA €6 · Aerobús €7.75 · OPO 심야 택시 €22 · 리스본 짐 보관 €9.60/3h · 도시세 포르투 €3·바르셀로나 €8.40 (1인 1박).</p>
     <p><b>항공 실결제</b> — KLM 예약 XUHBAH, 2026-11-15 발권, 2인 2,689,000원.</p>
   </div>
